@@ -1,0 +1,20 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "global";
+
+.menu-trigger {
+    top: 15px;
+    left: 15px;
+    z-index: 1080;
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: #B90101;
+    padding-top: 8px;
+    cursor: pointer;
+}

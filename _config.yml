@@ -1,0 +1,32 @@
+# Site settings
+title: Jesse Waites
+email: jesse.waites@gmail.com
+description: Jesse Waites is a Boston, MA based Ruby on Rails Developer.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+enable_retina: false
+permalink: :title
+nav_list:
+  Home : ['Home', '/', 'fa-home']
+  # Home_Alt : ['Home Alt', '/home-alt', 'fa-home']
+  # Home_Alt_2 : ['Home Alt 2', '/home-alt-2/', 'fa-home']
+  #About : ['About', '/about', 'fa-anchor']
+  # Contact : ['Contact', '/contact', 'fa-plane']
+  Author : ['About', '/author/michelle', 'fa-user']
+  Social : ['Social', '/', '']
+  LinkedIn : ['LinkedIn', 'https://www.linkedin.com/in/jessewaites', 'fa-linkedin']
+  Email : ['Email', 'mailto: jesse.waites@gmail.com', 'fa-envelope']
+  Blank : ['', '/']
+  Buy My Book : ['Buy My Book', '/', '']
+  Amazon : ['Amazon', 'http://www.amazon.com/Secrets-Of-My-App-Success-ebook/dp/B004Q9U18C', 'fa-book']
+  Apple : ['Apple', 'https://itunes.apple.com/us/book/the-secrets-of-my-app-success/id424978524?mt=11', 'fa-apple']
+
+
+single_footer: '<p>Jesse Waites &copy; 2015 <a href="/">latest posts</a></p>'
+footer_links:
+    About: ['About', '/about']
+    Writer: ['Jesse Waites', '/about']
+
+
+# Build settings
+markdown: kramdown
