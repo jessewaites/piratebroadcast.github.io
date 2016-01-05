@@ -2,7 +2,7 @@
 title: Jesse Waites
 email: jesse.waites@gmail.com
 description: Jesse Waites is a Boston, MA based Ruby on Rails Developer.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/jessewaites" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
 enable_retina: false
 permalink: :title
