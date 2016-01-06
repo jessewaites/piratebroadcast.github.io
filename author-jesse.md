@@ -5,7 +5,7 @@ permalink: author/jesse/
 feature_image: feature-sea
 author_avatar: Jesse
 author_name: Jesse Waites
-title: Jesse Waites
+title: About Jesse Waites
 fav_posts:
   post_1 : ['12 Reasons to quite your job','ten-reasons-to-travel-the-world/', 'Ask yourself, why not? What is the number one reason you wouldn’t. If the reason you get back is fear, you should just do it.']
   post_2 : ['CSS with Superpowers', 'css-with-superpowers/', 'Sass is completely compatible with all versions of CSS. We take this compatibility seriously, so that you can seamlessly use any available CSS libraries.']
@@ -14,7 +14,7 @@ fav_posts:
 
 ---
 
-# Jesse Waites
+# About Jesse Waites
 
 > “If you think math is hard, try web design.” ―Trish Parr
 
@@ -22,9 +22,7 @@ After growing up in the South and serving a short stint in the Air Force, I work
 
 While working in surgery, the iPhone was developed and I took advantage of the opportunity and hired a developer to create a medical terminology dictionary app for me. Released on opening day of the App Store, it sold fairly well and served as a springboard into my second career as a web and software developer after learning web development on my own for years and eventually graduating thoughtbot's Ruby on Rails intensive course.
 
-I wrote a book about the process of mobile app development, which is currently on sale on the iBookstore and the Amazon Kindle, and have given talks about the App Development process at M.I.T. and General Assembly. Below you will find the "Book Trailer" for the book.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/81Y5hSkbRiQ" frameborder="0" allowfullscreen></iframe>
+I wrote a book about the process of mobile app development, which is currently on sale on the iBookstore and the Amazon Kindle, and have given talks about the App Development process at M.I.T. and General Assembly.
 
 I have since created multiple mobile and web applications for myself and clients such as social networks, e-commerce applications that sell goods and services online, and scheduling applications that allow consultants to charge fees to book an appointment. In addition to my primary web development framework, Ruby on Rails, I also have extensive experience with Wordpress, Drupal, and Squarespace.
 
