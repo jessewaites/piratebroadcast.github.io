@@ -1,9 +1,9 @@
 ---
 layout: author
 title: Author
-permalink: author/michelle/
+permalink: author/jesse/
 feature_image: feature-sea
-author_avatar: michelle
+author_avatar: Jesse
 author_name: Jesse Waites
 title: Jesse Waites
 fav_posts:

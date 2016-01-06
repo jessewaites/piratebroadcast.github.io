@@ -2,9 +2,9 @@
 layout: post-sidebar
 date: 2015-02-10
 categories: motivation storytime
-author_name : Fred Smith
-author_url : /author/fred
-author_avatar: fred
+author_name : Jesse Waites
+author_url : /author/jesse
+author_avatar: jesse
 show_avatar : true
 read_time : 09
 feature_image: feature-water
@@ -27,4 +27,3 @@ Vestibulum semper dui risus, ut vestibulum ex vestibulum in. Duis vel placerat a
 Quisque sagittis arcu quis mauris consectetur tempus. Etiam id erat pretium, rutrum quam ut, commodo lacus. Proin vitae condimentum odio. Morbi facilisis ligula vitae auctor pretium. Fusce lorem lectus, ultrices sit amet neque ut, condimentum bibendum libero. Mauris cursus neque eros, vel consectetur quam mollis nec. Mauris quis est nec elit euismod condimentum. Vestibulum imperdiet suscipit elit et scelerisque. Vivamus mollis sagittis ante.
 
 Aenean commodo, massa quis mattis lacinia, mi ipsum vestibulum nisi, ut tincidunt massa erat quis neque. Aliquam volutpat eu ligula a tincidunt. Suspendisse imperdiet, lacus vitae pretium imperdiet, nisi elit efficitur felis, id ullamcorper nulla dolor ac massa. In rutrum eget nisi et maximus. Nam consequat libero et feugiat lobortis. Donec sit amet felis faucibus, egestas enim id, condimentum justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed aliquam, nisl vel volutpat semper, mi lacus tempus ante, hendrerit consequat massa lorem at lacus. Phasellus vel felis scelerisque, consectetur arcu ac, euismod massa.
-

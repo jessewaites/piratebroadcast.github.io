@@ -2,9 +2,9 @@
 layout: post-sidebar
 date: 2015-02-10
 categories: motivation
-author_name : Fred Smith
-author_url : /author/fred
-author_avatar: fred
+author_name : Jesse Waites
+author_url : /author/jesse
+author_avatar: jesse
 show_avatar : true
 read_time : 22
 feature_image: feature-water
@@ -23,4 +23,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in finibus di
 Vestibulum semper dui risus, ut vestibulum ex vestibulum in. Duis vel placerat augue. Morbi dapibus turpis nisi, eleifend hendrerit ligula congue non. Vestibulum felis velit, vulputate at metus ac, ullamcorper pharetra sapien. Praesent eget nibh scelerisque, scelerisque velit semper, ultrices velit. Nunc luctus quam ut condimentum sodales. Quisque eget eleifend nibh. Donec sit amet metus massa.
 
 Quisque sagittis arcu quis mauris consectetur tempus. Etiam id erat pretium, rutrum quam ut, commodo lacus. Proin vitae condimentum odio. Morbi facilisis ligula vitae auctor pretium. Fusce lorem lectus, ultrices sit amet neque ut, condimentum bibendum libero. Mauris cursus neque eros, vel consectetur quam mollis nec. Mauris quis est nec elit euismod condimentum. Vestibulum imperdiet suscipit elit et scelerisque. Vivamus mollis sagittis ante.
-
