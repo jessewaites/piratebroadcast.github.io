@@ -121,21 +121,21 @@ audio.play();
             <h1>Add an Apple Touch Icon to a Ruby App</h1>
 
             <p>This website runs on the Jekyll framework, which is a Ruby based blogging platform invented by Tom Preston-Werner, the founder of GitHub.
-After getting this website styled and configured the way I wanted to, I wanted to add some personal touches to it, so I added an Easter Egg and decided to add my Avatar as an apple touch icon, so if someone were to add it to their homescreen (which would never, ever happen), it would have a corresponding app icon. Pretty fancy.</p>
+After getting this website styled and configured the way I wanted to, I wanted to add some personal touches to it, so I added an Easter Egg and decided to add my Avatar as an apple touch icon, so if someone were to add it to their homescreen (which would never, ever happen), it would have a corresponding app icon. Pretty fancy, like so:</p>
+
+<p><img src="http://i.imgur.com/Rru5zJX.png" alt="Icon in Action" /></p>
 
 <p>Ok, lets do this.</p>
 
-<p>Create a square 180 x 180 pixel graphic in .png format using your design, logo, whatever. Next, name the image “apple-touch-icon.png” and save it. You can use the Preview program in the Mac to easily do this.</p>
+<p>Create a square 180 x 180 pixel image graphic in .png format using your design, logo, whatever. Next, name the image “apple-touch-icon.png” and save it. You can use the Preview program in the Mac to easily do this.</p>
 
 <p>Now upload the image to your Ruby or Rails app - You can do this by opening 2 different Finder windows locally and draggin’ it on over from your Desktop or wherever to your images folder. In this example, since this is a Jekyll app, I moved it to the Img folder.</p>
 
 <p>Lastly, add this HTML to the header of your site before the closing &lt;/head&gt; tag, without the outer, external quote marks:</p>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">"<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">href=</span><span class="s">"images/apple-touch-icon.png"</span><span class="nt">&gt;</span>"</code></pre></figure>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">"<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">href=</span><span class="s">"img/apple-touch-icon.png"</span><span class="nt">&gt;</span>"</code></pre></figure>
 
-<p>If you add this page to your homescreen on your mobile device, you will see it in action for yourself.</p>
-
-<p>This is the same for any site in most frameworks, but I thought maybe a google search would send someone this way and they can see that it is dead easy to do in any Ruby based app.</p>
+<p>I’ve noticed a lot of major sites aren’t doing this but details matter, so take a few minutes and give it a shot.</p>
 
 <p>Cheers.</p>
 
