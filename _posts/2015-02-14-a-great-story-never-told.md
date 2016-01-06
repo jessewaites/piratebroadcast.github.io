@@ -2,7 +2,7 @@
 layout: post
 date: 2015-02-10
 categories: storytime life journey
-author_name : Jesse Waites
+author_name : Jesse
 author_url : /author/jesse
 author_avatar: jesse
 show_avatar : true

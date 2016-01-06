@@ -3,7 +3,7 @@ layout: post
 title:  "Introducing Boston Ipsum"
 date: 2016-01-06 09:50:28
 categories: coding
-author_name : Jesse Waites
+author_name : Jesse
 author_url : /author/jesse
 author_avatar: jesse
 show_avatar : true

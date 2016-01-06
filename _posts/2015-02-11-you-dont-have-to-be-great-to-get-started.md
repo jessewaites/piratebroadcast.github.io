@@ -2,7 +2,7 @@
 layout: post-sidebar
 date: 2015-02-10
 categories: motivation leadership journey
-author_name : Jesse Waites
+author_name : Jesse
 author_url : /author/jesse
 author_avatar: jesse
 show_avatar : true

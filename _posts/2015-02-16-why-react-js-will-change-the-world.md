@@ -3,7 +3,7 @@ layout: post-sidebar
 date: 2015-02-10
 title: "Why React JS Will Change the World"
 categories: coding js
-author_name : Jesse Waites
+author_name : Jesse
 author_url : /author/jesse
 author_avatar: jesse
 show_avatar : true

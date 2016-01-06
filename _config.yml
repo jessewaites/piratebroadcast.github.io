@@ -14,11 +14,13 @@ nav_list:
   # Contact : ['Contact', '/contact', 'fa-plane']
   Author : ['About', '/author/jesse', 'fa-user']
   Blank : ['', '/']
+  Github : ['GitHub', 'https://www.github.com/piratebroadcast', 'fa-github']
   LinkedIn : ['LinkedIn', 'https://www.linkedin.com/in/jessewaites', 'fa-linkedin']
   Twitter : ['Twitter', 'https://www.twitter.com/jessewaites', 'fa-twitter']
   Facebook : ['Facebook', 'http://www.facebook.com/railsdevelopers', 'fa-facebook']
   Email : ['Email', 'mailto: jesse.waites@gmail.com', 'fa-rocket']
   Blank2 : ['', '/']
+
 
   Amazon : ['My Book on Amazon', 'http://www.amazon.com/Secrets-Of-My-App-Success-ebook/dp/B004Q9U18C', 'fa-book']
   Apple : ['My Book on iTunes', 'https://itunes.apple.com/us/book/the-secrets-of-my-app-success/id424978524?mt=11', 'fa-apple']
