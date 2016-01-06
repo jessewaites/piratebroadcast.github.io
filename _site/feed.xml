@@ -5,9 +5,28 @@
     <description>Jesse Waites is a Boston, MA based Ruby on Rails Developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Jan 2016 12:18:49 -0500</pubDate>
-    <lastBuildDate>Wed, 06 Jan 2016 12:18:49 -0500</lastBuildDate>
+    <pubDate>Wed, 06 Jan 2016 13:04:11 -0500</pubDate>
+    <lastBuildDate>Wed, 06 Jan 2016 13:04:11 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Super Mario Easter Egg</title>
+        <description>&lt;p&gt;This website holds a secret…&lt;/p&gt;
+
+&lt;p&gt;An Easter egg is an intentional inside joke, hidden message, or feature in an interactive work such as a computer program, video game or DVD menu screen. The name has been said to evoke the idea of a traditional Easter egg hunt.&lt;/p&gt;
+
+&lt;p&gt;I decided to add an easter egg to this website.&lt;/p&gt;
+
+&lt;p&gt;The secret is - If you load any page and type “1up”, you may hear a very familiar sound.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Jan 2016 04:50:28 -0500</pubDate>
+        <link>/super-mario-easter-egg</link>
+        <guid isPermaLink="true">/super-mario-easter-egg</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Introducing Boston Ipsum</title>
@@ -312,33 +331,6 @@
         <category>storytime</category>
         
         <category>life</category>
-        
-        <category>journey</category>
-        
-      </item>
-    
-      <item>
-        <title>You Dont Have To Be Great To Get Started</title>
-        <description>&lt;p&gt;It was a cold December morning, as I sat out on my porch I decided today was the day.&lt;/p&gt;
-
-&lt;p&gt;Dreamcatcher cold-pressed American Apparel, post-ironic Carles Shoreditch craft beer Banksy PBR retro distillery before they sold out freegan asymmetrical kogi. Food truck Schlitz direct trade, deep v ethical yr sriracha mumblecore freegan. Tattooed occupy pork belly, letterpress typewriter cold-pressed viral swag farm-to-table flexitarian. +1 hashtag put a bird on it authentic. 3 wolf moon locavore Vice, normcore actually meggings leggings cornhole brunch. Four loko vinyl trust fund, Intelligentsia wolf Bushwick lo-fi sriracha. Deep v vegan forage selvage.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/post-assets/view.jpg&quot; alt=&quot;view&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nihil eum cum quas! Consectetur aliquam molestias quos voluptatum recusandae accusantium eaque sed architecto esse. Ut obcaecati, porro numquam sed. Odio.&lt;/p&gt;
-
-&lt;p&gt;Dreamcatcher cold-pressed American Apparel, post-ironic Carles Shoreditch craft beer Banksy PBR retro distillery before they sold out freegan asymmetrical kogi. Food truck Schlitz direct trade, deep v ethical yr sriracha mumblecore freegan. Tattooed occupy pork belly, letterpress typewriter cold-pressed viral swag farm-to-table flexitarian. +1 hashtag put a bird on it authentic. 3 wolf moon locavore Vice, normcore actually meggings leggings cornhole brunch. Four loko vinyl trust fund, Intelligentsia wolf Bushwick lo-fi sriracha. Deep v vegan forage selvage.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quam provident accusamus vero autem culpa illum quo enim maiores eius error, sapiente inventore cum hic earum. Libero porro quisquam harum.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 10 Feb 2015 00:00:00 -0500</pubDate>
-        <link>/you-dont-have-to-be-great-to-get-started</link>
-        <guid isPermaLink="true">/you-dont-have-to-be-great-to-get-started</guid>
-        
-        
-        <category>motivation</category>
-        
-        <category>leadership</category>
         
         <category>journey</category>
         
