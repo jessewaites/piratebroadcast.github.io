@@ -5,9 +5,76 @@
     <description>Jesse Waites is a Boston, MA based Ruby on Rails Developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Jan 2016 00:25:47 -0500</pubDate>
-    <lastBuildDate>Wed, 06 Jan 2016 00:25:47 -0500</lastBuildDate>
+    <pubDate>Wed, 06 Jan 2016 10:19:30 -0500</pubDate>
+    <lastBuildDate>Wed, 06 Jan 2016 10:19:30 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Introducing Boston Ipsum</title>
+        <description>&lt;p&gt;Introducing the Boston Ipsum Ruby Gem.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;What is a RubyGem?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A Rubygem is a bit of code that a ruby developer wrote, made available in a portable format and posted to a public server, so that bit of code can be used on other machines and by other developers in different web projects. If you were to think of web development as building digital things with digital Legos (And you might not be too far off, frankly), you could imagine a Rubygem as being a specific Lego that performs a specific function. Some Rubygems allow you to send email, upload images, or even display a profile picture based on your email address. This Rubygem that I created displays Boston themed “Lorem Ipsum” text.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;What is Lorem Ipsum?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Lorem Ipsum is “filler text” used by print and web developers to take space up on a page with text so that he or she can get an idea of what the page will look like once the marketing text gets finished by the marketing department. For example, on the home page at http://JesseWaites.comyou can see that I have a small bio section on the left side. If I were still working on the bio, I could add some filler text there to take up 2 or 3 sentences and get a good idea of how much space it would take up on the page.&lt;/p&gt;
+
+&lt;p&gt;I wanted to experiment with making a Ruby gem, as I had never made one before, so I created a rather simple Lorem Ipsum generator that returns Boston area themed text.&lt;/p&gt;
+
+&lt;p&gt;Rubygems link: https://rubygems.org/gems/boston_ipsum/versions/1.5.5&lt;/p&gt;
+
+&lt;p&gt;You simply install the gem, bundle, and call:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;%= BostonIpsum.speak(integer) %&amp;gt;  &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;in any view. The integer number allows you to return a randomized yet specific number of words. To add words, make a pull request.&lt;/p&gt;
+
+&lt;p&gt;For example,&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;%= BostonIpsum.speak(2) %&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;could output “Patriots Somerville”, and&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;%= BostonIpsum.speak(4) %&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;could output “Sox Eastie Southie MBTA”&lt;/p&gt;
+
+&lt;p&gt;Installation:&lt;/p&gt;
+
+&lt;p&gt;Add this line to your application’s Gemfile:&lt;/p&gt;
+
+&lt;p&gt;gem ‘boston_ipsum’&lt;/p&gt;
+
+&lt;p&gt;And then execute:&lt;/p&gt;
+
+&lt;p&gt;$ bundle&lt;/p&gt;
+
+&lt;p&gt;Or install it yourself as:&lt;/p&gt;
+
+&lt;p&gt;$ gem install boston_ipsum&lt;/p&gt;
+
+&lt;p&gt;Usage:&lt;/p&gt;
+
+&lt;p&gt;Simply add:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;%= BostonIpsum.speak(5) %&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;into any view after requiring and bundling the gem into your ruby project.&lt;/p&gt;
+
+&lt;p&gt;To add Boston themed words to the list, simply add them and make a pull request on Github.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/piratebroadcast/BostonIpsum&quot;&gt;Here’s the Github link.&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Jan 2016 04:50:28 -0500</pubDate>
+        <link>/boston-ipsum</link>
+        <guid isPermaLink="true">/boston-ipsum</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Supercharge Your Workflow With Grunt</title>
