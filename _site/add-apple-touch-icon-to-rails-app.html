@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jesse Waites | A Great Story Never Told</title>
-    <meta name="description" content="I’ve never told this to anyone. Sit yourself down and strap yourself in, you will experience some turbulence before you reach a steady altitude.">
+    <title>Jesse Waites | Add an Apple Touch Icon to a Ruby App</title>
+    <meta name="description" content="This website runs on the Jekyll framework, which is a Ruby based blogging platform invented by Tom Preston-Werner, the founder of GitHub.After getting this w...">
 
     <link rel="stylesheet" href="/css/main.css">
 
-    <link rel="canonical" href="/a-great-story-never-told">
+    <link rel="canonical" href="/add-apple-touch-icon-to-rails-app">
     <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="/feed.xml" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <script>
@@ -38,7 +38,7 @@ audio.play();
 
   <body class="">
 
-    <header class="hero-image" style="background-image: url(/img/feature-wolf.jpg);">
+    <header class="hero-image" style="background-image: url(/img/icons.jpg);">
     <span class="menu-trigger animated fadeInDown">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -115,22 +115,29 @@ audio.play();
     <div class="row">
         <div class="col-xs-12 single-content">
             <p class="meta">
-                <a href="/author/jesse">Jesse</a> in <a href='/category/storytime'>Storytime</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 12 minutes
+                <a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 3 minutes
             </p>
 
-            <h1>A Great Story Never Told</h1>
+            <h1>Add an Apple Touch Icon to a Ruby App</h1>
 
-            <p>I’ve never told this to anyone. Sit yourself down and strap yourself in, you will experience some turbulence before you reach a steady altitude.</p>
+            <p>This website runs on the Jekyll framework, which is a Ruby based blogging platform invented by Tom Preston-Werner, the founder of GitHub.
+After getting this website styled and configured the way I wanted to, I wanted to add some personal touches to it, so I added an Easter Egg and decided to add my Avatar as an apple touch icon, so if someone were to add it to their homescreen (which would never, ever happen), it would have a corresponding app icon. Pretty fancy.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nihil eum cum quas! Consectetur aliquam molestias quos voluptatum recusandae accusantium eaque sed architecto esse. Ut obcaecati, porro numquam sed. Odio.</p>
+<p>Ok, lets do this.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quam provident accusamus vero autem culpa illum quo enim maiores eius error, sapiente inventore cum hic earum. Libero porro quisquam harum.</p>
+<p>Create a square 180 x 180 pixel graphic in .png format using your design, logo, whatever. Next, name the image “apple-touch-icon.png” and save it. You can use the Preview program in the Mac to easily do this.</p>
 
-<p><img src="/img/post-assets/iceland.jpg" alt="iceland" /></p>
+<p>Now upload the image to your Ruby or Rails app - You can do this by opening 2 different Finder windows locally and draggin’ it on over from your Desktop or wherever to your images folder. In this example, since this is a Jekyll app, I moved it to the Img folder.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nihil eum cum quas! Consectetur aliquam molestias quos voluptatum recusandae accusantium eaque sed architecto esse. Ut obcaecati, porro numquam sed. Odio.</p>
+<p>Lastly, add this HTML to the header of your site before the closing &lt;/head&gt; tag, without the outer, external quote marks:</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quam provident accusamus vero autem culpa illum quo enim maiores eius error, sapiente inventore cum hic earum. Libero porro quisquam harum.</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html">"<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">href=</span><span class="s">"images/apple-touch-icon.png"</span><span class="nt">&gt;</span>"</code></pre></figure>
+
+<p>If you add this page to your homescreen on your mobile device, you will see it in action for yourself.</p>
+
+<p>This is the same for any site in most frameworks, but I thought maybe a google search would send someone this way and they can see that it is dead easy to do in any Ruby based app.</p>
+
+<p>Cheers.</p>
 
 
         </div><!-- main-content/col -->
@@ -146,8 +153,8 @@ audio.play();
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="category-list">
-                <p>Published <span>Feb 10, 2015</span></p>
-                <p><a href="/author/jesse">Jesse</a> in <a href='/category/storytime'>Storytime</a></p>
+                <p>Published <span>Jan 6, 2016</span></p>
+                <p><a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a></p>
 
                 <div class="other-catergories">
                     <h3>Also found in</h3>
@@ -155,17 +162,7 @@ audio.play();
                     <ul>
                         
                         <li>
-                            <a href='/category/storytime'>Storytime</a>
-                            ,
-                        </li>
-                        
-                        <li>
-                            <a href='/category/storytime'>Life</a>
-                            ,
-                        </li>
-                        
-                        <li>
-                            <a href='/category/storytime'>Journey</a>
+                            <a href='/category/coding'>Coding</a>
                             
                         </li>
                         
@@ -178,76 +175,16 @@ audio.play();
             <div class="social">
                 <p>Share this article</a>
                 <div class="social-links">
-                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="/a-great-story-never-told"><i class="fa fa-twitter"></i></a>
+                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="/add-apple-touch-icon-to-rails-app"><i class="fa fa-twitter"></i></a>
 
-                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="/a-great-story-never-told"><i class="fa fa-facebook-official"></i></a>
-                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=/a-great-story-never-told"><i class="fa fa-envelope"></i></a>
+                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="/add-apple-touch-icon-to-rails-app"><i class="fa fa-facebook-official"></i></a>
+                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=/add-apple-touch-icon-to-rails-app"><i class="fa fa-envelope"></i></a>
                 </div>
             </div>
         </div>
     </div><!-- end row -->
 </div>
 
-    
-        <div class="row read-another-section">
-    
-        
-        <a href="/add-apple-touch-icon-to-rails-app"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
-            <div class="overlay"></div>
-            <img src='/img/recommend-wolf.jpg'>
-            <h3 class="read-another">Add an Apple Touch Icon to a Ruby App</h3>
-        </div></a>
-        
-    
-        
-        <a href="/super-mario-easter-egg"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
-            <div class="overlay"></div>
-            <img src='/img/recommend-wolf.jpg'>
-            <h3 class="read-another">Super Mario Easter Egg</h3>
-        </div></a>
-        
-    
-        
-        <a href="/boston-ipsum"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
-            <div class="overlay"></div>
-            <img src='/img/recommend-wolf.jpg'>
-            <h3 class="read-another">Introducing Boston Ipsum</h3>
-        </div></a>
-        
-    
-        
-        <a href="/supercharge-your-workflow-with-grunt"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
-            <div class="overlay"></div>
-            <img src='/img/recommend-laptop.jpg'>
-            <h3 class="read-another">Supercharge Your Workflow With Grunt</h3>
-        </div></a>
-        
-    
-        
-        <a href="/css-with-superpowers"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
-            <div class="overlay"></div>
-            <img src='/img/recommend-fire.jpg'>
-            <h3 class="read-another">CSS with Superpowers</h3>
-        </div></a>
-        
-    
-        
-        <a href="/ten-reasons-to-travel-the-world"><div class="col-sm-6 col-md-2 no-gutter read-another-container">
-            <div class="overlay"></div>
-            <img src='/img/recommend-wolf.jpg'>
-            <h3 class="read-another">10 Reasons to travel the world</h3>
-        </div></a>
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-</div>
     
 </footer>
 

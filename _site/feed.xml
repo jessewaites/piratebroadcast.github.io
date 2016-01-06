@@ -5,9 +5,39 @@
     <description>Jesse Waites is a Boston, MA based Ruby on Rails Developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Jan 2016 13:31:50 -0500</pubDate>
-    <lastBuildDate>Wed, 06 Jan 2016 13:31:50 -0500</lastBuildDate>
+    <pubDate>Wed, 06 Jan 2016 14:12:31 -0500</pubDate>
+    <lastBuildDate>Wed, 06 Jan 2016 14:12:31 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Add an Apple Touch Icon to a Ruby App</title>
+        <description>&lt;p&gt;This website runs on the Jekyll framework, which is a Ruby based blogging platform invented by Tom Preston-Werner, the founder of GitHub.
+After getting this website styled and configured the way I wanted to, I wanted to add some personal touches to it, so I added an Easter Egg and decided to add my Avatar as an apple touch icon, so if someone were to add it to their homescreen (which would never, ever happen), it would have a corresponding app icon. Pretty fancy.&lt;/p&gt;
+
+&lt;p&gt;Ok, lets do this.&lt;/p&gt;
+
+&lt;p&gt;Create a square 180 x 180 pixel graphic in .png format using your design, logo, whatever. Next, name the image “apple-touch-icon.png” and save it. You can use the Preview program in the Mac to easily do this.&lt;/p&gt;
+
+&lt;p&gt;Now upload the image to your Ruby or Rails app - You can do this by opening 2 different Finder windows locally and draggin’ it on over from your Desktop or wherever to your images folder. In this example, since this is a Jekyll app, I moved it to the Img folder.&lt;/p&gt;
+
+&lt;p&gt;Lastly, add this HTML to the header of your site before the closing &amp;lt;/head&amp;gt; tag, without the outer, external quote marks:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&quot;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple-touch-icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;images/apple-touch-icon.png&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;If you add this page to your homescreen on your mobile device, you will see it in action for yourself.&lt;/p&gt;
+
+&lt;p&gt;This is the same for any site in most frameworks, but I thought maybe a google search would send someone this way and they can see that it is dead easy to do in any Ruby based app.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Jan 2016 12:50:28 -0500</pubDate>
+        <link>/add-apple-touch-icon-to-rails-app</link>
+        <guid isPermaLink="true">/add-apple-touch-icon-to-rails-app</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Super Mario Easter Egg</title>
@@ -306,33 +336,6 @@
         <category>motivation</category>
         
         <category>storytime</category>
-        
-      </item>
-    
-      <item>
-        <title>A Great Story Never Told</title>
-        <description>&lt;p&gt;I’ve never told this to anyone. Sit yourself down and strap yourself in, you will experience some turbulence before you reach a steady altitude.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nihil eum cum quas! Consectetur aliquam molestias quos voluptatum recusandae accusantium eaque sed architecto esse. Ut obcaecati, porro numquam sed. Odio.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quam provident accusamus vero autem culpa illum quo enim maiores eius error, sapiente inventore cum hic earum. Libero porro quisquam harum.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/post-assets/iceland.jpg&quot; alt=&quot;iceland&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam nihil eum cum quas! Consectetur aliquam molestias quos voluptatum recusandae accusantium eaque sed architecto esse. Ut obcaecati, porro numquam sed. Odio.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quam provident accusamus vero autem culpa illum quo enim maiores eius error, sapiente inventore cum hic earum. Libero porro quisquam harum.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 10 Feb 2015 00:00:00 -0500</pubDate>
-        <link>/a-great-story-never-told</link>
-        <guid isPermaLink="true">/a-great-story-never-told</guid>
-        
-        
-        <category>storytime</category>
-        
-        <category>life</category>
-        
-        <category>journey</category>
         
       </item>
     
