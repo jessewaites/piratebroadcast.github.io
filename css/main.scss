@@ -25,6 +25,15 @@
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 
+#jPanelMenu-menu li a {
+    color: #DADADA;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border-bottom: 0 transparent;
+    font-size: 12px;
+    font-size: 1.5rem;
+}
+
 #avatar {
     /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
     background-image: url('https://pbs.twimg.com/profile_images/642098997876822016/JgRYkPsf.png');
