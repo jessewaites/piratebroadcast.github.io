@@ -8239,9 +8239,14 @@ a {
   display: block;
   height: 40px;
   width: 40px;
-  background: #B90101;
+  background: #9d2425;
   padding-top: 8px;
   cursor: pointer; }
+
+.btn-primary {
+  background: #2e2b49;
+  color: #fff;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
 
 #avatar {
   /* This image is 687 wide by 1024 tall, similar to your aspect ratio */
