@@ -7028,10 +7028,10 @@ ol {
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(1px); }
+    -webkit-transform: translateY(20px); }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(100px); } }
+    -webkit-transform: translateY(0); } }
 @-moz-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -8262,6 +8262,7 @@ a {
   /* make a square container */
   width: 150px;
   height: 150px;
+  border-bottom: 50px;
   /* fill the container, preserving aspect ratio, and cropping to fit */
   background-size: cover;
   /* center the image vertically and horizontally */

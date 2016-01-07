@@ -10,20 +10,23 @@
 
     <div class="site-info">
         <div class="primary-info">
-          <div class="animated fadeInUp">
-            <div id="avatar"></div>
-          </div>
+          <div>
+            <div class="animated fadeInUp">
+              <div id="avatar">
+              </div>
+            </div>
+
             <h1>{{ page.title }}</h1>
             <p>{{ page.desc }}</p>
-
+          </div>
         </div>
 
-        {% if page.include_cta_btn == true %}
+        <!-- {% if page.include_cta_btn == true %}
         <div class="secondary-info">
             <p>
                 <a class="btn btn-primary" href="{{ page.cta_link | prepend: site.baseurl }}"><i class="fa {{ page.cta_icon }}"></i>{{page.cta_text}}</a>
             </p>
         </div>
-        {% endif %}
+        {% endif %} -->
     </div>
 </section><!-- end sidebar -->
