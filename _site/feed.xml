@@ -5,9 +5,71 @@
     <description>Jesse Waites is a Boston, MA based Ruby on Rails Developer.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Jan 2016 22:20:52 -0500</pubDate>
-    <lastBuildDate>Wed, 06 Jan 2016 22:20:52 -0500</lastBuildDate>
+    <pubDate>Thu, 07 Jan 2016 14:18:51 -0500</pubDate>
+    <lastBuildDate>Thu, 07 Jan 2016 14:18:51 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>iOS Swift App Demo</title>
+        <description>&lt;p&gt;I recently put a swift demo app together as a way to show interest and at least passing familiarity with Swift / Xcode 7 / iOS Development. (Other than the fact that I wrote a book about it ;) This is simply a random fact display app that shows rather benign little facts about me such as the fact that I enjoy eating spaghetti and like to go hiking.&lt;/p&gt;
+
+&lt;p&gt;Here are a few things that crossed my mind when building this app.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Really neat to see the MVC implementation on the handset (iPhone) I’ve used for years.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There is no method on an array in Swift that will return a random element of the array, such as array.sample in Ruby. That seems kind of ridiculous. Apple has recently open sourced Swift and one hopes an implementation of that will soon be possible.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Building for iOS in Xcode is a hell of a lot of fun. Much like Rails, it seems everything has its place in an Xcode project, and it is obvious that the better one is with the tooling (in this case, Xcode) the more productive and capable the developer will be.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adding an app icon for the homepage was a breeze.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Adding a launch screen was a total pain and I was not successful. This seems to be due to a change in Xcode 7 and iOS 9. Didn’t want to burn more time attempting to resolve the issue so I moved on. I used Photoshop and created my image, placed it in what I thought was the proper location, but it simply didn’t work. Whatever.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Implementing a button that launched the in-app Safari browser was a breeze.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There is no mail client in the simulator so hardcoding an “email me” button into the app may work in the actual app on a real iPhone but will throw an error in the Xcode Simulator. I had this in my build but removed it (That code is still in the controller) because it was also causing a lot of drama in my UI layout. Specifically, my buttons were overlapping. See next bullet point.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I found layout and autolayout extremely difficult. I can see that I will need to put much more time into that to master it.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I’m very much a ‘looks matter’ type of developer and look forward to experimenting with cocoapods and using some of the preexisting UI libraries to make my stuff look really great.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;If I were building an app for, lets say a restaurant, it would be wise to build the menu from an external JSON endpoint, rather than hardcoding everything like meals and prices into the app. This way one could update the menu externally without having to recode the app and go back through the app store submission and review process. This JSON server would probably be great for something like that. https://github.com/typicode/json-server&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Based on my research, SwiftyJSON seems to be the ideal tool to process the JSON on the client / iOS device side: https://github.com/SwiftyJSON/SwiftyJSON&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Xcode projects don’t have readme.md files, so I had to manually create one by creating a folder, moving the Xcode project into it, cd-ing into the folder and using the command touch readme.md to create it.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/piratebroadcast/ios_swift_demo_app&quot;&gt;Here’s the Github link.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Next Steps: Build a Rails API app, like a simple little TODO app or something, (Make sure I scope the API routes like V1 or whatever) and then create an iOS front-end for it that reads things from the list and allows to post new TODOs from the App to the database. Would also be fun to experiment with Oauth and iOS, like signing in with Facebook, passing the token back to the Rails app, and authorizing or not authorizing on the iOS device.&lt;/p&gt;
+
+&lt;p&gt;Actually scratch that - Next step is to build a simple app that reads JSON from an endpoint somewhere (like government data or something, lots of options there) and displays it on the screen. This will give me another shot to work on effective UI and not get overwhelmed by attempting to do too many new things at once.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Jan 2016 04:50:28 -0500</pubDate>
+        <link>/swift-development-demo</link>
+        <guid isPermaLink="true">/swift-development-demo</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Add an Apple Touch Icon to a Ruby App</title>
@@ -307,35 +369,6 @@ After getting this website styled and configured the way I wanted to, I wanted t
         
         
         <category>motivation</category>
-        
-      </item>
-    
-      <item>
-        <title>Stop Thinking And Start Doing</title>
-        <description>&lt;p&gt;Get out of your head. Every good decision starts with a momment of action. What are you going to do today!&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in finibus diam, sit amet sollicitudin dui. Praesent erat dui, mattis sed elementum non, molestie et ipsum. Quisque fringilla vitae dolor a lacinia. Integer aliquam arcu non tortor egestas volutpat. Proin vitae pretium purus, a rhoncus sapien. Nam posuere rutrum lorem, eu sagittis ante scelerisque pretium. Morbi fermentum mauris a elit lacinia venenatis. Nunc ut iaculis nunc, sed faucibus nulla. Nunc at massa ut mi varius venenatis et id nibh. Sed molestie nibh sed risus mattis elementum. Ut iaculis, dolor sed consequat efficitur, nisi risus scelerisque dui, at bibendum velit nisi quis risus. Nunc gravida leo ut arcu tempus, et iaculis ex ullamcorper. Maecenas eget dolor diam. Suspendisse dapibus pulvinar tempus.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/post-assets/walk.jpg&quot; alt=&quot;walk&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/post-assets/water.jpg&quot; alt=&quot;water&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/post-assets/woods.jpg&quot; alt=&quot;woods&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Vestibulum semper dui risus, ut vestibulum ex vestibulum in. Duis vel placerat augue. Morbi dapibus turpis nisi, eleifend hendrerit ligula congue non. Vestibulum felis velit, vulputate at metus ac, ullamcorper pharetra sapien. Praesent eget nibh scelerisque, scelerisque velit semper, ultrices velit. Nunc luctus quam ut condimentum sodales. Quisque eget eleifend nibh. Donec sit amet metus massa.&lt;/p&gt;
-
-&lt;p&gt;Quisque sagittis arcu quis mauris consectetur tempus. Etiam id erat pretium, rutrum quam ut, commodo lacus. Proin vitae condimentum odio. Morbi facilisis ligula vitae auctor pretium. Fusce lorem lectus, ultrices sit amet neque ut, condimentum bibendum libero. Mauris cursus neque eros, vel consectetur quam mollis nec. Mauris quis est nec elit euismod condimentum. Vestibulum imperdiet suscipit elit et scelerisque. Vivamus mollis sagittis ante.&lt;/p&gt;
-
-&lt;p&gt;Aenean commodo, massa quis mattis lacinia, mi ipsum vestibulum nisi, ut tincidunt massa erat quis neque. Aliquam volutpat eu ligula a tincidunt. Suspendisse imperdiet, lacus vitae pretium imperdiet, nisi elit efficitur felis, id ullamcorper nulla dolor ac massa. In rutrum eget nisi et maximus. Nam consequat libero et feugiat lobortis. Donec sit amet felis faucibus, egestas enim id, condimentum justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed aliquam, nisl vel volutpat semper, mi lacus tempus ante, hendrerit consequat massa lorem at lacus. Phasellus vel felis scelerisque, consectetur arcu ac, euismod massa.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 10 Feb 2015 00:00:00 -0500</pubDate>
-        <link>/stop-thinking-and-start-doing</link>
-        <guid isPermaLink="true">/stop-thinking-and-start-doing</guid>
-        
-        
-        <category>motivation</category>
-        
-        <category>storytime</category>
         
       </item>
     

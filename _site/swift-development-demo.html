@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jesse Waites | 10 Reasons to travel the world</title>
-    <meta name="description" content="Ask yourself, why not? What is the number one reason you wouldn’t. If the reason you get back is fear, you should just do it.">
+    <title>Jesse Waites | iOS Swift App Demo</title>
+    <meta name="description" content="I recently put a swift demo app together as a way to show interest and at least passing familiarity with Swift / Xcode 7 / iOS Development. (Other than the f...">
 
     <link rel="stylesheet" href="/css/main.css">
 
-    <link rel="canonical" href="/ten-reasons-to-travel-the-world">
+    <link rel="canonical" href="/swift-development-demo">
     <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="/feed.xml" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
@@ -39,7 +39,7 @@ audio.play();
 
   <body class="">
 
-    <header class="hero-image" style="background-image: url(/img/feature-wolf.jpg);">
+    <header class="hero-image" style="background-image: url(/img/xcode.jpg);">
     <span class="menu-trigger animated fadeInDown">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -116,25 +116,61 @@ audio.play();
     <div class="row">
         <div class="col-xs-12 single-content">
             <p class="meta">
-                <a href="/author/jesse">Jesse</a> in <a href='/category/travel'>Travel</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 34 minutes
+                <a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 5 minutes
             </p>
 
-            <h1>10 Reasons to travel the world</h1>
+            <h1>iOS Swift App Demo</h1>
 
-            <p>Ask yourself, why not? What is the number one reason you wouldn’t. If the reason you get back is fear, you should just do it.</p>
+            <p>I recently put a swift demo app together as a way to show interest and at least passing familiarity with Swift / Xcode 7 / iOS Development. (Other than the fact that I wrote a book about it ;) This is simply a random fact display app that shows rather benign little facts about me such as the fact that I enjoy eating spaghetti and like to go hiking.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloribus, culpa, et suscipit praesentium incidunt, libero officiis ipsum fugiat odit aperiam commodi unde dignissimos veritatis accusamus molestias iste magni nobis?</p>
+<p>Here are a few things that crossed my mind when building this app.</p>
 
-<p><img src="/img/post-assets/fire.jpg" alt="Fire image" /></p>
+<ul>
+  <li>
+    <p>Really neat to see the MVC implementation on the handset (iPhone) I’ve used for years.</p>
+  </li>
+  <li>
+    <p>There is no method on an array in Swift that will return a random element of the array, such as array.sample in Ruby. That seems kind of ridiculous. Apple has recently open sourced Swift and one hopes an implementation of that will soon be possible.</p>
+  </li>
+  <li>
+    <p>Building for iOS in Xcode is a hell of a lot of fun. Much like Rails, it seems everything has its place in an Xcode project, and it is obvious that the better one is with the tooling (in this case, Xcode) the more productive and capable the developer will be.</p>
+  </li>
+  <li>
+    <p>Adding an app icon for the homepage was a breeze.</p>
+  </li>
+  <li>
+    <p>Adding a launch screen was a total pain and I was not successful. This seems to be due to a change in Xcode 7 and iOS 9. Didn’t want to burn more time attempting to resolve the issue so I moved on. I used Photoshop and created my image, placed it in what I thought was the proper location, but it simply didn’t work. Whatever.</p>
+  </li>
+  <li>
+    <p>Implementing a button that launched the in-app Safari browser was a breeze.</p>
+  </li>
+  <li>
+    <p>There is no mail client in the simulator so hardcoding an “email me” button into the app may work in the actual app on a real iPhone but will throw an error in the Xcode Simulator. I had this in my build but removed it (That code is still in the controller) because it was also causing a lot of drama in my UI layout. Specifically, my buttons were overlapping. See next bullet point.</p>
+  </li>
+  <li>
+    <p>I found layout and autolayout extremely difficult. I can see that I will need to put much more time into that to master it.</p>
+  </li>
+  <li>
+    <p>I’m very much a ‘looks matter’ type of developer and look forward to experimenting with cocoapods and using some of the preexisting UI libraries to make my stuff look really great.</p>
+  </li>
+  <li>
+    <p>If I were building an app for, lets say a restaurant, it would be wise to build the menu from an external JSON endpoint, rather than hardcoding everything like meals and prices into the app. This way one could update the menu externally without having to recode the app and go back through the app store submission and review process. This JSON server would probably be great for something like that. https://github.com/typicode/json-server</p>
+  </li>
+  <li>
+    <p>Based on my research, SwiftyJSON seems to be the ideal tool to process the JSON on the client / iOS device side: https://github.com/SwiftyJSON/SwiftyJSON</p>
+  </li>
+  <li>
+    <p>Xcode projects don’t have readme.md files, so I had to manually create one by creating a folder, moving the Xcode project into it, cd-ing into the folder and using the command touch readme.md to create it.</p>
+  </li>
+</ul>
 
-<p>Kale chips bespoke church-key American Apparel flannel pickled. Mlkshk High Life Blue Bottle, leggings gastropub four dollar toast post-ironic fap American Apparel VHS. Cliche cold-pressed single-origin coffee mlkshk retro distillery. 3 wolf moon Tumblr selvage semiotics food truck. Intelligentsia Pitchfork meh sriracha chambray, fanny pack lomo irony fap pickled stumptown. Twee +1 artisan, cred ethical gluten-free 90’s four loko Odd Future cronut small batch organic. Seitan hashtag jean shorts art party messenger bag.</p>
+<p><a href="https://github.com/piratebroadcast/ios_swift_demo_app">Here’s the Github link.</a></p>
 
-<blockquote>
-  <p>Scenester Echo Park tilde</p>
-</blockquote>
+<p>Next Steps: Build a Rails API app, like a simple little TODO app or something, (Make sure I scope the API routes like V1 or whatever) and then create an iOS front-end for it that reads things from the list and allows to post new TODOs from the App to the database. Would also be fun to experiment with Oauth and iOS, like signing in with Facebook, passing the token back to the Rails app, and authorizing or not authorizing on the iOS device.</p>
 
-<p>Locavore brunch kale chips vegan selvage High Life you probably haven’t heard of them before they sold out pork belly. Flexitarian organic wayfarers, cronut food truck bicycle rights drinking vinegar bespoke meditation mustache swag mumblecore semiotics locavore. Whatever kogi readymade, jean shorts pork belly chia distillery wayfarers. Art party single-origin coffee four dollar toast VHS, try-hard hoodie kogi normcore Neutra actually church-key flexitarian swag.</p>
+<p>Actually scratch that - Next step is to build a simple app that reads JSON from an endpoint somewhere (like government data or something, lots of options there) and displays it on the screen. This will give me another shot to work on effective UI and not get overwhelmed by attempting to do too many new things at once.</p>
 
+<p>Cheers.</p>
 
 
         </div><!-- main-content/col -->
@@ -150,8 +186,8 @@ audio.play();
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="category-list">
-                <p>Published <span>Feb 11, 2015</span></p>
-                <p><a href="/author/jesse">Jesse</a> in <a href='/category/travel'>Travel</a></p>
+                <p>Published <span>Jan 7, 2016</span></p>
+                <p><a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a></p>
 
                 <div class="other-catergories">
                     <h3>Also found in</h3>
@@ -159,12 +195,7 @@ audio.play();
                     <ul>
                         
                         <li>
-                            <a href='/category/travel'>Travel</a>
-                            ,
-                        </li>
-                        
-                        <li>
-                            <a href='/category/travel'>Storytime</a>
+                            <a href='/category/coding'>Coding</a>
                             
                         </li>
                         
@@ -177,10 +208,10 @@ audio.play();
             <div class="social">
                 <p>Share this article</a>
                 <div class="social-links">
-                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="/ten-reasons-to-travel-the-world"><i class="fa fa-twitter"></i></a>
+                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="/swift-development-demo"><i class="fa fa-twitter"></i></a>
 
-                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="/ten-reasons-to-travel-the-world"><i class="fa fa-facebook-official"></i></a>
-                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=/ten-reasons-to-travel-the-world"><i class="fa fa-envelope"></i></a>
+                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="/swift-development-demo"><i class="fa fa-facebook-official"></i></a>
+                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=/swift-development-demo"><i class="fa fa-envelope"></i></a>
                 </div>
             </div>
         </div>
