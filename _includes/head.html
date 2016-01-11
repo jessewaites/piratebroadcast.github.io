@@ -31,4 +31,26 @@ audio.play();
     <!--[if lt IE 9]>
         <script src="{{ "/js/vendor/html5shiv.min.js" | prepend: site.baseurl }}"></script>
     <![endif]-->
+    <!-- twitter card metadata below-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@jessewaites">
+    <meta name="twitter:creator" content="@jessewaites">
+    {% if page.title %}
+      <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+      <meta name="twitter:title" content="{{ site.title }}">
+    {% endif %}
+    {% if page.url %}
+      <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+    {% endif %}
+    {% if page.description %}
+      <meta name="twitter:description" content="{{ page.description }}">
+    {% else %}
+      <meta name="twitter:description" content="{{ site.description }}">
+    {% endif %}
+    {% if page.thumbnail %}
+      <meta name="twitter:image:src" content="{{ site.url }}/img/twitter_avatar.png">
+    {% else %}
+      <meta name="twitter:image:src" content="{{ site.url }}/img/twitter_avatar.png">
+    {% endif %}
 </head>

@@ -1,10 +1,11 @@
 # Site settings
 title: Jesse Waites
 email: jesse.waites@gmail.com
-description: Jesse Waites is a Boston, MA based Ruby on Rails Developer.
+description: "Jesse Waites: Boston, MA based Ruby on Rails Developer."
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "http://JesseWaites.com" # the base hostname & protocol for your site
 enable_retina: false
+avatar: img/twitter_card.png
 permalink: :title
 nav_list:
   Home : ['Home', '/', 'fa-home']
