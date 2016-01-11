@@ -36,21 +36,29 @@ audio.play();
     <meta name="twitter:site" content="@jessewaites">
     <meta name="twitter:creator" content="@jessewaites">
     {% if page.title %}
+      <meta property="og:title"  content="{{ page.title }}" />
       <meta name="twitter:title" content="{{ page.title }}">
     {% else %}
       <meta name="twitter:title" content="{{ site.title }}">
     {% endif %}
     {% if page.url %}
       <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+      <meta property="og:url"  content="{{ site.url }}{{ page.url }}">
     {% endif %}
     {% if page.description %}
       <meta name="twitter:description" content="{{ page.description }}">
+      <meta property="og:description"  content="{{ page.description }}">
     {% else %}
       <meta name="twitter:description" content="{{ site.description }}">
     {% endif %}
     {% if page.thumbnail %}
+      <meta property="og:image" content="{{ site.url }}/img/twitter_card2.png" />
       <meta name="twitter:image:src" content="{{ site.url }}/img/twitter_card2.png">
     {% else %}
+      <meta property="og:image" content="{{ site.url }}/img/twitter_card2.png" />
       <meta name="twitter:image:src" content="{{ site.url }}/img/twitter_card2.png">
     {% endif %}
+    <!-- facebook meta tags  -->
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="How much does culture influence creative thinking?" />
 </head>
