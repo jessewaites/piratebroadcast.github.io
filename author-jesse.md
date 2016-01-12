@@ -27,6 +27,6 @@ I can do everything from back end programming to mocking up a User Interface in 
 
 > “Websites should look good from the inside and out.” ― Paul Cookson
 
-I currently spend my time surrounding myself with great friends, hiking, traveling, backpacking, reading great books, watching amazing films, posting overly filtered Instagram pictures, making friends with Uber drivers, and building great looking web applications primarily with Ruby on Rails.
+I currently spend my time surrounding myself with great friends, hiking, traveling, backpacking, climbing at Brooklyn Boulders, reading great books, watching amazing films, posting overly filtered Instagram pictures, making smalltalk and fleeting friendships with Uber drivers, and building great looking web applications primarily with Ruby on Rails.
 
 Need to get in touch? Email Me or schedule an appointment for a phone call.
