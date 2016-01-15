@@ -31,36 +31,56 @@ audio.play();
     <!--[if lt IE 9]>
         <script src="{{ "/js/vendor/html5shiv.min.js" | prepend: site.baseurl }}"></script>
     <![endif]-->
-    <!-- twitter card metadata below-->
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jessewaites">
     <meta name="twitter:creator" content="@jessewaites">
     <meta property="og:image" content="{{ site.url }}/img/twitter_card2.png" />
     <meta name="twitter:image:src" content="{{ site.url }}/img/twitter_card2.png">
+    <meta content="{{ site.title }}" property="og:site_name">
+
     {% if page.title %}
-      <meta property="og:title"  content="{{ page.title }}" />
       <meta name="twitter:title" content="{{ page.title }}">
+      <meta content="{{ page.title }}" property="og:title">
+    {% else %}
+      <meta content="{{ site.title }}" property="og:title">
+    {% endif %}
+    {% if page.title %}
+      <meta name="twitter:title" content="{{ page.title }}">
+      <meta content="article" property="og:type">
     {% else %}
       <meta name="twitter:title" content="{{ site.title }}">
-    {% endif %}
-    {% if page.url %}
-      <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-      <meta property="og:url"  content="{{ site.url }}{{ page.url }}">
+      <meta content="website" property="og:type">
     {% endif %}
     {% if page.description %}
       <meta name="twitter:description" content="{{ page.description }}">
-      <meta property="og:description"  content="{{ page.description }}">
+      <meta content="{{ page.description }}" property="og:description">
     {% else %}
       <meta name="twitter:description" content="{{ site.description }}">
+      <meta content="{{ site.description }}" property="og:description">
     {% endif %}
-    <!-- {% if page.thumbnail %}
+    {% if page.url %}
+      <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+      <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+    {% endif %}
+    {% if page.date %}
+      <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
+      <meta content="{{ site.url }}/about/" property="article:author">
+    {% endif %}
+    {% if page.image %}
+      <meta content="{{ site.url }}/img/twitter_card2.png" property="og:image">
       <meta property="og:image" content="{{ site.url }}/img/twitter_card2.png" />
-      <meta name="twitter:image:src" content="{{ site.url }}/img/twitter_card2.png">
     {% else %}
-      <meta property="og:image" content="{{ site.url }}/img/twitter_card2.png" />
-      <meta name="twitter:image:src" content="{{ site.url }}/img/twitter_card2.png">
-    {% endif %} -->
-    <!-- facebook meta tags  -->
-    <meta property="og:type" content="article" />
-    <meta property="og:description" content="How much does culture influence creative thinking?" />
-</head>
+      <meta content="{{ site.url }}/img/twitter_card2.png" property="og:image">
+    {% endif %}
+    {% if page.categories %}
+      {% for category in page.categories limit:1 %}
+      <meta content="{{ category }}" property="article:section">
+      {% endfor %}
+    {% endif %}
+    {% if page.tags %}
+      {% for tag in page.tags %}
+      <meta content="{{ tag }}" property="article:tag">
+      {% endfor %}
+    {% endif %}
+    </head>
