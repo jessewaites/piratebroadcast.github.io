@@ -11,6 +11,7 @@ read_time : 5
 feature_image: xcode
 show_related_posts: false
 square_related: recommend-wolf
+description : "iOS Development from a Rubyists' perspective"
 ---
 
 I recently put a swift demo app together as a way to show interest and at least passing familiarity with Swift / Xcode 7 / iOS Development. (Other than the fact that I wrote a book about it ;) This is simply a random fact display app that shows rather benign little facts about me such as the fact that I enjoy eating spaghetti and like to go hiking.
