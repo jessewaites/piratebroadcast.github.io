@@ -2,16 +2,43 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jesse Waites</title>
-    <description>Jesse Waites is a Boston, MA based Ruby on Rails Developer.</description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 09 Jan 2016 09:29:11 -0500</pubDate>
-    <lastBuildDate>Sat, 09 Jan 2016 09:29:11 -0500</lastBuildDate>
+    <description>Jesse Waites: Boston, MA based Ruby on Rails Developer.</description>
+    <link>http://JesseWaites.com/</link>
+    <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 18 Jan 2016 11:01:27 -0500</pubDate>
+    <lastBuildDate>Mon, 18 Jan 2016 11:01:27 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Adding Twitter Cards &amp; Facebook Cards to a Jekyll App</title>
+        <description>&lt;p&gt;Twitter and Facebook Cards makes it possible to attach images to posts that automatically link to your content. It is the difference between pasting a link that is just a link, or having Twitter or Facebook scrape for an article title, an image, and title. These cards look very professional and they lead to increased content sharing. You would be surprised how many otherwise professional websites and web services overlook this trivial yet effective step. The image below will show you what a Twitter Card looks like - When displayed on Twitter on either a user page or in a feed, the entire image will serve as a clickable hyperlink to the page or post.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/otUP8vj.png&quot; alt=&quot;twitter card validation&quot; title=&quot;twitter card validation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Interestingly, I found what may be a bug in the Jekyll framework when writing this blog post - When pasting my code sample, a line of code such as “page.title” is being evaluated, so when I paste “page.title”, the output on the screen is the actual page title, in this case “Adding Twitter Cards &amp;amp; Facebook Cards to a Jekyll App”. This makes it difficult to share code with you but I found a workaround - I’ll simply need to share this code as a Github Gist to skip all of that drama.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/piratebroadcast/425724b1b5b75ae6c037.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Once you’ve added the code to your site header and pushed those updates to your production server, you can preview what your Twitter Card will look like by pasting a blog post link here. I should note that I have hardcoded the same image to display whenever any link is posted to my site - This way I always know that SOME image is present. I’m mostly writing about code anyway so having a dynamic image is not important to me.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cards-dev.twitter.com/validator&quot;&gt;You can preview what your Twitter Card will look like by pasting a blog post link here.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.facebook.com/tools/debug/og/object/&quot;&gt;You can preview your Facebook links here.&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 18 Jan 2016 04:50:28 -0500</pubDate>
+        <link>http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app</link>
+        <guid isPermaLink="true">http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>iOS Swift App Demo</title>
         <description>&lt;p&gt;I recently put a swift demo app together as a way to show interest and at least passing familiarity with Swift / Xcode 7 / iOS Development. (Other than the fact that I wrote a book about it ;) This is simply a random fact display app that shows rather benign little facts about me such as the fact that I enjoy eating spaghetti and like to go hiking.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/nRNKOA2.png&amp;quot;&quot; alt=&quot;Jesse Waites App&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Here are a few things that crossed my mind when building this app.&lt;/p&gt;
 
@@ -63,8 +90,8 @@
 &lt;p&gt;Cheers.&lt;/p&gt;
 </description>
         <pubDate>Thu, 07 Jan 2016 04:50:28 -0500</pubDate>
-        <link>/swift-development-demo</link>
-        <guid isPermaLink="true">/swift-development-demo</guid>
+        <link>http://JesseWaites.com/swift-development-demo</link>
+        <guid isPermaLink="true">http://JesseWaites.com/swift-development-demo</guid>
         
         
         <category>coding</category>
@@ -93,8 +120,8 @@ After getting this website styled and configured the way I wanted to, I wanted t
 &lt;p&gt;Cheers.&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Jan 2016 12:50:28 -0500</pubDate>
-        <link>/add-apple-touch-icon-to-rails-app</link>
-        <guid isPermaLink="true">/add-apple-touch-icon-to-rails-app</guid>
+        <link>http://JesseWaites.com/add-apple-touch-icon-to-rails-app</link>
+        <guid isPermaLink="true">http://JesseWaites.com/add-apple-touch-icon-to-rails-app</guid>
         
         
         <category>coding</category>
@@ -112,8 +139,8 @@ After getting this website styled and configured the way I wanted to, I wanted t
 &lt;p&gt;The secret is - If you load any page and type “1up”, you may hear a very familiar sound.&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Jan 2016 04:50:28 -0500</pubDate>
-        <link>/super-mario-easter-egg</link>
-        <guid isPermaLink="true">/super-mario-easter-egg</guid>
+        <link>http://JesseWaites.com/super-mario-easter-egg</link>
+        <guid isPermaLink="true">http://JesseWaites.com/super-mario-easter-egg</guid>
         
         
         <category>coding</category>
@@ -179,8 +206,8 @@ After getting this website styled and configured the way I wanted to, I wanted t
 &lt;p&gt;&lt;a href=&quot;https://github.com/piratebroadcast/BostonIpsum&quot;&gt;Here’s the Github link.&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Jan 2016 04:50:28 -0500</pubDate>
-        <link>/boston-ipsum</link>
-        <guid isPermaLink="true">/boston-ipsum</guid>
+        <link>http://JesseWaites.com/boston-ipsum</link>
+        <guid isPermaLink="true">http://JesseWaites.com/boston-ipsum</guid>
         
         
         <category>coding</category>
@@ -213,8 +240,8 @@ After getting this website styled and configured the way I wanted to, I wanted t
 &lt;p&gt;Grunt&lt;/p&gt;
 </description>
         <pubDate>Wed, 11 Feb 2015 03:50:28 -0500</pubDate>
-        <link>/supercharge-your-workflow-with-grunt</link>
-        <guid isPermaLink="true">/supercharge-your-workflow-with-grunt</guid>
+        <link>http://JesseWaites.com/supercharge-your-workflow-with-grunt</link>
+        <guid isPermaLink="true">http://JesseWaites.com/supercharge-your-workflow-with-grunt</guid>
         
         
         <category>coding</category>
@@ -244,8 +271,8 @@ After getting this website styled and configured the way I wanted to, I wanted t
 &lt;p&gt;Dreamcatcher cold-pressed American Apparel, post-ironic Carles Shoreditch craft beer Banksy PBR retro distillery before they sold out freegan asymmetrical kogi. Food truck Schlitz direct trade, deep v ethical yr sriracha mumblecore freegan. Tattooed occupy pork belly, letterpress typewriter cold-pressed viral swag farm-to-table flexitarian. +1 hashtag put a bird on it authentic. 3 wolf moon locavore Vice, normcore actually meggings leggings cornhole brunch. Four loko vinyl trust fund, Intelligentsia wolf Bushwick lo-fi sriracha. Deep v vegan forage selvage.&lt;/p&gt;
 </description>
         <pubDate>Wed, 11 Feb 2015 03:50:28 -0500</pubDate>
-        <link>/css-with-superpowers</link>
-        <guid isPermaLink="true">/css-with-superpowers</guid>
+        <link>http://JesseWaites.com/css-with-superpowers</link>
+        <guid isPermaLink="true">http://JesseWaites.com/css-with-superpowers</guid>
         
         
         <category>coding</category>
@@ -260,7 +287,7 @@ After getting this website styled and configured the way I wanted to, I wanted t
 
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloribus, culpa, et suscipit praesentium incidunt, libero officiis ipsum fugiat odit aperiam commodi unde dignissimos veritatis accusamus molestias iste magni nobis?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/post-assets/fire.jpg&quot; alt=&quot;Fire image&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://JesseWaites.com/img/post-assets/fire.jpg&quot; alt=&quot;Fire image&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kale chips bespoke church-key American Apparel flannel pickled. Mlkshk High Life Blue Bottle, leggings gastropub four dollar toast post-ironic fap American Apparel VHS. Cliche cold-pressed single-origin coffee mlkshk retro distillery. 3 wolf moon Tumblr selvage semiotics food truck. Intelligentsia Pitchfork meh sriracha chambray, fanny pack lomo irony fap pickled stumptown. Twee +1 artisan, cred ethical gluten-free 90’s four loko Odd Future cronut small batch organic. Seitan hashtag jean shorts art party messenger bag.&lt;/p&gt;
 
@@ -272,8 +299,8 @@ After getting this website styled and configured the way I wanted to, I wanted t
 
 </description>
         <pubDate>Wed, 11 Feb 2015 03:50:28 -0500</pubDate>
-        <link>/ten-reasons-to-travel-the-world</link>
-        <guid isPermaLink="true">/ten-reasons-to-travel-the-world</guid>
+        <link>http://JesseWaites.com/ten-reasons-to-travel-the-world</link>
+        <guid isPermaLink="true">http://JesseWaites.com/ten-reasons-to-travel-the-world</guid>
         
         
         <category>travel</category>
@@ -314,8 +341,8 @@ After getting this website styled and configured the way I wanted to, I wanted t
 &lt;p&gt;Good luck, and welcome!&lt;/p&gt;
 </description>
         <pubDate>Tue, 10 Feb 2015 00:00:00 -0500</pubDate>
-        <link>/why-react-js-will-change-the-world</link>
-        <guid isPermaLink="true">/why-react-js-will-change-the-world</guid>
+        <link>http://JesseWaites.com/why-react-js-will-change-the-world</link>
+        <guid isPermaLink="true">http://JesseWaites.com/why-react-js-will-change-the-world</guid>
         
         
         <category>coding</category>
@@ -341,40 +368,11 @@ After getting this website styled and configured the way I wanted to, I wanted t
 &lt;p&gt;Aenean commodo, massa quis mattis lacinia, mi ipsum vestibulum nisi, ut tincidunt massa erat quis neque. Aliquam volutpat eu ligula a tincidunt. Suspendisse imperdiet, lacus vitae pretium imperdiet, nisi elit efficitur felis, id ullamcorper nulla dolor ac massa. In rutrum eget nisi et maximus. Nam consequat libero et feugiat lobortis. Donec sit amet felis faucibus, egestas enim id, condimentum justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed aliquam, nisl vel volutpat semper, mi lacus tempus ante, hendrerit consequat massa lorem at lacus. Phasellus vel felis scelerisque, consectetur arcu ac, euismod massa.&lt;/p&gt;
 </description>
         <pubDate>Tue, 10 Feb 2015 00:00:00 -0500</pubDate>
-        <link>/its-not-always-that-simple</link>
-        <guid isPermaLink="true">/its-not-always-that-simple</guid>
+        <link>http://JesseWaites.com/its-not-always-that-simple</link>
+        <guid isPermaLink="true">http://JesseWaites.com/its-not-always-that-simple</guid>
         
         
         <category>motivation</category>
-        
-      </item>
-    
-      <item>
-        <title>Stop Thinking And Start Doing</title>
-        <description>&lt;p&gt;Get out of your head. Every good decision starts with a momment of action. What are you going to do today!&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in finibus diam, sit amet sollicitudin dui. Praesent erat dui, mattis sed elementum non, molestie et ipsum. Quisque fringilla vitae dolor a lacinia. Integer aliquam arcu non tortor egestas volutpat. Proin vitae pretium purus, a rhoncus sapien. Nam posuere rutrum lorem, eu sagittis ante scelerisque pretium. Morbi fermentum mauris a elit lacinia venenatis. Nunc ut iaculis nunc, sed faucibus nulla. Nunc at massa ut mi varius venenatis et id nibh. Sed molestie nibh sed risus mattis elementum. Ut iaculis, dolor sed consequat efficitur, nisi risus scelerisque dui, at bibendum velit nisi quis risus. Nunc gravida leo ut arcu tempus, et iaculis ex ullamcorper. Maecenas eget dolor diam. Suspendisse dapibus pulvinar tempus.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/post-assets/walk.jpg&quot; alt=&quot;walk&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/post-assets/water.jpg&quot; alt=&quot;water&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/post-assets/woods.jpg&quot; alt=&quot;woods&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Vestibulum semper dui risus, ut vestibulum ex vestibulum in. Duis vel placerat augue. Morbi dapibus turpis nisi, eleifend hendrerit ligula congue non. Vestibulum felis velit, vulputate at metus ac, ullamcorper pharetra sapien. Praesent eget nibh scelerisque, scelerisque velit semper, ultrices velit. Nunc luctus quam ut condimentum sodales. Quisque eget eleifend nibh. Donec sit amet metus massa.&lt;/p&gt;
-
-&lt;p&gt;Quisque sagittis arcu quis mauris consectetur tempus. Etiam id erat pretium, rutrum quam ut, commodo lacus. Proin vitae condimentum odio. Morbi facilisis ligula vitae auctor pretium. Fusce lorem lectus, ultrices sit amet neque ut, condimentum bibendum libero. Mauris cursus neque eros, vel consectetur quam mollis nec. Mauris quis est nec elit euismod condimentum. Vestibulum imperdiet suscipit elit et scelerisque. Vivamus mollis sagittis ante.&lt;/p&gt;
-
-&lt;p&gt;Aenean commodo, massa quis mattis lacinia, mi ipsum vestibulum nisi, ut tincidunt massa erat quis neque. Aliquam volutpat eu ligula a tincidunt. Suspendisse imperdiet, lacus vitae pretium imperdiet, nisi elit efficitur felis, id ullamcorper nulla dolor ac massa. In rutrum eget nisi et maximus. Nam consequat libero et feugiat lobortis. Donec sit amet felis faucibus, egestas enim id, condimentum justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed aliquam, nisl vel volutpat semper, mi lacus tempus ante, hendrerit consequat massa lorem at lacus. Phasellus vel felis scelerisque, consectetur arcu ac, euismod massa.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 10 Feb 2015 00:00:00 -0500</pubDate>
-        <link>/stop-thinking-and-start-doing</link>
-        <guid isPermaLink="true">/stop-thinking-and-start-doing</guid>
-        
-        
-        <category>motivation</category>
-        
-        <category>storytime</category>
         
       </item>
     

@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jesse Waites | Introducing Boston Ipsum</title>
-    <meta name="description" content="Introducing the Boston Ipsum Ruby Gem.">
+    <title>Jesse Waites | Adding Twitter Cards & Facebook Cards to a Jekyll App</title>
+    <meta name="description" content="Twitter and Facebook Cards makes it possible to attach images to posts that automatically link to your content. It is the difference between pasting a link t...">
 
     <link rel="stylesheet" href="/css/main.css">
 
-    <link rel="canonical" href="/boston-ipsum">
+    <link rel="canonical" href="/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app">
     <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="http://JesseWaites.com/feed.xml" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
@@ -43,23 +43,23 @@ audio.play();
     <meta content="Jesse Waites" property="og:site_name">
 
     
-      <meta name="twitter:title" content="Introducing Boston Ipsum">
-      <meta content="Introducing Boston Ipsum" property="og:title">
+      <meta name="twitter:title" content="Adding Twitter Cards & Facebook Cards to a Jekyll App">
+      <meta content="Adding Twitter Cards & Facebook Cards to a Jekyll App" property="og:title">
       <meta content="article" property="og:type">
     
 
     
-      <meta name="twitter:description" content="Jesse Waites: Boston, MA based Ruby on Rails Developer.">
-      <meta content="Jesse Waites: Boston, MA based Ruby on Rails Developer." property="og:description">
+      <meta name="twitter:description" content="The easy way to add social cards to your jekyll links">
+      <meta content="The easy way to add social cards to your jekyll links" property="og:description">
     
 
     
-      <meta name="twitter:url" content="http://JesseWaites.com/boston-ipsum">
-      <meta content="http://JesseWaites.com/boston-ipsum" property="og:url">
+      <meta name="twitter:url" content="http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app">
+      <meta content="http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app" property="og:url">
     
 
     
-      <meta content="2016-01-06T04:50:28-05:00" property="article:published_time">
+      <meta content="2016-01-18T04:50:28-05:00" property="article:published_time">
     
     
       <meta content="http://JesseWaites.com/img/twitter_card2.png" property="og:image">
@@ -79,7 +79,7 @@ audio.play();
 
   <body class="">
 
-    <header class="hero-image" style="background-image: url(/img/leafy-bench.jpg);">
+    <header class="hero-image" style="background-image: url(/img/card_preview_jpeg.jpg);">
     <span class="menu-trigger animated fadeInDown">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -156,66 +156,24 @@ audio.play();
     <div class="row">
         <div class="col-xs-12 single-content">
             <p class="meta">
-                <a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 8 minutes
+                <a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 7 minutes
             </p>
 
-            <h1>Introducing Boston Ipsum</h1>
+            <h1>Adding Twitter Cards & Facebook Cards to a Jekyll App</h1>
 
-            <p>Introducing the Boston Ipsum Ruby Gem.</p>
+            <p>Twitter and Facebook Cards makes it possible to attach images to posts that automatically link to your content. It is the difference between pasting a link that is just a link, or having Twitter or Facebook scrape for an article title, an image, and title. These cards look very professional and they lead to increased content sharing. You would be surprised how many otherwise professional websites and web services overlook this trivial yet effective step. The image below will show you what a Twitter Card looks like - When displayed on Twitter on either a user page or in a feed, the entire image will serve as a clickable hyperlink to the page or post.</p>
 
-<p><em>What is a RubyGem?</em></p>
+<p><img src="http://i.imgur.com/otUP8vj.png" alt="twitter card validation" title="twitter card validation" /></p>
 
-<p>A Rubygem is a bit of code that a ruby developer wrote, made available in a portable format and posted to a public server, so that bit of code can be used on other machines and by other developers in different web projects. If you were to think of web development as building digital things with digital Legos (And you might not be too far off, frankly), you could imagine a Rubygem as being a specific Lego that performs a specific function. Some Rubygems allow you to send email, upload images, or even display a profile picture based on your email address. This Rubygem that I created displays Boston themed “Lorem Ipsum” text.</p>
+<p>Interestingly, I found what may be a bug in the Jekyll framework when writing this blog post - When pasting my code sample, a line of code such as “page.title” is being evaluated, so when I paste “page.title”, the output on the screen is the actual page title, in this case “Adding Twitter Cards &amp; Facebook Cards to a Jekyll App”. This makes it difficult to share code with you but I found a workaround - I’ll simply need to share this code as a Github Gist to skip all of that drama.</p>
 
-<p><em>What is Lorem Ipsum?</em></p>
+<script src="https://gist.github.com/piratebroadcast/425724b1b5b75ae6c037.js"></script>
 
-<p>Lorem Ipsum is “filler text” used by print and web developers to take space up on a page with text so that he or she can get an idea of what the page will look like once the marketing text gets finished by the marketing department. For example, on the home page at http://JesseWaites.comyou can see that I have a small bio section on the left side. If I were still working on the bio, I could add some filler text there to take up 2 or 3 sentences and get a good idea of how much space it would take up on the page.</p>
+<p>Once you’ve added the code to your site header and pushed those updates to your production server, you can preview what your Twitter Card will look like by pasting a blog post link here. I should note that I have hardcoded the same image to display whenever any link is posted to my site - This way I always know that SOME image is present. I’m mostly writing about code anyway so having a dynamic image is not important to me.</p>
 
-<p>I wanted to experiment with making a Ruby gem, as I had never made one before, so I created a rather simple Lorem Ipsum generator that returns Boston area themed text.</p>
+<p><a href="https://cards-dev.twitter.com/validator">You can preview what your Twitter Card will look like by pasting a blog post link here.</a></p>
 
-<p>Rubygems link: https://rubygems.org/gems/boston_ipsum/versions/1.5.5</p>
-
-<p>You simply install the gem, bundle, and call:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="sx">%= BostonIpsum.speak(integer) %&gt;  </span></code></pre></figure>
-
-<p>in any view. The integer number allows you to return a randomized yet specific number of words. To add words, make a pull request.</p>
-
-<p>For example,</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="sx">%= BostonIpsum.speak(2) %&gt;</span></code></pre></figure>
-
-<p>could output “Patriots Somerville”, and</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="sx">%= BostonIpsum.speak(4) %&gt;</span></code></pre></figure>
-
-<p>could output “Sox Eastie Southie MBTA”</p>
-
-<p>Installation:</p>
-
-<p>Add this line to your application’s Gemfile:</p>
-
-<p>gem ‘boston_ipsum’</p>
-
-<p>And then execute:</p>
-
-<p>$ bundle</p>
-
-<p>Or install it yourself as:</p>
-
-<p>$ gem install boston_ipsum</p>
-
-<p>Usage:</p>
-
-<p>Simply add:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;</span><span class="sx">%= BostonIpsum.speak(5) %&gt;</span></code></pre></figure>
-
-<p>into any view after requiring and bundling the gem into your ruby project.</p>
-
-<p>To add Boston themed words to the list, simply add them and make a pull request on Github.</p>
-
-<p><a href="https://github.com/piratebroadcast/BostonIpsum">Here’s the Github link.</a></p>
+<p><a href="https://developers.facebook.com/tools/debug/og/object/">You can preview your Facebook links here.</a></p>
 
 
         </div><!-- main-content/col -->
@@ -231,7 +189,7 @@ audio.play();
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="category-list">
-                <p>Published <span>Jan 6, 2016</span></p>
+                <p>Published <span>Jan 18, 2016</span></p>
                 <p><a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a></p>
 
                 <div class="other-catergories">
@@ -253,10 +211,10 @@ audio.play();
             <div class="social">
                 <p>Share this article</a>
                 <div class="social-links">
-                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://JesseWaites.com/boston-ipsum"><i class="fa fa-twitter"></i></a>
+                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app"><i class="fa fa-twitter"></i></a>
 
-                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://JesseWaites.com/boston-ipsum"><i class="fa fa-facebook-official"></i></a>
-                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://JesseWaites.com/boston-ipsum"><i class="fa fa-envelope"></i></a>
+                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app"><i class="fa fa-facebook-official"></i></a>
+                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app"><i class="fa fa-envelope"></i></a>
                 </div>
             </div>
         </div>
