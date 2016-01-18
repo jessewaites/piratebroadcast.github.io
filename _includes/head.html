@@ -42,16 +42,13 @@ audio.play();
     {% if page.title %}
       <meta name="twitter:title" content="{{ page.title }}">
       <meta content="{{ page.title }}" property="og:title">
-    {% else %}
-      <meta content="{{ site.title }}" property="og:title">
-    {% endif %}
-    {% if page.title %}
-      <meta name="twitter:title" content="{{ page.title }}">
       <meta content="article" property="og:type">
     {% else %}
       <meta name="twitter:title" content="{{ site.title }}">
+      <meta content="{{ site.title }}" property="og:title">
       <meta content="website" property="og:type">
     {% endif %}
+
     {% if page.description %}
       <meta name="twitter:description" content="{{ page.description }}">
       <meta content="{{ page.description }}" property="og:description">
@@ -59,26 +56,28 @@ audio.play();
       <meta name="twitter:description" content="{{ site.description }}">
       <meta content="{{ site.description }}" property="og:description">
     {% endif %}
+
     {% if page.url %}
       <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
       <meta content="{{ site.url }}{{ page.url }}" property="og:url">
     {% endif %}
+
     {% if page.date %}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
-      <meta content="{{ site.url }}/about/" property="article:author">
     {% endif %}
     {% if page.image %}
       <meta content="{{ site.url }}/img/twitter_card2.png" property="og:image">
       <meta property="og:image" content="{{ site.url }}/img/twitter_card2.png" />
     {% else %}
       <meta content="{{ site.url }}/img/twitter_card2.png" property="og:image">
-      <meta content="{{ site.url }}/img/twitter_card2.png" property="og:image">
     {% endif %}
+
     {% if page.categories %}
       {% for category in page.categories limit:1 %}
       <meta content="{{ category }}" property="article:section">
       {% endfor %}
     {% endif %}
+    
     {% if page.tags %}
       {% for tag in page.tags %}
       <meta content="{{ tag }}" property="article:tag">
