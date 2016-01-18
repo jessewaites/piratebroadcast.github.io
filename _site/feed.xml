@@ -5,19 +5,19 @@
     <description>Jesse Waites: Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Jan 2016 11:31:12 -0500</pubDate>
-    <lastBuildDate>Mon, 18 Jan 2016 11:31:12 -0500</lastBuildDate>
+    <pubDate>Mon, 18 Jan 2016 11:59:12 -0500</pubDate>
+    <lastBuildDate>Mon, 18 Jan 2016 11:59:12 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Adding Twitter Cards &amp; Facebook Cards to a Jekyll App</title>
-        <description>&lt;p&gt;Twitter and Facebook Cards makes it possible to attach images to posts that automatically link to your content. LinkedIn also used the same Open Graph protocol tags that Facebook uses, so this will work for LinkedIn as well with no additional code needed.&lt;/p&gt;
+        <description>&lt;p&gt;Twitter and Facebook Cards makes it possible to attach images to posts that automatically link to your content. LinkedIn also uses the same “Open Graph” protocol that Facebook uses, so this will work for LinkedIn as well with no additional code needed.&lt;/p&gt;
 
 &lt;p&gt;Cards are the difference between pasting a link that is just a link, or having Twitter, Facebook, or LinkedIn scrape for an article title, an image, and title. These cards look very professional and they lead to increased content sharing. You would be surprised how many otherwise professional websites and web services overlook this trivial yet effective step. The image below will show you what a Twitter Card looks like - When displayed on Twitter on either a user page or in a feed, the entire image will serve as a clickable hyperlink to the page or post.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/otUP8vj.png&quot; alt=&quot;twitter card validation&quot; title=&quot;twitter card validation&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Interestingly, I found what may be a bug in the Jekyll framework when writing this blog post - When pasting my code sample, a line of code such as “page.title” is being evaluated, so when I paste “page.title”, the output on the screen is the actual page title, in this case “Adding Twitter Cards &amp;amp; Facebook Cards to a Jekyll App”. This makes it difficult to share code with you but I found a workaround - I’ll simply need to share this code as a Github Gist to skip all of that drama.&lt;/p&gt;
+&lt;p&gt;Interestingly, I found what may be a bug in the Jekyll framework when writing this blog post - When pasting my code sample, a line of code such as “page.title” is being evaluated, so when I paste “page.title”, the output on the screen is the actual page title, in this case “Adding Twitter Cards &amp;amp; Facebook Cards to a Jekyll App”. This makes it difficult to share code with you but I found a workaround - I’ll simply need to share this code as a Github Gist to skip all of that drama. The  code below is for a Jekyll app, but you should be able to convert this to your programming language of choice rather easily, provided that you have access to your page objects. The code is simple if/else conditional statements that should be trivial to convert to use in Django, Drupal, Ruby on Rails, et cetera.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/piratebroadcast/425724b1b5b75ae6c037.js&quot;&gt;&lt;/script&gt;
 
