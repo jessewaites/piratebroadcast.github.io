@@ -16,7 +16,7 @@ description : "The easy way to add social cards to your website links."
 
 Twitter and Facebook Cards makes it possible to attach images to posts that automatically link to your content. LinkedIn also uses the same "Open Graph" protocol that Facebook uses, so this will work for LinkedIn as well with no additional code needed.
 
-Cards are the difference between pasting a link that is just a link, or having Twitter, Facebook, or LinkedIn scrape for an article title, an image, and title. These cards look very professional and they lead to increased content sharing. You would be surprised how many otherwise professional websites and web services overlook this trivial yet effective step. The image below will show you what a Twitter Card looks like - When displayed on Twitter on either a user page or in a feed, the entire image will serve as a clickable hyperlink to the page or post.
+Cards are the difference between pasting a link that is just a link, or having Twitter, Facebook, or LinkedIn scrape for an article title, image, and description. These cards look very professional and studies have proved that they lead to increased content sharing. You would be surprised how many otherwise professional websites and web services overlook this trivial yet effective step. The image below will show you what a Twitter Card looks like - When displayed on Twitter on either a user page or in a feed, the entire image will serve as a clickable hyperlink to the page or post.
 
 ![twitter card validation](http://i.imgur.com/otUP8vj.png "twitter card validation")
 
