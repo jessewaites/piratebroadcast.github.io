@@ -19,8 +19,9 @@ So I got to work on this, TwitterImageTag.
 
 This gem allows you to easily add Twitter Avatar Images to your Ruby / Rails app views. Based on the Twitter v1.1 API, the primary usage would be for building out quick prototypes, or bypassing the need to have users upload their own avatar images. Ideally, you would have a field in your user onboarding form called "twitter handle", and call something like:
 
-<%= TwitterImageTag.show_me(current_user.twitter_handle, "normals") %>
-
+<pre>
+<%= TwitterImageTag.show_me(current_user.twitter_handle, "normal") %>
+</pre>
 
 This image pretty much explains it all:
 
