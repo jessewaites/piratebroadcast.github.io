@@ -37,7 +37,7 @@ This takes 2 arguments - any valid twitter handle, and any of 4 size options:
 normal: 48 x 48 pixels.
 bigger: 73 x 73 pixels.
 mini:   24 x 24 pixels.
-
+original: No idea.
 
 There's no telling what the "original" image size will be. It is whatever
 size the user uploaded.
@@ -48,8 +48,7 @@ size the user uploaded.
 
 Add this line to your application's Gemfile:
 
-NOTE: Make sure you are using the latest version of this gem - it went under a
-significant rewrite.
+NOTE: Make sure you are using the latest version of this gem - it went under a significant rewrite at version 1.9.5 - Don't use anything lower than that.
 
 ```ruby
 gem 'twitter_image_tag'
@@ -64,9 +63,9 @@ Or install it yourself as:
     $ gem install twitter_image_tag
 
 ## Usage
-
+<pre>
 <%= TwitterImageTag.show_me(current_user.twitter_handle, "normal") %>
-
+</pre>
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake false` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
