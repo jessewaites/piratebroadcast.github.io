@@ -12,13 +12,14 @@ feature_image: twitter_large_jpeg
 show_related_posts: false
 square_related: recommend-wolf
 ---
-> “To invent, you need a good imagination and a pile of junk.”
->
->  Thomas Edison
 
 When I'm building a web application that is in the early prototype stage, I like to allow users to have profile pictures, but sometimes want to skip the process of actually building a mechanism (configuring Paperclip) to upload and store profile pictures so I can focus on something else.
 
 So I got to work on this, TwitterImageTag.
+
+> “To invent, you need a good imagination and a pile of junk.”
+>
+>  Thomas Edison
 
 This gem allows you to easily add Twitter Avatar Images to your Ruby / Rails app views. Based on the Twitter v1.1 API, the primary usage would be for building out quick prototypes, or bypassing the need to have users upload their own avatar images. Ideally, you would have a field in your user onboarding form called "twitter handle", and call something like:
 
