@@ -13,6 +13,7 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 > “To invent, you need a good imagination and a pile of junk.”
+>
 >  Thomas Edison
 
 When I'm building a web application that is in the early prototype stage, I like to allow users to have profile pictures, but sometimes want to skip the process of actually building a mechanism (configuring Paperclip) to upload and store profile pictures so I can focus on something else.
