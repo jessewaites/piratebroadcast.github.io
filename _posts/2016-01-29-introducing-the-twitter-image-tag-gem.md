@@ -30,11 +30,11 @@ This image pretty much explains it all:
 This takes 2 arguments - any valid twitter handle, and any of 4 size options:
 "normal", "bigger", "mini", or "original".
 
-Size     | Pixel Dimensions
--------- | ----------------
-normal   | 48 x 48 pixels.
-bigger   | 73 x 73 pixels.
-mini     | 24 x 24 pixels.
+Size     - Pixel Dimensions
+-------- - ----------------
+normal   - 48 x 48 pixels.
+bigger   - 73 x 73 pixels.
+mini     - 24 x 24 pixels.
 
 
 There's no telling what the "original" image size will be. It is whatever
