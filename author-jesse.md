@@ -14,13 +14,13 @@ title: About Jesse Waites
 > “If you think math is hard, try web design.” ―Trish Parr
 
 <form action="https://jessewaites-stripe.herokuapp.com" method="POST">
-    <script>
+    <script
         src="https://checkout.stripe.com/checkout.js"
         class="stripe-button"
         data-key="pk_live_JEwYdUmZ8ZNhYt9gZvqlpXWx"
         data-name="JESSE_WAITES"
         data-description="PDF_BOOK"
-        data-amount="5"
+        data-amount="5">
     </script>
     <input name="amount" value="5" type="hidden">
     <input name="description" value="YOUR_DESCRIPTION" type="hidden">
