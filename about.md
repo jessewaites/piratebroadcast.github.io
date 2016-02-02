@@ -6,6 +6,7 @@ feature_image: feature-book
 ---
 > “If you think math is hard, try web design.” ―Trish Parr
 
+
 After growing up in the South and serving a short stint in the Air Force, I worked as an Operating Room Technician specializing in Trauma, Orthopaedic, and Neurosurgery in hospitals all over the US. After accepting a job in Trauma Surgery in Boston at MGH and falling in love with the city, I decided to stay in New England and have been here for almost 10 years. Boston is my home now.
 
 ![Boston, MA](http://i.imgur.com/ItNzFMY.png)
