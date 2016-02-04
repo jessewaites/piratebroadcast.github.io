@@ -13,7 +13,7 @@ title: About Jesse Waites
 
 <p>Here for the book? You can now buy the PDF version of my book here.</p>
 
-<form action="https://jessewaites-stripe.herokuapp.com" method="POST">
+<form action="https://jesse-book-server.herokuapp.com" method="POST">
     <script
         src="https://checkout.stripe.com/checkout.js"
         class="stripe-button"
@@ -36,7 +36,7 @@ After growing up in the South and serving a short stint in the Air Force, I work
 I wrote a book about the process of mobile app development, which is currently on sale on the iBookstore and the Amazon Kindle, and have given talks about the App Development process at M.I.T. and General Assembly. You can buy the PDF version of my book here.
 <br>
 
-<form action="https://jessewaites-stripe.herokuapp.com" method="POST">
+<form action="https://jesse-book-server.herokuapp.com" method="POST">
     <script
         src="https://checkout.stripe.com/checkout.js"
         class="stripe-button"
