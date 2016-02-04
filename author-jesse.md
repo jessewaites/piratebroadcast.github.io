@@ -24,7 +24,6 @@ title: About Jesse Waites
     </script>
     <input name="amount" value="500" type="hidden">
     <input name="description" value="Secrets of my App Success eBook" type="hidden">
-    <input name="metadata" value="eBook" type="hidden">
 </form>
 <br>
 
@@ -48,7 +47,6 @@ I wrote a book about the process of mobile app development, which is currently o
     </script>
     <input name="amount" value="500" type="hidden">
     <input name="description" value="Secrets of my App Success eBook" type="hidden">
-    <input name="metadata" value="eBook" type="hidden">
 </form>
 <br>
 I have since created multiple mobile and web applications for myself and clients such as social networks, e-commerce applications that sell goods and services online, and scheduling applications that allow consultants to charge fees to book an appointment. In addition to my primary web development framework, Ruby on Rails, I also have extensive experience with Wordpress, Drupal, and Squarespace.
