@@ -33,7 +33,7 @@ After growing up in the South and serving a short stint in the Air Force, I work
 
 <img style="float:left" src="/img/W.jpg" />hile working in surgery, the iPhone was developed and I took advantage of the opportunity and hired a developer to create a medical terminology dictionary app for me. Released on opening day of the App Store, it sold fairly well and served as a springboard into my second career as a web and software developer after learning web development on my own for years and eventually graduating thoughtbot's Ruby on Rails intensive course.
 
-My consulting work and I have bene written about in Wired magazine, Entrepreneur Magazine, Inc, Forbes, and a full profile in the Boston Globe.
+My consulting work and I have been written about in Wired Magazine, Entrepreneur Magazine, Inc., Forbes, and a full profile in the Boston Globe.
 I also wrote a book about the process of mobile app development, which is currently on sale on the iBookstore and the Amazon Kindle, and have given talks about the App Development process at M.I.T. and General Assembly. You can buy the PDF version of my book here.
 <br>
 
