@@ -29,7 +29,7 @@ This gem allows you to easily add Twitter Avatar Images to your Ruby / Rails app
 
 This image pretty much explains it all:
 
-![Example](https://pbs.twimg.com/media/CZ1x9D1VAAEWITQ.png:large "Example")
+![Example](http://i.imgur.com/9fru2jz.png)
 
 This takes 2 arguments - any valid twitter handle, and any of 4 size options:
 "normal", "bigger", "mini", or "original". The dimensions of the size options are:
