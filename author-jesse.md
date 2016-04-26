@@ -31,6 +31,39 @@ title: About Jesse Waites
 
 After growing up in the South and serving a short stint in the Air Force, I worked as an Operating Room Technician specializing in Trauma, Orthopaedic, and Neurosurgery in hospitals all over the US. After accepting a job in Trauma Surgery in Boston at MGH and falling in love with the city, I decided to stay in New England and have been here for almost 10 years. Boston is my home now.
 
+<br>
+  <canvas id="c" width="400" height="400"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+  <script>
+    var ctx = document.getElementById("c").getContext("2d");
+    var data = {
+      labels: ["HTML", "CSS", "Javascript", "Swift", "Ruby", "Rails", "Other"],
+      datasets: [{
+        label: "Ability",
+        fillColor: "rgba(220,220,220,0.2)",
+        strokeColor: "rgba(220,220,220,1)",
+        pointColor: "rgba(220,220,220,1)",
+        pointStrokeColor: "#fff",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(220,220,220,1)",
+        data: [65, 59, 80, 81, 56, 55, 40]
+      }, {
+        label: "Enjoyment",
+        fillColor: "rgba(151,187,205,0.2)",
+        strokeColor: "rgba(151,187,205,1)",
+        pointColor: "rgba(151,187,205,1)",
+        pointStrokeColor: "#fff",
+        pointHighlightFill: "#fff",
+        pointHighlightStroke: "rgba(151,187,205,1)",
+        data: [28, 48, 40, 19, 86, 27, 90]
+      }]
+    };
+    var MyNewChart = new Chart(ctx).Radar(data);
+
+
+  </script>
+
 <img style="float:left" src="/img/W.jpg" />hile working in surgery, the iPhone was developed and I took advantage of the opportunity and hired a developer to create a medical terminology dictionary app for me. Released on opening day of the App Store, it sold fairly well and served as a springboard into my second career as a web and software developer after learning web development on my own for years and eventually graduating thoughtbot's Ruby on Rails intensive course.
 
 My consulting work and I have been written about in Wired Magazine, Entrepreneur Magazine, Inc., Forbes, and a full profile in the Boston Globe.
