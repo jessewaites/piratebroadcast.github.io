@@ -71,6 +71,10 @@ Need to get in touch? Email Me or schedule an appointment for a phone call.
   var ctx = document.getElementById("c").getContext("2d");
   var data = {
     labels: ["Movies", "Books", "Hiking", "Dogs", "Photography", "Tea", "Other"],
+    options: {
+    responsive: true,
+    maintainAspectRatio: true
+    },
     datasets: [{
       label: "Weekdays",
       fillColor: "rgba(220,220,220,0.2)",
