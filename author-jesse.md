@@ -11,7 +11,7 @@ title: About Jesse Waites
 
 # About Jesse Waites
 
-<p>Here for the book? You can now buy the PDF version of my book here.</p>
+<p>Here for the book? You can now buy the PDF version of my book here. Also, enjoy this fun chart.</p>
 
 <form action="https://jesse-book-server.herokuapp.com" method="POST">
     <script
@@ -29,40 +29,9 @@ title: About Jesse Waites
 
 > “If you think math is hard, try web design.” ―Trish Parr
 
-After growing up in the South and serving a short stint in the Air Force, I worked as an Operating Room Technician specializing in Trauma, Orthopaedic, and Neurosurgery in hospitals all over the US. After accepting a job in Trauma Surgery in Boston at MGH and falling in love with the city, I decided to stay in New England and have been here for almost 10 years. Boston is my home now.
+<canvas id="c" width="400" height="400"></canvas>
 
-<br>
-  <canvas id="c" width="400" height="400"></canvas>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-  <script>
-    var ctx = document.getElementById("c").getContext("2d");
-    var data = {
-      labels: ["HTML", "CSS", "Javascript", "Swift", "Ruby", "Rails", "Other"],
-      datasets: [{
-        label: "Ability",
-        fillColor: "rgba(220,220,220,0.2)",
-        strokeColor: "rgba(220,220,220,1)",
-        pointColor: "rgba(220,220,220,1)",
-        pointStrokeColor: "#fff",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(220,220,220,1)",
-        data: [65, 59, 80, 81, 56, 55, 40]
-      }, {
-        label: "Enjoyment",
-        fillColor: "rgba(151,187,205,0.2)",
-        strokeColor: "rgba(151,187,205,1)",
-        pointColor: "rgba(151,187,205,1)",
-        pointStrokeColor: "#fff",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(151,187,205,1)",
-        data: [28, 48, 40, 19, 86, 27, 90]
-      }]
-    };
-    var MyNewChart = new Chart(ctx).Radar(data);
-
-
-  </script>
+After seeing a chart of some of my hobbies, here is a little about me: After growing up in the South and serving a short stint in the Air Force, I worked as an Operating Room Technician specializing in Trauma, Orthopaedic, and Neurosurgery in hospitals all over the US. After accepting a job in Trauma Surgery in Boston at MGH and falling in love with the city, I decided to stay in New England and have been here for almost 10 years. Boston is my home now.
 
 <img style="float:left" src="/img/W.jpg" />hile working in surgery, the iPhone was developed and I took advantage of the opportunity and hired a developer to create a medical terminology dictionary app for me. Released on opening day of the App Store, it sold fairly well and served as a springboard into my second career as a web and software developer after learning web development on my own for years and eventually graduating thoughtbot's Ruby on Rails intensive course.
 
@@ -96,3 +65,33 @@ I firmly believe that it is not good enough for a website to merely function pro
 I currently spend my time surrounding myself with great friends, hiking, traveling, backpacking, climbing at Brooklyn Boulders, reading great books, watching amazing films, posting overly filtered Instagram pictures, making smalltalk and fleeting friendships with Uber drivers, and building great looking web applications primarily with Ruby on Rails.
 
 Need to get in touch? Email Me or schedule an appointment for a phone call.
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script>
+  var ctx = document.getElementById("c").getContext("2d");
+  var data = {
+    labels: ["Movies", "Books", "Hiking", "Dogs", "Photography", "Tea", "Other"],
+    datasets: [{
+      label: "Ability",
+      fillColor: "rgba(220,220,220,0.2)",
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+      data: [65, 59, 80, 81, 56, 55, 40]
+    }, {
+      label: "Enjoyment",
+      fillColor: "rgba(151,187,205,0.2)",
+      strokeColor: "rgba(151,187,205,1)",
+      pointColor: "rgba(151,187,205,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(151,187,205,1)",
+      data: [28, 48, 40, 19, 86, 27, 90]
+    }]
+  };
+  var MyNewChart = new Chart(ctx).Radar(data);
+
+
+</script>
