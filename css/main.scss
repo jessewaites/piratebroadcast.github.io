@@ -6,6 +6,11 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import "global";
 
+body, html {
+  cursor: url(http://www.rw-designer.com/cursor-view/36196.gif), default;
+  height: 100%;
+}
+
 .menu-trigger {
     top: 15px;
     left: 15px;
