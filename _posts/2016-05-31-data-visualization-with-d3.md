@@ -17,7 +17,7 @@ Lately, I've been working on data visualizations at work. The idea is taking som
 votes from an election, the data from your FitBit, or anything else, and using it to tell a
 convincing story at a glance.
 
-> There is a magic in graphs. The proﬁle of a curve reveals in a ﬂash a whole situation — the life history of an epidemic, a panic, or an era of prosperity. The curve informs the mind, awakens the imagination,
+> There is a magic in graphs. The profile of a curve reveals in a ﬂash a whole situation — the life history of an epidemic, a panic, or an era of prosperity. The graph informs the mind, awakens the imagination,
 > convinces.
 >
 > ―Henry D. Hubbard
