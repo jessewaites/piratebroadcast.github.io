@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jesse Waites | About Jesse Waites</title>
-    <meta name="description" content="Jesse Waites: Boston, MA based Ruby on Rails Developer.">
+    <title>Jesse Waites | iOS Swift App Demo</title>
+    <meta name="description" content="I recently put a swift demo app together as a way to show interest and at least passing familiarity with Swift / Xcode 7 / iOS Development. (Other than the f...">
 
     <link rel="stylesheet" href="/css/main.css">
 
-    <link rel="canonical" href="/about/">
+    <link rel="canonical" href="/swift-development-demo/">
     <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="http://JesseWaites.com/feed.xml" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
@@ -100,42 +100,48 @@ $(document).ready(function() {
     <meta content="Jesse Waites" property="og:site_name">
 
     
-      <meta name="twitter:title" content="About Jesse Waites">
-      <meta content="About Jesse Waites" property="og:title">
+      <meta name="twitter:title" content="iOS Swift App Demo">
+      <meta content="iOS Swift App Demo" property="og:title">
       <meta content="article" property="og:type">
     
 
     
-      <meta name="twitter:description" content="Jesse Waites: Boston, MA based Ruby on Rails Developer.">
-      <meta content="Jesse Waites: Boston, MA based Ruby on Rails Developer." property="og:description">
+      <meta name="twitter:description" content="iOS Development from a Rubyists' perspective">
+      <meta content="iOS Development from a Rubyists' perspective" property="og:description">
     
 
     
-      <meta name="twitter:url" content="http://JesseWaites.com/about/">
-      <meta content="http://JesseWaites.com/about/" property="og:url">
+      <meta name="twitter:url" content="http://JesseWaites.com/swift-development-demo/">
+      <meta content="http://JesseWaites.com/swift-development-demo/" property="og:url">
     
 
+    
+      <meta content="2016-01-07T04:50:28-05:00" property="article:published_time">
     
     
       <meta content="http://JesseWaites.com/img/twitter_card2.png" property="og:image">
     
 
     
+      
+      <meta content="coding" property="article:section">
+      
+    
 
+    
+      
     
     </head>
 
 
   <body class="">
 
-    <header class="hero-image" style='background-image: url(/img/feature-book.jpg);'>
-    
+    <header class="hero-image" style="background-image: url(/img/xcode.jpg);">
     <span class="menu-trigger animated fadeInDown">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
     </span>
-
     <!-- if the user has javascript disabled they can still use the menu -->
 <noscript>
     <div class="no-js-menu">
@@ -200,39 +206,70 @@ $(document).ready(function() {
     </ul>
 </div>
 
+    <!-- <div id="avatar" style="float: right;"></div> -->
 </header>
 
 <main class="container">
     <div class="row">
         <div class="col-xs-12 single-content">
+            <p class="meta">
+                <a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 5 minutes
+            </p>
 
-            <h1>About Jesse Waites</h1>
+            <h1>iOS Swift App Demo</h1>
 
-            <blockquote>
-  <p>“If you think math is hard, try web design.” ―Trish Parr</p>
-</blockquote>
+            <p>I recently put a swift demo app together as a way to show interest and at least passing familiarity with Swift / Xcode 7 / iOS Development. (Other than the fact that I wrote a book about it ;) This is simply a random fact display app that shows rather benign little facts about me such as the fact that I enjoy eating spaghetti and like to go hiking.</p>
 
-<p>After growing up in the South and serving a short stint in the Air Force, I worked as an Operating Room Technician specializing in Trauma, Orthopaedic, and Neurosurgery in hospitals all over the US. After accepting a job in Trauma Surgery in Boston at MGH and falling in love with the city, I decided to stay in New England and have been here for almost 10 years. Boston is my home now.</p>
+<p><img src="http://i.imgur.com/nRNKOA2.png&quot;" alt="Jesse Waites App" /></p>
 
-<p><img src="http://i.imgur.com/ItNzFMY.png" alt="Boston, MA" /></p>
+<p>Here are a few things that crossed my mind when building this app.</p>
 
-<p>While working in surgery, the iPhone was developed and I took advantage of the opportunity and hired a developer to create a medical terminology dictionary app for me. Released on opening day of the App Store, it sold fairly well and served as a springboard into my second career as a web and software developer after learning web development on my own for years and eventually graduating thoughtbot’s Ruby on Rails intensive course.</p>
+<ul>
+  <li>
+    <p>Really neat to see the MVC implementation on the handset (iPhone) I’ve used for years.</p>
+  </li>
+  <li>
+    <p>There is no method on an array in Swift that will return a random element of the array, such as array.sample in Ruby. That seems kind of ridiculous. Apple has recently open sourced Swift and one hopes an implementation of that will soon be possible.</p>
+  </li>
+  <li>
+    <p>Building for iOS in Xcode is a hell of a lot of fun. Much like Rails, it seems everything has its place in an Xcode project, and it is obvious that the better one is with the tooling (in this case, Xcode) the more productive and capable the developer will be.</p>
+  </li>
+  <li>
+    <p>Adding an app icon for the homepage was a breeze.</p>
+  </li>
+  <li>
+    <p>Adding a launch screen was a total pain and I was not successful. This seems to be due to a change in Xcode 7 and iOS 9. Didn’t want to burn more time attempting to resolve the issue so I moved on. I used Photoshop and created my image, placed it in what I thought was the proper location, but it simply didn’t work. Whatever.</p>
+  </li>
+  <li>
+    <p>Implementing a button that launched the in-app Safari browser was a breeze.</p>
+  </li>
+  <li>
+    <p>There is no mail client in the simulator so hardcoding an “email me” button into the app may work in the actual app on a real iPhone but will throw an error in the Xcode Simulator. I had this in my build but removed it (That code is still in the controller) because it was also causing a lot of drama in my UI layout. Specifically, my buttons were overlapping. See next bullet point.</p>
+  </li>
+  <li>
+    <p>I found layout and autolayout extremely difficult. I can see that I will need to put much more time into that to master it.</p>
+  </li>
+  <li>
+    <p>I’m very much a ‘looks matter’ type of developer and look forward to experimenting with cocoapods and using some of the preexisting UI libraries to make my stuff look really great.</p>
+  </li>
+  <li>
+    <p>If I were building an app for, lets say a restaurant, it would be wise to build the menu from an external JSON endpoint, rather than hardcoding everything like meals and prices into the app. This way one could update the menu externally without having to recode the app and go back through the app store submission and review process. This JSON server would probably be great for something like that. https://github.com/typicode/json-server</p>
+  </li>
+  <li>
+    <p>Based on my research, SwiftyJSON seems to be the ideal tool to process the JSON on the client / iOS device side: https://github.com/SwiftyJSON/SwiftyJSON</p>
+  </li>
+  <li>
+    <p>Xcode projects don’t have readme.md files, so I had to manually create one by creating a folder, moving the Xcode project into it, cd-ing into the folder and using the command touch readme.md to create it.</p>
+  </li>
+</ul>
 
-<p>I wrote a book about the process of mobile app development, which is currently on sale on the iBookstore and the Amazon Kindle, and have given talks about the App Development process at M.I.T. and General Assembly. Below you will find the “Book Trailer” for the book.</p>
+<p><a href="https://github.com/piratebroadcast/ios_swift_demo_app">Here’s the Github link.</a></p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/81Y5hSkbRiQ" frameborder="0" allowfullscreen=""></iframe>
+<p>Next Steps: Build a Rails API app, like a simple little TODO app or something, (Make sure I scope the API routes like V1 or whatever) and then create an iOS front-end for it that reads things from the list and allows to post new TODOs from the App to the database. Would also be fun to experiment with Oauth and iOS, like signing in with Facebook, passing the token back to the Rails app, and authorizing or not authorizing on the iOS device.</p>
 
-<p>I have since created multiple mobile and web applications for myself and clients such as social networks, e-commerce applications that sell goods and services online, and scheduling applications that allow consultants to charge fees to book an appointment. In addition to my primary web development framework, Ruby on Rails, I also have extensive experience with Wordpress, Drupal, and Squarespace.</p>
+<p>Actually scratch that - Next step is to build a simple app that reads JSON from an endpoint somewhere (like government data or something, lots of options there) and displays it on the screen. This will give me another shot to work on effective UI and not get overwhelmed by attempting to do too many new things at once.</p>
 
-<p>I love what I do because being a web developer is the rare career field that affords me the ability to be both an engineer and an artist. I can do everything from back end programming to mocking up a User Interface in Omnigraffle, Balsamiq, or InVision and coding it up in HTML/CSS. I firmly believe that it is not good enough for a website to merely function properly from a programmatic perspective, it must also look great and be pleasant for people of all demographics to use.</p>
-
-<blockquote>
-  <p>“Websites should look good from the inside and out.” ― Paul Cookson</p>
-</blockquote>
-
-<p>I currently spend my time surrounding myself with great friends, hiking, traveling, backpacking, reading great books, watching amazing films, posting overly filtered Instagram pictures, making friends with Uber drivers, and building great looking web applications primarily with Ruby on Rails.</p>
-
-<p>Need to get in touch? Email Me or schedule an appointment for a phone call.</p>
+<p>Cheers.</p>
 
 
         </div><!-- main-content/col -->
@@ -240,14 +277,48 @@ $(document).ready(function() {
 
 </main> <!-- /container -->
 
-<footer class="single single-page without-readmore">
+<footer class="single">
     <div class="container">
-        <div class="col-sm-12">
-            <p>Jesse Waites &copy; 2015 <a href="/">latest posts</a></p>
+    <div class="row">
+        <div class="col-xs-12 col-sm-2">
+            <img src="/img/jesse.jpg" class="user-icon " alt="user-image">
         </div>
-    </div>
-</footer>
+        <div class="col-xs-12 col-sm-6">
+            <div class="category-list">
+                <p>Published <span>Jan 7, 2016</span></p>
+                <p><a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a></p>
 
+                <div class="other-catergories">
+                    <h3>Also found in</h3>
+
+                    <ul>
+                        
+                        <li>
+                            <a href='/category/coding'>Coding</a>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div><!-- end col -->
+        <div class="col-xs-12 col-sm-4">
+            <div class="social">
+                <p>Share this article</a>
+                <div class="social-links">
+                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://JesseWaites.com/swift-development-demo/"><i class="fa fa-twitter"></i></a>
+
+                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://JesseWaites.com/swift-development-demo/"><i class="fa fa-facebook-official"></i></a>
+                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://JesseWaites.com/swift-development-demo/"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end row -->
+</div>
+
+    
+</footer>
 
 
     <script src='/js/vendor/modernizr.custom.32229-2.8-respondjs-1-4-2.js'></script>

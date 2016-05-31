@@ -31,6 +31,63 @@
 audio.play();
   alert('You got an extra life!');
 });</script>
+
+<script>
+(function ( $ ) {
+    $.fn.typewrite = function ( options ) {
+        var settings = {
+            'selector': this,
+            'extra_char': '_',
+            'delay':    100,
+            'trim':     false,
+            'callback': null
+        };
+        if (options) $.extend(settings, options);
+
+        /* This extra closure makes it so each element
+         * matched by the selector runs sequentially, instead
+         * of all at the same time. */
+        function type_next_element(index) {
+            var current_element = $(settings.selector[index]);
+            var final_text = current_element.text();
+            if (settings.trim) final_text = $.trim(final_text);
+            current_element.html("").show();
+
+            function type_next_character(element, i) {
+                element.html( final_text.substr(0, i)+settings.extra_char );
+                if (final_text.length >= i) {
+                    setTimeout(function() {
+                        type_next_character(element, i+1);
+                    }, settings.delay);
+                }
+                else {
+                    if (++index < settings.selector.length) {
+                        type_next_element(index);
+                    }
+                    else if (settings.callback) settings.callback();
+                }
+            }
+            type_next_character(current_element, 0);
+        }
+        type_next_element(0);
+
+        return this;
+    };
+})(jQuery);
+
+
+
+$(document).ready(function() {
+
+    $('.demo').typewrite({
+        'callback': function(){
+            $('.demo').css();
+        },
+        'delay': 100
+    });
+});
+</script>
+
     <!--[if lt IE 9]>
         <script src="/js/vendor/html5shiv.min.js"></script>
     <![endif]-->
@@ -154,8 +211,8 @@ audio.play();
               </div>
             </div>
 
-            <h1>About Jesse Waites</h1>
-            <p></p>
+            <h1 class="demo">About Jesse Waites</h1>
+            <p class="demo"></p>
           </div>
         </div>
 
@@ -170,7 +227,7 @@ audio.play();
     <div class="author-bio__info">
         <h1 id="about-jesse-waites">About Jesse Waites</h1>
 
-<p>Here for the book? You can now buy the PDF version of my book here.</p>
+<p>Here for the book? You can now buy the PDF version of my book here. Also, enjoy this fun chart.</p>
 
 <form action="https://jesse-book-server.herokuapp.com" method="POST">
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="pk_live_JEwYdUmZ8ZNhYt9gZvqlpXWx" data-name="JESSE WAITES" data-description="PDF Book" data-amount="500">
@@ -184,11 +241,14 @@ audio.play();
   <p>“If you think math is hard, try web design.” ―Trish Parr</p>
 </blockquote>
 
-<p>After growing up in the South and serving a short stint in the Air Force, I worked as an Operating Room Technician specializing in Trauma, Orthopaedic, and Neurosurgery in hospitals all over the US. After accepting a job in Trauma Surgery in Boston at MGH and falling in love with the city, I decided to stay in New England and have been here for almost 10 years. Boston is my home now.</p>
+<canvas id="c" width="400" height="400"></canvas>
+
+<p>After seeing a chart of some of my hobbies, here is a little about me: After growing up in the South and serving a short stint in the Air Force, I worked as an Operating Room Technician specializing in Trauma, Orthopaedic, and Neurosurgery in hospitals all over the US. After accepting a job in Trauma Surgery in Boston at MGH and falling in love with the city, I decided to stay in New England and have been here for almost 10 years. Boston is my home now.</p>
 
 <p><img style="float:left" src="/img/W.jpg" />hile working in surgery, the iPhone was developed and I took advantage of the opportunity and hired a developer to create a medical terminology dictionary app for me. Released on opening day of the App Store, it sold fairly well and served as a springboard into my second career as a web and software developer after learning web development on my own for years and eventually graduating thoughtbot’s Ruby on Rails intensive course.</p>
 
-<p>I wrote a book about the process of mobile app development, which is currently on sale on the iBookstore and the Amazon Kindle, and have given talks about the App Development process at M.I.T. and General Assembly. You can buy the PDF version of my book here.
+<p>My consulting work and I have been written about in Wired Magazine, Entrepreneur Magazine, Inc., Forbes, and a full profile in the Boston Globe.
+I also wrote a book about the process of mobile app development, which is currently on sale on the iBookstore and the Amazon Kindle, and have given talks about the App Development process at M.I.T. and General Assembly. You can buy the PDF version of my book here.
 <br /></p>
 
 <form action="https://jesse-book-server.herokuapp.com" method="POST">
@@ -202,7 +262,9 @@ I have since created multiple mobile and web applications for myself and clients
 
 <p>I love what I do because being a web developer is the rare career field that affords me the ability to be both an engineer and an artist.</p>
 
-<p>I can do everything from back end programming to mocking up a User Interface in Omnigraffle, Balsamiq, or InVision and coding it up in HTML/CSS. I firmly believe that it is not good enough for a website to merely function properly from a programmatic perspective, it must also look great and be pleasant for people of all demographics to use.</p>
+<p>I can do everything from back end programming to mocking up a User Interface in Omnigraffle, Balsamiq, or InVision and coding it up in HTML/CSS and building out a great backend in Rails. I’ve used Bootstrap, Foundation, Stripe, Twilio, and a ton of other Ruby on Rails supporting technologies and frameworks.</p>
+
+<p>I firmly believe that it is not good enough for a website to merely function properly from a programmatic perspective, it must also look great and be pleasant for people of all demographics to use.</p>
 
 <blockquote>
   <p>“Websites should look good from the inside and out.” ― Paul Cookson</p>
@@ -211,6 +273,42 @@ I have since created multiple mobile and web applications for myself and clients
 <p>I currently spend my time surrounding myself with great friends, hiking, traveling, backpacking, climbing at Brooklyn Boulders, reading great books, watching amazing films, posting overly filtered Instagram pictures, making smalltalk and fleeting friendships with Uber drivers, and building great looking web applications primarily with Ruby on Rails.</p>
 
 <p>Need to get in touch? Email Me or schedule an appointment for a phone call.</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+
+<script>
+  var ctx = document.getElementById("c").getContext("2d");
+  var data = {
+    labels: ["Movies", "Books", "Hiking", "Dogs", "Photography", "Tea", "Other"],
+    options: {
+    responsive: true,
+    maintainAspectRatio: true
+    },
+    datasets: [{
+      label: "Weekdays",
+      fillColor: "rgba(220,220,220,0.2)",
+      strokeColor: "rgba(220,220,220,1)",
+      pointColor: "rgba(220,220,220,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+      data: [75, 69, 80, 81, 76, 95, 40]
+    }, {
+      label: "Weekends",
+      fillColor: "rgba(151,187,205,0.2)",
+      strokeColor: "rgba(151,187,205,1)",
+      pointColor: "rgba(151,187,205,1)",
+      pointStrokeColor: "#fff",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(151,187,205,1)",
+      data: [28, 48, 40, 69, 86, 67, 90]
+    }]
+  };
+  var MyNewChart = new Chart(ctx).Radar(data);
+
+
+</script>
+
 
     </div>
 </div>

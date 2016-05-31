@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jesse Waites | About Jesse Waites</title>
-    <meta name="description" content="Jesse Waites: Boston, MA based Ruby on Rails Developer.">
+    <title>Jesse Waites | Introducing the TwitterImageTag Rubygem</title>
+    <meta name="description" content="When I’m building a web application that is in the early prototype stage, I like to allow users to have profile pictures, but sometimes want to skip the proc...">
 
     <link rel="stylesheet" href="/css/main.css">
 
-    <link rel="canonical" href="/about/">
+    <link rel="canonical" href="/introducing-the-twitter-image-tag-gem/">
     <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="http://JesseWaites.com/feed.xml" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
@@ -100,8 +100,8 @@ $(document).ready(function() {
     <meta content="Jesse Waites" property="og:site_name">
 
     
-      <meta name="twitter:title" content="About Jesse Waites">
-      <meta content="About Jesse Waites" property="og:title">
+      <meta name="twitter:title" content="Introducing the TwitterImageTag Rubygem">
+      <meta content="Introducing the TwitterImageTag Rubygem" property="og:title">
       <meta content="article" property="og:type">
     
 
@@ -111,31 +111,37 @@ $(document).ready(function() {
     
 
     
-      <meta name="twitter:url" content="http://JesseWaites.com/about/">
-      <meta content="http://JesseWaites.com/about/" property="og:url">
+      <meta name="twitter:url" content="http://JesseWaites.com/introducing-the-twitter-image-tag-gem/">
+      <meta content="http://JesseWaites.com/introducing-the-twitter-image-tag-gem/" property="og:url">
     
 
+    
+      <meta content="2016-01-29T04:50:28-05:00" property="article:published_time">
     
     
       <meta content="http://JesseWaites.com/img/twitter_card2.png" property="og:image">
     
 
     
+      
+      <meta content="coding" property="article:section">
+      
+    
 
+    
+      
     
     </head>
 
 
   <body class="">
 
-    <header class="hero-image" style='background-image: url(/img/feature-book.jpg);'>
-    
+    <header class="hero-image" style="background-image: url(/img/twitter_large_jpeg.jpg);">
     <span class="menu-trigger animated fadeInDown">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
     </span>
-
     <!-- if the user has javascript disabled they can still use the menu -->
 <noscript>
     <div class="no-js-menu">
@@ -200,39 +206,84 @@ $(document).ready(function() {
     </ul>
 </div>
 
+    <!-- <div id="avatar" style="float: right;"></div> -->
 </header>
 
 <main class="container">
     <div class="row">
         <div class="col-xs-12 single-content">
+            <p class="meta">
+                <a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 4 minutes
+            </p>
 
-            <h1>About Jesse Waites</h1>
+            <h1>Introducing the TwitterImageTag Rubygem</h1>
 
-            <blockquote>
-  <p>“If you think math is hard, try web design.” ―Trish Parr</p>
-</blockquote>
+            <p>When I’m building a web application that is in the early prototype stage, I like to allow users to have profile pictures, but sometimes want to skip the process of actually building a mechanism (configuring Paperclip) to upload and store profile pictures so I can focus on something else.</p>
 
-<p>After growing up in the South and serving a short stint in the Air Force, I worked as an Operating Room Technician specializing in Trauma, Orthopaedic, and Neurosurgery in hospitals all over the US. After accepting a job in Trauma Surgery in Boston at MGH and falling in love with the city, I decided to stay in New England and have been here for almost 10 years. Boston is my home now.</p>
-
-<p><img src="http://i.imgur.com/ItNzFMY.png" alt="Boston, MA" /></p>
-
-<p>While working in surgery, the iPhone was developed and I took advantage of the opportunity and hired a developer to create a medical terminology dictionary app for me. Released on opening day of the App Store, it sold fairly well and served as a springboard into my second career as a web and software developer after learning web development on my own for years and eventually graduating thoughtbot’s Ruby on Rails intensive course.</p>
-
-<p>I wrote a book about the process of mobile app development, which is currently on sale on the iBookstore and the Amazon Kindle, and have given talks about the App Development process at M.I.T. and General Assembly. Below you will find the “Book Trailer” for the book.</p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/81Y5hSkbRiQ" frameborder="0" allowfullscreen=""></iframe>
-
-<p>I have since created multiple mobile and web applications for myself and clients such as social networks, e-commerce applications that sell goods and services online, and scheduling applications that allow consultants to charge fees to book an appointment. In addition to my primary web development framework, Ruby on Rails, I also have extensive experience with Wordpress, Drupal, and Squarespace.</p>
-
-<p>I love what I do because being a web developer is the rare career field that affords me the ability to be both an engineer and an artist. I can do everything from back end programming to mocking up a User Interface in Omnigraffle, Balsamiq, or InVision and coding it up in HTML/CSS. I firmly believe that it is not good enough for a website to merely function properly from a programmatic perspective, it must also look great and be pleasant for people of all demographics to use.</p>
+<p>So I got to work on this, TwitterImageTag.</p>
 
 <blockquote>
-  <p>“Websites should look good from the inside and out.” ― Paul Cookson</p>
+  <p>“To invent, you need a good imagination and a pile of junk.”</p>
+
+  <p>Thomas Edison</p>
 </blockquote>
 
-<p>I currently spend my time surrounding myself with great friends, hiking, traveling, backpacking, reading great books, watching amazing films, posting overly filtered Instagram pictures, making friends with Uber drivers, and building great looking web applications primarily with Ruby on Rails.</p>
+<p>This gem allows you to easily add Twitter Avatar Images to your Ruby / Rails app views. Based on the Twitter v1.1 API, the primary usage would be for building out quick prototypes, or bypassing the need to have users upload their own avatar images. Ideally, you would have a field in your user onboarding form called “twitter handle”, and call something like:</p>
 
-<p>Need to get in touch? Email Me or schedule an appointment for a phone call.</p>
+<pre>
+&lt;%= TwitterImageTag.show_me(current_user.twitter_handle, "normal") %&gt;
+</pre>
+
+<p>This image pretty much explains it all:</p>
+
+<p><img src="http://i.imgur.com/9fru2jz.png" alt="Example" /></p>
+
+<p>This takes 2 arguments - any valid twitter handle, and any of 4 size options:
+“normal”, “bigger”, “mini”, or “original”. The dimensions of the size options are:</p>
+
+<p>normal: 48 x 48 pixels.
+bigger: 73 x 73 pixels.
+mini:   24 x 24 pixels.
+original: No idea.</p>
+
+<p>There’s no telling what the “original” image size will be. It is whatever
+size the user uploaded.</p>
+
+<h2 id="installation">Installation</h2>
+
+<p>Add this line to your application’s Gemfile:</p>
+
+<p>NOTE: Make sure you are using the latest version of this gem - it went under a significant rewrite at version 1.9.5 - Don’t use anything lower than that.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'twitter_image_tag'</span>
+</code></pre>
+</div>
+
+<p>And then execute:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ bundle
+</code></pre>
+</div>
+
+<p>Or install it yourself as:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install twitter_image_tag
+</code></pre>
+</div>
+
+<h2 id="usage">Usage</h2>
+<pre>
+&lt;%= TwitterImageTag.show_me(current_user.twitter_handle, "normal") %&gt;
+</pre>
+<p>## Development</p>
+
+<p>After checking out the repo, run <code class="highlighter-rouge">bin/setup</code> to install dependencies. Then, run <code class="highlighter-rouge">rake false</code> to run the tests. You can also run <code class="highlighter-rouge">bin/console</code> for an interactive prompt that will allow you to experiment.</p>
+
+<p>To install this gem onto your local machine, run <code class="highlighter-rouge">bundle exec rake install</code>. To release a new version, update the version number in <code class="highlighter-rouge">version.rb</code>, and then run <code class="highlighter-rouge">bundle exec rake release</code>, which will create a git tag for the version, push git commits and tags, and push the <code class="highlighter-rouge">.gem</code> file to <a href="https://rubygems.org">rubygems.org</a>.</p>
+
+<h2 id="contributing">Contributing</h2>
+
+<p>Bug reports and pull requests are welcome on GitHub at https://github.com/piratebroadcast/twitter_image_tag.</p>
 
 
         </div><!-- main-content/col -->
@@ -240,14 +291,48 @@ $(document).ready(function() {
 
 </main> <!-- /container -->
 
-<footer class="single single-page without-readmore">
+<footer class="single">
     <div class="container">
-        <div class="col-sm-12">
-            <p>Jesse Waites &copy; 2015 <a href="/">latest posts</a></p>
+    <div class="row">
+        <div class="col-xs-12 col-sm-2">
+            <img src="/img/jesse.jpg" class="user-icon " alt="user-image">
         </div>
-    </div>
-</footer>
+        <div class="col-xs-12 col-sm-6">
+            <div class="category-list">
+                <p>Published <span>Jan 29, 2016</span></p>
+                <p><a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a></p>
 
+                <div class="other-catergories">
+                    <h3>Also found in</h3>
+
+                    <ul>
+                        
+                        <li>
+                            <a href='/category/coding'>Coding</a>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div><!-- end col -->
+        <div class="col-xs-12 col-sm-4">
+            <div class="social">
+                <p>Share this article</a>
+                <div class="social-links">
+                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://JesseWaites.com/introducing-the-twitter-image-tag-gem/"><i class="fa fa-twitter"></i></a>
+
+                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://JesseWaites.com/introducing-the-twitter-image-tag-gem/"><i class="fa fa-facebook-official"></i></a>
+                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://JesseWaites.com/introducing-the-twitter-image-tag-gem/"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end row -->
+</div>
+
+    
+</footer>
 
 
     <script src='/js/vendor/modernizr.custom.32229-2.8-respondjs-1-4-2.js'></script>

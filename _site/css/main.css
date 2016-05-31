@@ -8231,6 +8231,10 @@ a {
     color: #333;
     border-bottom: solid 1px #999; }
 
+body, html {
+  cursor: url(http://www.rw-designer.com/cursor-view/36196.gif), default;
+  height: 100%; }
+
 .menu-trigger {
   top: 15px;
   left: 15px;

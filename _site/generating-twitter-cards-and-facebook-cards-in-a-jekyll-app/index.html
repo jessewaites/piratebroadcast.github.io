@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jesse Waites | About Jesse Waites</title>
-    <meta name="description" content="Jesse Waites: Boston, MA based Ruby on Rails Developer.">
+    <title>Jesse Waites | Adding Twitter Cards & Facebook Cards to a Jekyll App</title>
+    <meta name="description" content="Twitter and Facebook Cards makes it possible to attach images to posts that automatically link to your content. LinkedIn also uses the same “Open Graph” prot...">
 
     <link rel="stylesheet" href="/css/main.css">
 
-    <link rel="canonical" href="/about/">
+    <link rel="canonical" href="/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/">
     <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="http://JesseWaites.com/feed.xml" />
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
@@ -100,42 +100,48 @@ $(document).ready(function() {
     <meta content="Jesse Waites" property="og:site_name">
 
     
-      <meta name="twitter:title" content="About Jesse Waites">
-      <meta content="About Jesse Waites" property="og:title">
+      <meta name="twitter:title" content="Adding Twitter Cards & Facebook Cards to a Jekyll App">
+      <meta content="Adding Twitter Cards & Facebook Cards to a Jekyll App" property="og:title">
       <meta content="article" property="og:type">
     
 
     
-      <meta name="twitter:description" content="Jesse Waites: Boston, MA based Ruby on Rails Developer.">
-      <meta content="Jesse Waites: Boston, MA based Ruby on Rails Developer." property="og:description">
+      <meta name="twitter:description" content="The easy way to add social cards to your website links.">
+      <meta content="The easy way to add social cards to your website links." property="og:description">
     
 
     
-      <meta name="twitter:url" content="http://JesseWaites.com/about/">
-      <meta content="http://JesseWaites.com/about/" property="og:url">
+      <meta name="twitter:url" content="http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/">
+      <meta content="http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/" property="og:url">
     
 
+    
+      <meta content="2016-01-18T04:50:28-05:00" property="article:published_time">
     
     
       <meta content="http://JesseWaites.com/img/twitter_card2.png" property="og:image">
     
 
     
+      
+      <meta content="coding" property="article:section">
+      
+    
 
+    
+      
     
     </head>
 
 
   <body class="">
 
-    <header class="hero-image" style='background-image: url(/img/feature-book.jpg);'>
-    
+    <header class="hero-image" style="background-image: url(/img/card_preview_jpeg.jpg);">
     <span class="menu-trigger animated fadeInDown">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
     </span>
-
     <!-- if the user has javascript disabled they can still use the menu -->
 <noscript>
     <div class="no-js-menu">
@@ -200,39 +206,33 @@ $(document).ready(function() {
     </ul>
 </div>
 
+    <!-- <div id="avatar" style="float: right;"></div> -->
 </header>
 
 <main class="container">
     <div class="row">
         <div class="col-xs-12 single-content">
+            <p class="meta">
+                <a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 7 minutes
+            </p>
 
-            <h1>About Jesse Waites</h1>
+            <h1>Adding Twitter Cards & Facebook Cards to a Jekyll App</h1>
 
-            <blockquote>
-  <p>“If you think math is hard, try web design.” ―Trish Parr</p>
-</blockquote>
+            <p>Twitter and Facebook Cards makes it possible to attach images to posts that automatically link to your content. LinkedIn also uses the same “Open Graph” protocol that Facebook uses, so this will work for LinkedIn as well with no additional code needed.</p>
 
-<p>After growing up in the South and serving a short stint in the Air Force, I worked as an Operating Room Technician specializing in Trauma, Orthopaedic, and Neurosurgery in hospitals all over the US. After accepting a job in Trauma Surgery in Boston at MGH and falling in love with the city, I decided to stay in New England and have been here for almost 10 years. Boston is my home now.</p>
+<p>Cards are the difference between pasting a link that is just a link, or having Twitter, Facebook, or LinkedIn scrape for an article title, image, and description. These cards look very professional and studies have proved that they lead to increased content sharing. You would be surprised how many otherwise professional websites and web services overlook this trivial yet effective step. The image below will show you what a Twitter Card looks like - When displayed on Twitter on either a user page or in a feed, the entire image will serve as a clickable hyperlink to the page or post.</p>
 
-<p><img src="http://i.imgur.com/ItNzFMY.png" alt="Boston, MA" /></p>
+<p><img src="http://i.imgur.com/otUP8vj.png" alt="twitter card validation" title="twitter card validation" /></p>
 
-<p>While working in surgery, the iPhone was developed and I took advantage of the opportunity and hired a developer to create a medical terminology dictionary app for me. Released on opening day of the App Store, it sold fairly well and served as a springboard into my second career as a web and software developer after learning web development on my own for years and eventually graduating thoughtbot’s Ruby on Rails intensive course.</p>
+<p>Interestingly, I found what may be a bug in the Jekyll framework when writing this blog post - When pasting my code sample, a line of code such as “page.title” is being evaluated, so when I paste “page.title”, the output on the screen is the actual page title, in this case “Adding Twitter Cards &amp; Facebook Cards to a Jekyll App”. This makes it difficult to share code with you but I found a workaround - I’ll simply need to share this code as a Github Gist to skip all of that drama. The  code below is for a Jekyll app, but you should be able to convert this to your programming language of choice rather easily, provided that you have access to your page objects. The code is simple if/else conditional statements that should be trivial to convert to use in Django, Drupal, Ruby on Rails, et cetera.</p>
 
-<p>I wrote a book about the process of mobile app development, which is currently on sale on the iBookstore and the Amazon Kindle, and have given talks about the App Development process at M.I.T. and General Assembly. Below you will find the “Book Trailer” for the book.</p>
+<script src="https://gist.github.com/piratebroadcast/425724b1b5b75ae6c037.js"></script>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/81Y5hSkbRiQ" frameborder="0" allowfullscreen=""></iframe>
+<p>Once you’ve added the code to your site header and pushed those updates to your production server, you can preview what your Cards will look like by pasting a blog post link in the validators below. I should note that I have hardcoded the same image to display whenever any link is posted to my site - This way I always know that SOME image is present. I’m mostly writing about code anyway so having a dynamic image is not important to me.</p>
 
-<p>I have since created multiple mobile and web applications for myself and clients such as social networks, e-commerce applications that sell goods and services online, and scheduling applications that allow consultants to charge fees to book an appointment. In addition to my primary web development framework, Ruby on Rails, I also have extensive experience with Wordpress, Drupal, and Squarespace.</p>
+<p><a href="https://cards-dev.twitter.com/validator">You can preview what your Twitter Card will look like by pasting a blog post link here.</a></p>
 
-<p>I love what I do because being a web developer is the rare career field that affords me the ability to be both an engineer and an artist. I can do everything from back end programming to mocking up a User Interface in Omnigraffle, Balsamiq, or InVision and coding it up in HTML/CSS. I firmly believe that it is not good enough for a website to merely function properly from a programmatic perspective, it must also look great and be pleasant for people of all demographics to use.</p>
-
-<blockquote>
-  <p>“Websites should look good from the inside and out.” ― Paul Cookson</p>
-</blockquote>
-
-<p>I currently spend my time surrounding myself with great friends, hiking, traveling, backpacking, reading great books, watching amazing films, posting overly filtered Instagram pictures, making friends with Uber drivers, and building great looking web applications primarily with Ruby on Rails.</p>
-
-<p>Need to get in touch? Email Me or schedule an appointment for a phone call.</p>
+<p><a href="https://developers.facebook.com/tools/debug/og/object/">You can preview your Facebook links here.</a></p>
 
 
         </div><!-- main-content/col -->
@@ -240,14 +240,48 @@ $(document).ready(function() {
 
 </main> <!-- /container -->
 
-<footer class="single single-page without-readmore">
+<footer class="single">
     <div class="container">
-        <div class="col-sm-12">
-            <p>Jesse Waites &copy; 2015 <a href="/">latest posts</a></p>
+    <div class="row">
+        <div class="col-xs-12 col-sm-2">
+            <img src="/img/jesse.jpg" class="user-icon " alt="user-image">
         </div>
-    </div>
-</footer>
+        <div class="col-xs-12 col-sm-6">
+            <div class="category-list">
+                <p>Published <span>Jan 18, 2016</span></p>
+                <p><a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a></p>
 
+                <div class="other-catergories">
+                    <h3>Also found in</h3>
+
+                    <ul>
+                        
+                        <li>
+                            <a href='/category/coding'>Coding</a>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div><!-- end col -->
+        <div class="col-xs-12 col-sm-4">
+            <div class="social">
+                <p>Share this article</a>
+                <div class="social-links">
+                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/"><i class="fa fa-twitter"></i></a>
+
+                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/"><i class="fa fa-facebook-official"></i></a>
+                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end row -->
+</div>
+
+    
+</footer>
 
 
     <script src='/js/vendor/modernizr.custom.32229-2.8-respondjs-1-4-2.js'></script>
