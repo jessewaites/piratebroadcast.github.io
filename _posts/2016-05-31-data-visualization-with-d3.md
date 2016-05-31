@@ -22,8 +22,7 @@ convincing story at a glance.
 >
 > ―Henry D. Hubbard
 
-I've been using a great javascript library called D3 and wanted
-to make a quick blog post to show off what the D3 library can do. D3 allows you full, custom control over the way your charts / graphs look and feel and you can even use common data structures like CSV (Like from an Excel file).
+I've been using a great javascript library called D3 and wanted to make a quick blog post to show off what the D3 library can do. D3 allows you full, custom control over the way your charts / graphs look and feel and you can even use common data structures like CSV (Like from an Excel file). The charts below are sample charts I've pulled from other sources. Make sure to click, drag, and touch the graphs to trigger the animations.
 
 <iframe width="100%" height="350" src="//jsfiddle.net/enigmarm/3HL4a/13/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 Click on the "Sort" and "Reset" buttons above to see the chart animation in action.
