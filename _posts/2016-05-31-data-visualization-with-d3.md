@@ -30,7 +30,7 @@ Click on the "Sort" and "Reset" buttons above to see the chart animation in acti
 
 
 <iframe width="550" height="500" src="//jsfiddle.net/JSDavi/qvco2Ljy/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-This one is a bit pointless but is pretty cool- Click and drag any of the circles above.
+This one is a bit pointless but is pretty cool- Click and drag any of the circles above, drag it around, fling it across the screen... Go nuts.
 
 
 <iframe width="100%" height="500" src="//jsfiddle.net/augburto/YMa2y/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
