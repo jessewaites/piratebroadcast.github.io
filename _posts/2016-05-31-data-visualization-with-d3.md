@@ -13,16 +13,16 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 
-<br>
+Lately, I've been working on data visualizations at work. The idea is taking some data, whether it be
+votes from an election, the data from your FitBit, or anything else, and using it to tell a
+convincing story at a glance. 
 
 > There is a magic in graphs. The proﬁle of a curve reveals in a ﬂash a whole situation — the life history of > an epidemic, a panic, or an era of prosperity. The curve informs the mind, awakens the imagination,
 > convinces.
 >
 > ―Henry D. Hubbard
 
-Lately, I've been working on data visualizations at work. The idea is taking some data, whether it be
-votes from an election, the data from your FitBit, or anything else, and using it to tell a
-convincing story at a glance. I've been using a great javascript library called D3 and wanted
+I've been using a great javascript library called D3 and wanted
 to make a quick blog post to show off what the D3 library can do. D3 allows you full, custom control over the way your charts / graphs look and feel and you can even use common data structures like CSV (Like from an Excel file).
 
 <iframe width="100%" height="350" src="//jsfiddle.net/enigmarm/3HL4a/13/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
