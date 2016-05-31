@@ -31,6 +31,63 @@
 audio.play();
   alert('You got an extra life!');
 });</script>
+
+<script>
+(function ( $ ) {
+    $.fn.typewrite = function ( options ) {
+        var settings = {
+            'selector': this,
+            'extra_char': '_',
+            'delay':    100,
+            'trim':     false,
+            'callback': null
+        };
+        if (options) $.extend(settings, options);
+
+        /* This extra closure makes it so each element
+         * matched by the selector runs sequentially, instead
+         * of all at the same time. */
+        function type_next_element(index) {
+            var current_element = $(settings.selector[index]);
+            var final_text = current_element.text();
+            if (settings.trim) final_text = $.trim(final_text);
+            current_element.html("").show();
+
+            function type_next_character(element, i) {
+                element.html( final_text.substr(0, i)+settings.extra_char );
+                if (final_text.length >= i) {
+                    setTimeout(function() {
+                        type_next_character(element, i+1);
+                    }, settings.delay);
+                }
+                else {
+                    if (++index < settings.selector.length) {
+                        type_next_element(index);
+                    }
+                    else if (settings.callback) settings.callback();
+                }
+            }
+            type_next_character(current_element, 0);
+        }
+        type_next_element(0);
+
+        return this;
+    };
+})(jQuery);
+
+
+
+$(document).ready(function() {
+
+    $('.demo').typewrite({
+        'callback': function(){
+            $('.demo').css();
+        },
+        'delay': 100
+    });
+});
+</script>
+
     <!--[if lt IE 9]>
         <script src="/js/vendor/html5shiv.min.js"></script>
     <![endif]-->
@@ -154,8 +211,13 @@ audio.play();
               </div>
             </div>
 
+<<<<<<< HEAD
             <h1>Jesse Waites</h1>
             <p>Boston Based Web / UX / App Developer</p>
+=======
+            <h1 class="demo">Jesse Waites</h1>
+            <p class="demo">Boston Based Ruby on Rails Developer</p>
+>>>>>>> ffcaabbbcf8e51f8e74c6fff91ff372ff7acb7b4
           </div>
         </div>
 
@@ -175,7 +237,29 @@ audio.play();
 
     <article class="post">
         <div class="post-preview col-xs-10  no-gutter">
-            <h2><a href="/introducing-the-twitter-image-tag-gem">Introducing the TwitterImageTag Rubygem</a></h2>
+            <h2><a href="/data-visualization-with-d3/">Data Visualization With D3</a></h2>
+
+            <p><br /></p>
+
+
+
+            <p class="meta">
+                <a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 4 minutes
+            </p>
+        </div>
+
+
+        
+        <div class=" col-xs-2  no-gutter">
+            <img src="/img/jesse.jpg" class="user-icon user-1" alt="user-image">
+        </div>
+        
+    </article>
+    
+
+    <article class="post">
+        <div class="post-preview col-xs-10  no-gutter">
+            <h2><a href="/introducing-the-twitter-image-tag-gem/">Introducing the TwitterImageTag Rubygem</a></h2>
 
             <p>When I’m building a web application that is in the early prototype stage, I like to allow users to have profile pictures, but sometimes want to skip the...
 
@@ -195,7 +279,7 @@ audio.play();
 
     <article class="post">
         <div class="post-preview col-xs-10  no-gutter">
-            <h2><a href="/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app">Adding Twitter Cards & Facebook Cards to a Jekyll App</a></h2>
+            <h2><a href="/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/">Adding Twitter Cards & Facebook Cards to a Jekyll App</a></h2>
 
             <p>Twitter and Facebook Cards makes it possible to attach images to posts that automatically link to your content. LinkedIn also uses the same “Open Graph” protocol that Facebook...
 
@@ -215,7 +299,7 @@ audio.play();
 
     <article class="post">
         <div class="post-preview col-xs-10  no-gutter">
-            <h2><a href="/swift-development-demo">iOS Swift App Demo</a></h2>
+            <h2><a href="/swift-development-demo/">iOS Swift App Demo</a></h2>
 
             <p>I recently put a swift demo app together as a way to show interest and at least passing familiarity with Swift / Xcode 7 / iOS Development. (Other...
 
@@ -235,7 +319,7 @@ audio.play();
 
     <article class="post">
         <div class="post-preview col-xs-10  no-gutter">
-            <h2><a href="/add-apple-touch-icon-to-rails-app">Add an Apple Touch Icon to a Ruby App</a></h2>
+            <h2><a href="/add-apple-touch-icon-to-rails-app/">Add an Apple Touch Icon to a Ruby App</a></h2>
 
             <p>This website runs on the Jekyll framework, which is a Ruby based blogging platform invented by Tom Preston-Werner, the founder of GitHub. After getting this website styled and...
 
@@ -255,7 +339,7 @@ audio.play();
 
     <article class="post">
         <div class="post-preview col-xs-10  no-gutter">
-            <h2><a href="/super-mario-easter-egg">Super Mario Easter Egg</a></h2>
+            <h2><a href="/super-mario-easter-egg/">Super Mario Easter Egg</a></h2>
 
             <p>This website holds a secret…</p>
 
@@ -277,7 +361,7 @@ audio.play();
 
     <article class="post">
         <div class="post-preview col-xs-10  no-gutter">
-            <h2><a href="/boston-ipsum">Introducing Boston Ipsum</a></h2>
+            <h2><a href="/boston-ipsum/">Introducing Boston Ipsum</a></h2>
 
             <p>Introducing the Boston Ipsum Ruby Gem.</p>
 

@@ -5,9 +5,47 @@
     <description>Jesse Waites: Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 04 Feb 2016 13:46:46 -0500</pubDate>
-    <lastBuildDate>Thu, 04 Feb 2016 13:46:46 -0500</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <pubDate>Tue, 31 May 2016 12:09:31 -0400</pubDate>
+    <lastBuildDate>Tue, 31 May 2016 12:09:31 -0400</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Data Visualization With D3</title>
+        <description>&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;There is a magic in graphs. The proﬁle of a curve reveals in a ﬂash a whole situation — the life history of &amp;gt; an epidemic, a panic, or an era of prosperity. The curve informs the mind, awakens the imagination,
+convinces.&lt;/p&gt;
+
+  &lt;p&gt;―Henry D. Hubbard&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Lately, I’ve been working on data visualizations at work. The idea is taking some data, whether it be
+votes from an election, the data from your FitBit, or anything else, and using it to tell a
+convincing story at a glance. I’ve been using a great javascript library called D3 and wanted
+to make a quick blog post to show off what the D3 library can do. D3 allows you full, custom control over the way your charts / graphs look and feel and you can even use common data structures like CSV (Like from an Excel file).&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;350&quot; src=&quot;//jsfiddle.net/enigmarm/3HL4a/13/embedded/result/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;Click on the “Sort” and “Reset” buttons above to see the chart animation in action.&lt;/p&gt;
+
+&lt;iframe width=&quot;550&quot; height=&quot;500&quot; src=&quot;//jsfiddle.net/JSDavi/qvco2Ljy/embedded/result/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;This one is a bit pointless but is pretty cool- Click and drag any of the circles above.&lt;/p&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;500&quot; src=&quot;//jsfiddle.net/augburto/YMa2y/embedded/result/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;Click on any of the blue boxes above.&lt;/p&gt;
+
+&lt;p&gt;Ok, that’s all for now. The next time you’re swamped with data at the office, consider using a
+visualization library like D3 to let your data help you make a much more convincing case for
+your argument.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 31 May 2016 05:50:28 -0400</pubDate>
+        <link>http://JesseWaites.com/data-visualization-with-d3/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/data-visualization-with-d3/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Introducing the TwitterImageTag Rubygem</title>
@@ -29,7 +67,7 @@
 
 &lt;p&gt;This image pretty much explains it all:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/CZ1x9D1VAAEWITQ.png:large&quot; alt=&quot;Example&quot; title=&quot;Example&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/9fru2jz.png&quot; alt=&quot;Example&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;This takes 2 arguments - any valid twitter handle, and any of 4 size options:
 “normal”, “bigger”, “mini”, or “original”. The dimensions of the size options are:&lt;/p&gt;
@@ -48,9 +86,9 @@ size the user uploaded.&lt;/p&gt;
 
 &lt;p&gt;NOTE: Make sure you are using the latest version of this gem - it went under a significant rewrite at version 1.9.5 - Don’t use anything lower than that.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby
-gem &#39;twitter_image_tag&#39;
-&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;twitter_image_tag&#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;And then execute:&lt;/p&gt;
 
@@ -79,8 +117,8 @@ gem &#39;twitter_image_tag&#39;
 &lt;p&gt;Bug reports and pull requests are welcome on GitHub at https://github.com/piratebroadcast/twitter_image_tag.&lt;/p&gt;
 </description>
         <pubDate>Fri, 29 Jan 2016 04:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/introducing-the-twitter-image-tag-gem</link>
-        <guid isPermaLink="true">http://JesseWaites.com/introducing-the-twitter-image-tag-gem</guid>
+        <link>http://JesseWaites.com/introducing-the-twitter-image-tag-gem/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/introducing-the-twitter-image-tag-gem/</guid>
         
         
         <category>coding</category>
@@ -106,8 +144,8 @@ gem &#39;twitter_image_tag&#39;
 &lt;p&gt;&lt;a href=&quot;https://developers.facebook.com/tools/debug/og/object/&quot;&gt;You can preview your Facebook links here.&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Mon, 18 Jan 2016 04:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app</link>
-        <guid isPermaLink="true">http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app</guid>
+        <link>http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/</guid>
         
         
         <category>coding</category>
@@ -170,8 +208,8 @@ gem &#39;twitter_image_tag&#39;
 &lt;p&gt;Cheers.&lt;/p&gt;
 </description>
         <pubDate>Thu, 07 Jan 2016 04:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/swift-development-demo</link>
-        <guid isPermaLink="true">http://JesseWaites.com/swift-development-demo</guid>
+        <link>http://JesseWaites.com/swift-development-demo/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/swift-development-demo/</guid>
         
         
         <category>coding</category>
@@ -200,8 +238,8 @@ After getting this website styled and configured the way I wanted to, I wanted t
 &lt;p&gt;Cheers.&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Jan 2016 12:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/add-apple-touch-icon-to-rails-app</link>
-        <guid isPermaLink="true">http://JesseWaites.com/add-apple-touch-icon-to-rails-app</guid>
+        <link>http://JesseWaites.com/add-apple-touch-icon-to-rails-app/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/add-apple-touch-icon-to-rails-app/</guid>
         
         
         <category>coding</category>
@@ -219,8 +257,8 @@ After getting this website styled and configured the way I wanted to, I wanted t
 &lt;p&gt;The secret is - If you load any page and type “1up”, you may hear a very familiar sound.&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Jan 2016 04:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/super-mario-easter-egg</link>
-        <guid isPermaLink="true">http://JesseWaites.com/super-mario-easter-egg</guid>
+        <link>http://JesseWaites.com/super-mario-easter-egg/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/super-mario-easter-egg/</guid>
         
         
         <category>coding</category>
@@ -286,8 +324,8 @@ After getting this website styled and configured the way I wanted to, I wanted t
 &lt;p&gt;&lt;a href=&quot;https://github.com/piratebroadcast/BostonIpsum&quot;&gt;Here’s the Github link.&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Wed, 06 Jan 2016 04:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/boston-ipsum</link>
-        <guid isPermaLink="true">http://JesseWaites.com/boston-ipsum</guid>
+        <link>http://JesseWaites.com/boston-ipsum/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/boston-ipsum/</guid>
         
         
         <category>coding</category>

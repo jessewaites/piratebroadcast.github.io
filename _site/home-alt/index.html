@@ -31,6 +31,63 @@
 audio.play();
   alert('You got an extra life!');
 });</script>
+
+<script>
+(function ( $ ) {
+    $.fn.typewrite = function ( options ) {
+        var settings = {
+            'selector': this,
+            'extra_char': '_',
+            'delay':    100,
+            'trim':     false,
+            'callback': null
+        };
+        if (options) $.extend(settings, options);
+
+        /* This extra closure makes it so each element
+         * matched by the selector runs sequentially, instead
+         * of all at the same time. */
+        function type_next_element(index) {
+            var current_element = $(settings.selector[index]);
+            var final_text = current_element.text();
+            if (settings.trim) final_text = $.trim(final_text);
+            current_element.html("").show();
+
+            function type_next_character(element, i) {
+                element.html( final_text.substr(0, i)+settings.extra_char );
+                if (final_text.length >= i) {
+                    setTimeout(function() {
+                        type_next_character(element, i+1);
+                    }, settings.delay);
+                }
+                else {
+                    if (++index < settings.selector.length) {
+                        type_next_element(index);
+                    }
+                    else if (settings.callback) settings.callback();
+                }
+            }
+            type_next_character(current_element, 0);
+        }
+        type_next_element(0);
+
+        return this;
+    };
+})(jQuery);
+
+
+
+$(document).ready(function() {
+
+    $('.demo').typewrite({
+        'callback': function(){
+            $('.demo').css();
+        },
+        'delay': 100
+    });
+});
+</script>
+
     <!--[if lt IE 9]>
         <script src="/js/vendor/html5shiv.min.js"></script>
     <![endif]-->
@@ -154,8 +211,8 @@ audio.play();
               </div>
             </div>
 
-            <h1>Home Alt</h1>
-            <p></p>
+            <h1 class="demo">Home Alt</h1>
+            <p class="demo"></p>
           </div>
         </div>
 
@@ -173,7 +230,17 @@ audio.play();
     
         
         <article class="post-favorite col-xs-12 col-sm-6 ">
-            <h2><a href="/introducing-the-twitter-image-tag-gem">Introducing the TwitterImageTag Rubygem</a></h2>
+            <h2><a href="/data-visualization-with-d3/">Data Visualization With D3</a></h2>
+
+            <p><br /></p>
+
+
+        </article>
+        
+    
+        
+        <article class="post-favorite col-xs-12 col-sm-6 ">
+            <h2><a href="/introducing-the-twitter-image-tag-gem/">Introducing the TwitterImageTag Rubygem</a></h2>
 
             <p>When I’m building a web application that is in the early prototype stage, I like to allow users...
         </article>
@@ -181,7 +248,7 @@ audio.play();
     
         
         <article class="post-favorite col-xs-12 col-sm-6 ">
-            <h2><a href="/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app">Adding Twitter Cards & Facebook Cards to a Jekyll App</a></h2>
+            <h2><a href="/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/">Adding Twitter Cards & Facebook Cards to a Jekyll App</a></h2>
 
             <p>Twitter and Facebook Cards makes it possible to attach images to posts that automatically link to your content....
         </article>
@@ -189,18 +256,12 @@ audio.play();
     
         
         <article class="post-favorite col-xs-12 col-sm-6 ">
-            <h2><a href="/swift-development-demo">iOS Swift App Demo</a></h2>
+            <h2><a href="/swift-development-demo/">iOS Swift App Demo</a></h2>
 
             <p>I recently put a swift demo app together as a way to show interest and at least passing...
         </article>
         
     
-        
-        <article class="post-favorite col-xs-12 col-sm-6 ">
-            <h2><a href="/add-apple-touch-icon-to-rails-app">Add an Apple Touch Icon to a Ruby App</a></h2>
-
-            <p>This website runs on the Jekyll framework, which is a Ruby based blogging platform invented by Tom Preston-Werner,...
-        </article>
         
     
         
