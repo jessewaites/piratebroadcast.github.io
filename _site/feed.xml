@@ -5,9 +5,81 @@
     <description>Jesse Waites: Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jun 2016 12:46:47 -0400</pubDate>
-    <lastBuildDate>Wed, 22 Jun 2016 12:46:47 -0400</lastBuildDate>
+    <pubDate>Wed, 22 Jun 2016 14:02:31 -0400</pubDate>
+    <lastBuildDate>Wed, 22 Jun 2016 14:02:31 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Embedding Interactive Ruby Snippets Into Web Pages</title>
+        <description>&lt;p&gt;&lt;br /&gt;
+&lt;em&gt;Ok, what is this all about?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Let&#39;s say you&#39;re a web developer and occasionally need to blog about code.
+You want to show off how to do this or that. Conventionally, there is no way
+to do this because browsers only understand HTML, CSS, and Javascript.&lt;/p&gt;
+
+&lt;p&gt;With this new javascript plugin called &lt;strong&gt;klipsify&lt;/strong&gt;, I can now
+run interactive Ruby snippets in the browser. Let&#39;s take a tour...&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-klipse-eval-ruby&quot;&gt;[9,8] * 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In the section above, change the “2” to a “20”, so that it says “[9,8] * 20”
+Did you see the output change? Cool, right?&lt;/p&gt;
+
+&lt;p&gt;Let’s show off something more complicated. Let’s write a custom Ruby method
+called “trumpify”.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-klipse-eval-ruby&quot;&gt;def trumpify(text)
+&quot;Wow! #{text} Sad!!&quot;
+end
+trumpify(&quot;My campaign is a garbage fire!&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Change &quot;My campaign is a garbage fire&quot; to anything else and the custom ruby
+method will trumpify it.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this next example, let’s explore Ruby’s Upcase method.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-klipse-eval-ruby&quot;&gt;&quot;Ban Assault Rifles&quot;.upcase
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Here&#39;s is a text exmploring the Swapcase method.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-klipse-eval-ruby&quot;&gt;&quot;Trump Is A Con Artist.&quot;.swapcase
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that, where words were capitalized, they are now lowercase, and vice versa.&lt;/p&gt;
+
+&lt;p&gt;Ok. Thanks for reading.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://2.bp.blogspot.com/-d94FNkb_Zxc/Tij3o8NE77I/AAAAAAAAAdw/DeZlPhbh2uM/s1600/fin.png&quot; alt=&quot;Fin&quot; /&gt;&lt;/p&gt;
+
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://app.klipse.tech/css/codemirror.css&quot; /&gt;
+
+&lt;script&gt;
+    window.klipse_settings = {
+        selector_eval_ruby: &#39;.language-klipse-eval-ruby&#39;, // css selector for the html elements you want to klipsify
+    };
+&lt;/script&gt;
+
+&lt;script src=&quot;http://cdn.opalrb.org/opal/current/opal.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;http://cdn.opalrb.org/opal/current/opal-parser.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;http://app.klipse.tech/plugin/js/klipse_plugin.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Wed, 22 Jun 2016 05:50:28 -0400</pubDate>
+        <link>http://JesseWaites.com/embedding-interactive-ruby-snippets-into-web-pages/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/embedding-interactive-ruby-snippets-into-web-pages/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Data Visualization With D3</title>
