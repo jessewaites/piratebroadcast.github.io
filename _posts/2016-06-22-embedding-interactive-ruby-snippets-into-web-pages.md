@@ -48,6 +48,8 @@ In this next example, let's explore Ruby's Upcase method.
 <pre><code class="language-klipse-eval-ruby">"Ban Assault Rifles".upcase
 </code></pre>
 
+<br>
+
 <p>Here, we explore the Swapcase method.</p>
 
 <pre><code class="language-klipse-eval-ruby">"Trump Is A Con Artist.".swapcase
@@ -56,6 +58,8 @@ In this next example, let's explore Ruby's Upcase method.
 Note that, where words were capitalized, they are now lowercase, and vice versa.
 
 You can check out Klipse here: https://github.com/viebel/klipse
+
+<br>
 
 *Ok. Thanks for reading.*
 

@@ -5,8 +5,8 @@
     <description>Jesse Waites: Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Jun 2016 14:05:50 -0400</pubDate>
-    <lastBuildDate>Wed, 22 Jun 2016 14:05:50 -0400</lastBuildDate>
+    <pubDate>Wed, 22 Jun 2016 14:14:42 -0400</pubDate>
+    <lastBuildDate>Wed, 22 Jun 2016 14:14:42 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -43,6 +43,8 @@ method will trumpify it.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-klipse-eval-ruby&quot;&gt;&quot;Ban Assault Rifles&quot;.upcase
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;p&gt;Here, we explore the Swapcase method.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-klipse-eval-ruby&quot;&gt;&quot;Trump Is A Con Artist.&quot;.swapcase
@@ -51,6 +53,8 @@ method will trumpify it.&lt;/p&gt;
 &lt;p&gt;Note that, where words were capitalized, they are now lowercase, and vice versa.&lt;/p&gt;
 
 &lt;p&gt;You can check out Klipse here: https://github.com/viebel/klipse&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Ok. Thanks for reading.&lt;/em&gt;&lt;/p&gt;
 
