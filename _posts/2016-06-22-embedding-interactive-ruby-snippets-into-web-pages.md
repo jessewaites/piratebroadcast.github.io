@@ -19,7 +19,8 @@ You want to show off how to do this or that. Conventionally, there is no way
 to do this because browsers only understand HTML, CSS, and Javascript.</p>
 
 <p>With this new javascript plugin called <strong>klipsify</strong>, I can now
-run interactive Ruby snippets in the browser. Let's take a tour...</p>
+run interactive Ruby snippets in the browser. Let's take a tour... (*Note: As of now
+this only works on non-mobile devices.*)</p>
 
 
 <pre><code class="language-klipse-eval-ruby">[9,8] * 2
