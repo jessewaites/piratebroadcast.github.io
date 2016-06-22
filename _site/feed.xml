@@ -5,31 +5,30 @@
     <description>Jesse Waites: Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 May 2016 12:09:31 -0400</pubDate>
-    <lastBuildDate>Tue, 31 May 2016 12:09:31 -0400</lastBuildDate>
+    <pubDate>Wed, 22 Jun 2016 12:46:47 -0400</pubDate>
+    <lastBuildDate>Wed, 22 Jun 2016 12:46:47 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
         <title>Data Visualization With D3</title>
-        <description>&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+        <description>&lt;p&gt;Lately, I’ve been working on data visualizations at work. The idea is taking some data, whether it be
+votes from an election, the data from your FitBit, or anything else, and using it to tell a
+convincing story at a glance.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;There is a magic in graphs. The proﬁle of a curve reveals in a ﬂash a whole situation — the life history of &amp;gt; an epidemic, a panic, or an era of prosperity. The curve informs the mind, awakens the imagination,
+  &lt;p&gt;There is a magic in graphs. The profile of a curve reveals in a ﬂash a whole situation — the life history of an epidemic, a panic, or an era of prosperity. The graph informs the mind, awakens the imagination,
 convinces.&lt;/p&gt;
 
   &lt;p&gt;―Henry D. Hubbard&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Lately, I’ve been working on data visualizations at work. The idea is taking some data, whether it be
-votes from an election, the data from your FitBit, or anything else, and using it to tell a
-convincing story at a glance. I’ve been using a great javascript library called D3 and wanted
-to make a quick blog post to show off what the D3 library can do. D3 allows you full, custom control over the way your charts / graphs look and feel and you can even use common data structures like CSV (Like from an Excel file).&lt;/p&gt;
+&lt;p&gt;I’ve been using a great javascript library called D3 and wanted to make a quick blog post to show off what the D3 library can do. D3 allows you full, custom control over the way your charts / graphs look and feel and you can even use common data structures like CSV (Like from an Excel file). The charts below are sample charts I’ve pulled from other sources. Make sure to click, drag, and touch the graphs to trigger the animations.&lt;/p&gt;
 
 &lt;iframe width=&quot;100%&quot; height=&quot;350&quot; src=&quot;//jsfiddle.net/enigmarm/3HL4a/13/embedded/result/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;Click on the “Sort” and “Reset” buttons above to see the chart animation in action.&lt;/p&gt;
 
 &lt;iframe width=&quot;550&quot; height=&quot;500&quot; src=&quot;//jsfiddle.net/JSDavi/qvco2Ljy/embedded/result/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;This one is a bit pointless but is pretty cool- Click and drag any of the circles above.&lt;/p&gt;
+&lt;p&gt;This one is a bit pointless but is pretty cool- Click and drag any of the circles above, drag it around, fling it across the screen… Go nuts.&lt;/p&gt;
 
 &lt;iframe width=&quot;100%&quot; height=&quot;500&quot; src=&quot;//jsfiddle.net/augburto/YMa2y/embedded/result/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
 &lt;p&gt;Click on any of the blue boxes above.&lt;/p&gt;
