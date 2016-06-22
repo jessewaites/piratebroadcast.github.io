@@ -66,7 +66,6 @@ I currently spend my time surrounding myself with great friends, hiking, traveli
 
 Need to get in touch? Email Me or schedule an appointment for a phone call.
 
-![Fin](http://2.bp.blogspot.com/-d94FNkb_Zxc/Tij3o8NE77I/AAAAAAAAAdw/DeZlPhbh2uM/s1600/fin.png)
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 <script>
