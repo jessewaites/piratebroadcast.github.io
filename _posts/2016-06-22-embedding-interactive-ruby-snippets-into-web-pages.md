@@ -13,8 +13,6 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 
-<br>
-*Ok, what is this all about?*
 
 <p>Let's say you're a web developer and occasionally need to blog about code.
 You want to show off how to do this or that. Conventionally, there is no way
@@ -50,15 +48,16 @@ In this next example, let's explore Ruby's Upcase method.
 <pre><code class="language-klipse-eval-ruby">"Ban Assault Rifles".upcase
 </code></pre>
 
-<p>Here's is a text exmploring the Swapcase method.</p>
+<p>Here, we explore the Swapcase method.</p>
 
 <pre><code class="language-klipse-eval-ruby">"Trump Is A Con Artist.".swapcase
 </code></pre>
 
 Note that, where words were capitalized, they are now lowercase, and vice versa.
 
+You can check out Klipse here: https://github.com/viebel/klipse
 
-Ok. Thanks for reading.
+*Ok. Thanks for reading.*
 
 ![Fin](http://2.bp.blogspot.com/-d94FNkb_Zxc/Tij3o8NE77I/AAAAAAAAAdw/DeZlPhbh2uM/s1600/fin.png)
 
