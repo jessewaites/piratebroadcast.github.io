@@ -8,7 +8,7 @@ author_url : /author/jesse
 author_avatar: jesse
 show_avatar : true
 read_time : 8
-feature_image: leafy-bench
+feature_image: summer
 show_related_posts: false
 square_related: recommend-wolf
 ---
