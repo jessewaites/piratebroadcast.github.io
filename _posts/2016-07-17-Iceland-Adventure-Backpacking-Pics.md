@@ -93,3 +93,8 @@ me a line and tell me about your favorite places.
 <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
 
 <hr>
+
+<p>I hope these pictures might inspire you to visit the beautiful country of Iceland one day.
+Let me know your favorite places to travel, I'd love to hear about it sometime.</p>
+
+<p>Jesse</p>
