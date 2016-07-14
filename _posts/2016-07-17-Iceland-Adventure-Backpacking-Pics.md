@@ -24,7 +24,7 @@ me a line and tell me about your favorite places.
 
 <br>
 
-<p>This is a "Secret" waterfall that we hiked to off of the main ring road. We passed y several grazing sheep on our way here. The interesting thing about this waterfall is, you can actually stand behind it.</p>
+<p>This is a "Secret" waterfall that we hiked to off of the main ring road. We passed by several grazing sheep on our way here. The interesting thing about this waterfall is, you can actually stand behind it. Absolutely incredible.</p>
 
 <hr>
 
