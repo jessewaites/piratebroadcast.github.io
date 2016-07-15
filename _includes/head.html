@@ -122,12 +122,15 @@ $(document).ready(function() {
     {% if page.date %}
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     {% endif %}
+
     {% if page.image %}
-      <meta content="{{ site.url }}/img/twitter_card2.png" property="og:image">
-      <meta property="og:image" content="{{ site.url }}/img/twitter_card2.png" />
+      <meta name="twitter:image:src" content="{{ site.url }}/img/{{ page.image }}">
+      <meta property="og:image" content="{{ site.url }}/img/{{ page.image }}" />
     {% else %}
       <meta content="{{ site.url }}/img/twitter_card2.png" property="og:image">
+      <meta property="og:image" content="{{ site.url }}/img/twitter_card1.png" />
     {% endif %}
+
 
     {% if page.categories %}
       {% for category in page.categories limit:1 %}
