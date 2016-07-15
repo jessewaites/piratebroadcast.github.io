@@ -124,8 +124,8 @@ $(document).ready(function() {
     {% endif %}
 
     {% if page.feature_image %}
-      <meta name="twitter:image:src" content="{{ site.url }}/img/{{ page.image }}">
-      <meta property="og:image" content="{{ site.url }}/img/{{ page.image }}">
+      <meta name="twitter:image:src" content="{{ site.url }}/img/{{ page.feature_image }}">
+      <meta property="og:image" content="{{ site.url }}/img/{{ page.feature_image }}">
     {% else %}
       <meta content="{{ site.url }}/img/twitter_card2.png" property="og:image">
       <meta property="og:image" content="{{ site.url }}/img/twitter_card2.png">
