@@ -13,21 +13,7 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 
-<style>
-    .google-maps {
-        position: relative;
-        padding-bottom: 75%; // This is the aspect ratio
-        height: 0;
-        overflow: hidden;
-    }
-    .google-maps iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
-    }
-</style>
+
 
 My friends and I recently went on a backpacking trip to Iceland. Here are some
 pictures of our adventures. If you're interested in hiking or backpacking, drop
@@ -45,7 +31,7 @@ me a line and tell me about your favorite places.
 
 <br>
 
-<p>We got a flat tire on our rental car 30 minutes into our road trip. The only bump on an otherwise fantastic trip.</p>
+<p>We got a flat tire 30 minutes into our road trip. The only bump on an otherwise fantastic trip.</p>
 
 <hr>
 
@@ -54,7 +40,7 @@ me a line and tell me about your favorite places.
 
 <br>
 
-<p>Once we got back on the road, right around the corner from the Seljalandsfoss waterfall, Dave found a small cavern leading into the rock. We went inside and found this amazing cavern with an indoor waterfall. One of the most amazing places I have ever been.</p>
+<p>Once we got back on the raKelsey Tierneyod, right around the corner from the Seljalandsfoss waterfall, Dave found a small cavern leading into the rock. We went inside and found this amazing cavern with an indoor waterfall. One of the most amazing places I have ever been.</p>
 
 <hr>
 

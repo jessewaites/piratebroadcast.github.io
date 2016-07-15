@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Jesse Waites | Iceland Adventure Backpacking Pics</title>
-    <meta name="description" content="">
+    <meta name="description" content="My friends and I recently went on a backpacking trip to Iceland. Here are somepictures of our adventures. If you’re interested in hiking or backpacking, drop...">
 
     <link rel="stylesheet" href="/css/main.css">
 
@@ -32,61 +32,6 @@ audio.play();
   alert('You got an extra life!');
 });</script>
 
-<script>
-(function ( $ ) {
-    $.fn.typewrite = function ( options ) {
-        var settings = {
-            'selector': this,
-            'extra_char': '_',
-            'delay':    100,
-            'trim':     false,
-            'callback': null
-        };
-        if (options) $.extend(settings, options);
-
-        /* This extra closure makes it so each element
-         * matched by the selector runs sequentially, instead
-         * of all at the same time. */
-        function type_next_element(index) {
-            var current_element = $(settings.selector[index]);
-            var final_text = current_element.text();
-            if (settings.trim) final_text = $.trim(final_text);
-            current_element.html("").show();
-
-            function type_next_character(element, i) {
-                element.html( final_text.substr(0, i)+settings.extra_char );
-                if (final_text.length >= i) {
-                    setTimeout(function() {
-                        type_next_character(element, i+1);
-                    }, settings.delay);
-                }
-                else {
-                    if (++index < settings.selector.length) {
-                        type_next_element(index);
-                    }
-                    else if (settings.callback) settings.callback();
-                }
-            }
-            type_next_character(current_element, 0);
-        }
-        type_next_element(0);
-
-        return this;
-    };
-})(jQuery);
-
-
-
-$(document).ready(function() {
-
-    $('.demo').typewrite({
-        'callback': function(){
-            $('.demo').css();
-        },
-        'delay': 100
-    });
-});
-</script>
 
     <!--[if lt IE 9]>
         <script src="/js/vendor/html5shiv.min.js"></script>
@@ -232,23 +177,7 @@ $(document).ready(function() {
 
             <h1>Iceland Adventure Backpacking Pics</h1>
 
-            <style>
-    .google-maps {
-        position: relative;
-        padding-bottom: 75%; // This is the aspect ratio
-        height: 0;
-        overflow: hidden;
-    }
-    .google-maps iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
-    }
-</style>
-
-<p>My friends and I recently went on a backpacking trip to Iceland. Here are some
+            <p>My friends and I recently went on a backpacking trip to Iceland. Here are some
 pictures of our adventures. If you’re interested in hiking or backpacking, drop
 me a line and tell me about your favorite places.</p>
 
@@ -273,7 +202,7 @@ me a line and tell me about your favorite places.</p>
 
 <p><br /></p>
 
-<p>Once we got back on the raod, right around the corner from the Seljalandsfoss waterfall, Dave found a small cavern leading into the rock. We went inside and found this amazing cavern with an indoor waterfall. One of the most amazing places I have ever been.</p>
+<p>Once we got back on the raKelsey Tierneyod, right around the corner from the Seljalandsfoss waterfall, Dave found a small cavern leading into the rock. We went inside and found this amazing cavern with an indoor waterfall. One of the most amazing places I have ever been.</p>
 
 <hr />
 
