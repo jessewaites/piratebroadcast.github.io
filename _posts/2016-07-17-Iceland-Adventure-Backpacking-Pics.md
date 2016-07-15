@@ -22,6 +22,10 @@ me a line and tell me about your favorite places.
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d759.7613697773777!2d-19.992241883749724!3d63.60944896265449!2m3!1f0!2f41.48251888903171!3f0!3m2!1i1024!2i768!4f20!3m3!1m2!1s0x48d71eadc4d081ed%3A0x46b389d26b602e45!2sSeljalandsfoss+Waterfall!5e1!3m2!1sen!2sus!4v1468595735724" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <br>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1468604381779!6m8!1m7!1sF%3A-w1tis2TxNH4%2FV3yuBwA7p3I%2FAAAAAAAAKpo%2FAkjlZtVHqtUN9z7OIbwF6y2IjmkLe3fwwCLIB!2m2!1d63.61549470000001!2d-19.9900532!3f194.94869832670008!4f-2.503829050231431!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+<br>
 <p>This is a map to the primary waterfall location and the indoor cavern. I know a few of my friends are going to Iceland soon so I wanted to include this map - You will find the hidden cavern to the left of the waterfall if you are facing it from the main road.</p>
 
 <hr>
