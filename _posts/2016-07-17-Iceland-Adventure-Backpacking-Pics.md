@@ -23,7 +23,7 @@ me a line and tell me about your favorite places.
 
 <br>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1468604381779!6m8!1m7!1sF%3A-w1tis2TxNH4%2FV3yuBwA7p3I%2FAAAAAAAAKpo%2FAkjlZtVHqtUN9z7OIbwF6y2IjmkLe3fwwCLIB!2m2!1d63.61549470000001!2d-19.9900532!3f194.94869832670008!4f-2.503829050231431!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sen!2sus!4v1468604696535!6m8!1m7!1sF%3A-w1tis2TxNH4%2FV3yuBwA7p3I%2FAAAAAAAAKpo%2FAkjlZtVHqtUN9z7OIbwF6y2IjmkLe3fwwCLIB!2m2!1d63.61549470000001!2d-19.9900532!3f192.87750905499004!4f5.109924764210177!5f0.7820865974627469" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 <br>
 <p>This is a map to the primary waterfall location and the indoor cavern. I know a few of my friends are going to Iceland soon so I wanted to include this map - You will find the hidden cavern to the left of the waterfall if you are facing it from the main road.</p>
