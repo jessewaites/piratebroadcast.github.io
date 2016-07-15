@@ -123,12 +123,12 @@ $(document).ready(function() {
       <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
     {% endif %}
 
-    {% if page.image %}
+    {% if page.feature_image %}
       <meta name="twitter:image:src" content="{{ site.url }}/img/{{ page.image }}">
-      <meta property="og:image" content="{{ site.url }}/img/{{ page.image }}" />
+      <meta property="og:image" content="{{ site.url }}/img/{{ page.image }}">
     {% else %}
       <meta content="{{ site.url }}/img/twitter_card2.png" property="og:image">
-      <meta property="og:image" content="{{ site.url }}/img/twitter_card1.png" />
+      <meta property="og:image" content="{{ site.url }}/img/twitter_card2.png">
     {% endif %}
 
 
