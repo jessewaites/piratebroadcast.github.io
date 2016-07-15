@@ -44,7 +44,7 @@ me a line and tell me about your favorite places.
 
 <br>
 
-<p>Once we got back on the raKelsey Tierneyod, right around the corner from the Seljalandsfoss waterfall, Dave found a small cavern leading into the rock. We went inside and found this amazing cavern with an indoor waterfall. One of the most amazing places I have ever been.</p>
+<p>Once we got back on the road, right around the corner from the Seljalandsfoss waterfall, Dave found a small cavern leading into the rock. We went inside and found this amazing cavern with an indoor waterfall. One of the most amazing places I have ever been.</p>
 
 <hr>
 
