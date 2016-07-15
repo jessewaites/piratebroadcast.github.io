@@ -45,7 +45,7 @@ me a line and tell me about your favorite places.
 
 <br>
 
-<p>We got a flat tire 30 minutes into our road trip. The only bump on an otherwise fantastic trip.</p>
+<p>We got a flat tire on our rental car 30 minutes into our road trip. The only bump on an otherwise fantastic trip.</p>
 
 <hr>
 
@@ -54,7 +54,7 @@ me a line and tell me about your favorite places.
 
 <br>
 
-<p>Once we got back on the raod, right around the corner from the Seljalandsfoss waterfall, Dave found a small cavern leading into the rock. We went inside and found this amazing cavern with an indoor waterfall. One of the most amazing places I have ever been.</p>
+<p>Once we got back on the road, right around the corner from the Seljalandsfoss waterfall, Dave found a small cavern leading into the rock. We went inside and found this amazing cavern with an indoor waterfall. One of the most amazing places I have ever been.</p>
 
 <hr>
 
