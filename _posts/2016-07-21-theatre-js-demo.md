@@ -46,6 +46,8 @@ square_related: recommend-wolf
 
 <p>Without further ado, the demo:</p>
 
+<hr>
+
 <br>
 
 <main class="scene">
