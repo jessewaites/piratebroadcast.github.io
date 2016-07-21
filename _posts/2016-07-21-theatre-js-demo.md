@@ -13,7 +13,7 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 
-<p>Recently, I discovered a cool little library called TheatreJS, created by Gabin Aureche. This library adds an animated effect mimicking human typing behavior in real time. I love libraries like this because it is a really creative way to get your users attention. It is great to be reminded that us web developers can do very, very creative things online to get our users' attention. I'd love to made a demo of a rap or rock song duet if I ever have the time! I added a demo below that I lifted from Gabin's Codepen demo with his permission.</p>
+<p>Recently, I discovered a cool little library called TheatreJS, created by Gabin Aureche. This library adds an animated effect mimicking human typing behavior in real time. I love libraries like this because it is a really creative way to display otherwise boring static text. It is great to be reminded that us web developers can do very, very creative things online to get our users' attention. I'd love to made a demo of a rap or rock song duet if I ever have the time! I added a demo below that I lifted from Gabin's Codepen demo with his permission.</p>
 
 [Here is the project on Github](https://github.com/Zhouzi/TheaterJS), and you can follow Gabin [here on Twitter.](https://twitter.com/Zh0uzi/)
 
