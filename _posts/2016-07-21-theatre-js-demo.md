@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Theatre JS Demo"
+title:  "TheatreJS Demo"
 date: 2016-07-14 09:50:28
 categories: coding
 author_name : Jesse
