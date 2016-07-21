@@ -5,13 +5,13 @@
     <description>Jesse Waites: Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 Jul 2016 11:16:05 -0400</pubDate>
-    <lastBuildDate>Thu, 21 Jul 2016 11:16:05 -0400</lastBuildDate>
+    <pubDate>Thu, 21 Jul 2016 14:24:04 -0400</pubDate>
+    <lastBuildDate>Thu, 21 Jul 2016 14:24:04 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>Theatre JS Demo</title>
-        <description>&lt;p&gt;Recently, I discovered a cool little library called TheatreJS, created by Gabin Aureche. This library adds a typing effect mimicking typing human behavior in real time. I love libraries like this because it is a really creative way to get your users attention. It is great to be reminded that web developers can do very, very creative things online. I&#39;d love to made a demo of a rap or rock song duet if I ever have the time! I added a demo below that I lifted from Gabin&#39;s Codepen demo.&lt;/p&gt;
+        <title>TheatreJS Demo</title>
+        <description>&lt;p&gt;Recently, I discovered a cool little library called TheatreJS, created by Gabin Aureche. This library adds an animated effect mimicking human typing behavior in real time. I love libraries like this because it is a really creative way to display otherwise boring static text. It is great to be reminded that us web developers can do very, very creative things online to get our users&#39; attention. I&#39;d love to made a demo of a rap or rock song duet if I ever have the time! I added a demo below that I lifted from Gabin&#39;s Codepen demo with his permission.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/Zhouzi/TheaterJS&quot;&gt;Here is the project on Github&lt;/a&gt;, and you can follow Gabin &lt;a href=&quot;https://twitter.com/Zh0uzi/&quot;&gt;here on Twitter.&lt;/a&gt;&lt;/p&gt;
 
@@ -42,6 +42,8 @@
 &lt;/style&gt;
 
 &lt;p&gt;Without further ado, the demo:&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -108,7 +110,7 @@ theater
 &lt;/script&gt;
 
 </description>
-        <pubDate>Thu, 14 Jul 2016 05:50:28 -0400</pubDate>
+        <pubDate>Thu, 21 Jul 2016 05:50:28 -0400</pubDate>
         <link>http://JesseWaites.com/theatre-js-demo/</link>
         <guid isPermaLink="true">http://JesseWaites.com/theatre-js-demo/</guid>
         
