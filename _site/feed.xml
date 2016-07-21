@@ -5,9 +5,117 @@
     <description>Jesse Waites: Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Jul 2016 11:16:48 -0400</pubDate>
-    <lastBuildDate>Mon, 18 Jul 2016 11:16:48 -0400</lastBuildDate>
+    <pubDate>Thu, 21 Jul 2016 11:16:05 -0400</pubDate>
+    <lastBuildDate>Thu, 21 Jul 2016 11:16:05 -0400</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Theatre JS Demo</title>
+        <description>&lt;p&gt;Recently, I discovered a cool little library called TheatreJS, created by Gabin Aureche. This library adds a typing effect mimicking typing human behavior in real time. I love libraries like this because it is a really creative way to get your users attention. It is great to be reminded that web developers can do very, very creative things online. I&#39;d love to made a demo of a rap or rock song duet if I ever have the time! I added a demo below that I lifted from Gabin&#39;s Codepen demo.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/Zhouzi/TheaterJS&quot;&gt;Here is the project on Github&lt;/a&gt;, and you can follow Gabin &lt;a href=&quot;https://twitter.com/Zh0uzi/&quot;&gt;here on Twitter.&lt;/a&gt;&lt;/p&gt;
+
+&lt;style&gt;
+.actor {
+  font-size: 2.8rem;
+  display: flex;
+  margin-bottom: $spacing;
+
+  &amp;:last-of-type {
+    margin-bottom: $spacing-large;
+  }
+}
+
+.actor__content {
+  flex-grow: 1;
+}
+
+@keyframes blink {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.actor__content--typing::after {
+  content: &#39;|&#39;;
+  animation: blink 500ms infinite;
+}
+&lt;/style&gt;
+
+&lt;p&gt;Without further ado, the demo:&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;main class=&quot;scene&quot;&gt;
+  &lt;div class=&quot;actor&quot;&gt;
+    &lt;div class=&quot;actor__prefix&quot;&gt;-&lt;/div&gt;
+    &lt;div id=&quot;vader&quot; class=&quot;actor__content&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;actor&quot;&gt;
+    &lt;div class=&quot;actor__prefix&quot;&gt;-&lt;/div&gt;
+    &lt;div id=&quot;luke&quot; class=&quot;actor__content&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/main&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe height=&quot;319&quot; scrolling=&quot;no&quot; src=&quot;//codepen.io/Zhouzi/embed/JoRazP/?height=319&amp;amp;theme-id=0&amp;amp;default-tab=html&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%;&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/Zhouzi/pen/JoRazP/&quot;&gt;TheaterJS&lt;/a&gt; by Gabin Aureche (&lt;a href=&quot;http://codepen.io/Zhouzi&quot;&gt;@Zhouzi&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
+&lt;/iframe&gt;
+
+&lt;script src=&quot;//cdn.jsdelivr.net/theaterjs/latest/theater.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+var theater = theaterJS()
+
+theater
+.on(&#39;type:start, erase:start&#39;, function () {
+  theater.getCurrentActor().$element.classList.add(&#39;actor__content--typing&#39;)
+})
+.on(&#39;type:end, erase:end&#39;, function () {
+  theater.getCurrentActor().$element.classList.remove(&#39;actor__content--typing&#39;)
+})
+.on(&#39;type:start, erase:start&#39;, function () {
+  if (theater.getCurrentActor().name === &#39;vader&#39;) {
+    document.body.classList.add(&#39;dark&#39;)
+  } else {
+    document.body.classList.remove(&#39;dark&#39;)
+  }
+})
+
+theater
+.addActor(&#39;vader&#39;, { speed: 0.8, accuracy: 0.6 })
+.addActor(&#39;luke&#39;)
+.addScene(&#39;vader:Luke.&#39;, 600)
+.addScene(&#39;luke:What?&#39;, 400)
+.addScene(&#39;vader:I am your father.&#39;, 400)
+.addScene(&#39;luke:Nooo...&#39;, -3, &#39;!!! &#39;, 600, &#39;No! &#39;, 600)
+.addScene(&#39;luke:That\&#39;s not true!&#39;, 600)
+.addScene(&#39;luke:That\&#39;s impossible!&#39;, 400)
+.addScene(&#39;vader:Search your feelings.&#39;, 1600)
+.addScene(&#39;vader:You know it to be true.&#39;, 1000)
+.addScene(&#39;luke:Noooooooo! &#39;, 600, &#39;No!&#39;, 400)
+.addScene(&#39;vader:Luke.&#39;, 600)
+.addScene(&#39;vader:You can destroy the Emperor.&#39;, 1600)
+.addScene(&#39;vader:He has foreseen this. &#39;, 800)
+.addScene(&#39;vader:It is your destiny.&#39;, 1600)
+.addScene(&#39;vader:Join me.&#39;, 800)
+.addScene(&#39;vader:Together we can rule the galaxy.&#39;, 800)
+.addScene(&#39;vader:As father and son.&#39;, 1600)
+.addScene(&#39;vader:Come with me. &#39;, 800)
+.addScene(&#39;vader:It is the only way.&#39;, 2000)
+.addScene(theater.replay.bind(theater))
+&lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 14 Jul 2016 05:50:28 -0400</pubDate>
+        <link>http://JesseWaites.com/theatre-js-demo/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/theatre-js-demo/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Iceland Adventure Backpacking Pics</title>
