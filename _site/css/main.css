@@ -8213,17 +8213,17 @@ a {
     border-bottom: solid 1px #999; }
 
 body, html {
-  cursor: url(http://www.rw-designer.com/cursor-view/36196.gif), default;
+  cursor: url(/mario.gif), default;
   height: 100%; }
 
 #nav-icon1 {
-  top: -10px;
+  top: -17px;
   left: 15px;
   z-index: 1080;
   position: fixed;
   display: block;
   height: 40px;
-  width: 48px;
+  width: 45px;
   margin: 50px auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -8240,7 +8240,7 @@ body, html {
   position: absolute;
   height: 9px;
   width: 100%;
-  background: #9F221A;
+  background: #B4251B;
   border-radius: 9px;
   opacity: 1;
   left: 0;
