@@ -29,6 +29,8 @@ title: About Jesse Waites
 
 > “If you think math is hard, try web design.” ―Trish Parr
 
+<p>Skills, Tools, and Keywords for the busy people: UI, UX, JavaScript, JQuery, D3, HTML, CSS, Git, Ruby, Ruby on Rails, Boston Rails Developer, Boston UI, Boston UX, iOS, OSX, Drupal, WordPress.</p>
+
 <canvas id="c" width="auto" height="auto"></canvas>
 
 After seeing a chart of some of my hobbies, here is a little about me: After growing up in the South and serving a short stint in the Air Force, I worked as an Operating Room Technician specializing in Trauma, Orthopaedic, and Neurosurgery in hospitals all over the US. After accepting a job in Trauma Surgery in Boston at MGH and falling in love with the city, I decided to stay in New England and have been here for almost 10 years. Boston is my home now.
