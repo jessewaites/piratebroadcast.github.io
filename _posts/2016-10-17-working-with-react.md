@@ -36,3 +36,7 @@ Another notable feature is the use of a "virtual DOM." React creates an in-memor
 ### JSX ###
 
 React components are typically written in JSX, a JavaScript extension syntax allowing quoting of HTML and using HTML tag syntax to render subcomponents. HTML syntax is processed into JavaScript calls of the React library. Developers may also write in pure JavaScript. Interesting, I've found that some HTML is not supported in JSX, specifically "break" tags and horizontal rule tags.
+
+### NPM Server Error Reporting ###
+
+Errors such as syntax errors and whatnot are pretty easily found in the NPM server log, which is pretty amazing. I always know exactly where to look to begin debugging the issue. I am definitely a fan of that.
