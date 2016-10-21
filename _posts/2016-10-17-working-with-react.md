@@ -25,6 +25,10 @@ React is maintained by Facebook, Instagram and a community of individual develop
 
 Some of the ideas and concepts I've learned since working with React are:
 
+### State ###
+
+Probably the most important concept in React is the concept of "State". State is described as how a React component’s data looks at any moment in time. This concept is better explained elsewhere by people far better at this that I so I will leave it to you to find resources about this. I may come back to this at a later moment and flesh this section out.
+
 ### One-way data flow ###
 
 Properties, a set of immutable object values, are passed to a component's renderer as properties in its HTML tag. A component cannot directly modify any properties passed to it, but can be passed callback functions that do modify values. This mechanism is expressed as "properties flow down; actions flow up". As an example of this, in my app, I have a concept called "selected video" that flows down all the way from the "App" concept to "Video List", to "Video List Item".
