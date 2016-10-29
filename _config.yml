@@ -20,6 +20,7 @@ nav_list:
   LinkedIn : ['LinkedIn', 'https://www.linkedin.com/in/jessewaites', 'fa-linkedin']
   Twitter : ['Twitter', 'https://www.twitter.com/jessewaites', 'fa-twitter']
   Facebook : ['Facebook', 'http://www.facebook.com/railsdevelopers', 'fa-facebook']
+  Instagram : ['Instagram', 'http://www.instagram.com/waitesjesse', 'fa-instagram']
   Email : ['Email', 'mailto: Hi@JesseWaites.com', 'fa-rocket']
   Blank2 : ['', '/']
 
