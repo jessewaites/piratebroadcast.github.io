@@ -22,9 +22,6 @@ nav_list:
   Facebook : ['Facebook', 'http://www.facebook.com/railsdevelopers', 'fa-facebook']
   Instagram : ['Instagram', 'http://www.instagram.com/waitesjesse', 'fa-instagram']
   Email : ['Email', 'mailto: Hi@JesseWaites.com', 'fa-rocket']
-  Blank2 : ['', '/']
-
-
   Amazon : ['My Book on Amazon', 'http://www.amazon.com/Secrets-Of-My-App-Success-ebook/dp/B004Q9U18C', 'fa-book']
   Apple : ['My Book on iTunes', 'https://itunes.apple.com/us/book/the-secrets-of-my-app-success/id424978524?mt=11', 'fa-apple']
 
