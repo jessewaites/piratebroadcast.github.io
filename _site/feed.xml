@@ -5,9 +5,142 @@
     <description>Jesse Waites: Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 21 Oct 2016 13:02:08 -0400</pubDate>
-    <lastBuildDate>Fri, 21 Oct 2016 13:02:08 -0400</lastBuildDate>
+    <pubDate>Wed, 14 Dec 2016 12:25:16 -0500</pubDate>
+    <lastBuildDate>Wed, 14 Dec 2016 12:25:16 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Javascript Drum Machine Demo</title>
+        <description>&lt;style&gt;
+.keys {
+  display:flex;
+  flex:1;
+  min-height:20vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border:4px solid black;
+  border-radius:5px;
+  margin:1rem;
+  font-size: 1.5rem;
+  padding:1rem .5rem;
+  transition:all .07s;
+  width:100px;
+  text-align: center;
+  color:white;
+  background:rgba(0,0,0,0.4);
+  text-shadow:0 0 5px black;
+}
+
+.playing {
+  transform:scale(1.1);
+  border-color:#ffc600;
+  box-shadow: 0 0 50px #ffc600;
+}
+
+kbd {
+  display: block;
+  font-size: 40px;
+}
+
+.sound {
+  font-size: 5.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color:#ffc600;
+}
+&lt;/style&gt;
+
+&lt;div class=&quot;keys&quot;&gt;
+    &lt;div data-key=&quot;65&quot; class=&quot;key&quot;&gt;
+      &lt;kbd&gt;A&lt;/kbd&gt;
+      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div data-key=&quot;83&quot; class=&quot;key&quot;&gt;
+      &lt;kbd&gt;S&lt;/kbd&gt;
+      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div data-key=&quot;68&quot; class=&quot;key&quot;&gt;
+      &lt;kbd&gt;D&lt;/kbd&gt;
+      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div data-key=&quot;70&quot; class=&quot;key&quot;&gt;
+      &lt;kbd&gt;F&lt;/kbd&gt;
+      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div data-key=&quot;71&quot; class=&quot;key&quot;&gt;
+      &lt;kbd&gt;G&lt;/kbd&gt;
+      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div data-key=&quot;72&quot; class=&quot;key&quot;&gt;
+      &lt;kbd&gt;H&lt;/kbd&gt;
+      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div data-key=&quot;74&quot; class=&quot;key&quot;&gt;
+      &lt;kbd&gt;J&lt;/kbd&gt;
+      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div data-key=&quot;75&quot; class=&quot;key&quot;&gt;
+      &lt;kbd&gt;K&lt;/kbd&gt;
+      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div data-key=&quot;76&quot; class=&quot;key&quot;&gt;
+      &lt;kbd&gt;L&lt;/kbd&gt;
+      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;audio data-key=&quot;65&quot; src=&quot;/sounds/clap.wav&quot;&gt;&lt;/audio&gt;
+&lt;audio data-key=&quot;83&quot; src=&quot;/sounds/hihat.wav&quot;&gt;&lt;/audio&gt;
+&lt;audio data-key=&quot;68&quot; src=&quot;/sounds/kick.wav&quot;&gt;&lt;/audio&gt;
+&lt;audio data-key=&quot;70&quot; src=&quot;/sounds/openhat.wav&quot;&gt;&lt;/audio&gt;
+&lt;audio data-key=&quot;71&quot; src=&quot;/sounds/boom.wav&quot;&gt;&lt;/audio&gt;
+&lt;audio data-key=&quot;72&quot; src=&quot;/sounds/ride.wav&quot;&gt;&lt;/audio&gt;
+&lt;audio data-key=&quot;74&quot; src=&quot;/sounds/snare.wav&quot;&gt;&lt;/audio&gt;
+&lt;audio data-key=&quot;75&quot; src=&quot;/sounds/tom.wav&quot;&gt;&lt;/audio&gt;
+&lt;audio data-key=&quot;76&quot; src=&quot;/sounds/tink.wav&quot;&gt;&lt;/audio&gt;
+
+&lt;p&gt;If you’re on a laptop, press the letter “A” , then “F” - Cool, right?&lt;/p&gt;
+
+&lt;p&gt;Recently, my friend Ben shared a link to Web Bos’ free new Javascript course, Javascript30. I’ve known Wes’ name around for quite a while being that he has
+  created what is known as the de facto ReactJs course, so I was curious to what his free course would offer. I’ve recently decided to give it a spin and was happy to see that the first course is building a javascript drum machine. I’ve always wanted to build one of these.&lt;/p&gt;
+
+&lt;p&gt;Long story short, you create a directory in your project full of .wav sound files. In your HTML, you have various audio tags - each one has a custom data-key attribute assigned to a different keyboard letter. In your javascript, you have a window listener waiting and watching for keyboard presses. When a key on the keyboard is pushed that corresponds to an audio file, that file is played via the audio HTML API. Otherwise, if a key is pressed that is NOT associated with an audio file, the function is exited and begins again, waiting and listening for the next keypress. I’m happy with Wes’ course so far and am looking forward to the rest of it.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://javascript30.com/&quot;&gt;Click here to see Wes’ Javascript30 course.&lt;/a&gt;&lt;/p&gt;
+
+&lt;script&gt;
+    function removeTransition(e) {
+      if (e.propertyName !== &#39;transform&#39;) return;
+      e.target.classList.remove(&#39;playing&#39;);
+    }
+
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key=&quot;${e.keyCode}&quot;]`);
+      const key = document.querySelector(`div[data-key=&quot;${e.keyCode}&quot;]`);
+      if (!audio) return;
+
+      key.classList.add(&#39;playing&#39;);
+      audio.currentTime = 0;
+      audio.play();
+    }
+
+    const keys = Array.from(document.querySelectorAll(&#39;.key&#39;));
+    keys.forEach(key =&gt; key.addEventListener(&#39;transitionend&#39;, removeTransition));
+    window.addEventListener(&#39;keydown&#39;, playSound);
+  &lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 17 Oct 2016 12:20:28 -0400</pubDate>
+        <link>http://JesseWaites.com/Javascript-Drum-Machine-Demo/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/Javascript-Drum-Machine-Demo/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Working with React</title>
@@ -23,6 +156,10 @@
 
 &lt;p&gt;Some of the ideas and concepts I’ve learned since working with React are:&lt;/p&gt;
 
+&lt;h3 id=&quot;state&quot;&gt;State&lt;/h3&gt;
+
+&lt;p&gt;Probably the most important concept in React is the concept of “State”. State is described as how a React component’s data looks at any moment in time. This concept is better explained elsewhere by people far better at this that I so I will leave it to you to find resources about this. I may come back to this at a later moment and flesh this section out.&lt;/p&gt;
+
 &lt;h3 id=&quot;one-way-data-flow&quot;&gt;One-way data flow&lt;/h3&gt;
 
 &lt;p&gt;Properties, a set of immutable object values, are passed to a component’s renderer as properties in its HTML tag. A component cannot directly modify any properties passed to it, but can be passed callback functions that do modify values. This mechanism is expressed as “properties flow down; actions flow up”. As an example of this, in my app, I have a concept called “selected video” that flows down all the way from the “App” concept to “Video List”, to “Video List Item”.&lt;/p&gt;
@@ -35,7 +172,9 @@
 
 &lt;p&gt;React components are typically written in JSX, a JavaScript extension syntax allowing quoting of HTML and using HTML tag syntax to render subcomponents. HTML syntax is processed into JavaScript calls of the React library. Developers may also write in pure JavaScript. Interesting, I’ve found that some HTML is not supported in JSX, specifically “break” tags and horizontal rule tags.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/CdY8xjj.png&quot; alt=&quot;React App from Jesse Waites&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;npm-server-error-reporting&quot;&gt;NPM Server Error Reporting&lt;/h3&gt;
+
+&lt;p&gt;Errors such as syntax errors and whatnot are pretty easily found in the NPM server log, which is pretty amazing. I always know exactly where to look to begin debugging the issue. I am definitely a fan of that.&lt;/p&gt;
 </description>
         <pubDate>Mon, 17 Oct 2016 12:20:28 -0400</pubDate>
         <link>http://JesseWaites.com/working-with-react/</link>
@@ -481,73 +620,6 @@ After getting this website styled and configured the way I wanted to, I wanted t
         <pubDate>Wed, 06 Jan 2016 04:50:28 -0500</pubDate>
         <link>http://JesseWaites.com/super-mario-easter-egg/</link>
         <guid isPermaLink="true">http://JesseWaites.com/super-mario-easter-egg/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Introducing Boston Ipsum</title>
-        <description>&lt;p&gt;Introducing the Boston Ipsum Ruby Gem.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;What is a RubyGem?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;A Rubygem is a bit of code that a ruby developer wrote, made available in a portable format and posted to a public server, so that bit of code can be used on other machines and by other developers in different web projects. If you were to think of web development as building digital things with digital Legos (And you might not be too far off, frankly), you could imagine a Rubygem as being a specific Lego that performs a specific function. Some Rubygems allow you to send email, upload images, or even display a profile picture based on your email address. This Rubygem that I created displays Boston themed “Lorem Ipsum” text.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;What is Lorem Ipsum?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Lorem Ipsum is “filler text” used by print and web developers to take space up on a page with text so that he or she can get an idea of what the page will look like once the marketing text gets finished by the marketing department. For example, on the home page at http://JesseWaites.comyou can see that I have a small bio section on the left side. If I were still working on the bio, I could add some filler text there to take up 2 or 3 sentences and get a good idea of how much space it would take up on the page.&lt;/p&gt;
-
-&lt;p&gt;I wanted to experiment with making a Ruby gem, as I had never made one before, so I created a rather simple Lorem Ipsum generator that returns Boston area themed text.&lt;/p&gt;
-
-&lt;p&gt;Rubygems link: https://rubygems.org/gems/boston_ipsum/versions/1.5.5&lt;/p&gt;
-
-&lt;p&gt;You simply install the gem, bundle, and call:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;%= BostonIpsum.speak(integer) %&amp;gt;  &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;in any view. The integer number allows you to return a randomized yet specific number of words. To add words, make a pull request.&lt;/p&gt;
-
-&lt;p&gt;For example,&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;%= BostonIpsum.speak(2) %&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;could output “Patriots Somerville”, and&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;%= BostonIpsum.speak(4) %&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;could output “Sox Eastie Southie MBTA”&lt;/p&gt;
-
-&lt;p&gt;Installation:&lt;/p&gt;
-
-&lt;p&gt;Add this line to your application’s Gemfile:&lt;/p&gt;
-
-&lt;p&gt;gem ‘boston_ipsum’&lt;/p&gt;
-
-&lt;p&gt;And then execute:&lt;/p&gt;
-
-&lt;p&gt;$ bundle&lt;/p&gt;
-
-&lt;p&gt;Or install it yourself as:&lt;/p&gt;
-
-&lt;p&gt;$ gem install boston_ipsum&lt;/p&gt;
-
-&lt;p&gt;Usage:&lt;/p&gt;
-
-&lt;p&gt;Simply add:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sx&quot;&gt;%= BostonIpsum.speak(5) %&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;into any view after requiring and bundling the gem into your ruby project.&lt;/p&gt;
-
-&lt;p&gt;To add Boston themed words to the list, simply add them and make a pull request on Github.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/piratebroadcast/BostonIpsum&quot;&gt;Here’s the Github link.&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 06 Jan 2016 04:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/boston-ipsum/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/boston-ipsum/</guid>
         
         
         <category>coding</category>

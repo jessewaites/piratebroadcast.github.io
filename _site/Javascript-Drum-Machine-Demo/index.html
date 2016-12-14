@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Jesse Waites | Add an Apple Touch Icon to a Ruby App</title>
-    <meta name="description" content="This website runs on the Jekyll framework, which is a Ruby based blogging platform invented by Tom Preston-Werner, the founder of GitHub.After getting this w...">
+    <title>Jesse Waites | Javascript Drum Machine Demo</title>
+    <meta name="description" content="">
 
     <link rel="stylesheet" href="/css/main.css">
 
-    <link rel="canonical" href="/add-apple-touch-icon-to-rails-app/">
+    <link rel="canonical" href="/Javascript-Drum-Machine-Demo/">
     <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="http://JesseWaites.com/feed.xml" />
     <link rel="apple-touch-icon" href="http://JesseWaites.com/img/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
@@ -45,8 +45,8 @@ audio.play();
     <meta content="Jesse Waites" property="og:site_name">
 
     
-      <meta name="twitter:title" content="Add an Apple Touch Icon to a Ruby App">
-      <meta content="Add an Apple Touch Icon to a Ruby App" property="og:title">
+      <meta name="twitter:title" content="Javascript Drum Machine Demo">
+      <meta content="Javascript Drum Machine Demo" property="og:title">
       <meta content="article" property="og:type">
     
 
@@ -56,17 +56,17 @@ audio.play();
     
 
     
-      <meta name="twitter:url" content="http://JesseWaites.com/add-apple-touch-icon-to-rails-app/">
-      <meta content="http://JesseWaites.com/add-apple-touch-icon-to-rails-app/" property="og:url">
+      <meta name="twitter:url" content="http://JesseWaites.com/Javascript-Drum-Machine-Demo/">
+      <meta content="http://JesseWaites.com/Javascript-Drum-Machine-Demo/" property="og:url">
     
 
     
-      <meta content="2016-01-06T12:50:28-05:00" property="article:published_time">
+      <meta content="2016-10-17T12:20:28-04:00" property="article:published_time">
     
 
     
-      <meta name="twitter:image:src" content="http://JesseWaites.com/img/icons.jpg">
-      <meta property="og:image" content="http://JesseWaites.com/img/icons.jpg">
+      <meta name="twitter:image:src" content="http://JesseWaites.com/img/drum.jpg">
+      <meta property="og:image" content="http://JesseWaites.com/img/drum.jpg">
     
 
 
@@ -84,7 +84,7 @@ audio.play();
 
   <body class="">
 
-    <header class="hero-image" style="background-image: url(/img/icons.jpg);">
+    <header class="hero-image" style="background-image: url(/img/drum.jpg);">
   <span class="menu-trigger">
   <div id="nav-icon1">
     <span></span>
@@ -178,26 +178,129 @@ audio.play();
                 <a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 3 minutes
             </p>
 
-            <h1>Add an Apple Touch Icon to a Ruby App</h1>
+            <h1>Javascript Drum Machine Demo</h1>
 
-            <p>This website runs on the Jekyll framework, which is a Ruby based blogging platform invented by Tom Preston-Werner, the founder of GitHub.
-After getting this website styled and configured the way I wanted to, I wanted to add some personal touches to it, so I added an Easter Egg and decided to add my Avatar as an apple touch icon, so if someone were to add it to their homescreen (which would never, ever happen), it would have a corresponding app icon. Pretty fancy, like so:</p>
+            <style>
+.keys {
+  display:flex;
+  flex:1;
+  min-height:20vh;
+  align-items: center;
+  justify-content: center;
+}
 
-<p><img src="http://i.imgur.com/Rru5zJX.png" alt="Icon in Action" /></p>
+.key {
+  border:4px solid black;
+  border-radius:5px;
+  margin:1rem;
+  font-size: 1.5rem;
+  padding:1rem .5rem;
+  transition:all .07s;
+  width:100px;
+  text-align: center;
+  color:white;
+  background:rgba(0,0,0,0.4);
+  text-shadow:0 0 5px black;
+}
 
-<p>Ok, lets do this.</p>
+.playing {
+  transform:scale(1.1);
+  border-color:#ffc600;
+  box-shadow: 0 0 50px #ffc600;
+}
 
-<p>Create a square 180 x 180 pixel image graphic in .png format using your design, logo, whatever. Next, name the image “apple-touch-icon.png” and save it. You can use the Preview program in the Mac to easily do this.</p>
+kbd {
+  display: block;
+  font-size: 40px;
+}
 
-<p>Now upload the image to your Ruby or Rails app - You can do this by opening 2 different Finder windows locally and draggin’ it on over from your Desktop or wherever to your images folder. In this example, since this is a Jekyll app, I moved it to the Img folder.</p>
+.sound {
+  font-size: 5.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color:#ffc600;
+}
+</style>
 
-<p>Lastly, add this HTML to the header of your site before the closing &lt;/head&gt; tag, without the outer, external quote marks:</p>
+<div class="keys">
+    <div data-key="65" class="key">
+      <kbd>A</kbd>
+      <span class="sound"></span>
+    </div>
+    <div data-key="83" class="key">
+      <kbd>S</kbd>
+      <span class="sound"></span>
+    </div>
+    <div data-key="68" class="key">
+      <kbd>D</kbd>
+      <span class="sound"></span>
+    </div>
+    <div data-key="70" class="key">
+      <kbd>F</kbd>
+      <span class="sound"></span>
+    </div>
+    <div data-key="71" class="key">
+      <kbd>G</kbd>
+      <span class="sound"></span>
+    </div>
+    <div data-key="72" class="key">
+      <kbd>H</kbd>
+      <span class="sound"></span>
+    </div>
+    <div data-key="74" class="key">
+      <kbd>J</kbd>
+      <span class="sound"></span>
+    </div>
+    <div data-key="75" class="key">
+      <kbd>K</kbd>
+      <span class="sound"></span>
+    </div>
+    <div data-key="76" class="key">
+      <kbd>L</kbd>
+      <span class="sound"></span>
+    </div>
+  </div>
 
-<figure class="highlight"><pre><code class="language-html" data-lang="html">"<span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">href=</span><span class="s">"img/apple-touch-icon.png"</span><span class="nt">&gt;</span>"</code></pre></figure>
+<audio data-key="65" src="/sounds/clap.wav"></audio>
+<audio data-key="83" src="/sounds/hihat.wav"></audio>
+<audio data-key="68" src="/sounds/kick.wav"></audio>
+<audio data-key="70" src="/sounds/openhat.wav"></audio>
+<audio data-key="71" src="/sounds/boom.wav"></audio>
+<audio data-key="72" src="/sounds/ride.wav"></audio>
+<audio data-key="74" src="/sounds/snare.wav"></audio>
+<audio data-key="75" src="/sounds/tom.wav"></audio>
+<audio data-key="76" src="/sounds/tink.wav"></audio>
 
-<p>I’ve noticed a lot of major sites aren’t doing this but details matter, so take a few minutes and give it a shot.</p>
+<p>If you’re on a laptop, press the letter “A” , then “F” - Cool, right?</p>
 
-<p>Cheers.</p>
+<p>Recently, my friend Ben shared a link to Web Bos’ free new Javascript course, Javascript30. I’ve known Wes’ name around for quite a while being that he has
+  created what is known as the de facto ReactJs course, so I was curious to what his free course would offer. I’ve recently decided to give it a spin and was happy to see that the first course is building a javascript drum machine. I’ve always wanted to build one of these.</p>
+
+<p>Long story short, you create a directory in your project full of .wav sound files. In your HTML, you have various audio tags - each one has a custom data-key attribute assigned to a different keyboard letter. In your javascript, you have a window listener waiting and watching for keyboard presses. When a key on the keyboard is pushed that corresponds to an audio file, that file is played via the audio HTML API. Otherwise, if a key is pressed that is NOT associated with an audio file, the function is exited and begins again, waiting and listening for the next keypress. I’m happy with Wes’ course so far and am looking forward to the rest of it.</p>
+
+<p><a href="https://javascript30.com/">Click here to see Wes’ Javascript30 course.</a></p>
+
+<script>
+    function removeTransition(e) {
+      if (e.propertyName !== 'transform') return;
+      e.target.classList.remove('playing');
+    }
+
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+      if (!audio) return;
+
+      key.classList.add('playing');
+      audio.currentTime = 0;
+      audio.play();
+    }
+
+    const keys = Array.from(document.querySelectorAll('.key'));
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playSound);
+  </script>
+
 
 
         </div><!-- main-content/col -->
@@ -213,7 +316,7 @@ After getting this website styled and configured the way I wanted to, I wanted t
         </div>
         <div class="col-xs-12 col-sm-6">
             <div class="category-list">
-                <p>Published <span>Jan 6, 2016</span></p>
+                <p>Published <span>Oct 17, 2016</span></p>
                 <p><a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a></p>
 
                 <div class="other-catergories">
@@ -235,10 +338,10 @@ After getting this website styled and configured the way I wanted to, I wanted t
             <div class="social">
                 <p>Share this article</a>
                 <div class="social-links">
-                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://JesseWaites.com/add-apple-touch-icon-to-rails-app/"><i class="fa fa-twitter"></i></a>
+                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://JesseWaites.com/Javascript-Drum-Machine-Demo/"><i class="fa fa-twitter"></i></a>
 
-                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://JesseWaites.com/add-apple-touch-icon-to-rails-app/"><i class="fa fa-facebook-official"></i></a>
-                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://JesseWaites.com/add-apple-touch-icon-to-rails-app/"><i class="fa fa-envelope"></i></a>
+                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://JesseWaites.com/Javascript-Drum-Machine-Demo/"><i class="fa fa-facebook-official"></i></a>
+                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://JesseWaites.com/Javascript-Drum-Machine-Demo/"><i class="fa fa-envelope"></i></a>
                 </div>
             </div>
         </div>
