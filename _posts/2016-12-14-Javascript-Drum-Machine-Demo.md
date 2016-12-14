@@ -105,7 +105,7 @@ kbd {
   <audio data-key="75" src="/sounds/tom.wav"></audio>
   <audio data-key="76" src="/sounds/tink.wav"></audio>
 
-  If you're on a laptop, press the letter "A" , then "F" - Cool, right?
+  If you're on a laptop, press the letter "A" , then "F" - Cool, right? (This demo works on non-mobile devices only. Sorry, iPhone and Android users.)
 
   Recently, my friend Ben shared a link to Web Bos' free new Javascript course, Javascript30. I've known Wes' name around for quite a while being that he has
   created what is known as the de facto ReactJs course, so I was curious to what his free course would offer. I've recently decided to give it a spin and was happy to see that the first course is building a javascript drum machine. I've always wanted to build one of these.
