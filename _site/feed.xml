@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jesse Waites</title>
-    <description>Jesse Waites: Boston, MA based Ruby on Rails Developer.</description>
+    <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Dec 2016 12:25:16 -0500</pubDate>
-    <lastBuildDate>Wed, 14 Dec 2016 12:25:16 -0500</lastBuildDate>
+    <pubDate>Wed, 14 Dec 2016 13:46:51 -0500</pubDate>
+    <lastBuildDate>Wed, 14 Dec 2016 13:46:51 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -102,7 +102,7 @@ kbd {
 &lt;audio data-key=&quot;75&quot; src=&quot;/sounds/tom.wav&quot;&gt;&lt;/audio&gt;
 &lt;audio data-key=&quot;76&quot; src=&quot;/sounds/tink.wav&quot;&gt;&lt;/audio&gt;
 
-&lt;p&gt;If you’re on a laptop, press the letter “A” , then “F” - Cool, right?&lt;/p&gt;
+&lt;p&gt;If you’re on a laptop, press the letter “A” , then “F” - Cool, right? (This demo works on non-mobile devices only. Sorry, iPhone and Android users.)&lt;/p&gt;
 
 &lt;p&gt;Recently, my friend Ben shared a link to Web Bos’ free new Javascript course, Javascript30. I’ve known Wes’ name around for quite a while being that he has
   created what is known as the de facto ReactJs course, so I was curious to what his free course would offer. I’ve recently decided to give it a spin and was happy to see that the first course is building a javascript drum machine. I’ve always wanted to build one of these.&lt;/p&gt;
