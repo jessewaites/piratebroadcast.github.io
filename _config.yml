@@ -1,7 +1,7 @@
 # Site settings
 title: Jesse Waites
 email: jesse.waites@gmail.com
-description: "Jesse Waites: Boston, MA based Ruby on Rails Developer."
+description: "Jesse Waites - Boston, MA based Ruby on Rails Developer."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://JesseWaites.com" # the base hostname & protocol for your site
 enable_retina: false
@@ -13,9 +13,9 @@ nav_list:
   # Home_Alt_2 : ['Home Alt 2', '/home-alt-2/', 'fa-home']
   #About : ['About', '/about', 'fa-anchor']
   # Contact : ['Contact', '/contact', 'fa-plane']
-  Author : ['About', '/author/jesse', 'fa-user']
+  Author : ['About Jesse Waites', '/author/jesse', 'fa-user']
   Blank : ['', '/']
-  Resume : ['Resume', 'https://drive.google.com/file/d/0B78faj-_ufT8TEpkZ3JRSmp0WFU/view?usp=sharing', 'fa-file-text']
+  Resume : ['My Resume', 'https://drive.google.com/file/d/0B78faj-_ufT8TEpkZ3JRSmp0WFU/view?usp=sharing', 'fa-file-text']
   Github : ['GitHub', 'https://www.github.com/piratebroadcast', 'fa-github']
   LinkedIn : ['LinkedIn', 'https://www.linkedin.com/in/jessewaites', 'fa-linkedin']
   Twitter : ['Twitter', 'https://www.twitter.com/jessewaites', 'fa-twitter']
