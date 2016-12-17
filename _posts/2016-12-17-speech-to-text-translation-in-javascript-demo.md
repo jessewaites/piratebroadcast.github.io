@@ -36,7 +36,7 @@ This works on non-mobile devices only, and best in Chrome. I built this with the
       .map(result => result.transcript)
       .join('');
 
-      const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
+      const poopScript = transcript.replace(/shit/gi, '💩');
       p.textContent = poopScript;
 
       if (e.results[0].isFinal) {
