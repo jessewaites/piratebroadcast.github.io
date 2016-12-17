@@ -5,13 +5,14 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Dec 2016 10:56:29 -0500</pubDate>
-    <lastBuildDate>Sat, 17 Dec 2016 10:56:29 -0500</lastBuildDate>
+    <pubDate>Sat, 17 Dec 2016 11:11:04 -0500</pubDate>
+    <lastBuildDate>Sat, 17 Dec 2016 11:11:04 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Speech to Text Translation Demo with Javascript</title>
-        <description>&lt;p&gt;Test text.&lt;/p&gt;
+        <description>&lt;p&gt;Check this out – See that thing in the upper right corner of the browser? Click “Allow”
+to allow my website to briefly access your microphone, then start talking to your computer.&lt;/p&gt;
 
 &lt;div class=&quot;words&quot; contenteditable=&quot;&quot;&gt;
 &lt;/div&gt;

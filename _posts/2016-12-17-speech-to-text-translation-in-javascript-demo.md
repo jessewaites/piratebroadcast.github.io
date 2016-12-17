@@ -8,12 +8,13 @@ author_url : /author/jesse
 author_avatar: jesse
 show_avatar : true
 read_time : 3
-feature_image: drum
+feature_image: microphone
 show_related_posts: false
 square_related: recommend-wolf
 ---
 
-Test text.
+Check this out -- See that thing in the upper right corner of the browser? Click "Allow"
+to allow my website to briefly access your microphone, then start talking to your computer.
 
 <div class="words" contenteditable>
 </div>
