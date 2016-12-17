@@ -15,9 +15,10 @@ square_related: recommend-wolf
 
 Check this out -- See that thing in the upper right corner of the browser? Click "Allow"
 to allow my website to briefly access your microphone, then start talking to your computer.
+This works on non-mobile devices only, and best in Chrome. I built this with the HTML5 Speech Recognition API, which allows JavaScript to have access to a browser's audio stream and convert it to text.
 
-<div class="words" contenteditable>
-</div>
+<pre><div class="words" contenteditable>
+</div></pre>
 
 <script>
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;

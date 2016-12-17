@@ -5,17 +5,18 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Dec 2016 11:11:04 -0500</pubDate>
-    <lastBuildDate>Sat, 17 Dec 2016 11:11:04 -0500</lastBuildDate>
+    <pubDate>Sat, 17 Dec 2016 11:41:16 -0500</pubDate>
+    <lastBuildDate>Sat, 17 Dec 2016 11:41:16 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Speech to Text Translation Demo with Javascript</title>
         <description>&lt;p&gt;Check this out – See that thing in the upper right corner of the browser? Click “Allow”
-to allow my website to briefly access your microphone, then start talking to your computer.&lt;/p&gt;
+to allow my website to briefly access your microphone, then start talking to your computer.
+This works on non-mobile devices only, and best in Chrome. I built this with the HTML5 Speech Recognition API, which allows JavaScript to have access to a browser’s audio stream and convert it to text.&lt;/p&gt;
 
-&lt;div class=&quot;words&quot; contenteditable=&quot;&quot;&gt;
-&lt;/div&gt;
+&lt;pre&gt;&lt;div class=&quot;words&quot; contenteditable=&quot;&quot;&gt;
+&lt;/div&gt;&lt;/pre&gt;
 
 &lt;script&gt;
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
