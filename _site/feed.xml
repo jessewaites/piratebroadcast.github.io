@@ -5,9 +5,57 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 14 Dec 2016 13:46:51 -0500</pubDate>
-    <lastBuildDate>Wed, 14 Dec 2016 13:46:51 -0500</lastBuildDate>
+    <pubDate>Sat, 17 Dec 2016 10:56:29 -0500</pubDate>
+    <lastBuildDate>Sat, 17 Dec 2016 10:56:29 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Speech to Text Translation Demo with Javascript</title>
+        <description>&lt;p&gt;Test text.&lt;/p&gt;
+
+&lt;div class=&quot;words&quot; contenteditable=&quot;&quot;&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  const recognition = new SpeechRecognition();
+  recognition.interimResults = true;
+
+  let p = document.createElement(&#39;p&#39;);
+  const words = document.querySelector(&#39;.words&#39;);
+  words.appendChild(p);
+
+  recognition.addEventListener(&#39;result&#39;, e =&gt; {
+    const transcript = Array.from(e.results)
+      .map(result =&gt; result[0])
+      .map(result =&gt; result.transcript)
+      .join(&#39;&#39;);
+
+      const poopScript = transcript.replace(/poop|poo|shit|dump/gi, &#39;💩&#39;);
+      p.textContent = poopScript;
+
+      if (e.results[0].isFinal) {
+        p = document.createElement(&#39;p&#39;);
+        words.appendChild(p);
+      }
+  });
+
+  recognition.addEventListener(&#39;end&#39;, recognition.start);
+
+  recognition.start();
+
+&lt;/script&gt;
+
+</description>
+        <pubDate>Mon, 17 Oct 2016 12:20:28 -0400</pubDate>
+        <link>http://JesseWaites.com/speech-to-text-translation-in-javascript-demo/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/speech-to-text-translation-in-javascript-demo/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Javascript Drum Machine Demo</title>
@@ -601,25 +649,6 @@ After getting this website styled and configured the way I wanted to, I wanted t
         <pubDate>Wed, 06 Jan 2016 12:50:28 -0500</pubDate>
         <link>http://JesseWaites.com/add-apple-touch-icon-to-rails-app/</link>
         <guid isPermaLink="true">http://JesseWaites.com/add-apple-touch-icon-to-rails-app/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Super Mario Easter Egg</title>
-        <description>&lt;p&gt;This website holds a secret…&lt;/p&gt;
-
-&lt;p&gt;An Easter egg is an intentional inside joke, hidden message, or feature in an interactive work such as a computer program, video game or DVD menu screen. The name has been said to evoke the idea of a traditional Easter egg hunt.&lt;/p&gt;
-
-&lt;p&gt;I decided to add an easter egg to this website.&lt;/p&gt;
-
-&lt;p&gt;The secret is - If you load any page and type “1up”, you may hear a very familiar sound.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 06 Jan 2016 04:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/super-mario-easter-egg/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/super-mario-easter-egg/</guid>
         
         
         <category>coding</category>
