@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Updating CSS variables with Javascript in the Swiss Alps"
-date: 2016-12-12 012:20:28
+date: 2016-12-20 012:20:28
 categories: coding
 author_name : Jesse
 author_url : /author/jesse
@@ -24,7 +24,7 @@ square_related: recommend-wolf
     <label for="blur">Blur:</label>
     <input type="range" name="blur" min="0" max="25" value="5" data-sizing="px">
 
-    <label for="base">Frame Color</label>
+    <label for="base">Frame Color:</label>
     <input type="color" name="base" value="#b4251b">
   </div>
 

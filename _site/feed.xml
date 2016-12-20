@@ -5,8 +5,8 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Dec 2016 15:51:04 -0500</pubDate>
-    <lastBuildDate>Tue, 20 Dec 2016 15:51:04 -0500</lastBuildDate>
+    <pubDate>Tue, 20 Dec 2016 15:53:52 -0500</pubDate>
+    <lastBuildDate>Tue, 20 Dec 2016 15:53:52 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -22,7 +22,7 @@
     &lt;label for=&quot;blur&quot;&gt;Blur:&lt;/label&gt;
     &lt;input type=&quot;range&quot; name=&quot;blur&quot; min=&quot;0&quot; max=&quot;25&quot; value=&quot;5&quot; data-sizing=&quot;px&quot; /&gt;
 
-    &lt;label for=&quot;base&quot;&gt;Frame Color&lt;/label&gt;
+    &lt;label for=&quot;base&quot;&gt;Frame Color:&lt;/label&gt;
     &lt;input type=&quot;color&quot; name=&quot;base&quot; value=&quot;#b4251b&quot; /&gt;
   &lt;/div&gt;
 
@@ -112,7 +112,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 
 &lt;/body&gt;
 </description>
-        <pubDate>Mon, 12 Dec 2016 12:20:28 -0500</pubDate>
+        <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
         <link>http://JesseWaites.com/image-blur-with-javascipt/</link>
         <guid isPermaLink="true">http://JesseWaites.com/image-blur-with-javascipt/</guid>
         
