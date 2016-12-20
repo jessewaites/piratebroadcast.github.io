@@ -17,6 +17,8 @@ Check this out -- See that thing in the upper left corner of the browser? Click 
 to allow my website to briefly access your microphone, then start talking to your computer.
 This works on non-mobile devices only, and best in Chrome. I built this with the HTML5 Speech Recognition API, which allows JavaScript to have access to a browser's audio stream and convert it to text.
 
+When you're testing it, say the words "Pizza", "Ice Cream", or "Cheeseburger" for a nice surprise.
+
 <pre><div class="words" contenteditable>
 </div></pre>
 
@@ -42,6 +44,21 @@ This works on non-mobile devices only, and best in Chrome. I built this with the
       if (e.results[0].isFinal) {
         p = document.createElement('p');
         words.appendChild(p);
+      }
+      if(transcript.includes('pizza')) {
+        alert("Your 🍕 is on the way!");
+      }
+      if(transcript.includes('Pizza')) {
+        alert("Your 🍕 is on the way!");
+      }
+      if(transcript.includes('cheeseburger')) {
+        alert("🍔 Protip: 5 Guys has the best burger in town.");
+      }
+      if(transcript.includes('ice cream')) {
+        alert("😕 Isn't it a little cold for Ice cream? Anyway, your wish is my command: 🍦");
+      }
+      if(transcript.includes('shit')) {
+        alert("💩 💩 💩 💩 💩");
       }
   });
 

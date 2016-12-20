@@ -5,15 +5,17 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Dec 2016 11:41:16 -0500</pubDate>
-    <lastBuildDate>Sat, 17 Dec 2016 11:41:16 -0500</lastBuildDate>
+    <pubDate>Tue, 20 Dec 2016 10:20:37 -0500</pubDate>
+    <lastBuildDate>Tue, 20 Dec 2016 10:20:37 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Speech to Text Translation Demo with Javascript</title>
-        <description>&lt;p&gt;Check this out – See that thing in the upper right corner of the browser? Click “Allow”
+        <description>&lt;p&gt;Check this out – See that thing in the upper left corner of the browser? Click “Allow”
 to allow my website to briefly access your microphone, then start talking to your computer.
 This works on non-mobile devices only, and best in Chrome. I built this with the HTML5 Speech Recognition API, which allows JavaScript to have access to a browser’s audio stream and convert it to text.&lt;/p&gt;
+
+&lt;p&gt;When you’re testing it, say the words “Pizza”, “Ice Cream”, or “Cheeseburger” for a nice surprise.&lt;/p&gt;
 
 &lt;pre&gt;&lt;div class=&quot;words&quot; contenteditable=&quot;&quot;&gt;
 &lt;/div&gt;&lt;/pre&gt;
@@ -40,6 +42,21 @@ This works on non-mobile devices only, and best in Chrome. I built this with the
       if (e.results[0].isFinal) {
         p = document.createElement(&#39;p&#39;);
         words.appendChild(p);
+      }
+      if(transcript.includes(&#39;pizza&#39;)) {
+        alert(&quot;Your 🍕 is on the way!&quot;);
+      }
+      if(transcript.includes(&#39;Pizza&#39;)) {
+        alert(&quot;Your 🍕 is on the way!&quot;);
+      }
+      if(transcript.includes(&#39;cheeseburger&#39;)) {
+        alert(&quot;🍔 Protip: 5 Guys has the best burger in town.&quot;);
+      }
+      if(transcript.includes(&#39;ice cream&#39;)) {
+        alert(&quot;😕 Isn&#39;t it a little cold for Ice cream? Anyway, your wish is my command: 🍦&quot;);
+      }
+      if(transcript.includes(&#39;shit&#39;)) {
+        alert(&quot;💩 💩 💩 💩 💩&quot;);
       }
   });
 
