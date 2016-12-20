@@ -32,8 +32,9 @@ square_related: recommend-wolf
   <p>This is a photo of me on a recent hiking trip to the Swiss Alps, in Gimmelwald, Switzerland.
   It is an amazing place and you should go if you ever have the chance.</p>
 
-  <style>
-  input[type=range]{
+<style>
+
+input[type=range]{
   -webkit-appearance: none;
 }
 
@@ -63,53 +64,53 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   background: #ccc;
 }
 
-    :root {
-      --base: #b4251b;
-      --spacing: 10px;
-      --blur: 5px;
-    }
+:root {
+  --base: #b4251b;
+  --spacing: 10px;
+  --blur: 5px;
+}
 
-    img {
-      padding: var(--spacing);
-      background: var(--base);
-      filter: blur(var(--blur));
-    }
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
 
-    .hl {
-      color: var(--base);
-    }
+.hl {
+  color: var(--base);
+}
 
-    body {
-      text-align: center;
-    }
+body {
+  text-align: center;
+}
 
-    body {
-      color: black;
-      font-family: 'helvetica neue', sans-serif;
-      font-weight: 100;
-      font-size: 50px;
-    }
+body {
+  color: black;
+  font-family: 'helvetica neue', sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+}
 
-    .controls {
-      margin-bottom: 50px;
-    }
+.controls {
+  margin-bottom: 50px;
+}
 
-    input {
-      width:100px;
-    }
-  </style>
+input {
+  width:100px;
+}
+</style>
 
-  <script>
-    const inputs = document.querySelectorAll('.controls input');
+<script>
+  const inputs = document.querySelectorAll('.controls input');
 
-    function handleUpdate() {
-      const suffix = this.dataset.sizing || '';
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-    }
+  function handleUpdate() {
+    const suffix = this.dataset.sizing || '';
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+  }
 
-    inputs.forEach(input => input.addEventListener('change', handleUpdate));
-    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
-  </script>
+  inputs.forEach(input => input.addEventListener('change', handleUpdate));
+  inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+</script>
 
 
 </body>

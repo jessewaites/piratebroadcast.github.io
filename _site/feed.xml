@@ -5,8 +5,8 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Dec 2016 15:53:52 -0500</pubDate>
-    <lastBuildDate>Tue, 20 Dec 2016 15:53:52 -0500</lastBuildDate>
+    <pubDate>Tue, 20 Dec 2016 15:57:15 -0500</pubDate>
+    <lastBuildDate>Tue, 20 Dec 2016 15:57:15 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -30,8 +30,9 @@
   &lt;p&gt;This is a photo of me on a recent hiking trip to the Swiss Alps, in Gimmelwald, Switzerland.
   It is an amazing place and you should go if you ever have the chance.&lt;/p&gt;
 
-  &lt;style&gt;
-  input[type=range]{
+&lt;style&gt;
+
+input[type=range]{
   -webkit-appearance: none;
 }
 
@@ -61,41 +62,41 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   background: #ccc;
 }
 
-    :root {
-      --base: #b4251b;
-      --spacing: 10px;
-      --blur: 5px;
-    }
+:root {
+  --base: #b4251b;
+  --spacing: 10px;
+  --blur: 5px;
+}
 
-    img {
-      padding: var(--spacing);
-      background: var(--base);
-      filter: blur(var(--blur));
-    }
+img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+}
 
-    .hl {
-      color: var(--base);
-    }
+.hl {
+  color: var(--base);
+}
 
-    body {
-      text-align: center;
-    }
+body {
+  text-align: center;
+}
 
-    body {
-      color: black;
-      font-family: &#39;helvetica neue&#39;, sans-serif;
-      font-weight: 100;
-      font-size: 50px;
-    }
+body {
+  color: black;
+  font-family: &#39;helvetica neue&#39;, sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+}
 
-    .controls {
-      margin-bottom: 50px;
-    }
+.controls {
+  margin-bottom: 50px;
+}
 
-    input {
-      width:100px;
-    }
-  &lt;/style&gt;
+input {
+  width:100px;
+}
+&lt;/style&gt;
 
   &lt;script&gt;
     const inputs = document.querySelectorAll(&#39;.controls input&#39;);
