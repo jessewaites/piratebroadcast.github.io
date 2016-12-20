@@ -5,9 +5,100 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Dec 2016 10:20:37 -0500</pubDate>
-    <lastBuildDate>Tue, 20 Dec 2016 10:20:37 -0500</lastBuildDate>
+    <pubDate>Tue, 20 Dec 2016 10:43:54 -0500</pubDate>
+    <lastBuildDate>Tue, 20 Dec 2016 10:43:54 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Tick Tock: Javascript / CSS Analog Clock Demo</title>
+        <description>&lt;p&gt;Testing.&lt;/p&gt;
+
+&lt;body&gt;
+
+
+    &lt;div class=&quot;clock&quot;&gt;
+      &lt;div class=&quot;clock-face&quot;&gt;
+        &lt;div class=&quot;hand hour-hand&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;hand min-hand&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;hand second-hand&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+
+  &lt;style&gt;
+
+
+    .clock {
+      width: 30rem;
+      height: 30rem;
+      border:20px solid #b4251b;
+      border-radius:50%;
+      margin:50px auto;
+      position: relative;
+      padding:2rem;
+      box-shadow:
+        0 0 0 4px rgba(0,0,0,0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px); /* account for the height of the clock hands */
+    }
+
+    .hand {
+      width:50%;
+      height:6px;
+      background:black;
+      position: absolute;
+      top:50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+      transition: all 0.05s;
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
+&lt;/style&gt;
+
+&lt;script&gt;
+  const secondHand = document.querySelector(&#39;.second-hand&#39;);
+  const minsHand = document.querySelector(&#39;.min-hand&#39;);
+  const hourHand = document.querySelector(&#39;.hour-hand&#39;);
+
+  function setDate() {
+    const now = new Date();
+
+    const seconds = now.getSeconds();
+    const secondsDegrees = ((seconds / 60) * 360) + 90;
+    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+    const mins = now.getMinutes();
+    const minsDegrees = ((mins / 60) * 360) + 90;
+    minsHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+    const hour = now.getHours();
+    const hourDegrees = ((hour / 12) * 360) + 90;
+    hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+  }
+
+  setInterval(setDate, 1000);
+
+  setDate();
+
+&lt;/script&gt;
+&lt;/body&gt;
+</description>
+        <pubDate>Mon, 17 Oct 2016 12:20:28 -0400</pubDate>
+        <link>http://JesseWaites.com/css-javascript-analog-clock/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/css-javascript-analog-clock/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Speech to Text Translation Demo with Javascript</title>
@@ -638,36 +729,6 @@ gem &#39;twitter_image_tag&#39;
         <pubDate>Thu, 07 Jan 2016 04:50:28 -0500</pubDate>
         <link>http://JesseWaites.com/swift-development-demo/</link>
         <guid isPermaLink="true">http://JesseWaites.com/swift-development-demo/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Add an Apple Touch Icon to a Ruby App</title>
-        <description>&lt;p&gt;This website runs on the Jekyll framework, which is a Ruby based blogging platform invented by Tom Preston-Werner, the founder of GitHub.
-After getting this website styled and configured the way I wanted to, I wanted to add some personal touches to it, so I added an Easter Egg and decided to add my Avatar as an apple touch icon, so if someone were to add it to their homescreen (which would never, ever happen), it would have a corresponding app icon. Pretty fancy, like so:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/Rru5zJX.png&quot; alt=&quot;Icon in Action&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Ok, lets do this.&lt;/p&gt;
-
-&lt;p&gt;Create a square 180 x 180 pixel image graphic in .png format using your design, logo, whatever. Next, name the image “apple-touch-icon.png” and save it. You can use the Preview program in the Mac to easily do this.&lt;/p&gt;
-
-&lt;p&gt;Now upload the image to your Ruby or Rails app - You can do this by opening 2 different Finder windows locally and draggin’ it on over from your Desktop or wherever to your images folder. In this example, since this is a Jekyll app, I moved it to the Img folder.&lt;/p&gt;
-
-&lt;p&gt;Lastly, add this HTML to the header of your site before the closing &amp;lt;/head&amp;gt; tag, without the outer, external quote marks:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&quot;&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;apple-touch-icon&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;img/apple-touch-icon.png&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;I’ve noticed a lot of major sites aren’t doing this but details matter, so take a few minutes and give it a shot.&lt;/p&gt;
-
-&lt;p&gt;Cheers.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 06 Jan 2016 12:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/add-apple-touch-icon-to-rails-app/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/add-apple-touch-icon-to-rails-app/</guid>
         
         
         <category>coding</category>
