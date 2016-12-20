@@ -51,7 +51,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 16px;
   width: 16px;
   border-radius: 50%;
-  background: #b4251b;
+  background: var(--base);
   margin-top: 0px;
 }
 
