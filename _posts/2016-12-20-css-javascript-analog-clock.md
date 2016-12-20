@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Tick Tock: Javascript / CSS Analog Clock Demo"
-date: 2016-10-17 012:20:28
+date: 2016-12-12 012:20:28
 categories: coding
 author_name : Jesse
 author_url : /author/jesse

@@ -5,9 +5,90 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Dec 2016 11:41:40 -0500</pubDate>
-    <lastBuildDate>Tue, 20 Dec 2016 11:41:40 -0500</lastBuildDate>
+    <pubDate>Tue, 20 Dec 2016 13:52:05 -0500</pubDate>
+    <lastBuildDate>Tue, 20 Dec 2016 13:52:05 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Updating CSS variables with Javascript in the Swiss Alps</title>
+        <description>&lt;body&gt;
+  &lt;p&gt;Move the range sliders around to update our CSS variables with &lt;span class=&quot;hl&quot;&gt;Javascript&lt;/span&gt;
+  and reveal my hiking picture taken in the Swiss Alps, in Gimmelwald, Switzerland.&lt;/p&gt;
+
+  &lt;div class=&quot;controls&quot;&gt;
+    &lt;label for=&quot;spacing&quot;&gt;Frame Size:&lt;/label&gt;
+    &lt;input type=&quot;range&quot; name=&quot;spacing&quot; min=&quot;10&quot; max=&quot;200&quot; value=&quot;10&quot; data-sizing=&quot;px&quot; /&gt;
+
+    &lt;label for=&quot;blur&quot;&gt;Blur:&lt;/label&gt;
+    &lt;input type=&quot;range&quot; name=&quot;blur&quot; min=&quot;0&quot; max=&quot;25&quot; value=&quot;5&quot; data-sizing=&quot;px&quot; /&gt;
+
+    &lt;label for=&quot;base&quot;&gt;Frame Color&lt;/label&gt;
+    &lt;input type=&quot;color&quot; name=&quot;base&quot; value=&quot;#9d2425&quot; /&gt;
+  &lt;/div&gt;
+
+  &lt;img src=&quot;http://i.imgur.com/zSUPCqp.png&quot; /&gt;
+  &lt;p&gt;This is a photo of me on a recent hiking trip to the Swiss Alps, in Gimmelwald, Switzerland.&lt;/p&gt;
+
+  &lt;style&gt;
+    :root {
+      --base: #9d2425;
+      --spacing: 10px;
+      --blur: 5px;
+    }
+
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .hl {
+      color: var(--base);
+    }
+
+    body {
+      text-align: center;
+    }
+
+    body {
+      color: black;
+      font-family: &#39;helvetica neue&#39;, sans-serif;
+      font-weight: 100;
+      font-size: 50px;
+    }
+
+    .controls {
+      margin-bottom: 50px;
+    }
+
+    input {
+      width:100px;
+    }
+  &lt;/style&gt;
+
+  &lt;script&gt;
+    const inputs = document.querySelectorAll(&#39;.controls input&#39;);
+
+    function handleUpdate() {
+      const suffix = this.dataset.sizing || &#39;&#39;;
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    inputs.forEach(input =&gt; input.addEventListener(&#39;change&#39;, handleUpdate));
+    inputs.forEach(input =&gt; input.addEventListener(&#39;mousemove&#39;, handleUpdate));
+  &lt;/script&gt;
+
+
+&lt;/body&gt;
+</description>
+        <pubDate>Mon, 12 Dec 2016 12:20:28 -0500</pubDate>
+        <link>http://JesseWaites.com/image-blur-with-javascipt/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/image-blur-with-javascipt/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Tick Tock: Javascript / CSS Analog Clock Demo</title>
@@ -111,7 +192,7 @@
 &lt;/script&gt;
 &lt;/body&gt;
 </description>
-        <pubDate>Mon, 17 Oct 2016 12:20:28 -0400</pubDate>
+        <pubDate>Mon, 12 Dec 2016 12:20:28 -0500</pubDate>
         <link>http://JesseWaites.com/css-javascript-analog-clock/</link>
         <guid isPermaLink="true">http://JesseWaites.com/css-javascript-analog-clock/</guid>
         
@@ -685,70 +766,6 @@ gem &#39;twitter_image_tag&#39;
         <pubDate>Mon, 18 Jan 2016 04:50:28 -0500</pubDate>
         <link>http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/</link>
         <guid isPermaLink="true">http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>iOS Swift App Demo</title>
-        <description>&lt;p&gt;I recently put a swift demo app together as a way to show interest and at least passing familiarity with Swift / Xcode 7 / iOS Development. (Other than the fact that I wrote a book about it ;) This is simply a random fact display app that shows rather benign little facts about me such as the fact that I enjoy eating spaghetti and like to go hiking.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/nRNKOA2.png&amp;quot;&quot; alt=&quot;Jesse Waites App&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here are a few things that crossed my mind when building this app.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Really neat to see the MVC implementation on the handset (iPhone) I’ve used for years.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;There is no method on an array in Swift that will return a random element of the array, such as array.sample in Ruby. That seems kind of ridiculous. Apple has recently open sourced Swift and one hopes an implementation of that will soon be possible.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Building for iOS in Xcode is a hell of a lot of fun. Much like Rails, it seems everything has its place in an Xcode project, and it is obvious that the better one is with the tooling (in this case, Xcode) the more productive and capable the developer will be.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Adding an app icon for the homepage was a breeze.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Adding a launch screen was a total pain and I was not successful. This seems to be due to a change in Xcode 7 and iOS 9. Didn’t want to burn more time attempting to resolve the issue so I moved on. I used Photoshop and created my image, placed it in what I thought was the proper location, but it simply didn’t work. Whatever.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Implementing a button that launched the in-app Safari browser was a breeze.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;There is no mail client in the simulator so hardcoding an “email me” button into the app may work in the actual app on a real iPhone but will throw an error in the Xcode Simulator. I had this in my build but removed it (That code is still in the controller) because it was also causing a lot of drama in my UI layout. Specifically, my buttons were overlapping. See next bullet point.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I found layout and autolayout extremely difficult. I can see that I will need to put much more time into that to master it.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;I’m very much a ‘looks matter’ type of developer and look forward to experimenting with cocoapods and using some of the preexisting UI libraries to make my stuff look really great.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;If I were building an app for, lets say a restaurant, it would be wise to build the menu from an external JSON endpoint, rather than hardcoding everything like meals and prices into the app. This way one could update the menu externally without having to recode the app and go back through the app store submission and review process. This JSON server would probably be great for something like that. https://github.com/typicode/json-server&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Based on my research, SwiftyJSON seems to be the ideal tool to process the JSON on the client / iOS device side: https://github.com/SwiftyJSON/SwiftyJSON&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Xcode projects don’t have readme.md files, so I had to manually create one by creating a folder, moving the Xcode project into it, cd-ing into the folder and using the command touch readme.md to create it.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/piratebroadcast/ios_swift_demo_app&quot;&gt;Here’s the Github link.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Next Steps: Build a Rails API app, like a simple little TODO app or something, (Make sure I scope the API routes like V1 or whatever) and then create an iOS front-end for it that reads things from the list and allows to post new TODOs from the App to the database. Would also be fun to experiment with Oauth and iOS, like signing in with Facebook, passing the token back to the Rails app, and authorizing or not authorizing on the iOS device.&lt;/p&gt;
-
-&lt;p&gt;Actually scratch that - Next step is to build a simple app that reads JSON from an endpoint somewhere (like government data or something, lots of options there) and displays it on the screen. This will give me another shot to work on effective UI and not get overwhelmed by attempting to do too many new things at once.&lt;/p&gt;
-
-&lt;p&gt;Cheers.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 07 Jan 2016 04:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/swift-development-demo/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/swift-development-demo/</guid>
         
         
         <category>coding</category>
