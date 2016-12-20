@@ -5,15 +5,15 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Dec 2016 10:46:14 -0500</pubDate>
-    <lastBuildDate>Tue, 20 Dec 2016 10:46:14 -0500</lastBuildDate>
+    <pubDate>Tue, 20 Dec 2016 11:41:40 -0500</pubDate>
+    <lastBuildDate>Tue, 20 Dec 2016 11:41:40 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Tick Tock: Javascript / CSS Analog Clock Demo</title>
-        <description>&lt;p&gt;Testing.&lt;/p&gt;
+        <description>&lt;body&gt;
 
-&lt;body&gt;
+    &lt;p&gt;The current time is:&lt;/p&gt;
 
 
     &lt;div class=&quot;clock&quot;&gt;
@@ -24,6 +24,7 @@
       &lt;/div&gt;
     &lt;/div&gt;
 
+    &lt;p id=&quot;time&quot;&gt;&lt;/p&gt;
 
   &lt;style&gt;
 
@@ -47,7 +48,7 @@
       position: relative;
       width: 100%;
       height: 100%;
-      transform: translateY(-3px); /* account for the height of the clock hands */
+      transform: translateY(-3px);
     }
 
     .hand {
@@ -87,6 +88,25 @@
   setInterval(setDate, 1000);
 
   setDate();
+
+  (function () {
+    function checkTime(i) {
+        return (i &lt; 10) ? &quot;0&quot; + i : i;
+    }
+
+    function startTime() {
+        var today = new Date(),
+            h = checkTime(today.getHours()),
+            m = checkTime(today.getMinutes()),
+            s = checkTime(today.getSeconds());
+            ampm = (h &gt;= 12) ? &quot;PM&quot; : &quot;AM&quot;;
+        document.getElementById(&#39;time&#39;).innerHTML = h + &quot;:&quot; + m + &quot;:&quot; + s + ampm;
+        t = setTimeout(function () {
+            startTime()
+        }, 500);
+    }
+    startTime();
+})();
 
 &lt;/script&gt;
 &lt;/body&gt;

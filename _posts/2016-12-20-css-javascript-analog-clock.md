@@ -13,9 +13,9 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 
-Testing.
-
 <body>
+
+    <p>The current time is:</p>
 
 
     <div class="clock">
@@ -26,6 +26,7 @@ Testing.
       </div>
     </div>
 
+    <p id="time"></p>
 
   <style>
 
@@ -49,7 +50,7 @@ Testing.
       position: relative;
       width: 100%;
       height: 100%;
-      transform: translateY(-3px); /* account for the height of the clock hands */
+      transform: translateY(-3px);
     }
 
     .hand {
@@ -89,6 +90,25 @@ Testing.
   setInterval(setDate, 1000);
 
   setDate();
+
+  (function () {
+    function checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+
+    function startTime() {
+        var today = new Date(),
+            h = checkTime(today.getHours()),
+            m = checkTime(today.getMinutes()),
+            s = checkTime(today.getSeconds());
+            ampm = (h >= 12) ? "PM" : "AM";
+        document.getElementById('time').innerHTML = h + ":" + m + ":" + s + ampm;
+        t = setTimeout(function () {
+            startTime()
+        }, 500);
+    }
+    startTime();
+})();
 
 </script>
 </body>
