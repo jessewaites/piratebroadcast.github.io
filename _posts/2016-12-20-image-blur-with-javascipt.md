@@ -25,15 +25,46 @@ square_related: recommend-wolf
     <input type="range" name="blur" min="0" max="25" value="5" data-sizing="px">
 
     <label for="base">Frame Color</label>
-    <input type="color" name="base" value="#9d2425">
+    <input type="color" name="base" value="#b4251b">
   </div>
 
   <img src="http://i.imgur.com/zSUPCqp.png">
-  <p>This is a photo of me on a recent hiking trip to the Swiss Alps, in Gimmelwald, Switzerland.</p>
+  <p>This is a photo of me on a recent hiking trip to the Swiss Alps, in Gimmelwald, Switzerland.
+  It's an amazing place-- You should go if you ever have the chance!</p>
 
   <style>
+  input[type=range]{
+  -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 300px;
+  height: 5px;
+  background: #ddd;
+  border: none;
+  border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #b4251b;
+  margin-top: 0px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ccc;
+}
+
     :root {
-      --base: #9d2425;
+      --base: #b4251b;
       --spacing: 10px;
       --blur: 5px;
     }
