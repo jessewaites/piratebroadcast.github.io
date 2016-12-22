@@ -5,8 +5,8 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Dec 2016 08:37:07 -0500</pubDate>
-    <lastBuildDate>Thu, 22 Dec 2016 08:37:07 -0500</lastBuildDate>
+    <pubDate>Thu, 22 Dec 2016 09:11:26 -0500</pubDate>
+    <lastBuildDate>Thu, 22 Dec 2016 09:11:26 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -78,12 +78,18 @@ img {
   color: var(--base);
 }
 
-
 body {
   color: black;
   font-family: &#39;helvetica neue&#39;, sans-serif;
   font-weight: 100;
   font-size: 50px;
+}
+label {
+    color: var(--base);
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
 }
 
 .controls {
