@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Jesse Waites | Updating CSS variables with Javascript in the Swiss Alps</title>
-    <meta name="description" content="  Move the range sliders around to update our CSS variables with Javascript  and reveal my hiking picture taken in the Swiss Alps, in Gimmelwald, Switzerland.">
+    <meta name="description" content="  Move the range sliders around to update our CSS variables with Javascript  and reveal my hiking picture taken in the Swiss Alps, in Gimmelwald, Switzerland...">
 
     <link rel="stylesheet" href="/css/main.css">
 
@@ -158,7 +158,7 @@ audio.play();
 </div>
 
     <!-- <div id="avatar" style="float: right;"></div> -->
-    
+
 </header>
 
 
@@ -181,7 +181,7 @@ audio.play();
 
             <body>
   <p>Move the range sliders around to update our CSS variables with <span class="hl">Javascript</span>
-  and reveal my hiking picture taken in the Swiss Alps, in Gimmelwald, Switzerland.</p>
+  and reveal my hiking picture taken in the Swiss Alps, in Gimmelwald, Switzerland. Though it is possible to make this work on mobile, it works best in a full browser, in Chrome. (The range slider controls are a pain to trigger in iOS Safari.)</p>
 
   <div class="controls">
     <label for="spacing">Frame Size:</label>
@@ -195,8 +195,8 @@ audio.play();
   </div>
 
   <img src="http://i.imgur.com/zSUPCqp.png" />
-  <p>This is a photo of me on a recent hiking trip to the Swiss Alps, in Gimmelwald, Switzerland.
-  It is an amazing place and you should go if you ever have the chance.</p>
+  <p>This is a photo from a recent hiking trip I took to the Swiss Alps, in Gimmelwald, Switzerland.
+  It is an amazing place and you should go if you ever have the chance. I highly recommend Mountain Hostel, in Gimmelwald.</p>
 
 <style>
 
@@ -246,9 +246,6 @@ img {
   color: var(--base);
 }
 
-body {
-  text-align: center;
-}
 
 body {
   color: black;
@@ -266,17 +263,17 @@ input {
 }
 </style>
 
-  <script>
-    const inputs = document.querySelectorAll('.controls input');
+<script>
+  const inputs = document.querySelectorAll('.controls input');
 
-    function handleUpdate() {
-      const suffix = this.dataset.sizing || '';
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-    }
+  function handleUpdate() {
+    const suffix = this.dataset.sizing || '';
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+  }
 
-    inputs.forEach(input => input.addEventListener('change', handleUpdate));
-    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
-  </script>
+  inputs.forEach(input => input.addEventListener('change', handleUpdate));
+  inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+</script>
 
 
 </body>

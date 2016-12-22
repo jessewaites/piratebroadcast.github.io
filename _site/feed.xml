@@ -5,15 +5,15 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 20 Dec 2016 15:57:15 -0500</pubDate>
-    <lastBuildDate>Tue, 20 Dec 2016 15:57:15 -0500</lastBuildDate>
+    <pubDate>Thu, 22 Dec 2016 08:37:07 -0500</pubDate>
+    <lastBuildDate>Thu, 22 Dec 2016 08:37:07 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Updating CSS variables with Javascript in the Swiss Alps</title>
         <description>&lt;body&gt;
   &lt;p&gt;Move the range sliders around to update our CSS variables with &lt;span class=&quot;hl&quot;&gt;Javascript&lt;/span&gt;
-  and reveal my hiking picture taken in the Swiss Alps, in Gimmelwald, Switzerland.&lt;/p&gt;
+  and reveal my hiking picture taken in the Swiss Alps, in Gimmelwald, Switzerland. Though it is possible to make this work on mobile, it works best in a full browser, in Chrome. (The range slider controls are a pain to trigger in iOS Safari.)&lt;/p&gt;
 
   &lt;div class=&quot;controls&quot;&gt;
     &lt;label for=&quot;spacing&quot;&gt;Frame Size:&lt;/label&gt;
@@ -27,8 +27,8 @@
   &lt;/div&gt;
 
   &lt;img src=&quot;http://i.imgur.com/zSUPCqp.png&quot; /&gt;
-  &lt;p&gt;This is a photo of me on a recent hiking trip to the Swiss Alps, in Gimmelwald, Switzerland.
-  It is an amazing place and you should go if you ever have the chance.&lt;/p&gt;
+  &lt;p&gt;This is a photo from a recent hiking trip I took to the Swiss Alps, in Gimmelwald, Switzerland.
+  It is an amazing place and you should go if you ever have the chance. I highly recommend Mountain Hostel, in Gimmelwald.&lt;/p&gt;
 
 &lt;style&gt;
 
@@ -78,9 +78,6 @@ img {
   color: var(--base);
 }
 
-body {
-  text-align: center;
-}
 
 body {
   color: black;
@@ -98,17 +95,17 @@ input {
 }
 &lt;/style&gt;
 
-  &lt;script&gt;
-    const inputs = document.querySelectorAll(&#39;.controls input&#39;);
+&lt;script&gt;
+  const inputs = document.querySelectorAll(&#39;.controls input&#39;);
 
-    function handleUpdate() {
-      const suffix = this.dataset.sizing || &#39;&#39;;
-      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-    }
+  function handleUpdate() {
+    const suffix = this.dataset.sizing || &#39;&#39;;
+    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+  }
 
-    inputs.forEach(input =&gt; input.addEventListener(&#39;change&#39;, handleUpdate));
-    inputs.forEach(input =&gt; input.addEventListener(&#39;mousemove&#39;, handleUpdate));
-  &lt;/script&gt;
+  inputs.forEach(input =&gt; input.addEventListener(&#39;change&#39;, handleUpdate));
+  inputs.forEach(input =&gt; input.addEventListener(&#39;mousemove&#39;, handleUpdate));
+&lt;/script&gt;
 
 
 &lt;/body&gt;

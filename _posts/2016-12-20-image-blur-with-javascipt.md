@@ -15,7 +15,7 @@ square_related: recommend-wolf
 
 <body>
   <p>Move the range sliders around to update our CSS variables with <span class='hl'>Javascript</span>
-  and reveal my hiking picture taken in the Swiss Alps, in Gimmelwald, Switzerland.</p>
+  and reveal my hiking picture taken in the Swiss Alps, in Gimmelwald, Switzerland. Though it is possible to make this work on mobile, it works best in a full browser, in Chrome. (The range slider controls are a pain to trigger in iOS Safari.)</p>
 
   <div class="controls">
     <label for="spacing">Frame Size:</label>
@@ -29,8 +29,8 @@ square_related: recommend-wolf
   </div>
 
   <img src="http://i.imgur.com/zSUPCqp.png">
-  <p>This is a photo of me on a recent hiking trip to the Swiss Alps, in Gimmelwald, Switzerland.
-  It is an amazing place and you should go if you ever have the chance.</p>
+  <p>This is a photo from a recent hiking trip I took to the Swiss Alps, in Gimmelwald, Switzerland.
+  It is an amazing place and you should go if you ever have the chance. I highly recommend Mountain Hostel, in Gimmelwald.</p>
 
 <style>
 
@@ -80,9 +80,6 @@ img {
   color: var(--base);
 }
 
-body {
-  text-align: center;
-}
 
 body {
   color: black;
