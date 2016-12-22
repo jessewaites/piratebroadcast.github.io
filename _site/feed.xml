@@ -5,9 +5,85 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Dec 2016 09:11:26 -0500</pubDate>
-    <lastBuildDate>Thu, 22 Dec 2016 09:11:26 -0500</lastBuildDate>
+    <pubDate>Thu, 22 Dec 2016 10:46:23 -0500</pubDate>
+    <lastBuildDate>Thu, 22 Dec 2016 10:46:23 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Form Typeahead using the new Fetch API</title>
+        <description>&lt;style&gt;
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    width: 500px;
+    height: 60px;
+}
+&lt;/style&gt;
+
+&lt;p&gt;Pretty simple demo: Start typing into the form box. Try “Boston” or “Massachusetts” - This was built using the new HTML Fetch API. It’s really cool to be able to do this all client side with no need for anything else. &lt;a href=&quot;https://davidwalsh.name/fetch&quot; title=&quot;Fetch&quot;&gt;You can learn more about Fetch over on David Walsh’s blog.&lt;/a&gt;&lt;/p&gt;
+
+&lt;body&gt;
+
+  &lt;form class=&quot;search-form&quot;&gt;
+    &lt;input type=&quot;text&quot; class=&quot;search&quot; placeholder=&quot;Start typing City or State name here&quot; autofocus=&quot;&quot; /&gt;
+    &lt;ul class=&quot;suggestions&quot;&gt;
+      &lt;li&gt;Filter for a city&lt;/li&gt;
+      &lt;li&gt;or a state&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/form&gt;
+&lt;script&gt;
+const endpoint = &#39;https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json&#39;;
+
+const cities = [];
+fetch(endpoint)
+  .then(blob =&gt; blob.json())
+  .then(data =&gt; cities.push(...data));
+
+function findMatches(wordToMatch, cities) {
+  return cities.filter(place =&gt; {
+    const regex = new RegExp(wordToMatch, &#39;gi&#39;);
+    return place.city.match(regex) || place.state.match(regex)
+  });
+}
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, &#39;,&#39;);
+}
+
+function displayMatches() {
+  const matchArray = findMatches(this.value, cities);
+  const html = matchArray.map(place =&gt; {
+    const regex = new RegExp(this.value, &#39;gi&#39;);
+    const cityName = place.city.replace(regex, `&lt;span class=&quot;hl&quot;&gt;${this.value}&lt;/span&gt;`);
+    const stateName = place.state.replace(regex, `&lt;span class=&quot;hl&quot;&gt;${this.value}&lt;/span&gt;`);
+    return `
+      &lt;li&gt;
+        &lt;span class=&quot;name&quot;&gt;${cityName}, ${stateName}&lt;/span&gt;
+        &lt;span class=&quot;population&quot;&gt;Population: ${numberWithCommas(place.population)}&lt;/span&gt;
+      &lt;/li&gt;
+    `;
+  }).join(&#39;&#39;);
+  suggestions.innerHTML = html;
+}
+
+const searchInput = document.querySelector(&#39;.search&#39;);
+const suggestions = document.querySelector(&#39;.suggestions&#39;);
+
+searchInput.addEventListener(&#39;change&#39;, displayMatches);
+searchInput.addEventListener(&#39;keyup&#39;, displayMatches);
+
+&lt;/script&gt;
+&lt;/body&gt;
+</description>
+        <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
+        <link>http://JesseWaites.com/ajax-typeahead-stunts/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/ajax-typeahead-stunts/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Updating CSS variables with Javascript in the Swiss Alps</title>
@@ -66,6 +142,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   --base: #b4251b;
   --spacing: 10px;
   --blur: 5px;
+  --grayscale: 0px;
 }
 
 img {
@@ -774,33 +851,6 @@ gem &#39;twitter_image_tag&#39;
         <pubDate>Fri, 29 Jan 2016 04:50:28 -0500</pubDate>
         <link>http://JesseWaites.com/introducing-the-twitter-image-tag-gem/</link>
         <guid isPermaLink="true">http://JesseWaites.com/introducing-the-twitter-image-tag-gem/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Adding Twitter Cards &amp; Facebook Cards to a Jekyll App</title>
-        <description>&lt;p&gt;Twitter and Facebook Cards makes it possible to attach images to posts that automatically link to your content. LinkedIn also uses the same “Open Graph” protocol that Facebook uses, so this will work for LinkedIn as well with no additional code needed.&lt;/p&gt;
-
-&lt;p&gt;Cards are the difference between pasting a link that is just a link, or having Twitter, Facebook, or LinkedIn scrape for an article title, image, and description. These cards look very professional and studies have proved that they lead to increased content sharing. You would be surprised how many otherwise professional websites and web services overlook this trivial yet effective step. The image below will show you what a Twitter Card looks like - When displayed on Twitter on either a user page or in a feed, the entire image will serve as a clickable hyperlink to the page or post.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/otUP8vj.png&quot; alt=&quot;twitter card validation&quot; title=&quot;twitter card validation&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Interestingly, I found what may be a bug in the Jekyll framework when writing this blog post - When pasting my code sample, a line of code such as “page.title” is being evaluated, so when I paste “page.title”, the output on the screen is the actual page title, in this case “Adding Twitter Cards &amp;amp; Facebook Cards to a Jekyll App”. This makes it difficult to share code with you but I found a workaround - I’ll simply need to share this code as a Github Gist to skip all of that drama. The  code below is for a Jekyll app, but you should be able to convert this to your programming language of choice rather easily, provided that you have access to your page objects. The code is simple if/else conditional statements that should be trivial to convert to use in Django, Drupal, Ruby on Rails, et cetera.&lt;/p&gt;
-
-&lt;script src=&quot;https://gist.github.com/piratebroadcast/425724b1b5b75ae6c037.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;Once you’ve added the code to your site header and pushed those updates to your production server, you can preview what your Cards will look like by pasting a blog post link in the validators below. I should note that I have hardcoded the same image to display whenever any link is posted to my site - This way I always know that SOME image is present. I’m mostly writing about code anyway so having a dynamic image is not important to me.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://cards-dev.twitter.com/validator&quot;&gt;You can preview what your Twitter Card will look like by pasting a blog post link here.&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://developers.facebook.com/tools/debug/og/object/&quot;&gt;You can preview your Facebook links here.&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 18 Jan 2016 04:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/generating-twitter-cards-and-facebook-cards-in-a-jekyll-app/</guid>
         
         
         <category>coding</category>
