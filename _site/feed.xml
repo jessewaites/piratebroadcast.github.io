@@ -5,9 +5,163 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 22 Dec 2016 10:46:23 -0500</pubDate>
-    <lastBuildDate>Thu, 22 Dec 2016 10:46:23 -0500</lastBuildDate>
+    <pubDate>Fri, 23 Dec 2016 10:57:02 -0500</pubDate>
+    <lastBuildDate>Fri, 23 Dec 2016 10:57:02 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Crazy Webcam Stunts</title>
+        <description>&lt;body&gt;
+
+  &lt;div class=&quot;photobooth&quot;&gt;
+    &lt;div class=&quot;controls&quot;&gt;
+      &lt;button onclick=&quot;takePhoto()&quot;&gt;Take Photo&lt;/button&gt;
+&lt;!--       &lt;div class=&quot;rgb&quot;&gt;
+        &lt;label for=&quot;rmin&quot;&gt;Red Min:&lt;/label&gt;
+        &lt;input type=&quot;range&quot; min=0 max=255 name=&quot;rmin&quot;&gt;
+        &lt;label for=&quot;rmax&quot;&gt;Red Max:&lt;/label&gt;
+        &lt;input type=&quot;range&quot; min=0 max=255 name=&quot;rmax&quot;&gt;
+
+        &lt;br&gt;
+
+        &lt;label for=&quot;gmin&quot;&gt;Green Min:&lt;/label&gt;
+        &lt;input type=&quot;range&quot; min=0 max=255 name=&quot;gmin&quot;&gt;
+        &lt;label for=&quot;gmax&quot;&gt;Green Max:&lt;/label&gt;
+        &lt;input type=&quot;range&quot; min=0 max=255 name=&quot;gmax&quot;&gt;
+
+        &lt;br&gt;
+
+        &lt;label for=&quot;bmin&quot;&gt;Blue Min:&lt;/label&gt;
+        &lt;input type=&quot;range&quot; min=0 max=255 name=&quot;bmin&quot;&gt;
+        &lt;label for=&quot;bmax&quot;&gt;Blue Max:&lt;/label&gt;
+        &lt;input type=&quot;range&quot; min=0 max=255 name=&quot;bmax&quot;&gt;
+      &lt;/div&gt; --&gt;
+    &lt;/div&gt;
+
+    &lt;canvas class=&quot;photo&quot;&gt;&lt;/canvas&gt;
+    &lt;video class=&quot;player&quot;&gt;&lt;/video&gt;
+    &lt;div class=&quot;strip&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;audio class=&quot;snap&quot; src=&quot;http://wesbos.com/demos/photobooth/snap.mp3&quot; hidden=&quot;&quot;&gt;&lt;/audio&gt;
+
+
+&lt;/body&gt;
+&lt;script&gt;
+const video = document.querySelector(&#39;.player&#39;);
+const canvas = document.querySelector(&#39;.photo&#39;);
+const ctx = canvas.getContext(&#39;2d&#39;);
+const strip = document.querySelector(&#39;.strip&#39;);
+const snap = document.querySelector(&#39;.snap&#39;);
+
+function getVideo() {
+  navigator.mediaDevices.getUserMedia({ video: true, audio: false })
+    .then(localMediaStream =&gt; {
+      console.log(localMediaStream);
+      video.src = window.URL.createObjectURL(localMediaStream);
+      video.play();
+    })
+    .catch(err =&gt; {
+      console.error(`OH NO!!!`, err);
+    });
+}
+
+function paintToCanavas() {
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  canvas.width = width;
+  canvas.height = height;
+
+  return setInterval(() =&gt; {
+    ctx.drawImage(video, 0, 0, width, height);
+    // take the pixels out
+    let pixels = ctx.getImageData(0, 0, width, height);
+    // mess with them
+    // pixels = redEffect(pixels);
+
+    pixels = rgbSplit(pixels);
+    // ctx.globalAlpha = 0.8;
+
+    // pixels = greenScreen(pixels);
+    // put them back
+    ctx.putImageData(pixels, 0, 0);
+  }, 16);
+}
+
+function takePhoto() {
+  // played the sound
+  snap.currentTime = 0;
+  snap.play();
+
+  // take the data out of the canvas
+  const data = canvas.toDataURL(&#39;image/jpeg&#39;);
+  const link = document.createElement(&#39;a&#39;);
+  link.href = data;
+  link.setAttribute(&#39;download&#39;, &#39;handsome&#39;);
+  link.innerHTML = `&lt;img src=&quot;${data}&quot; alt=&quot;Handsome Man&quot; /&gt;`;
+  strip.insertBefore(link, strip.firsChild);
+}
+
+function redEffect(pixels) {
+  for(let i = 0; i &lt; pixels.data.length; i+=4) {
+    pixels.data[i + 0] = pixels.data[i + 0] + 200; // RED
+    pixels.data[i + 1] = pixels.data[i + 1] - 50; // GREEN
+    pixels.data[i + 2] = pixels.data[i + 2] * 0.5; // Blue
+  }
+  return pixels;
+}
+
+function rgbSplit(pixels) {
+  for(let i = 0; i &lt; pixels.data.length; i+=4) {
+    pixels.data[i - 150] = pixels.data[i + 0]; // RED
+    pixels.data[i + 500] = pixels.data[i + 1]; // GREEN
+    pixels.data[i - 550] = pixels.data[i + 2]; // Blue
+  }
+  return pixels;
+}
+
+function greenScreen(pixels) {
+  const levels = {};
+
+  document.querySelectorAll(&#39;.rgb input&#39;).forEach((input) =&gt; {
+    levels[input.name] = input.value;
+  });
+
+  for (i = 0; i &lt; pixels.data.length; i = i + 4) {
+    red = pixels.data[i + 0];
+    green = pixels.data[i + 1];
+    blue = pixels.data[i + 2];
+    alpha = pixels.data[i + 3];
+
+    if (red &gt;= levels.rmin
+      &amp;&amp; green &gt;= levels.gmin
+      &amp;&amp; blue &gt;= levels.bmin
+      &amp;&amp; red &lt;= levels.rmax
+      &amp;&amp; green &lt;= levels.gmax
+      &amp;&amp; blue &lt;= levels.bmax) {
+      // take it out!
+      pixels.data[i + 3] = 0;
+    }
+  }
+
+  return pixels;
+}
+
+getVideo();
+
+video.addEventListener(&#39;canplay&#39;, paintToCanavas);
+
+&lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
+        <link>http://JesseWaites.com/crazy-webcam-effects/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/crazy-webcam-effects/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Form Typeahead using the new Fetch API</title>
@@ -773,84 +927,6 @@ your argument.&lt;/p&gt;
         <pubDate>Tue, 31 May 2016 05:50:28 -0400</pubDate>
         <link>http://JesseWaites.com/data-visualization-with-d3/</link>
         <guid isPermaLink="true">http://JesseWaites.com/data-visualization-with-d3/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Introducing the TwitterImageTag Rubygem</title>
-        <description>&lt;p&gt;When I’m building a web application that is in the early prototype stage, I like to allow users to have profile pictures, but sometimes want to skip the process of actually building a mechanism (configuring Paperclip) to upload and store profile pictures so I can focus on something else.&lt;/p&gt;
-
-&lt;p&gt;So I got to work on this, TwitterImageTag.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“To invent, you need a good imagination and a pile of junk.”&lt;/p&gt;
-
-  &lt;p&gt;Thomas Edison&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This gem allows you to easily add Twitter Avatar Images to your Ruby / Rails app views. Based on the Twitter v1.1 API, the primary usage would be for building out quick prototypes, or bypassing the need to have users upload their own avatar images. Ideally, you would have a field in your user onboarding form called “twitter handle”, and call something like:&lt;/p&gt;
-
-&lt;pre&gt;
-&amp;lt;%= TwitterImageTag.show_me(current_user.twitter_handle, &quot;normal&quot;) %&amp;gt;
-&lt;/pre&gt;
-
-&lt;p&gt;This image pretty much explains it all:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/9fru2jz.png&quot; alt=&quot;Example&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This takes 2 arguments - any valid twitter handle, and any of 4 size options:
-“normal”, “bigger”, “mini”, or “original”. The dimensions of the size options are:&lt;/p&gt;
-
-&lt;p&gt;normal: 48 x 48 pixels.
-bigger: 73 x 73 pixels.
-mini:   24 x 24 pixels.
-original: No idea.&lt;/p&gt;
-
-&lt;p&gt;There’s no telling what the “original” image size will be. It is whatever
-size the user uploaded.&lt;/p&gt;
-
-&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
-
-&lt;p&gt;Add this line to your application’s Gemfile:&lt;/p&gt;
-
-&lt;p&gt;NOTE: Make sure you are using the latest version of this gem - it went under a significant rewrite at version 1.9.5 - Don’t use anything lower than that.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby
-gem &#39;twitter_image_tag&#39;
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;And then execute:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Or install it yourself as:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install twitter_image_tag
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
-&lt;pre&gt;
-&amp;lt;%= TwitterImageTag.show_me(current_user.twitter_handle, &quot;normal&quot;) %&amp;gt;
-&lt;/pre&gt;
-&lt;p&gt;## Development&lt;/p&gt;
-
-&lt;p&gt;After checking out the repo, run &lt;code class=&quot;highlighter-rouge&quot;&gt;bin/setup&lt;/code&gt; to install dependencies. Then, run &lt;code class=&quot;highlighter-rouge&quot;&gt;rake false&lt;/code&gt; to run the tests. You can also run &lt;code class=&quot;highlighter-rouge&quot;&gt;bin/console&lt;/code&gt; for an interactive prompt that will allow you to experiment.&lt;/p&gt;
-
-&lt;p&gt;To install this gem onto your local machine, run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec rake install&lt;/code&gt;. To release a new version, update the version number in &lt;code class=&quot;highlighter-rouge&quot;&gt;version.rb&lt;/code&gt;, and then run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec rake release&lt;/code&gt;, which will create a git tag for the version, push git commits and tags, and push the &lt;code class=&quot;highlighter-rouge&quot;&gt;.gem&lt;/code&gt; file to &lt;a href=&quot;https://rubygems.org&quot;&gt;rubygems.org&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
-
-&lt;p&gt;Bug reports and pull requests are welcome on GitHub at https://github.com/piratebroadcast/twitter_image_tag.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 29 Jan 2016 04:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/introducing-the-twitter-image-tag-gem/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/introducing-the-twitter-image-tag-gem/</guid>
         
         
         <category>coding</category>
