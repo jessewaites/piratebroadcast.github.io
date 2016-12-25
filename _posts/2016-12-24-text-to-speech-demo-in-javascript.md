@@ -28,7 +28,7 @@ It should be noted that this does not currently work on mobile devices.</p>
 
   <input name="pitch" type="range" min="0" max="2" step="0.1">
   <br>
-  <textarea class="form-control" rows="5" name="text">Press play, or change this text then press the green button 👍</textarea>
+  <textarea class="form-control" rows="5" name="text">Press Speak now, or change this text first, then press the green button 👍</textarea>
   <br>
 
   <button id="speak" class="btn btn-success">Speak</button>
