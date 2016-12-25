@@ -5,9 +5,82 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Dec 2016 15:03:25 -0500</pubDate>
-    <lastBuildDate>Fri, 23 Dec 2016 15:03:25 -0500</lastBuildDate>
+    <pubDate>Sat, 24 Dec 2016 21:17:53 -0500</pubDate>
+    <lastBuildDate>Sat, 24 Dec 2016 21:17:53 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Text To Speech Demonstration using Javascript</title>
+        <description>&lt;p&gt;&lt;label for=&quot;rate&quot;&gt;Select a Voice:&lt;/label&gt;
+  &lt;select name=&quot;voice&quot; id=&quot;voices&quot; class=&quot;form-control&quot;&gt;
+    &lt;option value=&quot;&quot;&gt;Select A Voice&lt;/option&gt;
+  &lt;/select&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;rate&quot;&gt;Rate:&lt;/label&gt;
+  &lt;input name=&quot;rate&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;3&quot; value=&quot;1&quot; step=&quot;0.1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;label for=&quot;pitch&quot;&gt;Pitch:&lt;/label&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;input name=&quot;pitch&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;2&quot; step=&quot;0.1&quot; /&gt;
+  &lt;br /&gt;&lt;/p&gt;
+&lt;textarea class=&quot;form-control&quot; rows=&quot;5&quot; name=&quot;text&quot;&gt;Press play, or change this text then press the green button 👍&lt;/textarea&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;button id=&quot;speak&quot; class=&quot;btn btn-success&quot;&gt;Speak&lt;/button&gt;
+  &lt;button id=&quot;stop&quot; class=&quot;btn btn-danger&quot;&gt;Stop!&lt;/button&gt;&lt;/p&gt;
+
+&lt;script&gt;
+const msg = new SpeechSynthesisUtterance();
+let voices = [];
+const voicesDropdown = document.querySelector(&#39;[name=&quot;voice&quot;]&#39;);
+const options = document.querySelectorAll(&#39;[type=&quot;range&quot;], [name=&quot;text&quot;]&#39;);
+const speakButton = document.querySelector(&#39;#speak&#39;);
+const stopButton = document.querySelector(&#39;#stop&#39;);
+msg.text = document.querySelector(&#39;[name=&quot;text&quot;]&#39;).value;
+
+function populateVoices() {
+voices = this.getVoices();
+voicesDropdown.innerHTML = voices
+  .filter(voice =&gt; voice.lang.includes(&#39;en&#39;))
+  .map(voice =&gt; `&lt;option value=&quot;${voice.name}&quot;&gt;${voice.name} (${voice.lang})&lt;/option&gt;`)
+  .join(&#39;&#39;);
+}
+
+function setVoice() {
+msg.voice = voices.find(voice =&gt; voice.name === this.value);
+toggle();
+}
+
+function toggle(startOver = true) {
+speechSynthesis.cancel();
+if (startOver) {
+  speechSynthesis.speak(msg);
+}
+}
+
+function setOption() {
+console.log(this.name, this.value);
+msg[this.name] = this.value;
+toggle();
+}
+
+speechSynthesis.addEventListener(&#39;voiceschanged&#39;, populateVoices);
+voicesDropdown.addEventListener(&#39;change&#39;, setVoice);
+options.forEach(option =&gt; option.addEventListener(&#39;change&#39;, setOption));
+speakButton.addEventListener(&#39;click&#39;, toggle);
+stopButton.addEventListener(&#39;click&#39;, () =&gt; toggle(false));
+
+&lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
+        <link>http://JesseWaites.com/text-to-speech-demo-in-javascript/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/text-to-speech-demo-in-javascript/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Form Typeahead using the new Fetch API</title>
@@ -773,84 +846,6 @@ your argument.&lt;/p&gt;
         <pubDate>Tue, 31 May 2016 05:50:28 -0400</pubDate>
         <link>http://JesseWaites.com/data-visualization-with-d3/</link>
         <guid isPermaLink="true">http://JesseWaites.com/data-visualization-with-d3/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Introducing the TwitterImageTag Rubygem</title>
-        <description>&lt;p&gt;When I’m building a web application that is in the early prototype stage, I like to allow users to have profile pictures, but sometimes want to skip the process of actually building a mechanism (configuring Paperclip) to upload and store profile pictures so I can focus on something else.&lt;/p&gt;
-
-&lt;p&gt;So I got to work on this, TwitterImageTag.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“To invent, you need a good imagination and a pile of junk.”&lt;/p&gt;
-
-  &lt;p&gt;Thomas Edison&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;This gem allows you to easily add Twitter Avatar Images to your Ruby / Rails app views. Based on the Twitter v1.1 API, the primary usage would be for building out quick prototypes, or bypassing the need to have users upload their own avatar images. Ideally, you would have a field in your user onboarding form called “twitter handle”, and call something like:&lt;/p&gt;
-
-&lt;pre&gt;
-&amp;lt;%= TwitterImageTag.show_me(current_user.twitter_handle, &quot;normal&quot;) %&amp;gt;
-&lt;/pre&gt;
-
-&lt;p&gt;This image pretty much explains it all:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/9fru2jz.png&quot; alt=&quot;Example&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This takes 2 arguments - any valid twitter handle, and any of 4 size options:
-“normal”, “bigger”, “mini”, or “original”. The dimensions of the size options are:&lt;/p&gt;
-
-&lt;p&gt;normal: 48 x 48 pixels.
-bigger: 73 x 73 pixels.
-mini:   24 x 24 pixels.
-original: No idea.&lt;/p&gt;
-
-&lt;p&gt;There’s no telling what the “original” image size will be. It is whatever
-size the user uploaded.&lt;/p&gt;
-
-&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
-
-&lt;p&gt;Add this line to your application’s Gemfile:&lt;/p&gt;
-
-&lt;p&gt;NOTE: Make sure you are using the latest version of this gem - it went under a significant rewrite at version 1.9.5 - Don’t use anything lower than that.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby
-gem &#39;twitter_image_tag&#39;
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;And then execute:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Or install it yourself as:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ gem install twitter_image_tag
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;/h2&gt;
-&lt;pre&gt;
-&amp;lt;%= TwitterImageTag.show_me(current_user.twitter_handle, &quot;normal&quot;) %&amp;gt;
-&lt;/pre&gt;
-&lt;p&gt;## Development&lt;/p&gt;
-
-&lt;p&gt;After checking out the repo, run &lt;code class=&quot;highlighter-rouge&quot;&gt;bin/setup&lt;/code&gt; to install dependencies. Then, run &lt;code class=&quot;highlighter-rouge&quot;&gt;rake false&lt;/code&gt; to run the tests. You can also run &lt;code class=&quot;highlighter-rouge&quot;&gt;bin/console&lt;/code&gt; for an interactive prompt that will allow you to experiment.&lt;/p&gt;
-
-&lt;p&gt;To install this gem onto your local machine, run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec rake install&lt;/code&gt;. To release a new version, update the version number in &lt;code class=&quot;highlighter-rouge&quot;&gt;version.rb&lt;/code&gt;, and then run &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec rake release&lt;/code&gt;, which will create a git tag for the version, push git commits and tags, and push the &lt;code class=&quot;highlighter-rouge&quot;&gt;.gem&lt;/code&gt; file to &lt;a href=&quot;https://rubygems.org&quot;&gt;rubygems.org&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;contributing&quot;&gt;Contributing&lt;/h2&gt;
-
-&lt;p&gt;Bug reports and pull requests are welcome on GitHub at https://github.com/piratebroadcast/twitter_image_tag.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 29 Jan 2016 04:50:28 -0500</pubDate>
-        <link>http://JesseWaites.com/introducing-the-twitter-image-tag-gem/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/introducing-the-twitter-image-tag-gem/</guid>
         
         
         <category>coding</category>
