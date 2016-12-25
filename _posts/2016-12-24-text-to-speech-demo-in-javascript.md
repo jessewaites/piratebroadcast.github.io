@@ -21,10 +21,10 @@ It should be noted that this does not currently work on mobile devices.</p>
   </select>
 
 
-  <label for="rate">Rate:</label>
+  <label for="rate">Speech Speed Rate:</label>
   <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
 
-  <label for="pitch">Pitch:</label>
+  <label for="pitch">Voice Pitch:</label>
 
   <input name="pitch" type="range" min="0" max="2" step="0.1">
   <br>

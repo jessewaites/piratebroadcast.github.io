@@ -5,8 +5,8 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Dec 2016 00:24:23 -0500</pubDate>
-    <lastBuildDate>Sun, 25 Dec 2016 00:24:23 -0500</lastBuildDate>
+    <pubDate>Sun, 25 Dec 2016 00:27:35 -0500</pubDate>
+    <lastBuildDate>Sun, 25 Dec 2016 00:27:35 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -19,10 +19,10 @@ It should be noted that this does not currently work on mobile devices.&lt;/p&gt
     &lt;option value=&quot;&quot;&gt;Select A Voice&lt;/option&gt;
   &lt;/select&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;label for=&quot;rate&quot;&gt;Rate:&lt;/label&gt;
+&lt;p&gt;&lt;label for=&quot;rate&quot;&gt;Speech Speed Rate:&lt;/label&gt;
   &lt;input name=&quot;rate&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;3&quot; value=&quot;1&quot; step=&quot;0.1&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;label for=&quot;pitch&quot;&gt;Pitch:&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;label for=&quot;pitch&quot;&gt;Voice Pitch:&lt;/label&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;input name=&quot;pitch&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;2&quot; step=&quot;0.1&quot; /&gt;
   &lt;br /&gt;&lt;/p&gt;
