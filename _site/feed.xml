@@ -5,8 +5,8 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Dec 2016 00:27:35 -0500</pubDate>
-    <lastBuildDate>Sun, 25 Dec 2016 00:27:35 -0500</lastBuildDate>
+    <pubDate>Sun, 25 Dec 2016 00:31:38 -0500</pubDate>
+    <lastBuildDate>Sun, 25 Dec 2016 00:31:38 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -25,8 +25,9 @@ It should be noted that this does not currently work on mobile devices.&lt;/p&gt
 &lt;p&gt;&lt;label for=&quot;pitch&quot;&gt;Voice Pitch:&lt;/label&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;input name=&quot;pitch&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;2&quot; step=&quot;0.1&quot; /&gt;
-  &lt;br /&gt;&lt;/p&gt;
-&lt;textarea class=&quot;form-control&quot; rows=&quot;5&quot; name=&quot;text&quot;&gt;Press Speak now, or change this text first, then press the green button 👍&lt;/textarea&gt;
+  &lt;br /&gt;
+  &lt;label for=&quot;rate&quot;&gt;Enter the text you would like spoken here:&lt;/label&gt;&lt;/p&gt;
+&lt;textarea class=&quot;form-control&quot; rows=&quot;5&quot; name=&quot;text&quot;&gt;Press Speak now, or change this text first, then press the green button. The text in this box is editable. 👍&lt;/textarea&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;button id=&quot;speak&quot; class=&quot;btn btn-success&quot;&gt;Speak&lt;/button&gt;
