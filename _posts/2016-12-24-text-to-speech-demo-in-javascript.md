@@ -16,7 +16,7 @@ square_related: recommend-wolf
 It should be noted that this does not currently work on mobile devices.</p>
 
   <label for="rate">Select a Voice:</label>
-  <select name="voice" id="voices" class="form-control">
+  <select name="voice" id="voices" class="form-control" autofocus>
     <option value="">Select A Voice</option>
   </select>
 
