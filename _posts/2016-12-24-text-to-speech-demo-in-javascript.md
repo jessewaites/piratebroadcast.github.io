@@ -12,7 +12,8 @@ feature_image: macbook
 show_related_posts: false
 square_related: recommend-wolf
 ---
-<p>Here's a demo of the experimental "SpeechSynthesisUtterance" interface of the Web Speech API.</p>
+<p>Here's a demo of the experimental "SpeechSynthesisUtterance" interface of the Web Speech API.
+It should be noted that this does not currently work on mobile devices.</p>
 
   <label for="rate">Select a Voice:</label>
   <select name="voice" id="voices" class="form-control">

@@ -5,13 +5,13 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Dec 2016 21:26:05 -0500</pubDate>
-    <lastBuildDate>Sat, 24 Dec 2016 21:26:05 -0500</lastBuildDate>
+    <pubDate>Sat, 24 Dec 2016 21:26:57 -0500</pubDate>
+    <lastBuildDate>Sat, 24 Dec 2016 21:26:57 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Text To Speech Demonstration using Javascript</title>
-        <description>&lt;p&gt;Here&#39;s a demo of the expermiental SpeechSynthesisUtterance interface of the Web Speech API.&lt;/p&gt;
+        <description>&lt;p&gt;Here&#39;s a demo of the experimental &quot;SpeechSynthesisUtterance&quot; interface of the Web Speech API.&lt;/p&gt;
 
 &lt;p&gt;&lt;label for=&quot;rate&quot;&gt;Select a Voice:&lt;/label&gt;
   &lt;select name=&quot;voice&quot; id=&quot;voices&quot; class=&quot;form-control&quot;&gt;
