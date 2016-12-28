@@ -5,9 +5,81 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Dec 2016 00:31:38 -0500</pubDate>
-    <lastBuildDate>Sun, 25 Dec 2016 00:31:38 -0500</lastBuildDate>
+    <pubDate>Wed, 28 Dec 2016 11:06:11 -0500</pubDate>
+    <lastBuildDate>Wed, 28 Dec 2016 11:06:11 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
+    
+      <item>
+        <title>Demo: Drawing on the screen using HTML5 canvas</title>
+        <description>&lt;p&gt;Hold and drag your mouse cursor around. Enjoy the vibrant colors as you explore your inner artist.&lt;/p&gt;
+
+&lt;canvas id=&quot;draw&quot; width=&quot;800&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+const canvas = document.querySelector(&#39;#draw&#39;);
+const ctx = canvas.getContext(&#39;2d&#39;);
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+ctx.strokeStyle = &#39;#BADA55&#39;;
+ctx.lineJoin = &#39;round&#39;;
+ctx.lineCap = &#39;round&#39;;
+ctx.lineWidth = 100;
+
+
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+let hue = 0;
+let direction = true;
+
+function draw(e) {
+  if (!isDrawing) return; // stop the fn from running when they are not moused down
+  console.log(e);
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+  ctx.beginPath();
+  // start from
+  ctx.moveTo(lastX, lastY);
+  // go to
+  ctx.lineTo(e.offsetX, e.offsetY);
+  ctx.stroke();
+  [lastX, lastY] = [e.offsetX, e.offsetY];
+
+  hue++;
+  if (hue &gt;= 360) {
+    hue = 0;
+  }
+  if (ctx.lineWidth &gt;= 100 || ctx.lineWidth &lt;= 1) {
+    direction = !direction;
+  }
+
+  if(direction) {
+    ctx.lineWidth++;
+  } else {
+    ctx.lineWidth--;
+  }
+
+}
+
+canvas.addEventListener(&#39;mousedown&#39;, (e) =&gt; {
+  isDrawing = true;
+  [lastX, lastY] = [e.offsetX, e.offsetY];
+});
+
+
+canvas.addEventListener(&#39;mousemove&#39;, draw);
+canvas.addEventListener(&#39;mouseup&#39;, () =&gt; isDrawing = false);
+canvas.addEventListener(&#39;mouseout&#39;, () =&gt; isDrawing = false);
+
+&lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
+        <link>http://JesseWaites.com/drawing-on-the-screen-with-html5-canvas/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/drawing-on-the-screen-with-html5-canvas/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Text To Speech Demonstration using Javascript</title>
@@ -813,43 +885,6 @@ method will trumpify it.&lt;/p&gt;
         <pubDate>Wed, 22 Jun 2016 05:50:28 -0400</pubDate>
         <link>http://JesseWaites.com/embedding-interactive-ruby-snippets-into-web-pages/</link>
         <guid isPermaLink="true">http://JesseWaites.com/embedding-interactive-ruby-snippets-into-web-pages/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Data Visualization With D3</title>
-        <description>&lt;p&gt;Lately, I’ve been working on data visualizations at work. The idea is taking some data, whether it be
-votes from an election, the data from your FitBit, or anything else, and using it to tell a
-convincing story at a glance.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;There is a magic in graphs. The profile of a curve reveals in a ﬂash a whole situation — the life history of an epidemic, a panic, or an era of prosperity. The graph informs the mind, awakens the imagination,
-convinces.&lt;/p&gt;
-
-  &lt;p&gt;―Henry D. Hubbard&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;I’ve been using a great javascript library called D3 and wanted to make a quick blog post to show off what the D3 library can do. D3 allows you full, custom control over the way your charts / graphs look and feel and you can even use common data structures like CSV (Like from an Excel file). The charts below are sample charts I’ve pulled from other sources. Make sure to click, drag, and touch the graphs to trigger the animations.&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;350&quot; src=&quot;//jsfiddle.net/enigmarm/3HL4a/13/embedded/result/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;Click on the “Sort” and “Reset” buttons above to see the chart animation in action.&lt;/p&gt;
-
-&lt;iframe width=&quot;550&quot; height=&quot;500&quot; src=&quot;//jsfiddle.net/JSDavi/qvco2Ljy/embedded/result/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;This one is a bit pointless but is pretty cool- Click and drag any of the circles above, drag it around, fling it across the screen… Go nuts.&lt;/p&gt;
-
-&lt;iframe width=&quot;100%&quot; height=&quot;500&quot; src=&quot;//jsfiddle.net/augburto/YMa2y/embedded/result/&quot; allowfullscreen=&quot;allowfullscreen&quot; frameborder=&quot;0&quot;&gt;&lt;/iframe&gt;
-&lt;p&gt;Click on any of the blue boxes above.&lt;/p&gt;
-
-&lt;p&gt;Ok, that’s all for now. The next time you’re swamped with data at the office, consider using a
-visualization library like D3 to let your data help you make a much more convincing case for
-your argument.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 31 May 2016 05:50:28 -0400</pubDate>
-        <link>http://JesseWaites.com/data-visualization-with-d3/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/data-visualization-with-d3/</guid>
         
         
         <category>coding</category>
