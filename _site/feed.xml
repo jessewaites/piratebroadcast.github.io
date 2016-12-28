@@ -5,13 +5,13 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Dec 2016 11:10:27 -0500</pubDate>
-    <lastBuildDate>Wed, 28 Dec 2016 11:10:27 -0500</lastBuildDate>
+    <pubDate>Wed, 28 Dec 2016 11:12:42 -0500</pubDate>
+    <lastBuildDate>Wed, 28 Dec 2016 11:12:42 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Demo: Drawing on the screen using HTML5 canvas</title>
-        <description>&lt;p&gt;Hold and drag your mouse cursor around. Enjoy the vibrant colors as you explore your inner artist.&lt;/p&gt;
+        <description>&lt;p&gt;Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or desktop.&lt;/p&gt;
 
 &lt;canvas id=&quot;draw&quot; width=&quot;800&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
 &lt;script&gt;
