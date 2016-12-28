@@ -5,8 +5,8 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Dec 2016 11:06:11 -0500</pubDate>
-    <lastBuildDate>Wed, 28 Dec 2016 11:06:11 -0500</lastBuildDate>
+    <pubDate>Wed, 28 Dec 2016 11:10:27 -0500</pubDate>
+    <lastBuildDate>Wed, 28 Dec 2016 11:10:27 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -68,6 +68,55 @@ canvas.addEventListener(&#39;mousedown&#39;, (e) =&gt; {
 canvas.addEventListener(&#39;mousemove&#39;, draw);
 canvas.addEventListener(&#39;mouseup&#39;, () =&gt; isDrawing = false);
 canvas.addEventListener(&#39;mouseout&#39;, () =&gt; isDrawing = false);
+
+// Set up touch events for mobile, etc
+canvas.addEventListener(&quot;touchstart&quot;, function (e) {
+        mousePos = getTouchPos(canvas, e);
+  var touch = e.touches[0];
+  var mouseEvent = new MouseEvent(&quot;mousedown&quot;, {
+    clientX: touch.clientX,
+    clientY: touch.clientY
+  });
+  canvas.dispatchEvent(mouseEvent);
+}, false);
+canvas.addEventListener(&quot;touchend&quot;, function (e) {
+  var mouseEvent = new MouseEvent(&quot;mouseup&quot;, {});
+  canvas.dispatchEvent(mouseEvent);
+}, false);
+canvas.addEventListener(&quot;touchmove&quot;, function (e) {
+  var touch = e.touches[0];
+  var mouseEvent = new MouseEvent(&quot;mousemove&quot;, {
+    clientX: touch.clientX,
+    clientY: touch.clientY
+  });
+  canvas.dispatchEvent(mouseEvent);
+}, false);
+
+// Get the position of a touch relative to the canvas
+function getTouchPos(canvasDom, touchEvent) {
+  var rect = canvasDom.getBoundingClientRect();
+  return {
+    x: touchEvent.touches[0].clientX - rect.left,
+    y: touchEvent.touches[0].clientY - rect.top
+  };
+}
+
+// Prevent scrolling when touching the canvas
+document.body.addEventListener(&quot;touchstart&quot;, function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener(&quot;touchend&quot;, function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
+document.body.addEventListener(&quot;touchmove&quot;, function (e) {
+  if (e.target == canvas) {
+    e.preventDefault();
+  }
+}, false);
 
 &lt;/script&gt;
 

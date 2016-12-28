@@ -13,7 +13,7 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 
-<p>Hold and drag your mouse cursor around. Enjoy the vibrant colors as you explore your inner artist.</p>
+<p>Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or desktop.</p>
 
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
