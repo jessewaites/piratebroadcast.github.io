@@ -13,7 +13,7 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 
-<p>Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or desktop. Feel free to print the image after you draw it by simply pressing the Print button.</p>
+<p>Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist, or something like that. Feel free to print the image after you draw it by simply pressing the Print button.</p>
 
 <button id="printVoucher" class="btn btn-success" onClick="printCanvas();"><i class="fa fa-file-text"></i>  Print Image</button>
 
