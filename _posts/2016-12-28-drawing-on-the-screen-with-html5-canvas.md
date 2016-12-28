@@ -17,6 +17,9 @@ square_related: recommend-wolf
 
 <button id="printVoucher" class="btn btn-success" onClick="printCanvas();">Print Image</button>
 
+<p>Draw below here.</p>
+<hr>
+
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
 const canvas = document.querySelector('#draw');
@@ -126,7 +129,7 @@ function printCanvas(el) {
     var dataUrl = canvas.toDataURL();
     var windowContent = '<!DOCTYPE html>';
     windowContent += '<html>'
-    windowContent += '<head><title>JesseWaites.com</title></head>';
+    windowContent += '<head><title>Your image from JesseWaites.com</title></head>';
     windowContent += '<body>'
     windowContent += '<img src="' + dataUrl + '">';
     windowContent += '</body>';

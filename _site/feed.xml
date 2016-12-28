@@ -5,8 +5,8 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Dec 2016 11:31:39 -0500</pubDate>
-    <lastBuildDate>Wed, 28 Dec 2016 11:31:39 -0500</lastBuildDate>
+    <pubDate>Wed, 28 Dec 2016 11:33:47 -0500</pubDate>
+    <lastBuildDate>Wed, 28 Dec 2016 11:33:47 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -14,6 +14,9 @@
         <description>&lt;p&gt;Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or desktop. Feel free to print the image after you draw it by simply pressing the Print button.&lt;/p&gt;
 
 &lt;p&gt;&lt;button id=&quot;printVoucher&quot; class=&quot;btn btn-success&quot; onclick=&quot;printCanvas();&quot;&gt;Print Image&lt;/button&gt;&lt;/p&gt;
+
+&lt;p&gt;Draw below here.&lt;/p&gt;
+&lt;hr /&gt;
 
 &lt;canvas id=&quot;draw&quot; width=&quot;800&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
 &lt;script&gt;
@@ -124,7 +127,7 @@ function printCanvas(el) {
     var dataUrl = canvas.toDataURL();
     var windowContent = &#39;&lt;!DOCTYPE html&gt;&#39;;
     windowContent += &#39;&lt;html&gt;&#39;
-    windowContent += &#39;&lt;head&gt;&lt;title&gt;JesseWaites.com&lt;/title&gt;&lt;/head&gt;&#39;;
+    windowContent += &#39;&lt;head&gt;&lt;title&gt;Your image from JesseWaites.com&lt;/title&gt;&lt;/head&gt;&#39;;
     windowContent += &#39;&lt;body&gt;&#39;
     windowContent += &#39;&lt;img src=&quot;&#39; + dataUrl + &#39;&quot;&gt;&#39;;
     windowContent += &#39;&lt;/body&gt;&#39;;
