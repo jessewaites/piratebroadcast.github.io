@@ -13,7 +13,9 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 
-<p>Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or desktop.</p>
+<p>Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or desktop. Feel free to print the image after you draw it by simply pressing the Print button.</p>
+
+<button id="printVoucher" class="btn btn-success" onClick="printCanvas();">Print Image</button>
 
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
@@ -119,5 +121,24 @@ document.body.addEventListener("touchmove", function (e) {
     e.preventDefault();
   }
 }, false);
+
+function printCanvas(el) {  
+    var dataUrl = canvas.toDataURL();
+    var windowContent = '<!DOCTYPE html>';
+    windowContent += '<html>'
+    windowContent += '<head><title>JesseWaites.com</title></head>';
+    windowContent += '<body>'
+    windowContent += '<img src="' + dataUrl + '">';
+    windowContent += '</body>';
+    windowContent += '</html>';
+    var printWin = window.open('','','width=340,height=260');
+    printWin.document.open();
+    printWin.document.write(windowContent);
+    printWin.document.close();
+    printWin.focus();
+    printWin.print();
+    printWin.close();
+}
+
 
 </script>

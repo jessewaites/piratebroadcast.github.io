@@ -5,13 +5,15 @@
     <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
     <link>http://JesseWaites.com/</link>
     <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Dec 2016 11:12:42 -0500</pubDate>
-    <lastBuildDate>Wed, 28 Dec 2016 11:12:42 -0500</lastBuildDate>
+    <pubDate>Wed, 28 Dec 2016 11:31:39 -0500</pubDate>
+    <lastBuildDate>Wed, 28 Dec 2016 11:31:39 -0500</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
         <title>Demo: Drawing on the screen using HTML5 canvas</title>
-        <description>&lt;p&gt;Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or desktop.&lt;/p&gt;
+        <description>&lt;p&gt;Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or desktop. Feel free to print the image after you draw it by simply pressing the Print button.&lt;/p&gt;
+
+&lt;p&gt;&lt;button id=&quot;printVoucher&quot; class=&quot;btn btn-success&quot; onclick=&quot;printCanvas();&quot;&gt;Print Image&lt;/button&gt;&lt;/p&gt;
 
 &lt;canvas id=&quot;draw&quot; width=&quot;800&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
 &lt;script&gt;
@@ -19,7 +21,7 @@ const canvas = document.querySelector(&#39;#draw&#39;);
 const ctx = canvas.getContext(&#39;2d&#39;);
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-ctx.strokeStyle = &#39;#BADA55&#39;;
+ctx.strokeStyle = &#39;#b4251b&#39;;
 ctx.lineJoin = &#39;round&#39;;
 ctx.lineCap = &#39;round&#39;;
 ctx.lineWidth = 100;
@@ -117,6 +119,25 @@ document.body.addEventListener(&quot;touchmove&quot;, function (e) {
     e.preventDefault();
   }
 }, false);
+
+function printCanvas(el) {  
+    var dataUrl = canvas.toDataURL();
+    var windowContent = &#39;&lt;!DOCTYPE html&gt;&#39;;
+    windowContent += &#39;&lt;html&gt;&#39;
+    windowContent += &#39;&lt;head&gt;&lt;title&gt;JesseWaites.com&lt;/title&gt;&lt;/head&gt;&#39;;
+    windowContent += &#39;&lt;body&gt;&#39;
+    windowContent += &#39;&lt;img src=&quot;&#39; + dataUrl + &#39;&quot;&gt;&#39;;
+    windowContent += &#39;&lt;/body&gt;&#39;;
+    windowContent += &#39;&lt;/html&gt;&#39;;
+    var printWin = window.open(&#39;&#39;,&#39;&#39;,&#39;width=340,height=260&#39;);
+    printWin.document.open();
+    printWin.document.write(windowContent);
+    printWin.document.close();
+    printWin.focus();
+    printWin.print();
+    printWin.close();
+}
+
 
 &lt;/script&gt;
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Jesse Waites | Demo: Drawing on the screen using HTML5 canvas</title>
-    <meta name="description" content="Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or desktop.">
+    <meta name="description" content="Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or deskt...">
 
     <link rel="stylesheet" href="/css/main.css">
 
@@ -179,7 +179,9 @@ audio.play();
 
             <h1>Demo: Drawing on the screen using HTML5 canvas</h1>
 
-            <p>Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or desktop.</p>
+            <p>Hold and drag your mouse cursor or finger around. Enjoy the vibrant colors as you explore your inner artist. This should work on all devices, mobile or desktop. Feel free to print the image after you draw it by simply pressing the Print button.</p>
+
+<p><button id="printVoucher" class="btn btn-success" onclick="printCanvas();">Print Image</button></p>
 
 <canvas id="draw" width="800" height="800"></canvas>
 <script>
@@ -187,7 +189,7 @@ const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-ctx.strokeStyle = '#BADA55';
+ctx.strokeStyle = '#b4251b';
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 100;
@@ -285,6 +287,25 @@ document.body.addEventListener("touchmove", function (e) {
     e.preventDefault();
   }
 }, false);
+
+function printCanvas(el) {  
+    var dataUrl = canvas.toDataURL();
+    var windowContent = '<!DOCTYPE html>';
+    windowContent += '<html>'
+    windowContent += '<head><title>JesseWaites.com</title></head>';
+    windowContent += '<body>'
+    windowContent += '<img src="' + dataUrl + '">';
+    windowContent += '</body>';
+    windowContent += '</html>';
+    var printWin = window.open('','','width=340,height=260');
+    printWin.document.open();
+    printWin.document.write(windowContent);
+    printWin.document.close();
+    printWin.focus();
+    printWin.print();
+    printWin.close();
+}
+
 
 </script>
 
