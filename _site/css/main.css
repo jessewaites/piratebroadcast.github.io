@@ -8352,6 +8352,7 @@ body, html {
   border-bottom: 50px;
   /* fill the container, preserving aspect ratio, and cropping to fit */
   background-size: cover;
+  float: right;
   /* center the image vertically and horizontally */
   background-position: center;
   /* round the edges to a circle with border radius 1/2 container size */

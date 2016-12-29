@@ -160,6 +160,8 @@ body, html {
     /* fill the container, preserving aspect ratio, and cropping to fit */
     background-size: cover;
 
+    float: right;
+
     /* center the image vertically and horizontally */
     background-position: center;
 
