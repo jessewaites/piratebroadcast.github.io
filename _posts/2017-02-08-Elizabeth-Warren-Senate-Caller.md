@@ -13,8 +13,10 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 <p>Elizabeth Warren was recently forced from the Senate Floor for reading a letter from Corretta Scott King that reveals how Jeff Sessions intimidated and frightened elderly black voters in the 1960s. This cannot stand. Feel free to use this tool to call Senator Mitchell at his office at (202) 224-2541 and play the transcript of the letter for him. Simply adjust your settings, dial (202) 224-2541 from your cell, and press "Play".
-If that mailbox is full, [find the number of your local Representative here at this link.](http://www.house.gov/representatives/find/)
 (This does not currently work on mobile devices and works best in Chrome.)</p>
+
+If that mailbox is full, [find the number of your local Representative here at this link.](http://www.house.gov/representatives/find/)
+
 
   <label for="rate">Select a Voice:</label>
   <select name="voice" id="voices" class="form-control" autofocus>
