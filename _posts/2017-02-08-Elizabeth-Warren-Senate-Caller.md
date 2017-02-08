@@ -12,7 +12,7 @@ feature_image: warren
 show_related_posts: false
 square_related: recommend-wolf
 ---
-<p>Elizabeth Warren was recently forced from the Senate Floor for reading a letter from Corretta Scott King that reveals how Jeff Sessions has intimidated and frighten elderly black voters in the 1960s. This cannot stand. Feel free to call Senator Mitchell and play the transcript of the letter for him. Simply adjust your settings, dial (202) 224-2541, and press "Play". (This does not currently work on mobile devices.)</p>
+<p>Elizabeth Warren was recently forced from the Senate Floor for reading a letter from Corretta Scott King that reveals how Jeff Sessions intimidated and frightened elderly black voters in the 1960s. This cannot stand. Feel free to call Senator Mitchell and play the transcript of the letter for him. Simply adjust your settings, dial (202) 224-2541, and press "Play". (This does not currently work on mobile devices.)</p>
 
   <label for="rate">Select a Voice:</label>
   <select name="voice" id="voices" class="form-control" autofocus>
