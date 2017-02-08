@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Elizabeth Warren / Coretta Scott King Senate Letter Auto-Reader"
-date: 2017-2-8 012:20:28
+date: 2017-02-08 012:20:28
 categories: politics
 author_name : Jesse
 author_url : /author/jesse
