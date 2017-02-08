@@ -41,8 +41,8 @@ Sincerely,
 Coretta Scott King</textarea>
   <br>
 
-  <button id="speak" class="btn btn-success">Speak</button>
-  <button id="stop" class="btn btn-danger">Stop!</button>
+  <button id="speak" class="btn btn-success">Play</button>
+  <button id="stop" class="btn btn-danger">Stop</button>
 
 
 <script>
