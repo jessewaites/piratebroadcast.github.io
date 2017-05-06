@@ -21,3 +21,5 @@ screen of whatever device it is currently being read on, so that means that it l
 Main Foundation For Emails website: http://foundation.zurb.com/emails.html
 
 <p>One of the reasons I chose Foundation For Emails is that A) they have some great templates (http://foundation.zurb.com/emails/email-templates.html) to choose from, so I could choose the one that closest met the needs of the Report Card, and B) They're almost the only game in town. There aren't a lot of other tools for this particular job.<p>
+
+<pre>rails g mailer CardMailer</pre>
