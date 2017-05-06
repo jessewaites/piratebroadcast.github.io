@@ -64,7 +64,7 @@ and so on...
 One of the most important "Gotchas" I learned form this process is how to fix broken images. You see, when
 these emails would open for me locally, the image paths would be broken. This is because the email itself has no knowledge of the rails app and no idea about how image paths work. We need to tell our email where our app is located on the internet through action mailers asset host config setting. The way to do this is to edit your application.rb file and add the following line:</p>
 
-<pre>config.action_mailer.asset_host = 'http://YourSiteUrl.com'<pre>
+<pre>config.action_mailer.asset_host = 'http://YourSiteUrl.com'</pre>
 
 <p>In development.rb, we need to override this to localhost:</p>
 
