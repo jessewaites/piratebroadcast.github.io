@@ -19,8 +19,8 @@ For Emails, by the Zurb company. (For the layperson, a "Responsive" email is an 
 
 [Here is the main Foundation For Emails website.](http://foundation.zurb.com/emails.html)
 
-<p>A few of the reasons I chose Foundation For Emails is that </p> [they have some great prebuilt templates](http://foundation.zurb.com/emails/email-templates.html)
-<p>to choose from, so I could choose the one that closest met the needs of the Report Card, and they're almost the only game in town. There aren't a lot of other tools for this particular job. A key thing to know about is that responsive emails is a tricky process -- there are entire companies that build products around doing this, because each email client renders things differently, and GMail strips the style tags out of emails completely, so to find a single tool that deals with all of this for you is a great thing. So after looking at my options, Zurb it is. Onwards...<p>
+<p>A few of the reasons I chose Foundation For Emails is that [they have some great prebuilt templates](http://foundation.zurb.com/emails/email-templates.html)
+ to choose from, so I could choose the one that closest met the needs of the Report Card, and they're almost the only game in town. There aren't a lot of other tools for this particular job. A key thing to know about is that responsive emails is a tricky process -- there are entire companies that build products around doing this, because each email client renders things differently, and GMail strips the style tags out of emails completely, so to find a single tool that deals with all of this for you is a great thing. So after looking at my options, Zurb it is. Onwards...<p>
 
 <p>In this feature, lets presume Users have_many ReportCards, and ReportCards belong_to Users.
 I used the Whenever gem and the Schedule.rb file to automatically generate these User ReportCards via a rake task without any user intervention on the last day of the month, every single month.
@@ -39,11 +39,16 @@ Now that I understand the data structure, I generate a Mailer in the rails app f
 
 <p>Now on to the tricky part: When we ran the mailer generator command, it created a folder in our Views called "Report Card Mailer" - Inside of this, we need to create a file called "report.html.erb". The file has to be named EXACTLY that for the mailer to find the right template... Our method is called def report(user), and it looks for the report.html.erb template based on that name. That took me forever to debug and figure out the first time through.</p>
 
-<p>Now that we have a place to put our responsive code, we need to grab it. Head over to the Foundation For Emails site and choose the template you want. Lets say this time we go with the "basic" template found here: https://litmus.com/checklist/emails/public/eb690d2</p>
+<p>Now that we have a place to put our responsive code, we need to grab it. Head over to the Foundation For Emails site and choose the template you want. [Lets say this time we go with the "basic" template found here:](https://litmus.com/checklist/emails/public/eb690d2)
 
-<p>Sign up and download the whole Foundation For Emails project file and open the folder in your editor. Now copy the CSS file completely and paste it into the CSS section of the Inliner found here:
 
-http://foundation.zurb.com/emails/inliner-v2.html
+<p>Sign up and download the whole Foundation For Emails project file and open the folder in your editor.
+
+(https://litmus.com/checklist/emails/public/eb690d2)
+
+ Now copy the CSS file completely and paste it into the CSS section of the Inliner found here:
+
+(http://foundation.zurb.com/emails/inliner-v2.html)
 
 Next, open the HTML file for the Basic email and paste it into the HTML part. Make sure to uncheck the "compress HTML" option, then click the Inline! button. Copy that output and paste it directly into the report.html.erb file we created earlier in that mailer folder in the Views section.
 
