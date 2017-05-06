@@ -82,8 +82,8 @@ DO NOT add the rails tags before running it through the inliner, because the inl
 <p>Fire off another email and your images, if you are using them, should now be working as intended.</p>
 
 <p>The very last implementation part of this is to send the report cards on a regular schedule. I did this by writing a simple rake take that found all users = Users.where(:send_report_cards => "true"), then
-looping through those users and firing off ReportCardMailer.report(User.last).deliver</p>
+looping through those users and firing off ReportCardMailer.report(user).deliver - This could also be made into a Sidekiq job.</p>
 
-<p>That presumers you make some sort of boolean setting on user to determine if a user gets the email or not but you get the idea there. Finally, I add a line to our schedule.rb file from that Whenever gem and run this rake task on the morning of the first of the month. Generate the Report Card at the end of the month, and send it on the 1st of the month. There may be a better way to do this but it fits our current need without overengineering a solution.</p>
+<p>That presumes you made some sort of boolean setting on user to determine if a user gets the email or not but you get the idea there. Finally, I add a line to our schedule.rb file from that Whenever gem and run this rake task on the morning of the first of the month. Generate the Report Card at the end of the month, and send it on the 1st of the month. There may be a better way to do this but it fits our current need without overengineering a solution.</p>
 
 <p>So thats how I built the ReportCard feature, programmatically generated the Report Cards, and emailed them out at a regularly scheduled interval. If you have any questions, drop me a line on Twitter on via email and I'll do my best to give you a hand. Cheers.</p>
