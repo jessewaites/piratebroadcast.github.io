@@ -19,8 +19,11 @@ For Emails, by the Zurb company. (For the layperson, a "Responsive" email is an 
 
 [Here is the main Foundation For Emails website.](http://foundation.zurb.com/emails.html)
 
-<p>A few of the reasons I chose Foundation For Emails is that [they have some great prebuilt templates](http://foundation.zurb.com/emails/email-templates.html)
- to choose from, so I could choose the one that closest met the needs of the Report Card, and they're almost the only game in town. There aren't a lot of other tools for this particular job. A key thing to know about is that responsive emails is a tricky process -- there are entire companies that build products around doing this, because each email client renders things differently, and GMail strips the style tags out of emails completely, so to find a single tool that deals with all of this for you is a great thing. So after looking at my options, Zurb it is. Onwards...<p>
+<p>A few of the reasons I chose Foundation For Emails is that:
+
+ [They have some great prebuilt templates to choose from.](http://foundation.zurb.com/emails/email-templates.html)
+
+ ...So I could choose the one that closest met the needs of the Report Card, and they're almost the only game in town. There aren't a lot of other tools for this particular job. A key thing to know about is that responsive emails is a tricky process -- there are entire companies that build products around doing this, because each email client renders things differently, and GMail strips the style tags out of emails completely, so to find a single tool that deals with all of this for you is a great thing. So after looking at my options, Zurb it is. Onwards...<p>
 
 <p>In this feature, lets presume Users have_many ReportCards, and ReportCards belong_to Users.
 I used the Whenever gem and the Schedule.rb file to automatically generate these User ReportCards via a rake task without any user intervention on the last day of the month, every single month.
