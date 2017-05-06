@@ -86,6 +86,6 @@ looping through those users and firing off ReportCardMailer.report(user).deliver
 
 <p>That presumes you made some sort of boolean setting on user to determine if a user gets the email or not but you get the idea there. Finally, I add a line to our schedule.rb file from that Whenever gem and run this rake task on the morning of the first of the month. Generate the Report Card at the end of the month, and send it on the 1st of the month. There may be a better way to do this but it fits our current need without overengineering a solution.</p>
 
-<p>So the process is: Download the Foundation For Emails project, Edit your template for the text you want, then copy the CSS and paste it into the Inliner, then paste the edited HTML, uncheck "compress HTML option", paste the output into the mailer template, add your asset host settings, then add your rails tags and fire off a test in the console.</p>
+<p>To summarize, the process is: Download the Foundation For Emails project, Edit your template for the text you want, then copy the CSS and paste it into the Inliner, then paste the edited HTML, uncheck "compress HTML option", paste the output into the mailer template, add your asset host settings, then add your rails tags and fire off a test in the console.</p>
 
 <p>So thats how I built the ReportCard feature, programmatically generated the Report Cards, and emailed them out at a regularly scheduled interval. If you have any questions, drop me a line on Twitter on via email and I'll do my best to give you a hand. Cheers.</p>
