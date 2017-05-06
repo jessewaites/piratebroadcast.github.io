@@ -37,11 +37,11 @@ Now that I understand the data structure, I generate a Mailer in the rails app f
 <script src="https://gist.github.com/piratebroadcast/f2428257baaab951fc5aa10dce42ffc0.js"></script>
 
 
-Now on to the tricky part: When we ran the mailer generator command, it created a folder in our Views called "Report Card Mailer" - Inside of this, we need to create a file called "report.html.erb". The file has to be names EXACTLY that for the mailer to find the right template... Our method is called def report(user), and it looks for the report.html.erb template based on that name. That took me forever to debug and figure out the first time through.
+<p>Now on to the tricky part: When we ran the mailer generator command, it created a folder in our Views called "Report Card Mailer" - Inside of this, we need to create a file called "report.html.erb". The file has to be names EXACTLY that for the mailer to find the right template... Our method is called def report(user), and it looks for the report.html.erb template based on that name. That took me forever to debug and figure out the first time through.</p>
 
-Now that we have a place to put our responsive code, we need to grab it. Head over to the Foundation For Emails site and choose the template you want. Lets say this time we go with the "basic" template found here: https://litmus.com/checklist/emails/public/eb690d2
+<p>Now that we have a place to put our responsive code, we need to grab it. Head over to the Foundation For Emails site and choose the template you want. Lets say this time we go with the "basic" template found here: https://litmus.com/checklist/emails/public/eb690d2</p>
 
-Sign up and download the whole Foundation For Emails project file and open the folder in your editor. Now copy the CSS file completelym and paste it into the CSS section of the Inliner found here:
+<p>Sign up and download the whole Foundation For Emails project file and open the folder in your editor. Now copy the CSS file completelym and paste it into the CSS section of the Inliner found here:
 
 http://foundation.zurb.com/emails/inliner-v2.html
 
@@ -49,11 +49,11 @@ Next, open the HTML fir the Basic email and paste it into the HTML part. Make su
 
 This is a good time to install the letter_opener rubygem in the development section of your gemfile if you don't already have it.
 
-Now, fire up your Rails console and enter the following:
+Now, fire up your Rails console and enter the following:</p>
 
 <pre>$ ReportCardMailer.report(User.last).deliver</pre>
 
-You should see a sweet looking email open up in your web browser that looks identical to the one we selected from the template. You can also use Google Chromes device emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone, so my bodd was able to show our stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be. Mockuphone link: https://mockuphone.com/#ios
+<p>You should see a sweet looking email open up in your web browser that looks identical to the one we selected from the template. You can also use Google Chromes device emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone, so my bodd was able to show our stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be. Mockuphone link: https://mockuphone.com/#ios
 
 Anyways, go through the email and edit it with whatever marketing text you need, and populate the variables we need with things like
 
@@ -62,12 +62,12 @@ Anyways, go through the email and edit it with whatever marketing text you need,
 and so on...
 
 One of the most important "Gotchas" I learned form this process is how to fix broken images. You see, when
-these emails would open for me locally, the image paths would be broken. This is because the email itself has no knowledge of the rails app and no idea about how image paths work. We need to tell our email where our app is located on the internet through action mailers asset host config setting. The way to do this is to edit your application.rb file and add the following line:
+these emails would open for me locally, the image paths would be broken. This is because the email itself has no knowledge of the rails app and no idea about how image paths work. We need to tell our email where our app is located on the internet through action mailers asset host config setting. The way to do this is to edit your application.rb file and add the following line:</p>
 
 <pre>config.action_mailer.asset_host = 'http://YourSiteUrl.com'<pre>
 
-In development.rb, we need to override this to localhost:
+<p>In development.rb, we need to override this to localhost:</p>
 
 <pre>config.action_mailer.asset_host = 'localhost:3000'</pre>
 
-Fire off another email and your images, if you are using them, should now be working as intended.
+<p>Fire off another email and your images, if you are using them, should now be working as intended.</p>
