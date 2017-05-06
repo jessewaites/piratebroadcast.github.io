@@ -25,10 +25,10 @@ For Emails, by the Zurb company. (For the layperson, a "Responsive" email is an 
 
  <p>...So I could choose the one that closest met the needs of the Report Card. Second, they're almost the only game in town. There aren't a lot of other tools for this particular job. A key thing to know about is that responsive emails is a tricky process -- there are entire companies that build products around doing this, because each email client renders things differently, and GMail strips the style tags out of emails completely, so to find a single tool that deals with all of this for you is a great thing. So after looking at my options, Zurb it is. Onwards...</p>
 
-<p>In this feature, lets presume Users have_many ReportCards, and ReportCards belong_to Users.
+<p>In this feature, let's presume Users have_many ReportCards, and ReportCards belong_to Users.
 I used the Whenever gem and the Schedule.rb file to automatically generate these User ReportCards via a rake task without any user intervention on the last day of the month, every single month.</p>
 
-<p>Now lets talk about the data in these Report Cards. The data in the actual thing I built was, frankly, very complicated, but for this example lets keep it nice and simple... Lets say a Report has 30 "grades", for 30 days a month, each as the string datatype. Each day the user can receive an A, B, C, D, or F (Why is there no E grade? I just realized that. Super weird. Anyways...)</p>
+<p>Now let's talk about the data in these Report Cards. The data in the actual thing I built was, frankly, very complicated, but for this example let's keep it nice and simple... Let's say a Report has 30 "grades", for 30 days a month, each as the string datatype. Each day the user can receive an A, B, C, D, or F (Why is there no E grade? I just realized that. Super weird. Anyways...)</p>
 
 
 <p>Now that I understand the data structure, I generate a Mailer in the rails app from the Rails console:
@@ -44,7 +44,7 @@ I used the Whenever gem and the Schedule.rb file to automatically generate these
 
 <p>Now that we have a place to put our responsive code, we need to grab it. Head over to the Foundation For Emails site and choose the template you want.</p>
 
-<p>Lets say this time we go with the "basic" template found here: https://litmus.com/checklist/emails/public/eb690d2</p>
+<p>Let's say this time we go with the "basic" template found here: https://litmus.com/checklist/emails/public/eb690d2</p>
 
 
 <p>Sign up and download the whole Foundation For Emails project file and open the folder in your editor. Now copy the Foundation CSS file completely and paste it into the CSS section of the Inliner found here:</p>
@@ -84,7 +84,7 @@ and so on...</p>
 <p>The very last implementation part of this is to send the report cards on a regular schedule. I did this by writing a simple rake take that found all users = Users.where(:send_report_cards => "true"), then
 looping through those users and firing off ReportCardMailer.report(user).deliver - This could also be made into a Sidekiq job.</p>
 
-<p>That presumes you made some sort of boolean setting on user to determine if a user gets the email or not but you get the idea there. Finally, I add a line to our schedule.rb file from that Whenever gem and run this rake task on the morning of the first of the month. Generate the Report Card at the end of the month, and send it on the 1st of the month. There may be a better way to do this but it fits our current need without overengineering a solution.</p>
+<p>That presumes you made some sort of boolean setting on user to determine if a user gets the email or not but you get the idea there. Finally, I add a line to our schedule.rb file from that Whenever gem and run this rake task on the morning of the first of the month. Generate the Report Card at the end of the month, and send it on the 1st of the month. You see, report_card = user.report_cards.last on the 1st of the month will always be the correct report card, the most recent one, since there are created, chronologically, at the end of the previous month in a way in which we can anticipate. There may be a better way to do this but it fits our current need without overengineering a solution.</p>
 
 <p>To summarize, the process is: Download the Foundation For Emails project, Edit your template for the text you want, then copy the CSS and paste it into the Inliner, then paste the edited HTML, uncheck "compress HTML option", paste the output into the mailer template, add your asset host settings, then add your rails tags and fire off a test in the console.</p>
 
