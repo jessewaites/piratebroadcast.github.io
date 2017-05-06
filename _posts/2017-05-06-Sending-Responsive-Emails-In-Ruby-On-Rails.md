@@ -21,14 +21,14 @@ For Emails, by the Zurb company. (For the layperson, a "Responsive" email is an 
 
 <p>A few of the reasons I chose Foundation For Emails is that...</p>
 
- [They have some great prebuilt templates to choose from:](http://foundation.zurb.com/emails/email-templates.html)
+ [They have some great prebuilt templates to choose from](http://foundation.zurb.com/emails/email-templates.html)
 
- <p>...So I could choose the one that closest met the needs of the Report Card, and they're almost the only game in town. There aren't a lot of other tools for this particular job. A key thing to know about is that responsive emails is a tricky process -- there are entire companies that build products around doing this, because each email client renders things differently, and GMail strips the style tags out of emails completely, so to find a single tool that deals with all of this for you is a great thing. So after looking at my options, Zurb it is. Onwards...</p>
+ <p>...So I could choose the one that closest met the needs of the Report Card. Second, they're almost the only game in town. There aren't a lot of other tools for this particular job. A key thing to know about is that responsive emails is a tricky process -- there are entire companies that build products around doing this, because each email client renders things differently, and GMail strips the style tags out of emails completely, so to find a single tool that deals with all of this for you is a great thing. So after looking at my options, Zurb it is. Onwards...</p>
 
 <p>In this feature, lets presume Users have_many ReportCards, and ReportCards belong_to Users.
 I used the Whenever gem and the Schedule.rb file to automatically generate these User ReportCards via a rake task without any user intervention on the last day of the month, every single month.
 
-Now lets talk about the data in these Report Cards. The data in the actual thing I built was, frankly, very complicated, but for this example lets keep it nice and simple... Lets say a Report 7 "grades", for 7 days a week, as the string datatype. Each day the user can receive an A, B, C, D, or F (Why is there no E grade? I just realized that. Super weird. Anyways...)
+Now lets talk about the data in these Report Cards. The data in the actual thing I built was, frankly, very complicated, but for this example lets keep it nice and simple... Lets say a Report has 30 "grades", for 30 days a month, each as the string datatype. Each day the user can receive an A, B, C, D, or F (Why is there no E grade? I just realized that. Super weird. Anyways...)
 
 
 Now that I understand the data structure, I generate a Mailer in the rails app from the Rails console:
@@ -59,7 +59,7 @@ Now, fire up your Rails console and enter the following:</p>
 
 <pre>$ ReportCardMailer.report(User.last).deliver</pre>
 
-<p>You should see a sweet looking email open up in your web browser thanks to letter_opener that looks identical to the one we selected from the template. You can also use Google Chromes device emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone, so my bodd was able to show our stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be.</p>
+<p>You should see a sweet looking email open up in your web browser thanks to letter_opener that looks identical to the one we selected from the template. You can also use the Google Chromes Device Emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone.com, so my boss was able to show stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be.</p>
 
 <p>Mockuphone link: https://mockuphone.com/#ios
 
