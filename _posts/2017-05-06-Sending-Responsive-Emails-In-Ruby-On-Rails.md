@@ -32,10 +32,10 @@ Now that I understand the data structure, I generate a Mailer in the rails app f
 
 <pre>$ rails g mailer CardMailer</pre>
 
-And inside that mailer, I need to add the local variables that will render into the email itself:
+<p>And inside that mailer, I need to add the local variables that will render into the email itself:<p>
 
 <script src="https://gist.github.com/piratebroadcast/f2428257baaab951fc5aa10dce42ffc0.js"></script
 
 
 
-Let us now imagine it is the 1st of a new month and we have 5 users, each with 1 completed report card.
+<p>Let us now imagine it is the 1st of a new month and we have 5 users, each with 1 completed report card.</p>
