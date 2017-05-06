@@ -60,7 +60,8 @@ Now, fire up your Rails console and enter the following:</p>
 <pre>$ ReportCardMailer.report(User.last).deliver</pre>
 
 <p>You should see a sweet looking email open up in your web browser thanks to letter_opener that looks identical to the one we selected from the template. You can also use Google Chromes device emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone, so my bodd was able to show our stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be.</p>
-Mockuphone link: https://mockuphone.com/#ios
+
+<p>Mockuphone link: https://mockuphone.com/#ios
 
 Anyways, go through the email and edit it with whatever marketing text you need, and populate the variables we need with things like:
 "Your Grades:"
