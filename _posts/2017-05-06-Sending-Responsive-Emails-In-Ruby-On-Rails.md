@@ -42,7 +42,9 @@ Now that I understand the data structure, I generate a Mailer in the rails app f
 
 <p>Now on to the tricky part: When we ran the mailer generator command, it created a folder in our Views called "Report Card Mailer" - Inside of this, we need to create a file called "report.html.erb". The file has to be named EXACTLY that for the mailer to find the right template... Our method is called def report(user), and it looks for the report.html.erb template based on that name. That took me forever to debug and figure out the first time through.</p>
 
-<p>Now that we have a place to put our responsive code, we need to grab it. Head over to the Foundation For Emails site and choose the template you want. [Lets say this time we go with the "basic" template found here:](https://litmus.com/checklist/emails/public/eb690d2)
+<p>Now that we have a place to put our responsive code, we need to grab it. Head over to the Foundation For Emails site and choose the template you want.</p>
+
+<p>[Lets say this time we go with the "basic" template found here:](https://litmus.com/checklist/emails/public/eb690d2)</p>
 
 
 <p>Sign up and download the whole Foundation For Emails project file and open the folder in your editor.</p>
@@ -50,7 +52,7 @@ Now that I understand the data structure, I generate a Mailer in the rails app f
 
 <p>Now copy the Foundation CSS file completely and paste it into the CSS section of the Inliner found here:</p>
 
-[Inliner](http://foundation.zurb.com/emails/inliner-v2.html)
+<p>[Inliner:](http://foundation.zurb.com/emails/inliner-v2.html)</p>
 
 <p>Next, open the HTML file for the Basic email and paste it into the HTML part. Make sure to uncheck the "compress HTML" option, then click the Inline! button. Copy that output and paste it directly into the report.html.erb file we created earlier in that mailer folder in the Views section.</p>
 
@@ -60,7 +62,8 @@ Now, fire up your Rails console and enter the following:</p>
 
 <pre>$ ReportCardMailer.report(User.last).deliver</pre>
 
-<p>You should see a sweet looking email open up in your web browser thanks to letter_opener that looks identical to the one we selected from the template. You can also use Google Chromes device emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone, so my bodd was able to show our stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be.</p> [Mockuphone link.](https://mockuphone.com/#ios)
+<p>You should see a sweet looking email open up in your web browser thanks to letter_opener that looks identical to the one we selected from the template. You can also use Google Chromes device emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone, so my bodd was able to show our stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be.</p>
+ [Mockuphone link.](https://mockuphone.com/#ios)
 
 Anyways, go through the email and edit it with whatever marketing text you need, and populate the variables we need with things like:
 "Your Grades:"
