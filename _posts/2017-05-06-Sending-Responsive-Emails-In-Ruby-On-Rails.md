@@ -61,15 +61,15 @@ Now, fire up your Rails console and enter the following:</p>
 
 <p>You should see a sweet looking email open up in your web browser thanks to letter_opener that looks identical to the one we selected from the template. You can also use the Google Chromes Device Emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone.com, so my boss was able to show stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be.</p>
 
-<p>Mockuphone link: https://mockuphone.com/#ios
+<p>Mockuphone link: https://mockuphone.com/#ios</p>
 
-Anyways, go through the email and edit it with whatever marketing text you need, and populate the variables we need with things like:
+<p>Anyways, go through the email and edit it with whatever marketing text you need, and populate the variables we need with things like:
 "Your Grades:"
 "Day One Grade:" "<%= day_1_grade %>"
 "Day Two Grade:" "<%= day_2_grade %>"
-and so on...
+and so on...</p>
 
-DO NOT add the rails tags before running it through the inliner, because the inliner itself doesn't understand rails tags and it will misinterpret them and break them. And make sure you stick to the template as closely as possible. The whole point of using it is that the people at Zurb have spend a LOT of time making sure this all works perfectly responsively, and it's a bad idea to go crazy, making fundamental changes to the template that might break that.</p>
+<p>DO NOT add the rails tags before running it through the inliner, because the inliner itself doesn't understand rails tags and it will misinterpret them and break them. And make sure you stick to the template as closely as possible. The whole point of using it is that the people at Zurb have spend a LOT of time making sure this all works perfectly responsively, and it's a bad idea to go crazy, making fundamental changes to the template that might break that.</p>
 
 <p>NOTE: One of the most important "Gotchas" I learned from this process is how to fix broken email images. You see, when these emails would open for me locally, the image paths would be broken. This is because the email itself has no knowledge of the rails app and no idea about how image_tag paths work. We need to tell our email where our image assets are located on the internet through the action mailer's asset host config setting. The way to do this is to edit your application.rb file and add the following line:</p>
 
