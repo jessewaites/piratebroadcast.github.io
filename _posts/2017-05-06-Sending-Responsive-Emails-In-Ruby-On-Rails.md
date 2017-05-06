@@ -19,7 +19,7 @@ For Emails, by the Zurb company. (For the layperson, a "Responsive" email is an 
 
 [Here is the main Foundation For Emails website.](http://foundation.zurb.com/emails.html)
 
-<p>A few of the reasons I chose Foundation For Emails is that:...</p>
+<p>A few of the reasons I chose Foundation For Emails is that...</p>
 
  [They have some great prebuilt templates to choose from:](http://foundation.zurb.com/emails/email-templates.html)
 
@@ -47,11 +47,10 @@ Now that I understand the data structure, I generate a Mailer in the rails app f
 
 <p>Sign up and download the whole Foundation For Emails project file and open the folder in your editor.
 
-(https://litmus.com/checklist/emails/public/eb690d2)
 
- Now copy the CSS file completely and paste it into the CSS section of the Inliner found here:
+ Now copy the Foundation CSS file completely and paste it into the CSS section of the Inliner found here:
 
-(http://foundation.zurb.com/emails/inliner-v2.html)
+[Inliner](http://foundation.zurb.com/emails/inliner-v2.html)
 
 Next, open the HTML file for the Basic email and paste it into the HTML part. Make sure to uncheck the "compress HTML" option, then click the Inline! button. Copy that output and paste it directly into the report.html.erb file we created earlier in that mailer folder in the Views section.
 
@@ -61,7 +60,7 @@ Now, fire up your Rails console and enter the following:</p>
 
 <pre>$ ReportCardMailer.report(User.last).deliver</pre>
 
-<p>You should see a sweet looking email open up in your web browser thanks to letter_opener that looks identical to the one we selected from the template. You can also use Google Chromes device emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone, so my bodd was able to show our stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be. Mockuphone link: https://mockuphone.com/#ios
+<p>You should see a sweet looking email open up in your web browser thanks to letter_opener that looks identical to the one we selected from the template. You can also use Google Chromes device emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone, so my bodd was able to show our stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be.</p> [Mockuphone link.]https://mockuphone.com/#ios
 
 Anyways, go through the email and edit it with whatever marketing text you need, and populate the variables we need with things like:
 "Your Grades:"
@@ -69,9 +68,9 @@ Anyways, go through the email and edit it with whatever marketing text you need,
 "Day Two Grade:" "<%= day_2_grade %>"
 and so on...
 
-DO NOT add the rails tags before running it through the inliner, because the inliner itself doesn't understand rails tags and it will misinterpret them and break them. And make sure you stick to the template as closely as possible. The whole point of using it is that the people at Zurb have spend a LOT of time making sure this all works perfectly responsively, and it's a bad idea to go crazy, making fundamental changes to the template that might break that.
+DO NOT add the rails tags before running it through the inliner, because the inliner itself doesn't understand rails tags and it will misinterpret them and break them. And make sure you stick to the template as closely as possible. The whole point of using it is that the people at Zurb have spend a LOT of time making sure this all works perfectly responsively, and it's a bad idea to go crazy, making fundamental changes to the template that might break that.</p>
 
-NOTE: One of the most important "Gotchas" I learned form this process is how to fix broken images. You see, when these emails would open for me locally, the image paths would be broken. This is because the email itself has no knowledge of the rails app and no idea about how image_tag paths work. We need to tell our email where our app is located on the internet through the action mailer's asset host config setting. The way to do this is to edit your application.rb file and add the following line:</p>
+<p>NOTE: One of the most important "Gotchas" I learned form this process is how to fix broken images. You see, when these emails would open for me locally, the image paths would be broken. This is because the email itself has no knowledge of the rails app and no idea about how image_tag paths work. We need to tell our email where our app is located on the internet through the action mailer's asset host config setting. The way to do this is to edit your application.rb file and add the following line:</p>
 
 <pre>config.action_mailer.asset_host = 'http://YourSiteUrl.com'</pre>
 
@@ -86,4 +85,4 @@ looping through those users and firing off ReportCardMailer.report(User.last).de
 
 <p>That presumers you make some sort of boolean setting on user to determine if a user gets the email or not but you get the idea there. Finally, I add a line to our schedule.rb file from that Whenever gem and run this rake task on the morning of the first of the month. Generate the Report Card at the end of the month, and send it on the 1st of the month. There may be a better way to do this but it fits our current need without overengineering a solution.</p>
 
-<p>So thats how I built the ReportCard feature, programmatically generated the Report Cards, and emailed them out at a regularly scheduled interval. If you have any questions, drop me a line on Twitter on via email and I'll do my best to give you a hand. Cheers.
+<p>So thats how I built the ReportCard feature, programmatically generated the Report Cards, and emailed them out at a regularly scheduled interval. If you have any questions, drop me a line on Twitter on via email and I'll do my best to give you a hand. Cheers.</p>
