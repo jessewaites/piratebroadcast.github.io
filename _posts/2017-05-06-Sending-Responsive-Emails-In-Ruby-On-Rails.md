@@ -46,6 +46,8 @@ Now that I understand the data structure, I generate a Mailer in the rails app f
 
 <p>[Lets say this time we go with the "basic" template found here:](https://litmus.com/checklist/emails/public/eb690d2)</p>
 
+[This link](http://example.net/) has no title attribute.
+
 
 <p>Sign up and download the whole Foundation For Emails project file and open the folder in your editor.</p>
 
