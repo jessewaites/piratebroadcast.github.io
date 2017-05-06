@@ -26,12 +26,12 @@ For Emails, by the Zurb company. (For the layperson, a "Responsive" email is an 
  <p>...So I could choose the one that closest met the needs of the Report Card. Second, they're almost the only game in town. There aren't a lot of other tools for this particular job. A key thing to know about is that responsive emails is a tricky process -- there are entire companies that build products around doing this, because each email client renders things differently, and GMail strips the style tags out of emails completely, so to find a single tool that deals with all of this for you is a great thing. So after looking at my options, Zurb it is. Onwards...</p>
 
 <p>In this feature, lets presume Users have_many ReportCards, and ReportCards belong_to Users.
-I used the Whenever gem and the Schedule.rb file to automatically generate these User ReportCards via a rake task without any user intervention on the last day of the month, every single month.
+I used the Whenever gem and the Schedule.rb file to automatically generate these User ReportCards via a rake task without any user intervention on the last day of the month, every single month.</p>
 
-Now lets talk about the data in these Report Cards. The data in the actual thing I built was, frankly, very complicated, but for this example lets keep it nice and simple... Lets say a Report has 30 "grades", for 30 days a month, each as the string datatype. Each day the user can receive an A, B, C, D, or F (Why is there no E grade? I just realized that. Super weird. Anyways...)
+<p>Now lets talk about the data in these Report Cards. The data in the actual thing I built was, frankly, very complicated, but for this example lets keep it nice and simple... Lets say a Report has 30 "grades", for 30 days a month, each as the string datatype. Each day the user can receive an A, B, C, D, or F (Why is there no E grade? I just realized that. Super weird. Anyways...)</p>
 
 
-Now that I understand the data structure, I generate a Mailer in the rails app from the Rails console:
+<p>Now that I understand the data structure, I generate a Mailer in the rails app from the Rails console:
 
 <pre>$ rails g mailer CardMailer</pre>
 
