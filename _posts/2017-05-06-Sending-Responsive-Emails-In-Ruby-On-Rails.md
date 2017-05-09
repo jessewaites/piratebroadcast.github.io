@@ -88,4 +88,4 @@ looping through those users and firing off ReportCardMailer.report(user).deliver
 
 <p>To summarize, the process is: Download the Foundation For Emails project, Edit your template for the text you want, then copy the CSS and paste it into the Inliner, then paste the edited HTML, uncheck "compress HTML option", paste the output into the mailer template, add your asset host settings, then add your rails tags and fire off a test in the console.</p>
 
-<p>So thats how I built the ReportCard feature, programmatically generated the Report Cards, and emailed them out at a regularly scheduled interval. If you have any questions, drop me a line on Twitter on via email and I'll do my best to give you a hand. Cheers.</p>
+<p>So thats how I built the ReportCard feature, programmatically generated the Report Cards, and emailed them out at a regularly scheduled interval. If you have any questions, drop me a line on Twitter or via email and I'll do my best to give you a hand. Cheers.</p>
