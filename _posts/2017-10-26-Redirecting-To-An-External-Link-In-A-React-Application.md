@@ -19,6 +19,6 @@ function of the React Router, so I started there. I created my component, import
 
 <p>The solution to this wasn't obvious so I thought to write this blog post and document this simple solution so that others can find it. Without further ado...
 
-It turns out that what I wanted to do was use an inline component and window.location to force the browser to go to another page. I'll paste a gist below so you can see how I set my React Router up in Index.js. This definitely works with React Router 3 and 4. If this was useful to you, send me an email or follow me and let me know to I'll keep it up.<p>
+It turns out that what I wanted to do was use an inline component and window.location to force the browser to go to another page. I'll paste a gist below so you can see how I set my React Router up in Index.js. This definitely works with React Router 3 and 4. If this was useful to you, send me an email or follow me and let me know to keep it up.<p>
 
 <script src="https://gist.github.com/piratebroadcast/ff057097328b823251b3976117404934.js"></script>
