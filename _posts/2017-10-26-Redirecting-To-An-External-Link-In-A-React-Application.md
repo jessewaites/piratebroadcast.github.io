@@ -6,7 +6,7 @@ categories: coding
 author_name : Jesse
 author_url : /author/jesse
 author_avatar: jesse
-show_avatar : true
+show_avatar : false
 read_time : 2
 feature_image: detour
 show_related_posts: false

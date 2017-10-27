@@ -15,6 +15,7 @@ feature_image: swiss
     <article class="post">
         <div class="post-preview col-xs-10  no-gutter">
             <img src="{{ site.baseurl}}/img/{{ post.feature_image }}.jpg">
+            <br />
             <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
 
             {{ post.excerpt | truncatewords: 28 }}
