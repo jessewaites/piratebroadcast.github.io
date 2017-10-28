@@ -20,13 +20,15 @@ feature_image: swiss
               <img src="{{ site.baseurl}}/img/{{ post.feature_image }}.jpg" class="animated fadeInLeft">
             </a>
             <br />
-            <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+            <div class="animated fadeInRight">
+              <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
 
-            {{ post.excerpt | truncatewords: 28 }}
+              {{ post.excerpt | truncatewords: 28 }}
 
-            <p class="meta">
-                <a href="{{ post.author_url | prepend: site.baseurl }}">{{ post.author_name | capitalize}}</a> in <a href='{{ "/category/" | append: post.categories.first | prepend: site.baseurl }}'>{{ post.categories.first | capitalize }}</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> {{ post.read_time }} minutes
-            </p>
+              <p class="meta">
+                  <a href="{{ post.author_url | prepend: site.baseurl }}">{{ post.author_name | capitalize}}</a> in <a href='{{ "/category/" | append: post.categories.first | prepend: site.baseurl }}'>{{ post.categories.first | capitalize }}</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> {{ post.read_time }} minutes
+              </p>
+            </div>  
         </div>
     </article>
     {% endfor %}
