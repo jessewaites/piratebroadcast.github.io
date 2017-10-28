@@ -6,7 +6,7 @@ feature_image: swiss
   alert("You won! 🍄 Type '1up' on any page to receive an extra life! PS Don't do it with headphones in!");
 </script> -->
 
-<div class="sub-nav">
+<div class="sub-nav animated fadeInDown">
     <a href="#" class="select-posts active">Posts</a>
     <a href="#" class="select-categories">Categories</a>
 </div>
@@ -28,7 +28,7 @@ feature_image: swiss
               <p class="meta">
                   <a href="{{ post.author_url | prepend: site.baseurl }}">{{ post.author_name | capitalize}}</a> in <a href='{{ "/category/" | append: post.categories.first | prepend: site.baseurl }}'>{{ post.categories.first | capitalize }}</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> {{ post.read_time }} minutes
               </p>
-            </div>  
+            </div>
         </div>
     </article>
     {% endfor %}
