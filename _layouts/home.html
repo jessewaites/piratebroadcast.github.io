@@ -30,8 +30,7 @@ feature_image: swiss
 	float: left;
 	overflow: hidden;
 	margin: 10px 1%;
-	min-width: 320px;
-	max-width: 480px;
+	min-width: 700px;
 	max-height: 360px;
 	width: 48%;
 	background: #3085a3;
@@ -197,8 +196,8 @@ figure.effect-romeo:hover p {
               <img src="{{ site.baseurl}}/img/{{ post.feature_image }}.jpg" class="animated fadeInLeft">
             </a>
             <figcaption>
-              <h2>Wild <span>Romeo</span></h2>
-              <p>Romeo never knows what he wants. He seemed to be very cross about something.</p>
+              <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+              <p>{{ post.excerpt | truncatewords: 28 }}</p>
               <a href="#">View more</a>
             </figcaption>
             </figure>
