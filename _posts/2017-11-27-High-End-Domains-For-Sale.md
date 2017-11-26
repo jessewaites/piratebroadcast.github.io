@@ -28,19 +28,19 @@ square_related: recommend-wolf
             <td>1</td>
             <td>John</td>
             <td>Carter</td>
-            <td>johncarter@mail.com</td>
+            <td><button type="button" class="btn btn-primary">Make Offer</button></td>
         </tr>
         <tr>
             <td>2</td>
             <td>Peter</td>
             <td>Parker</td>
-            <td>peterparker@mail.com</td>
+            <td><button type="button" class="btn btn-primary">Make Offer</button></td>
         </tr>
         <tr>
             <td>3</td>
             <td>John</td>
             <td>Rambo</td>
-            <td>johnrambo@mail.com</td>
+            <td><button type="button" class="btn btn-primary">Make Offer</button></td>
         </tr>
     </tbody>
 </table>
