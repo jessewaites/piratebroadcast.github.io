@@ -12,7 +12,7 @@ feature_image: Global-Network
 show_related_posts: false
 square_related: recommend-wolf
 ---
-<p>This page is a landing page for my domain sales side business. The domains I own are DNS forwarded to this page where I have the below list of domains currently owned by myself or someone I represent.</p>
+<p>This page is a landing page for my domain sales side business (I believe the kids these days call it a 'side hustle'? I digress.) The domains I own are DNS forwarded to this page where I have the below list of all domains currently owned by myself or someone I represent. I have over 10 years of experience in the business of buying and selling internet domains. Drop me a line if you have any questions about the business. On to the current products...</p>
 
 <table class="table table-hover">
     <thead>
