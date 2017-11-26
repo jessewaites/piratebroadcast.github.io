@@ -24,6 +24,11 @@ square_related: recommend-wolf
     </thead>
     <tbody>
         <tr>
+            <td><p>BuyCurses.com</p></td>
+            <td><p>No description Available</p></td>
+            <td><button type="button" class="btn btn-primary" onclick="location.href='mailto:hi@jessewaites.com';">Make Offer</button></td>
+        </tr>
+        <tr>
             <td><p>whtmntn.com</p></td>
             <td><p>Short abbreviation of White Mountain, perfect for a business located in the White Mountains area of New Hampshire.</p></td>
             <td><button type="button" class="btn btn-primary" onclick="location.href='mailto:hi@jessewaites.com';">Make Offer</button></td>
