@@ -17,40 +17,40 @@ square_related: recommend-wolf
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>Domain / URL</th>
-            <th>Description</th>
-            <th>Buy Now</th>
+            <th><p>Domain / URL</p></th>
+            <th><p>Description</p></th>
+            <th><p>Buy Now</p></th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>whtmntn.com</td>
+            <td><p>whtmntn.com</p></td>
             <td><p>Short abbreviation of White Mountain, perfect for a business located in the White Mountains area of New Hampshire.</p></td>
             <td><button type="button" class="btn btn-primary" onclick="location.href='mailto:hi@jessewaites.com';">Make Offer</button></td>
         </tr>
         <tr>
-            <td>whtmntns.com</td>
-            <td>Short abbreviation of White Mountains, perfect for a business located in the White Mountains area of New Hampshire.</td>
+            <td><p>whtmntns.com</p></td>
+            <td><p>Short abbreviation of White Mountains, perfect for a business located in the White Mountains area of New Hampshire.</p></td>
             <td><button type="button" class="btn btn-primary" onclick="location.href='mailto:hi@jessewaites.com';">Make Offer</button></td>
         </tr>
         <tr>
-            <td>BCKPCKR.com</td>
-            <td>Short abbreviation of Backpacker</td>
+            <td><p>BCKPCKR.com</p></td>
+            <td><p>Short abbreviation of Backpacker</p></td>
             <td><button type="button" class="btn btn-primary" onclick="location.href='mailto:hi@jessewaites.com';">Make Offer</button></td>
         </tr>
         <tr>
-            <td>BuyMyMCM.com</td>
-            <td>Buy My Man Crush Monday</td>
+            <td><p>BuyMyMCM.com</p></td>
+            <td><p>Buy My Man Crush Monday</p></td>
             <td><button type="button" class="btn btn-primary" onclick="location.href='mailto:hi@jessewaites.com';">Make Offer</button></td>
         </tr>
         <tr>
-            <td>BuyMyWCW.com</td>
-            <td>Buy My Woman Crush Wednesday</td>
+            <td><p>BuyMyWCW.com</p></td>
+            <td><p>Buy My Woman Crush Wednesday</p></td>
             <td><button type="button" class="btn btn-primary" onclick="location.href='mailto:hi@jessewaites.com';">Make Offer</button></td>
         </tr>
         <tr>
-            <td>InvestingInCryptocoins.com</td>
-            <td>$$$$</td>
+            <td><p>InvestingInCryptocoins.com</p></td>
+            <td><p>$$$$</p></td>
             <td><button type="button" class="btn btn-primary" onclick="location.href='mailto:hi@jessewaites.com';">Make Offer</button></td>
         </tr>
     </tbody>
