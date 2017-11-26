@@ -8,7 +8,7 @@ author_url : /author/jesse
 author_avatar: jesse
 show_avatar : false
 read_time : 2
-feature_image: detour
+feature_image: Global-Network
 show_related_posts: false
 square_related: recommend-wolf
 ---
@@ -46,6 +46,11 @@ square_related: recommend-wolf
         <tr>
             <td>BuyMyWCW.com</td>
             <td>Buy My Woman Crush Wednesday</td>
+            <td><button type="button" class="btn btn-primary" onclick="location.href='mailto:hi@jessewaites.com';">Make Offer</button></td>
+        </tr>
+        <tr>
+            <td>InvestingInCryptocoins.com</td>
+            <td>$$$$</td>
             <td><button type="button" class="btn btn-primary" onclick="location.href='mailto:hi@jessewaites.com';">Make Offer</button></td>
         </tr>
     </tbody>
