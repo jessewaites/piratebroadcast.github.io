@@ -14,33 +14,33 @@ square_related: recommend-wolf
 ---
 <p>This page is a landing page for my domain sales side business. The domains I own are DNS forwarded to this page where I have the below list of domains currently owned by myself or someone I represent.</p>
 
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
-      <th scope="col">Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Row</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>Carter</td>
+            <td>johncarter@mail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Peter</td>
+            <td>Parker</td>
+            <td>peterparker@mail.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>John</td>
+            <td>Rambo</td>
+            <td>johnrambo@mail.com</td>
+        </tr>
+    </tbody>
 </table>
