@@ -18,8 +18,8 @@ square_related: recommend-wolf
 
 <p>So I've seen this tool Drift around for a bit now and thought to myself, "Could I install thing into my personal site that runs on the Jekyll framework? Could I easily add the Drift Conversational Marketing into a Ruby on Rails app? I wonder how long it would take me?" I considered it a personal challenge to get it set up and deployed as quickly as possible. I started the clock and got to work onboarding through the free tier of their website.</p>
 
-<p>So, spoiler alert: It was super easy and I was done in less that 5 minutes. I went through their creation wizard (Select "Javascript" for Jekyll / Ruby on Rails), uploaded my avatar into the system, and had some javascript copies to my clipboard in a matter of minutes.</p>
+<p>So, spoiler alert: It was super easy and I was done in less that 5 minutes. I went through their creation wizard (Select "Javascript" for Jekyll / Ruby on Rails), uploaded my avatar into the system, and had some javascript copied to my clipboard in a matter of minutes.</p>
 
 <p>In Jekyll, open up includes/head.html and paste it into that partial. Save it. Commit it, deploy it. For Rails, you'll want to open views/shared/header.html.erb and paste the js there.<p>
 
-<p>It literally was one of the easiest things I've ever added to this site and now I have a super cool chat box on my personal website. Head on over to Drift.com and check them out sometime.</p>
+<p>It literally was one of the easiest things I've ever added to this site and now I have a super cool chat box on my personal website. You can see it in action on the bottom right corner of this page, the little red box. Head on over to Drift.com and check them out sometime.</p>
