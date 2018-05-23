@@ -16,7 +16,7 @@ square_related: recommend-wolf
 As almost everyone has by now heard, the EU has passed some new consumer privacy
 laws that go into effect later this week. There are a lot of new technical ramifications
 of this, but this blog post specifically covers having existing and new users accept
-our new GDPR Terms Of Service.
+our new GDPR End User Licence Agreement.
 
 When building a new feature, I like to think backwards from the end result of what
 we want: At the end of the day, we need all users to accept the new terms. That means we need to display these new terms. If the users don't agree, let's assume they will no longer be able to use our service.
@@ -25,7 +25,7 @@ I solved this by adding an uncloseable Popup modal on our logged-in homepage. Yo
 
 $('#myModal').modal({backdrop: 'static', keyboard: false}) )
 
-Ok, so users are now locked out of the rest of the application and are forced to make a choice in the modal. So far, so good. The text of the new GDPR EULA is within the modal, as are two buttons: Accept, or Log Out. If they click Log Put, I sent them to the regular Devise "Log Out" path. So what happens if they click "Accept"?
+Ok, so users are now locked out of the rest of the application and are forced to make a choice in the modal. So far, so good. The text of the new GDPR EULA is within the modal, as are two buttons: Accept, or Log Out. If they click "Log Out", I sent them to the regular Devise "Log Out" path. So what happens if they click "Accept"?
 
 I added a column to our Users table called accepted_gdpr_eula_at that accepts Datetime, and ran the migration. Next, I created a new Controller in the Rails Application called GrprEulaController, and added an action called "accept_gdpr_eula!". Then I added my route in the routes.rb file. (Bonus points for making this a proper RESTful action, when I refactor this I will do so then-- the rest of our app is built in a similar way to this, so it is actually more consistent with everyone else's work to name it this way. Don't @ me.)
 
