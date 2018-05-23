@@ -14,15 +14,14 @@ square_related: recommend-wolf
 ---
 
 As almost everyone has by now heard, the EU has passed some new consumer privacy
-law that go into effect later this week. There are a lot of new technical ramifications
+laws that go into effect later this week. There are a lot of new technical ramifications
 of this, but this blog post specifically covers having existing and new users accept
 our new GDPR Terms Of Service.
 
 When building a new feature, I like to think backwards from the end result of what
 we want: At the end of the day, we need all users to accept the new terms. That means we need to display these new terms. If the users don't agree, let's assume they will no longer be able to use our service.
 
-I solved this by adding an uncloseable popup modal on our logged-in homepage.
-(You can make a bootstrap modal static with:
+I solved this by adding an uncloseable popup modal on our logged-in homepage. You can make a bootstrap modal static with:
 
 $('#myModal').modal({backdrop: 'static', keyboard: false}) )
 
@@ -35,4 +34,4 @@ The user clicks the "Accept" button, and the method in the controller updates th
 
 I also added some logic to the Popup Modal - if the current_users gdpr_accepted_at column is nil, show the modal. If it is not nil, don't show the modal (Since logically it means they have already seen and accepted it.)
 
-We can now determine who has and has not accepted our new terms, and have restricted the ability of users who have not accepted the new terms from using our web application. Yes it could be argued that we could have built an entire EULA management system, but implementing it this way has solved the business goal in a reasonable amount of time.
+We can now determine who has and has not accepted our new terms, and have restricted the ability of users who have not accepted the new terms from using our web application. Yes it could be argued that we could have built an entire EULA management system, but implementing it this way has solved the business goal in a reasonable amount of time. For what it's worth, I wrote this on my lunchbreak because I thought it might be helpful to other developers currently working on the same issue, so don't read too much into any of this or feel you need to break it apart. Have a great Memorial Day Weekend! 
