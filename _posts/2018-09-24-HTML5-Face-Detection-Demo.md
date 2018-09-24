@@ -13,16 +13,7 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 
-
-<script src="https://tastenkunst.github.io/brfv4_javascript_examples/js/libs/createjs/preloadjs.min.js"></script>
-	<script src="https://tastenkunst.github.io/brfv4_javascript_examples/js/BRFv4Demo.js"></script>
-
-	<script>
-		window.onload = brfv4Example.start; //see js/BRFv4Demo.js
-	</script>
-
-
-
+<body>
   <div id="_wrapper">
 
   	<div id="_content">
@@ -35,7 +26,7 @@ square_related: recommend-wolf
   		<div id="_stats"></div>
   		<div id="_progressBar"></div>
   		<a href="http://www.tastenkunst.com" target="_blank">
-  			<img id="_brfv4_logo" src="assets/brfv4_logo.png" alt="BRFv4 Logo"/>
+  			<img id="_brfv4_logo" src="https://tastenkunst.github.io/brfv4_javascript_examples/assets/brfv4_logo.png" alt="BRFv4 Logo"/>
   		</a>
   	</div>
 
@@ -44,3 +35,11 @@ square_related: recommend-wolf
   </div>
 
   <div id="_settingsRight"></div>
+  </body>
+
+  <script src="https://tastenkunst.github.io/brfv4_javascript_examples/js/libs/createjs/preloadjs.min.js"></script>
+  	<script src="https://tastenkunst.github.io/brfv4_javascript_examples/js/BRFv4Demo.js"></script>
+
+  	<script>
+  		window.onload = brfv4Example.start; //see js/BRFv4Demo.js
+  	</script>
