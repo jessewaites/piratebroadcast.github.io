@@ -14,8 +14,8 @@ square_related: recommend-wolf
 ---
 
 
-<script src="js/libs/createjs/preloadjs.min.js"></script>
-	<script src="js/BRFv4Demo.js"></script>
+<script src="https://tastenkunst.github.io/brfv4_javascript_examples/js/libs/createjs/preloadjs.min.js"></script>
+	<script src="https://tastenkunst.github.io/brfv4_javascript_examples/js/BRFv4Demo.js"></script>
 
 	<script>
 		window.onload = brfv4Example.start; //see js/BRFv4Demo.js
