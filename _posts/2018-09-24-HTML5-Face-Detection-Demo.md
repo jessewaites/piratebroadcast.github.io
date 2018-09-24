@@ -12,7 +12,7 @@ feature_image: bad
 show_related_posts: false
 square_related: recommend-wolf
 ---
-BRFv4Demo
+
 
 <script src="js/libs/createjs/preloadjs.min.js"></script>
 	<script src="js/BRFv4Demo.js"></script>
@@ -21,7 +21,7 @@ BRFv4Demo
 		window.onload = brfv4Example.start; //see js/BRFv4Demo.js
 	</script>
 
-  <body>
+
 
   <div id="_wrapper">
 
@@ -44,5 +44,3 @@ BRFv4Demo
   </div>
 
   <div id="_settingsRight"></div>
-
-  </body>
