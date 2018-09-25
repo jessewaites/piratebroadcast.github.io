@@ -3,10 +3,10 @@
   <channel>
     <title>Jesse Waites</title>
     <description>Jesse Waites - Boston based Rails / React Developer.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Sep 2018 11:14:54 -0400</pubDate>
-    <lastBuildDate>Tue, 25 Sep 2018 11:14:54 -0400</lastBuildDate>
+    <link>http://JesseWaites.com/</link>
+    <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 25 Sep 2018 11:26:45 -0400</pubDate>
+    <lastBuildDate>Tue, 25 Sep 2018 11:26:45 -0400</lastBuildDate>
     <generator>Jekyll v3.8.4</generator>
     
       <item>
@@ -14,8 +14,8 @@
         <description>
 </description>
         <pubDate>Wed, 23 May 2018 12:50:28 -0400</pubDate>
-        <link>http://localhost:4000/HTML5-Face-Detection-Demo/</link>
-        <guid isPermaLink="true">http://localhost:4000/HTML5-Face-Detection-Demo/</guid>
+        <link>http://JesseWaites.com/HTML5-Face-Detection-Demo/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/HTML5-Face-Detection-Demo/</guid>
         
         
         <category>coding</category>
@@ -47,8 +47,8 @@ we want: At the end of the day, we need all users to accept the new terms. That 
 &lt;p&gt;We can now determine who has and has not accepted our new terms, and have restricted the ability of users who have not accepted the new terms from using our web application. Yes it could be argued that we could have built an entire EULA management system, but implementing it this way has solved the business goal in a reasonable amount of time. For what it’s worth, I wrote this on my lunchbreak because I thought it might be helpful to other developers currently working on the same issue, so don’t read too much into any of this or feel you need to break it apart. Have a great Memorial Day Weekend!&lt;/p&gt;
 </description>
         <pubDate>Wed, 23 May 2018 12:50:28 -0400</pubDate>
-        <link>http://localhost:4000/Adding-GDRP-EULA-To-A-Ruby-On-Rails-Application/</link>
-        <guid isPermaLink="true">http://localhost:4000/Adding-GDRP-EULA-To-A-Ruby-On-Rails-Application/</guid>
+        <link>http://JesseWaites.com/Adding-GDRP-EULA-To-A-Ruby-On-Rails-Application/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/Adding-GDRP-EULA-To-A-Ruby-On-Rails-Application/</guid>
         
         
         <category>coding</category>
@@ -71,8 +71,8 @@ we want: At the end of the day, we need all users to accept the new terms. That 
 &lt;/p&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 28 Nov 2017 12:20:28 -0500</pubDate>
-        <link>http://localhost:4000/Installing-Drift-In-A-Ruby-On-Rails-or-Jekyll-Applicaiton/</link>
-        <guid isPermaLink="true">http://localhost:4000/Installing-Drift-In-A-Ruby-On-Rails-or-Jekyll-Applicaiton/</guid>
+        <link>http://JesseWaites.com/Installing-Drift-In-A-Ruby-On-Rails-or-Jekyll-Applicaiton/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/Installing-Drift-In-A-Ruby-On-Rails-or-Jekyll-Applicaiton/</guid>
         
         
         <category>coding</category>
@@ -131,8 +131,8 @@ we want: At the end of the day, we need all users to accept the new terms. That 
 &lt;/table&gt;
 </description>
         <pubDate>Sun, 26 Nov 2017 12:20:28 -0500</pubDate>
-        <link>http://localhost:4000/Premium-Domain-Names-For-Sale-2018/</link>
-        <guid isPermaLink="true">http://localhost:4000/Premium-Domain-Names-For-Sale-2018/</guid>
+        <link>http://JesseWaites.com/Premium-Domain-Names-For-Sale-2018/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/Premium-Domain-Names-For-Sale-2018/</guid>
         
         
         <category>coding</category>
@@ -154,8 +154,8 @@ It turns out that what I wanted to do was use an inline component and window.loc
 &lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
 </description>
         <pubDate>Thu, 26 Oct 2017 12:20:28 -0400</pubDate>
-        <link>http://localhost:4000/Redirecting-To-An-External-Link-In-A-React-Application/</link>
-        <guid isPermaLink="true">http://localhost:4000/Redirecting-To-An-External-Link-In-A-React-Application/</guid>
+        <link>http://JesseWaites.com/Redirecting-To-An-External-Link-In-A-React-Application/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/Redirecting-To-An-External-Link-In-A-React-Application/</guid>
         
         
         <category>coding</category>
@@ -185,8 +185,8 @@ comes out in human english so it's useful for your users as well. (Not just us d
 
 </description>
         <pubDate>Tue, 23 May 2017 12:20:28 -0400</pubDate>
-        <link>http://localhost:4000/Debug-Your-Rails-Application-With-This-One-Weird-Trick/</link>
-        <guid isPermaLink="true">http://localhost:4000/Debug-Your-Rails-Application-With-This-One-Weird-Trick/</guid>
+        <link>http://JesseWaites.com/Debug-Your-Rails-Application-With-This-One-Weird-Trick/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/Debug-Your-Rails-Application-With-This-One-Weird-Trick/</guid>
         
         
         <category>coding</category>
@@ -274,8 +274,8 @@ looping through those users and firing off ReportCardMailer.report(user).deliver
 &lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 06 May 2017 12:20:28 -0400</pubDate>
-        <link>http://localhost:4000/Sending-Responsive-Emails-In-Ruby-On-Rails/</link>
-        <guid isPermaLink="true">http://localhost:4000/Sending-Responsive-Emails-In-Ruby-On-Rails/</guid>
+        <link>http://JesseWaites.com/Sending-Responsive-Emails-In-Ruby-On-Rails/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/Sending-Responsive-Emails-In-Ruby-On-Rails/</guid>
         
         
         <category>coding</category>
@@ -419,8 +419,8 @@ function printCanvas(el) {
 
 </description>
         <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
-        <link>http://localhost:4000/drawing-on-the-screen-with-html5-canvas/</link>
-        <guid isPermaLink="true">http://localhost:4000/drawing-on-the-screen-with-html5-canvas/</guid>
+        <link>http://JesseWaites.com/drawing-on-the-screen-with-html5-canvas/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/drawing-on-the-screen-with-html5-canvas/</guid>
         
         
         <category>coding</category>
@@ -496,8 +496,8 @@ stopButton.addEventListener('click', () =&gt; toggle(false));
 
 </description>
         <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
-        <link>http://localhost:4000/text-to-speech-demo-in-javascript/</link>
-        <guid isPermaLink="true">http://localhost:4000/text-to-speech-demo-in-javascript/</guid>
+        <link>http://JesseWaites.com/text-to-speech-demo-in-javascript/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/text-to-speech-demo-in-javascript/</guid>
         
         
         <category>coding</category>
@@ -572,8 +572,8 @@ searchInput.addEventListener('keyup', displayMatches);
 &lt;/body&gt;
 </description>
         <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
-        <link>http://localhost:4000/ajax-typeahead-stunts/</link>
-        <guid isPermaLink="true">http://localhost:4000/ajax-typeahead-stunts/</guid>
+        <link>http://JesseWaites.com/ajax-typeahead-stunts/</link>
+        <guid isPermaLink="true">http://JesseWaites.com/ajax-typeahead-stunts/</guid>
         
         
         <category>coding</category>
