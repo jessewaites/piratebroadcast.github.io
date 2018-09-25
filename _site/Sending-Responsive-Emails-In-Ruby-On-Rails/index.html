@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Jesse Waites | Sending Responsive Emails In Ruby On Rails with Foundation For Emails</title>
+    <meta name="description" content="Recently, I was tasked with building a Report Card feature for our customers at work. After gettingmore details about the intent of the feature, I decided th...">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="canonical" href="/Sending-Responsive-Emails-In-Ruby-On-Rails/">
+    <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="http://localhost:4000/feed.xml" />
+    <link rel="apple-touch-icon" href="http://localhost:4000/img/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-50943467-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script src="//cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js"
+        type="text/javascript"></script>
+        <script>cheet('1 u p', function () {
+          var audio = new Audio('/1up.mp3');
+audio.play();
+  alert('You got an extra life! 🍄 ');
+});</script>
+
+<!-- Start of Async Drift Code -->
+<script>
+!function() {
+var t;
+if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+t.factory = function(e) {
+return function() {
+  var n;
+  return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+};
+}, t.methods.forEach(function(e) {
+t[e] = t.factory(e);
+}), t.load = function(t) {
+var e, n, o, i;
+e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+});
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('6gyg5xtt693v');
+</script>
+<!-- End of Async Drift Code -->
+
+
+    <!--[if lt IE 9]>
+        <script src="/js/vendor/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@jessewaites">
+    <meta name="twitter:creator" content="@jessewaites">
+    <!-- <meta property="og:image" content="http://localhost:4000/img/twitter_card2.png" />
+    <meta name="twitter:image:src" content="http://localhost:4000/img/twitter_card2.png"> -->
+    <meta content="Jesse Waites" property="og:site_name">
+
+    
+      <meta name="twitter:title" content="Sending Responsive Emails In Ruby On Rails with Foundation For Emails">
+      <meta content="Sending Responsive Emails In Ruby On Rails with Foundation For Emails" property="og:title">
+      <meta content="article" property="og:type">
+    
+
+    
+      <meta name="twitter:description" content="Jesse Waites - Boston based Rails / React Developer.">
+      <meta content="Jesse Waites - Boston based Rails / React Developer." property="og:description">
+    
+
+    
+      <meta name="twitter:url" content="http://localhost:4000/Sending-Responsive-Emails-In-Ruby-On-Rails/">
+      <meta content="http://localhost:4000/Sending-Responsive-Emails-In-Ruby-On-Rails/" property="og:url">
+    
+
+    
+      <meta content="2017-05-06T12:20:28-04:00" property="article:published_time">
+    
+
+    
+      <meta name="twitter:image:src" content="http://localhost:4000/img/responsive.jpg">
+      <meta property="og:image" content="http://localhost:4000/img/responsive.jpg">
+    
+
+
+    
+      
+      <meta content="coding" property="article:section">
+      
+    
+
+    
+      
+    
+    </head>
+
+
+  <body class="">
+
+    <header class="hero-image" style="background-image: url(/img/responsive.jpg);">
+  <span class="menu-trigger">
+  <div id="nav-icon1">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</span>
+
+    <!-- if the user has javascript disabled they can still use the menu -->
+<noscript>
+    <div class="no-js-menu">
+        <ul>
+            
+                <li><i class="fa fa-home"></i><a href="/">Home</a></li>
+            
+                <li><i class="fa fa-user"></i><a href="/author/jesse">About Jesse Waites</a></li>
+            
+                <li><i class="fa "></i><a href="/"></a></li>
+            
+                <li><i class="fa fa-file-text"></i><a href="https://drive.google.com/file/d/0B78faj-_ufT8TEpkZ3JRSmp0WFU/view?usp=sharing">My Resume</a></li>
+            
+                <li><i class="fa fa-github"></i><a href="https://www.github.com/piratebroadcast">GitHub</a></li>
+            
+                <li><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/jessewaites">LinkedIn</a></li>
+            
+                <li><i class="fa fa-twitter"></i><a href="https://www.twitter.com/jessewaites">Twitter</a></li>
+            
+                <li><i class="fa fa-facebook"></i><a href="http://www.facebook.com/railsdevelopers">Facebook</a></li>
+            
+                <li><i class="fa fa-instagram"></i><a href="https://www.linkedin.com/in/jessewaites">Instagram</a></li>
+            
+                <li><i class="fa fa-rocket"></i><a href="mailto: Hi@JesseWaites.com">Email</a></li>
+            
+                <li><i class="fa fa-book"></i><a href="http://www.amazon.com/Secrets-Of-My-App-Success-ebook/dp/B004Q9U18C">My Book on Amazon</a></li>
+            
+                <li><i class="fa fa-apple"></i><a href="https://itunes.apple.com/us/book/the-secrets-of-my-app-success/id424978524?mt=11">My Book on iTunes</a></li>
+            
+        </ul>
+    </div>
+</noscript>
+<!-- end no script -->
+
+    <div id="menu-target">
+    <ul>
+        
+            <li><i class="fa fa-home"></i><a href="/">Home</a></li>
+        
+            <li><i class="fa fa-user"></i><a href="/author/jesse">About Jesse Waites</a></li>
+        
+            <li><i class="fa "></i><a href="/"></a></li>
+        
+            <li><i class="fa fa-file-text"></i><a href="https://drive.google.com/file/d/0B78faj-_ufT8TEpkZ3JRSmp0WFU/view?usp=sharing">My Resume</a></li>
+        
+            <li><i class="fa fa-github"></i><a href="https://www.github.com/piratebroadcast">GitHub</a></li>
+        
+            <li><i class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/jessewaites">LinkedIn</a></li>
+        
+            <li><i class="fa fa-twitter"></i><a href="https://www.twitter.com/jessewaites">Twitter</a></li>
+        
+            <li><i class="fa fa-facebook"></i><a href="http://www.facebook.com/railsdevelopers">Facebook</a></li>
+        
+            <li><i class="fa fa-instagram"></i><a href="https://www.linkedin.com/in/jessewaites">Instagram</a></li>
+        
+            <li><i class="fa fa-rocket"></i><a href="mailto: Hi@JesseWaites.com">Email</a></li>
+        
+            <li><i class="fa fa-book"></i><a href="http://www.amazon.com/Secrets-Of-My-App-Success-ebook/dp/B004Q9U18C">My Book on Amazon</a></li>
+        
+            <li><i class="fa fa-apple"></i><a href="https://itunes.apple.com/us/book/the-secrets-of-my-app-success/id424978524?mt=11">My Book on iTunes</a></li>
+        
+    </ul>
+</div>
+
+    <!-- <div id="avatar" style="float: right;"></div> -->
+
+</header>
+
+
+
+<main class="container">
+    <!-- <div class="ribbon"><span>For Hire!</span></div> -->
+
+    <div class="row">
+
+
+
+        <div class="col-xs-12 single-content">
+
+            <p class="meta">
+
+                <a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a> <i class="link-spacer"></i> <i class="fa fa-bookmark"></i> 2 minutes
+            </p>
+
+            <h1>Sending Responsive Emails In Ruby On Rails with Foundation For Emails</h1>
+
+            <p>Recently, I was tasked with building a Report Card feature for our customers at work. After getting
+more details about the intent of the feature, I decided that a slick looking responsive email would
+best fill this need. I did a lot of research about the best tools for this and settled on using Foundation
+For Emails, by the Zurb company. (For the layperson, a "Responsive" email is an email that "morphs" to fit the screen of whatever device it is currently being read on, so that means that it looks great on both an iPhone or an Android or a huge desktop monitor in a web browser.)</p>
+
+<p><a href="http://foundation.zurb.com/emails.html">Here is the main Foundation For Emails website.</a></p>
+
+<p>A few of the reasons I chose Foundation For Emails is that...</p>
+
+<p><a href="http://foundation.zurb.com/emails/email-templates.html">They have some great prebuilt templates to choose from</a></p>
+
+<p>...So I could choose the one that closest met the needs of the Report Card. Second, they're almost the only game in town. There aren't a lot of other tools for this particular job. A key thing to know about is that responsive emails is a tricky process -- there are entire companies that build products around doing this, because each email client renders things differently, and GMail strips the style tags out of emails completely, so to find a single tool that deals with all of this for you is a great thing. So after looking at my options, Zurb it is. Onwards...</p>
+
+<p>In this feature, let's presume Users have_many ReportCards, and ReportCards belong_to Users.
+I used the Whenever gem and the Schedule.rb file to automatically generate these User ReportCards via a rake task without any user intervention on the last day of the month, every single month.</p>
+
+<p>Now let's talk about the data in these Report Cards. The data in the actual thing I built was, frankly, very complicated, but for this example let's keep it nice and simple... Let's say a Report has 30 "grades", for 30 days a month, each as the string datatype. Each day the user can receive an A, B, C, D, or F (Why is there no E grade? I just realized that. Super weird. Anyways...)</p>
+
+<p>Now that I understand the data structure, I generate a Mailer in the rails app from the Rails console:
+
+<pre>$ rails g mailer CardMailer</pre>
+
+<p>And inside that mailer, I need to add the local variables that will render into the email itself:<p>
+
+<script src="https://gist.github.com/piratebroadcast/f2428257baaab951fc5aa10dce42ffc0.js"></script>
+
+
+<p>Now on to the tricky part: When we ran the mailer generator command, it created a folder in our Views called "Report Card Mailer" - Inside of this, we need to create a file called "report.html.erb". The file has to be named EXACTLY that for the mailer to find the right template... Our method is called def report(user), and it looks for the report.html.erb template based on that name. That took me forever to debug and figure out the first time through.</p>
+
+<p>Now that we have a place to put our responsive code, we need to grab it. Head over to the Foundation For Emails site and choose the template you want.</p>
+
+<p>Let's say this time we go with the "basic" template found here: https://litmus.com/checklist/emails/public/eb690d2</p>
+
+
+<p>Sign up and download the whole Foundation For Emails project file and open the folder in your editor. Now copy the Foundation CSS file completely and paste it into the CSS section of the Inliner found here:</p>
+
+<p>Inliner: http://foundation.zurb.com/emails/inliner-v2.html</p>
+
+<p>Next, open the HTML file for the Basic email and paste it into the HTML part. Make sure to uncheck the "compress HTML" option, then click the Inline! button. Copy that output and paste it directly into the report.html.erb file we created earlier in that mailer folder in the Views section.</p>
+
+<p>Note: This is a good time to install the letter_opener rubygem in the development section of your gemfile if you don't already have it.
+
+Now, fire up your Rails console and enter the following:</p>
+
+<pre>$ ReportCardMailer.report(User.last).deliver</pre>
+
+<p>You should see a sweet looking email open up in your web browser thanks to letter_opener that looks identical to the one we selected from the template. You can also use the Google Chromes Device Emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone.com, so my boss was able to show stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be.</p>
+
+<p>Mockuphone link: https://mockuphone.com/#ios</p>
+
+<p>Anyways, go through the email and edit it with whatever marketing text you need, and populate the variables we need with things like:
+"Your Grades:"
+"Day One Grade:" "&lt;%= day_1_grade %&gt;"
+"Day Two Grade:" "&lt;%= day_2_grade %&gt;"
+and so on...</p>
+
+<p>DO NOT add the rails tags before running it through the inliner, because the inliner itself doesn't understand rails tags and it will misinterpret them and break them. And make sure you stick to the template as closely as possible. The whole point of using it is that the people at Zurb have spend a LOT of time making sure this all works perfectly responsively, and it's a bad idea to go crazy, making fundamental changes to the template that might break that.</p>
+
+<p>NOTE: One of the most important "Gotchas" I learned from this process is how to fix broken email images. You see, when these emails would open for me locally, the image paths would be broken. This is because the email itself has no knowledge of the rails app and no idea about how image_tag paths work. We need to tell our email where our image assets are located on the internet through the action mailer's asset host config setting. The way to do this is to edit your application.rb file and add the following line:</p>
+
+<pre>config.action_mailer.asset_host = 'http://YourSiteUrl.com'</pre>
+
+<p>In development.rb, we need to override this to localhost:</p>
+
+<pre>config.action_mailer.asset_host = 'localhost:3000'</pre>
+
+<p>This took me a fair bit of time to debug and you get to know it for free. Lucky you. Now fire off another email in the console and your images, if you are using them, should now be working as intended.</p>
+
+<p>The very last implementation part of this is to send the report cards on a regular schedule. I did this by writing a simple rake take that found all users = Users.where(:send_report_cards =&gt; "true"), then
+looping through those users and firing off ReportCardMailer.report(user).deliver - This could also be made into a Sidekiq job.</p>
+
+<p>That presumes you made some sort of boolean setting on user to determine if a user gets the email or not but you get the idea there. Finally, I add a line to our schedule.rb file from that Whenever gem and run this rake task on the morning of the first of the month. Generate the Report Card at the end of the month, and send it on the 1st of the month. You see, report_card = user.report_cards.last on the 1st of the month will always be the correct report card, the most recent one, since there are created, chronologically, at the end of the previous month in a way in which we can anticipate. There may be a better way to do this but it fits our current need without overengineering a solution.</p>
+
+<p>To summarize, the process is: Download the Foundation For Emails project, Edit your template for the text you want, then copy the CSS and paste it into the Inliner, then paste the edited HTML, uncheck "compress HTML option", paste the output into the mailer template, add your asset host settings, then add your rails tags and fire off a test in the console.</p>
+
+<p>So thats how I built the ReportCard feature, programmatically generated the Report Cards, and emailed them out at a regularly scheduled interval. If you have any questions, drop me a line on Twitter or via email and I'll do my best to give you a hand. Cheers.</p>
+</p></p></p>
+
+
+        </div><!-- main-content/col -->
+    </div> <!--/row -->
+
+</main> <!-- /container -->
+
+<footer class="single">
+    <div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-2">
+            <img src="/img/jesse.jpg" class="user-icon " alt="user-image">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="category-list">
+                <p>Published <span>May 6, 2017</span></p>
+                <p><a href="/author/jesse">Jesse</a> in <a href='/category/coding'>Coding</a></p>
+
+                <div class="other-catergories">
+                    <h3>Also found in</h3>
+
+                    <ul>
+                        
+                        <li>
+                            <a href='/category/coding'>Coding</a>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+        </div><!-- end col -->
+        <div class="col-xs-12 col-sm-4">
+            <div class="social">
+                <p>Share this article</a>
+                <div class="social-links">
+                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://localhost:4000/Sending-Responsive-Emails-In-Ruby-On-Rails/"><i class="fa fa-twitter"></i></a>
+
+                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://localhost:4000/Sending-Responsive-Emails-In-Ruby-On-Rails/"><i class="fa fa-facebook-official"></i></a>
+                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://localhost:4000/Sending-Responsive-Emails-In-Ruby-On-Rails/"><i class="fa fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- end row -->
+</div>
+
+    
+</footer>
+
+
+    <script src='/js/vendor/modernizr.custom.32229-2.8-respondjs-1-4-2.js'></script>
+    <script src="/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src='/js/vendor/jquery.jpanelmenu.min.js'></script>
+    <script type='application/javascript' src='/js/vendor/fastclick.min.js'></script>
+    
+    <script src=' /js/main.js'></script>
+  </body>
+
+</html>

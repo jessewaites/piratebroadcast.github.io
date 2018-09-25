@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="/css/main.css">
 
     <link rel="canonical" href="/introducing-the-twitter-image-tag-gem/">
-    <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="http://JesseWaites.com/feed.xml" />
-    <link rel="apple-touch-icon" href="http://JesseWaites.com/img/apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="http://localhost:4000/feed.xml" />
+    <link rel="apple-touch-icon" href="http://localhost:4000/img/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -29,8 +29,33 @@
         <script>cheet('1 u p', function () {
           var audio = new Audio('/1up.mp3');
 audio.play();
-  alert('You got an extra life!');
+  alert('You got an extra life! 🍄 ');
 });</script>
+
+<!-- Start of Async Drift Code -->
+<script>
+!function() {
+var t;
+if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+t.factory = function(e) {
+return function() {
+  var n;
+  return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+};
+}, t.methods.forEach(function(e) {
+t[e] = t.factory(e);
+}), t.load = function(t) {
+var e, n, o, i;
+e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+});
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('6gyg5xtt693v');
+</script>
+<!-- End of Async Drift Code -->
 
 
     <!--[if lt IE 9]>
@@ -40,8 +65,8 @@ audio.play();
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jessewaites">
     <meta name="twitter:creator" content="@jessewaites">
-    <!-- <meta property="og:image" content="http://JesseWaites.com/img/twitter_card2.png" />
-    <meta name="twitter:image:src" content="http://JesseWaites.com/img/twitter_card2.png"> -->
+    <!-- <meta property="og:image" content="http://localhost:4000/img/twitter_card2.png" />
+    <meta name="twitter:image:src" content="http://localhost:4000/img/twitter_card2.png"> -->
     <meta content="Jesse Waites" property="og:site_name">
 
     
@@ -51,13 +76,13 @@ audio.play();
     
 
     
-      <meta name="twitter:description" content="Jesse Waites - Boston, MA based Ruby on Rails Developer.">
-      <meta content="Jesse Waites - Boston, MA based Ruby on Rails Developer." property="og:description">
+      <meta name="twitter:description" content="Jesse Waites - Boston based Rails / React Developer.">
+      <meta content="Jesse Waites - Boston based Rails / React Developer." property="og:description">
     
 
     
-      <meta name="twitter:url" content="http://JesseWaites.com/introducing-the-twitter-image-tag-gem/">
-      <meta content="http://JesseWaites.com/introducing-the-twitter-image-tag-gem/" property="og:url">
+      <meta name="twitter:url" content="http://localhost:4000/introducing-the-twitter-image-tag-gem/">
+      <meta content="http://localhost:4000/introducing-the-twitter-image-tag-gem/" property="og:url">
     
 
     
@@ -65,8 +90,8 @@ audio.play();
     
 
     
-      <meta name="twitter:image:src" content="http://JesseWaites.com/img/twitter_large_jpeg.jpg">
-      <meta property="og:image" content="http://JesseWaites.com/img/twitter_large_jpeg.jpg">
+      <meta name="twitter:image:src" content="http://localhost:4000/img/twitter_large_jpeg.jpg">
+      <meta property="og:image" content="http://localhost:4000/img/twitter_large_jpeg.jpg">
     
 
 
@@ -216,27 +241,24 @@ size the user uploaded.</p>
 
 <p>NOTE: Make sure you are using the latest version of this gem - it went under a significant rewrite at version 1.9.5 - Don’t use anything lower than that.</p>
 
-<p><code class="highlighter-rouge">ruby
-gem 'twitter_image_tag'
-</code></p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'twitter_image_tag'</span>
+</code></pre></div></div>
 
 <p>And then execute:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ bundle
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ bundle
+</code></pre></div></div>
 
 <p>Or install it yourself as:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ gem install twitter_image_tag
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ gem install twitter_image_tag
+</code></pre></div></div>
 
 <h2 id="usage">Usage</h2>
 <pre>
 &lt;%= TwitterImageTag.show_me(current_user.twitter_handle, "normal") %&gt;
 </pre>
-<p>## Development</p>
+<h2 id="development">Development</h2>
 
 <p>After checking out the repo, run <code class="highlighter-rouge">bin/setup</code> to install dependencies. Then, run <code class="highlighter-rouge">rake false</code> to run the tests. You can also run <code class="highlighter-rouge">bin/console</code> for an interactive prompt that will allow you to experiment.</p>
 
@@ -282,10 +304,10 @@ gem 'twitter_image_tag'
             <div class="social">
                 <p>Share this article</a>
                 <div class="social-links">
-                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://JesseWaites.com/introducing-the-twitter-image-tag-gem/"><i class="fa fa-twitter"></i></a>
+                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://localhost:4000/introducing-the-twitter-image-tag-gem/"><i class="fa fa-twitter"></i></a>
 
-                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://JesseWaites.com/introducing-the-twitter-image-tag-gem/"><i class="fa fa-facebook-official"></i></a>
-                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://JesseWaites.com/introducing-the-twitter-image-tag-gem/"><i class="fa fa-envelope"></i></a>
+                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://localhost:4000/introducing-the-twitter-image-tag-gem/"><i class="fa fa-facebook-official"></i></a>
+                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://localhost:4000/introducing-the-twitter-image-tag-gem/"><i class="fa fa-envelope"></i></a>
                 </div>
             </div>
         </div>

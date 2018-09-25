@@ -2,12 +2,285 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Jesse Waites</title>
-    <description>Jesse Waites - Boston, MA based Ruby on Rails Developer.</description>
-    <link>http://JesseWaites.com/</link>
-    <atom:link href="http://JesseWaites.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 28 Dec 2016 19:58:16 -0500</pubDate>
-    <lastBuildDate>Wed, 28 Dec 2016 19:58:16 -0500</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <description>Jesse Waites - Boston based Rails / React Developer.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 25 Sep 2018 11:14:54 -0400</pubDate>
+    <lastBuildDate>Tue, 25 Sep 2018 11:14:54 -0400</lastBuildDate>
+    <generator>Jekyll v3.8.4</generator>
+    
+      <item>
+        <title>Face Detection in HTML5 (Work in Progress)</title>
+        <description>
+</description>
+        <pubDate>Wed, 23 May 2018 12:50:28 -0400</pubDate>
+        <link>http://localhost:4000/HTML5-Face-Detection-Demo/</link>
+        <guid isPermaLink="true">http://localhost:4000/HTML5-Face-Detection-Demo/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
+    
+      <item>
+        <title>Implementing a GDPR EULA in a Ruby on Rails Application</title>
+        <description>&lt;p&gt;As almost everyone has by now heard, the EU has passed some new consumer privacy
+laws that go into effect later this week. There are a lot of new technical ramifications
+of this, but this blog post specifically covers having existing and new users accept
+our new GDPR End User Licence Agreement.&lt;/p&gt;
+
+&lt;p&gt;When building a new feature, I like to think backwards from the end result of what
+we want: At the end of the day, we need all users to accept the new terms. That means we need to display these new terms. If the users don’t agree, let’s assume they will no longer be able to use our service.&lt;/p&gt;
+
+&lt;p&gt;I solved this by adding an uncloseable Popup modal on our logged-in homepage. You can make a bootstrap modal unable to be closed with:&lt;/p&gt;
+
+&lt;p&gt;$(‘#myModal’).modal({backdrop: ‘static’, keyboard: false}) )&lt;/p&gt;
+
+&lt;p&gt;Ok, so users are now locked out of the rest of the application and are forced to make a choice in the modal. So far, so good. The text of the new GDPR EULA is within the modal, as are two buttons: Accept, or Log Out. If they click “Log Out”, I sent them to the regular Devise “Log Out” path. So what happens if they click “Accept”?&lt;/p&gt;
+
+&lt;p&gt;I added a column to our Users table called accepted_gdpr_eula_at that accepts Datetime, and ran the migration. Next, I created a new Controller in the Rails Application called GrprEulaController, and added an action called “accept_gdpr_eula!”. Then I added my route in the routes.rb file. (Bonus points for making this a proper RESTful action, when I refactor this I will do so then– the rest of our app is built in a similar way to this, so it is actually more consistent with everyone else’s work to name it this way. Don’t @ me.)&lt;/p&gt;
+
+&lt;p&gt;The user clicks the “Accept” button, and the method in the controller updates the current_users gdpr_accepted_at column to Time.now, then redirects them to the home path.&lt;/p&gt;
+
+&lt;p&gt;I also added some logic to the Popup Modal - if the current_users gdpr_accepted_at column is nil, show the modal. If it is not nil, don’t show the modal (Since logically it means they have already seen and accepted it.)&lt;/p&gt;
+
+&lt;p&gt;We can now determine who has and has not accepted our new terms, and have restricted the ability of users who have not accepted the new terms from using our web application. Yes it could be argued that we could have built an entire EULA management system, but implementing it this way has solved the business goal in a reasonable amount of time. For what it’s worth, I wrote this on my lunchbreak because I thought it might be helpful to other developers currently working on the same issue, so don’t read too much into any of this or feel you need to break it apart. Have a great Memorial Day Weekend!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 May 2018 12:50:28 -0400</pubDate>
+        <link>http://localhost:4000/Adding-GDRP-EULA-To-A-Ruby-On-Rails-Application/</link>
+        <guid isPermaLink="true">http://localhost:4000/Adding-GDRP-EULA-To-A-Ruby-On-Rails-Application/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
+    
+      <item>
+        <title>Installing Drift into a Ruby on Rails or Jekyll Site</title>
+        <description>&lt;p&gt;I frequently compare the profession of web development to that of being a carpenter. Much of our expertise relies in knowing the correct tool for any particular job, and knowing the layout of the problem and the tools available to us to solve the current problem.&lt;/p&gt;
+
+&lt;p&gt;I mention this because I like using this personal website of mine to show off my work or the tools available to us. Far too frequently, a web developer will not have any samples of their work to show a prospective client, employer, etc. Would you hire a carpenter that couldn't show you anything they've built before, or if the table they showed you was kind of terrible looking? I think not. I enjoy knowing what the latest tools available to me are to help my site look and function better, and one of those tools is called Drift.&lt;/p&gt;
+
+&lt;p&gt;I've seen Drift around for a while now and thought to myself, &quot;Could I install thing into my personal site that runs on the Jekyll framework? Could I easily add the Drift Conversational Marketing into a Ruby on Rails app? I wonder how long it would take me?&quot; I considered it a personal challenge to get it set up and deployed as quickly as possible. I started the clock and got to work onboarding through the free tier of their website.&lt;/p&gt;
+
+&lt;p&gt;So, spoiler alert: It was super easy and I was done in less that 5 minutes. I went through their creation wizard (Select &quot;Javascript&quot; for Jekyll / Ruby on Rails), uploaded my avatar into the system, and had some javascript copied to my clipboard in a matter of minutes.&lt;/p&gt;
+
+&lt;p&gt;In Jekyll, open up includes/head.html and paste the copied code into that partial. Save it. Commit it, push it, deploy it. For Rails, you'll want to open views/shared/header.html.erb and paste the js there.&lt;p&gt;
+
+&lt;p&gt;It literally was one of the easiest things I've ever added to this site and now I have a super cool chat box on my personal website. You can see it in action on the bottom right corner of this page, the little red box. Head on over to Drift.com and check them out sometime.&lt;/p&gt;
+&lt;/p&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 28 Nov 2017 12:20:28 -0500</pubDate>
+        <link>http://localhost:4000/Installing-Drift-In-A-Ruby-On-Rails-or-Jekyll-Applicaiton/</link>
+        <guid isPermaLink="true">http://localhost:4000/Installing-Drift-In-A-Ruby-On-Rails-or-Jekyll-Applicaiton/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
+    
+      <item>
+        <title>Domains For Sale</title>
+        <description>&lt;p&gt;This page is a landing page for my domain sales side business (I believe the kids these days call it a 'side hustle'? I digress.) The domains I own are DNS forwarded to this page where I have the below list of all domains currently owned by myself or someone I represent. I have over 10 years of experience in the business of buying and selling internet domains. Drop me a line if you have any questions about the business. On to the current products...&lt;/p&gt;
+
+&lt;table class=&quot;table table-hover&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;p&gt;Domain / URL&lt;/p&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;p&gt;Description&lt;/p&gt;&lt;/th&gt;
+            &lt;th&gt;&lt;p&gt;Buy Now&lt;/p&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;p&gt;BuyCurses.com&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;p&gt;No description Available&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; onclick=&quot;location.href='mailto:hi@jessewaites.com';&quot;&gt;Make Offer&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;p&gt;whtmntn.com&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;p&gt;Short abbreviation of White Mountain, perfect for a business located in the White Mountains area of New Hampshire.&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; onclick=&quot;location.href='mailto:hi@jessewaites.com';&quot;&gt;Make Offer&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;p&gt;whtmntns.com&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;p&gt;Short abbreviation of White Mountains, perfect for a business located in the White Mountains area of New Hampshire.&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; onclick=&quot;location.href='mailto:hi@jessewaites.com';&quot;&gt;Make Offer&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;p&gt;BCKPCKR.com&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;p&gt;Short abbreviation of Backpacker&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; onclick=&quot;location.href='mailto:hi@jessewaites.com';&quot;&gt;Make Offer&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;p&gt;BuyMyMCM.com&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;p&gt;Buy My Man Crush Monday&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; onclick=&quot;location.href='mailto:hi@jessewaites.com';&quot;&gt;Make Offer&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;p&gt;BuyMyWCW.com&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;p&gt;Buy My Woman Crush Wednesday&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; onclick=&quot;location.href='mailto:hi@jessewaites.com';&quot;&gt;Make Offer&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;p&gt;InvestingInCryptocoins.com&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;p&gt;$$$$&lt;/p&gt;&lt;/td&gt;
+            &lt;td&gt;&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; onclick=&quot;location.href='mailto:hi@jessewaites.com';&quot;&gt;Make Offer&lt;/button&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        <pubDate>Sun, 26 Nov 2017 12:20:28 -0500</pubDate>
+        <link>http://localhost:4000/Premium-Domain-Names-For-Sale-2018/</link>
+        <guid isPermaLink="true">http://localhost:4000/Premium-Domain-Names-For-Sale-2018/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
+    
+      <item>
+        <title>Redirecting To An External Link In A React Application</title>
+        <description>&lt;p&gt;Recently, I was working on a React Application and wondered how I could link to an external web page. I was learning the in's and out's of React Router and decided to figure it out. (If you haven't figured it out yet, that's the best way to learn: Have an idea and work on it until you implement it.)&lt;/p&gt;
+
+&lt;p&gt;A React focused internet forum directed me to look at the the Redirect
+function of the React Router, so I started there. I created my component, imported it into Index.js, but for the life of me I couldn't get it to work. The issue is that Redirect is for internal links only. Going from /Posts to /Users, for example. (It seems kind of obvious in retrospect.) I deleted the component and reverted the rest of my work and kept up the research.&lt;p&gt;
+
+&lt;p&gt;The solution to this wasn't obvious so I thought to write this blog post and document this simple solution so that others can find it. Without further ado...
+
+It turns out that what I wanted to do was use an inline component and window.location to force the browser to go to another page. I'll paste a gist below so you can see how I set my React Router up in Index.js. This definitely works with React Router 3 and 4. If this was useful to you, send me an email or follow me and let me know to keep it up.&lt;p&gt;
+
+&lt;script src=&quot;https://gist.github.com/piratebroadcast/ff057097328b823251b3976117404934.js&quot;&gt;&lt;/script&gt;
+&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 26 Oct 2017 12:20:28 -0400</pubDate>
+        <link>http://localhost:4000/Redirecting-To-An-External-Link-In-A-React-Application/</link>
+        <guid isPermaLink="true">http://localhost:4000/Redirecting-To-An-External-Link-In-A-React-Application/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
+    
+      <item>
+        <title>Debug Your Rails Application With This One Weird Trick</title>
+        <description>&lt;p&gt;Fate is a fickle mistress. Sometimes you find yourself working in a fresh Rails application, the entire architecture
+of which fits inside of your mind. Other times, you find yourself working on a massive project with dozens of interconnecting pieces. I've found myself of the receiving end of the latter rather than the former more often not.
+I would sometimes run into a problem where, I would try and save a new instance of an object through a form (called Thing.rb in this example) and the thing just wouldn't save, no matter what I tried. Logs weren't helpful, and Pry wouldn't help because I simply don't know what I don't know.&lt;/p&gt;
+
+&lt;p&gt;I could try all kinds of incantations on it and shove the kitchen sink into the object (maybe a validation somewhere I don't know about?) but at the end of the day, you don't know what you don't know.&lt;/p&gt;
+
+&lt;p&gt;Then one day I figured out this one weird trick...&lt;/p&gt;
+
+&lt;p&gt;Drop a flash notice into the create action that tells me the errors on the object. Using this syntax, it even
+comes out in human english so it's useful for your users as well. (Not just us developer types)&lt;/p&gt;
+
+&lt;p&gt;Using this technique, I was able to see that the reason my object wasn't saving was that there was a validation being called on it on the model level, even though that association had long been removed. Who knows how long this had been broken in production?&lt;/p&gt;
+
+&lt;p&gt;Try dropping the flash message line into your controllers sometime and see if you find it helpful for you as well.&lt;/p&gt;
+
+&lt;p&gt;Cheers.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/piratebroadcast/fa56eb3fd9d576f0f1211b2098952b99.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Tue, 23 May 2017 12:20:28 -0400</pubDate>
+        <link>http://localhost:4000/Debug-Your-Rails-Application-With-This-One-Weird-Trick/</link>
+        <guid isPermaLink="true">http://localhost:4000/Debug-Your-Rails-Application-With-This-One-Weird-Trick/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
+    
+      <item>
+        <title>Sending Responsive Emails In Ruby On Rails with Foundation For Emails</title>
+        <description>&lt;p&gt;Recently, I was tasked with building a Report Card feature for our customers at work. After getting
+more details about the intent of the feature, I decided that a slick looking responsive email would
+best fill this need. I did a lot of research about the best tools for this and settled on using Foundation
+For Emails, by the Zurb company. (For the layperson, a &quot;Responsive&quot; email is an email that &quot;morphs&quot; to fit the screen of whatever device it is currently being read on, so that means that it looks great on both an iPhone or an Android or a huge desktop monitor in a web browser.)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://foundation.zurb.com/emails.html&quot;&gt;Here is the main Foundation For Emails website.&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A few of the reasons I chose Foundation For Emails is that...&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://foundation.zurb.com/emails/email-templates.html&quot;&gt;They have some great prebuilt templates to choose from&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;...So I could choose the one that closest met the needs of the Report Card. Second, they're almost the only game in town. There aren't a lot of other tools for this particular job. A key thing to know about is that responsive emails is a tricky process -- there are entire companies that build products around doing this, because each email client renders things differently, and GMail strips the style tags out of emails completely, so to find a single tool that deals with all of this for you is a great thing. So after looking at my options, Zurb it is. Onwards...&lt;/p&gt;
+
+&lt;p&gt;In this feature, let's presume Users have_many ReportCards, and ReportCards belong_to Users.
+I used the Whenever gem and the Schedule.rb file to automatically generate these User ReportCards via a rake task without any user intervention on the last day of the month, every single month.&lt;/p&gt;
+
+&lt;p&gt;Now let's talk about the data in these Report Cards. The data in the actual thing I built was, frankly, very complicated, but for this example let's keep it nice and simple... Let's say a Report has 30 &quot;grades&quot;, for 30 days a month, each as the string datatype. Each day the user can receive an A, B, C, D, or F (Why is there no E grade? I just realized that. Super weird. Anyways...)&lt;/p&gt;
+
+&lt;p&gt;Now that I understand the data structure, I generate a Mailer in the rails app from the Rails console:
+
+&lt;pre&gt;$ rails g mailer CardMailer&lt;/pre&gt;
+
+&lt;p&gt;And inside that mailer, I need to add the local variables that will render into the email itself:&lt;p&gt;
+
+&lt;script src=&quot;https://gist.github.com/piratebroadcast/f2428257baaab951fc5aa10dce42ffc0.js&quot;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Now on to the tricky part: When we ran the mailer generator command, it created a folder in our Views called &quot;Report Card Mailer&quot; - Inside of this, we need to create a file called &quot;report.html.erb&quot;. The file has to be named EXACTLY that for the mailer to find the right template... Our method is called def report(user), and it looks for the report.html.erb template based on that name. That took me forever to debug and figure out the first time through.&lt;/p&gt;
+
+&lt;p&gt;Now that we have a place to put our responsive code, we need to grab it. Head over to the Foundation For Emails site and choose the template you want.&lt;/p&gt;
+
+&lt;p&gt;Let's say this time we go with the &quot;basic&quot; template found here: https://litmus.com/checklist/emails/public/eb690d2&lt;/p&gt;
+
+
+&lt;p&gt;Sign up and download the whole Foundation For Emails project file and open the folder in your editor. Now copy the Foundation CSS file completely and paste it into the CSS section of the Inliner found here:&lt;/p&gt;
+
+&lt;p&gt;Inliner: http://foundation.zurb.com/emails/inliner-v2.html&lt;/p&gt;
+
+&lt;p&gt;Next, open the HTML file for the Basic email and paste it into the HTML part. Make sure to uncheck the &quot;compress HTML&quot; option, then click the Inline! button. Copy that output and paste it directly into the report.html.erb file we created earlier in that mailer folder in the Views section.&lt;/p&gt;
+
+&lt;p&gt;Note: This is a good time to install the letter_opener rubygem in the development section of your gemfile if you don't already have it.
+
+Now, fire up your Rails console and enter the following:&lt;/p&gt;
+
+&lt;pre&gt;$ ReportCardMailer.report(User.last).deliver&lt;/pre&gt;
+
+&lt;p&gt;You should see a sweet looking email open up in your web browser thanks to letter_opener that looks identical to the one we selected from the template. You can also use the Google Chromes Device Emulator in the developer tools to emulate an iPhone device to see how it will look on a mobile. I took a screenshot of the screen at this point and dropped it into one of the devices at Mockuphone.com, so my boss was able to show stakeholders our progress and we could communicate visually with the rest of the team how the feature was coming along. Its also useful for making marketing materials for your new feature if need be.&lt;/p&gt;
+
+&lt;p&gt;Mockuphone link: https://mockuphone.com/#ios&lt;/p&gt;
+
+&lt;p&gt;Anyways, go through the email and edit it with whatever marketing text you need, and populate the variables we need with things like:
+&quot;Your Grades:&quot;
+&quot;Day One Grade:&quot; &quot;&amp;lt;%= day_1_grade %&amp;gt;&quot;
+&quot;Day Two Grade:&quot; &quot;&amp;lt;%= day_2_grade %&amp;gt;&quot;
+and so on...&lt;/p&gt;
+
+&lt;p&gt;DO NOT add the rails tags before running it through the inliner, because the inliner itself doesn't understand rails tags and it will misinterpret them and break them. And make sure you stick to the template as closely as possible. The whole point of using it is that the people at Zurb have spend a LOT of time making sure this all works perfectly responsively, and it's a bad idea to go crazy, making fundamental changes to the template that might break that.&lt;/p&gt;
+
+&lt;p&gt;NOTE: One of the most important &quot;Gotchas&quot; I learned from this process is how to fix broken email images. You see, when these emails would open for me locally, the image paths would be broken. This is because the email itself has no knowledge of the rails app and no idea about how image_tag paths work. We need to tell our email where our image assets are located on the internet through the action mailer's asset host config setting. The way to do this is to edit your application.rb file and add the following line:&lt;/p&gt;
+
+&lt;pre&gt;config.action_mailer.asset_host = 'http://YourSiteUrl.com'&lt;/pre&gt;
+
+&lt;p&gt;In development.rb, we need to override this to localhost:&lt;/p&gt;
+
+&lt;pre&gt;config.action_mailer.asset_host = 'localhost:3000'&lt;/pre&gt;
+
+&lt;p&gt;This took me a fair bit of time to debug and you get to know it for free. Lucky you. Now fire off another email in the console and your images, if you are using them, should now be working as intended.&lt;/p&gt;
+
+&lt;p&gt;The very last implementation part of this is to send the report cards on a regular schedule. I did this by writing a simple rake take that found all users = Users.where(:send_report_cards =&amp;gt; &quot;true&quot;), then
+looping through those users and firing off ReportCardMailer.report(user).deliver - This could also be made into a Sidekiq job.&lt;/p&gt;
+
+&lt;p&gt;That presumes you made some sort of boolean setting on user to determine if a user gets the email or not but you get the idea there. Finally, I add a line to our schedule.rb file from that Whenever gem and run this rake task on the morning of the first of the month. Generate the Report Card at the end of the month, and send it on the 1st of the month. You see, report_card = user.report_cards.last on the 1st of the month will always be the correct report card, the most recent one, since there are created, chronologically, at the end of the previous month in a way in which we can anticipate. There may be a better way to do this but it fits our current need without overengineering a solution.&lt;/p&gt;
+
+&lt;p&gt;To summarize, the process is: Download the Foundation For Emails project, Edit your template for the text you want, then copy the CSS and paste it into the Inliner, then paste the edited HTML, uncheck &quot;compress HTML option&quot;, paste the output into the mailer template, add your asset host settings, then add your rails tags and fire off a test in the console.&lt;/p&gt;
+
+&lt;p&gt;So thats how I built the ReportCard feature, programmatically generated the Report Cards, and emailed them out at a regularly scheduled interval. If you have any questions, drop me a line on Twitter or via email and I'll do my best to give you a hand. Cheers.&lt;/p&gt;
+&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 06 May 2017 12:20:28 -0400</pubDate>
+        <link>http://localhost:4000/Sending-Responsive-Emails-In-Ruby-On-Rails/</link>
+        <guid isPermaLink="true">http://localhost:4000/Sending-Responsive-Emails-In-Ruby-On-Rails/</guid>
+        
+        
+        <category>coding</category>
+        
+      </item>
     
       <item>
         <title>Demo: Drawing on the screen using HTML5 canvas</title>
@@ -20,13 +293,13 @@
 
 &lt;canvas id=&quot;draw&quot; width=&quot;800&quot; height=&quot;800&quot;&gt;&lt;/canvas&gt;
 &lt;script&gt;
-const canvas = document.querySelector(&#39;#draw&#39;);
-const ctx = canvas.getContext(&#39;2d&#39;);
+const canvas = document.querySelector('#draw');
+const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-ctx.strokeStyle = &#39;#b4251b&#39;;
-ctx.lineJoin = &#39;round&#39;;
-ctx.lineCap = &#39;round&#39;;
+ctx.strokeStyle = '#b4251b';
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
 ctx.lineWidth = 100;
 
 
@@ -64,15 +337,15 @@ function draw(e) {
 
 }
 
-canvas.addEventListener(&#39;mousedown&#39;, (e) =&gt; {
+canvas.addEventListener('mousedown', (e) =&gt; {
   isDrawing = true;
   [lastX, lastY] = [e.offsetX, e.offsetY];
 });
 
 
-canvas.addEventListener(&#39;mousemove&#39;, draw);
-canvas.addEventListener(&#39;mouseup&#39;, () =&gt; isDrawing = false);
-canvas.addEventListener(&#39;mouseout&#39;, () =&gt; isDrawing = false);
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mouseup', () =&gt; isDrawing = false);
+canvas.addEventListener('mouseout', () =&gt; isDrawing = false);
 
 // Set up touch events for mobile, etc
 canvas.addEventListener(&quot;touchstart&quot;, function (e) {
@@ -125,14 +398,14 @@ document.body.addEventListener(&quot;touchmove&quot;, function (e) {
 
 function printCanvas(el) {  
     var dataUrl = canvas.toDataURL();
-    var windowContent = &#39;&lt;!DOCTYPE html&gt;&#39;;
-    windowContent += &#39;&lt;html&gt;&#39;
-    windowContent += &#39;&lt;head&gt;&lt;title&gt;Your image from JesseWaites.com&lt;/title&gt;&lt;/head&gt;&#39;;
-    windowContent += &#39;&lt;body&gt;&#39;
-    windowContent += &#39;&lt;img src=&quot;&#39; + dataUrl + &#39;&quot;&gt;&#39;;
-    windowContent += &#39;&lt;/body&gt;&#39;;
-    windowContent += &#39;&lt;/html&gt;&#39;;
-    var printWin = window.open(&#39;&#39;,&#39;&#39;,&#39;width=340,height=260&#39;);
+    var windowContent = '&lt;!DOCTYPE html&gt;';
+    windowContent += '&lt;html&gt;'
+    windowContent += '&lt;head&gt;&lt;title&gt;Your image from JesseWaites.com&lt;/title&gt;&lt;/head&gt;';
+    windowContent += '&lt;body&gt;'
+    windowContent += '&lt;img src=&quot;' + dataUrl + '&quot;&gt;';
+    windowContent += '&lt;/body&gt;';
+    windowContent += '&lt;/html&gt;';
+    var printWin = window.open('','','width=340,height=260');
     printWin.document.open();
     printWin.document.write(windowContent);
     printWin.document.close();
@@ -146,8 +419,8 @@ function printCanvas(el) {
 
 </description>
         <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
-        <link>http://JesseWaites.com/drawing-on-the-screen-with-html5-canvas/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/drawing-on-the-screen-with-html5-canvas/</guid>
+        <link>http://localhost:4000/drawing-on-the-screen-with-html5-canvas/</link>
+        <guid isPermaLink="true">http://localhost:4000/drawing-on-the-screen-with-html5-canvas/</guid>
         
         
         <category>coding</category>
@@ -156,7 +429,7 @@ function printCanvas(el) {
     
       <item>
         <title>Text To Speech Demonstration using Javascript</title>
-        <description>&lt;p&gt;Here&#39;s a demo of the experimental &quot;Speech Synthesis&quot; interface of the Web Speech API.
+        <description>&lt;p&gt;Here's a demo of the experimental &quot;Speech Synthesis&quot; interface of the Web Speech API.
 It should be noted that this does not currently work on mobile devices.&lt;/p&gt;
 
 &lt;p&gt;&lt;label for=&quot;rate&quot;&gt;Select a Voice:&lt;/label&gt;
@@ -181,18 +454,18 @@ It should be noted that this does not currently work on mobile devices.&lt;/p&gt
 &lt;script&gt;
 const msg = new SpeechSynthesisUtterance();
 let voices = [];
-const voicesDropdown = document.querySelector(&#39;[name=&quot;voice&quot;]&#39;);
-const options = document.querySelectorAll(&#39;[type=&quot;range&quot;], [name=&quot;text&quot;]&#39;);
-const speakButton = document.querySelector(&#39;#speak&#39;);
-const stopButton = document.querySelector(&#39;#stop&#39;);
-msg.text = document.querySelector(&#39;[name=&quot;text&quot;]&#39;).value;
+const voicesDropdown = document.querySelector('[name=&quot;voice&quot;]');
+const options = document.querySelectorAll('[type=&quot;range&quot;], [name=&quot;text&quot;]');
+const speakButton = document.querySelector('#speak');
+const stopButton = document.querySelector('#stop');
+msg.text = document.querySelector('[name=&quot;text&quot;]').value;
 
 function populateVoices() {
 voices = this.getVoices();
 voicesDropdown.innerHTML = voices
-  .filter(voice =&gt; voice.lang.includes(&#39;en&#39;))
+  .filter(voice =&gt; voice.lang.includes('en'))
   .map(voice =&gt; `&lt;option value=&quot;${voice.name}&quot;&gt;${voice.name} (${voice.lang})&lt;/option&gt;`)
-  .join(&#39;&#39;);
+  .join('');
 }
 
 function setVoice() {
@@ -213,18 +486,18 @@ msg[this.name] = this.value;
 toggle();
 }
 
-speechSynthesis.addEventListener(&#39;voiceschanged&#39;, populateVoices);
-voicesDropdown.addEventListener(&#39;change&#39;, setVoice);
-options.forEach(option =&gt; option.addEventListener(&#39;change&#39;, setOption));
-speakButton.addEventListener(&#39;click&#39;, toggle);
-stopButton.addEventListener(&#39;click&#39;, () =&gt; toggle(false));
+speechSynthesis.addEventListener('voiceschanged', populateVoices);
+voicesDropdown.addEventListener('change', setVoice);
+options.forEach(option =&gt; option.addEventListener('change', setOption));
+speakButton.addEventListener('click', toggle);
+stopButton.addEventListener('click', () =&gt; toggle(false));
 
 &lt;/script&gt;
 
 </description>
         <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
-        <link>http://JesseWaites.com/text-to-speech-demo-in-javascript/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/text-to-speech-demo-in-javascript/</guid>
+        <link>http://localhost:4000/text-to-speech-demo-in-javascript/</link>
+        <guid isPermaLink="true">http://localhost:4000/text-to-speech-demo-in-javascript/</guid>
         
         
         <category>coding</category>
@@ -255,7 +528,7 @@ button, input, optgroup, select, textarea {
     &lt;/ul&gt;
   &lt;/form&gt;
 &lt;script&gt;
-const endpoint = &#39;https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json&#39;;
+const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
 
 const cities = [];
 fetch(endpoint)
@@ -264,19 +537,19 @@ fetch(endpoint)
 
 function findMatches(wordToMatch, cities) {
   return cities.filter(place =&gt; {
-    const regex = new RegExp(wordToMatch, &#39;gi&#39;);
+    const regex = new RegExp(wordToMatch, 'gi');
     return place.city.match(regex) || place.state.match(regex)
   });
 }
 
 function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, &#39;,&#39;);
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 function displayMatches() {
   const matchArray = findMatches(this.value, cities);
   const html = matchArray.map(place =&gt; {
-    const regex = new RegExp(this.value, &#39;gi&#39;);
+    const regex = new RegExp(this.value, 'gi');
     const cityName = place.city.replace(regex, `&lt;span class=&quot;hl&quot;&gt;${this.value}&lt;/span&gt;`);
     const stateName = place.state.replace(regex, `&lt;span class=&quot;hl&quot;&gt;${this.value}&lt;/span&gt;`);
     return `
@@ -285,679 +558,22 @@ function displayMatches() {
         &lt;span class=&quot;population&quot;&gt;Population: ${numberWithCommas(place.population)}&lt;/span&gt;
       &lt;/li&gt;
     `;
-  }).join(&#39;&#39;);
+  }).join('');
   suggestions.innerHTML = html;
 }
 
-const searchInput = document.querySelector(&#39;.search&#39;);
-const suggestions = document.querySelector(&#39;.suggestions&#39;);
+const searchInput = document.querySelector('.search');
+const suggestions = document.querySelector('.suggestions');
 
-searchInput.addEventListener(&#39;change&#39;, displayMatches);
-searchInput.addEventListener(&#39;keyup&#39;, displayMatches);
+searchInput.addEventListener('change', displayMatches);
+searchInput.addEventListener('keyup', displayMatches);
 
 &lt;/script&gt;
 &lt;/body&gt;
 </description>
         <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
-        <link>http://JesseWaites.com/ajax-typeahead-stunts/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/ajax-typeahead-stunts/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Updating CSS variables with Javascript in the Swiss Alps</title>
-        <description>&lt;body&gt;
-  &lt;p&gt;Move the range sliders around to update our CSS variables with &lt;span class=&quot;hl&quot;&gt;Javascript&lt;/span&gt;
-  and reveal my hiking picture taken in the Swiss Alps, in Gimmelwald, Switzerland. Though it is possible to make this work on mobile, it works best in a full browser, in Chrome. (The range slider controls are a pain to trigger in iOS Safari.)&lt;/p&gt;
-
-  &lt;div class=&quot;controls&quot;&gt;
-    &lt;label for=&quot;spacing&quot;&gt;Frame Size:&lt;/label&gt;
-    &lt;input type=&quot;range&quot; name=&quot;spacing&quot; min=&quot;10&quot; max=&quot;200&quot; value=&quot;10&quot; data-sizing=&quot;px&quot; /&gt;
-
-    &lt;label for=&quot;blur&quot;&gt;Blur:&lt;/label&gt;
-    &lt;input type=&quot;range&quot; name=&quot;blur&quot; min=&quot;0&quot; max=&quot;25&quot; value=&quot;5&quot; data-sizing=&quot;px&quot; /&gt;
-
-    &lt;label for=&quot;base&quot;&gt;Frame Color:&lt;/label&gt;
-    &lt;input type=&quot;color&quot; name=&quot;base&quot; value=&quot;#b4251b&quot; /&gt;
-  &lt;/div&gt;
-
-  &lt;img src=&quot;http://i.imgur.com/zSUPCqp.png&quot; /&gt;
-  &lt;p&gt;This is a photo from a recent hiking trip I took to the Swiss Alps, in Gimmelwald, Switzerland.
-  It is an amazing place and you should go if you ever have the chance. I highly recommend Mountain Hostel, in Gimmelwald.&lt;/p&gt;
-
-&lt;style&gt;
-
-input[type=range]{
-  -webkit-appearance: none;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-  width: 300px;
-  height: 5px;
-  background: #ddd;
-  border: none;
-  border-radius: 3px;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  border: none;
-  height: 16px;
-  width: 16px;
-  border-radius: 50%;
-  background: var(--base);
-  margin-top: 0px;
-}
-
-input[type=range]:focus {
-  outline: none;
-}
-
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #ccc;
-}
-
-:root {
-  --base: #b4251b;
-  --spacing: 10px;
-  --blur: 5px;
-  --grayscale: 0px;
-}
-
-img {
-  padding: var(--spacing);
-  background: var(--base);
-  filter: blur(var(--blur));
-}
-
-.hl {
-  color: var(--base);
-}
-
-body {
-  color: black;
-  font-family: &#39;helvetica neue&#39;, sans-serif;
-  font-weight: 100;
-  font-size: 50px;
-}
-label {
-    color: var(--base);
-    display: inline-block;
-    max-width: 100%;
-    margin-bottom: 5px;
-    font-weight: 700;
-}
-
-.controls {
-  margin-bottom: 50px;
-}
-
-input {
-  width:100px;
-}
-&lt;/style&gt;
-
-&lt;script&gt;
-  const inputs = document.querySelectorAll(&#39;.controls input&#39;);
-
-  function handleUpdate() {
-    const suffix = this.dataset.sizing || &#39;&#39;;
-    document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
-  }
-
-  inputs.forEach(input =&gt; input.addEventListener(&#39;change&#39;, handleUpdate));
-  inputs.forEach(input =&gt; input.addEventListener(&#39;mousemove&#39;, handleUpdate));
-&lt;/script&gt;
-
-
-&lt;/body&gt;
-</description>
-        <pubDate>Tue, 20 Dec 2016 12:20:28 -0500</pubDate>
-        <link>http://JesseWaites.com/image-blur-with-javascipt/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/image-blur-with-javascipt/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Tick Tock: Javascript / CSS Analog Clock Demo</title>
-        <description>&lt;body&gt;
-
-    &lt;p&gt;The current time is:&lt;/p&gt;
-
-
-    &lt;div class=&quot;clock&quot;&gt;
-      &lt;div class=&quot;clock-face&quot;&gt;
-        &lt;div class=&quot;hand hour-hand&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;hand min-hand&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;hand second-hand&quot;&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;p id=&quot;time&quot;&gt;&lt;/p&gt;
-
-  &lt;style&gt;
-
-
-    .clock {
-      width: 30rem;
-      height: 30rem;
-      border:20px solid #b4251b;
-      border-radius:50%;
-      margin:50px auto;
-      position: relative;
-      padding:2rem;
-      box-shadow:
-        0 0 0 4px rgba(0,0,0,0.1),
-        inset 0 0 0 3px #EFEFEF,
-        inset 0 0 10px black,
-        0 0 10px rgba(0,0,0,0.2);
-    }
-
-    .clock-face {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transform: translateY(-3px);
-    }
-
-    .hand {
-      width:50%;
-      height:6px;
-      background:black;
-      position: absolute;
-      top:50%;
-      transform-origin: 100%;
-      transform: rotate(90deg);
-      transition: all 0.05s;
-      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
-    }
-&lt;/style&gt;
-
-&lt;script&gt;
-  const secondHand = document.querySelector(&#39;.second-hand&#39;);
-  const minsHand = document.querySelector(&#39;.min-hand&#39;);
-  const hourHand = document.querySelector(&#39;.hour-hand&#39;);
-
-  function setDate() {
-    const now = new Date();
-
-    const seconds = now.getSeconds();
-    const secondsDegrees = ((seconds / 60) * 360) + 90;
-    secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-
-    const mins = now.getMinutes();
-    const minsDegrees = ((mins / 60) * 360) + 90;
-    minsHand.style.transform = `rotate(${minsDegrees}deg)`;
-
-    const hour = now.getHours();
-    const hourDegrees = ((hour / 12) * 360) + 90;
-    hourHand.style.transform = `rotate(${hourDegrees}deg)`;
-  }
-
-  setInterval(setDate, 1000);
-
-  setDate();
-
-  (function () {
-    function checkTime(i) {
-        return (i &lt; 10) ? &quot;0&quot; + i : i;
-    }
-
-    function startTime() {
-        var today = new Date(),
-            h = checkTime(today.getHours()),
-            m = checkTime(today.getMinutes()),
-            s = checkTime(today.getSeconds());
-            ampm = (h &gt;= 12) ? &quot;PM&quot; : &quot;AM&quot;;
-        document.getElementById(&#39;time&#39;).innerHTML = h + &quot;:&quot; + m + &quot;:&quot; + s + ampm;
-        t = setTimeout(function () {
-            startTime()
-        }, 500);
-    }
-    startTime();
-})();
-
-&lt;/script&gt;
-&lt;/body&gt;
-</description>
-        <pubDate>Mon, 12 Dec 2016 12:20:28 -0500</pubDate>
-        <link>http://JesseWaites.com/css-javascript-analog-clock/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/css-javascript-analog-clock/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Speech to Text Translation Demo with Javascript</title>
-        <description>&lt;p&gt;Check this out – See that thing in the upper left corner of the browser? Click “Allow”
-to allow my website to briefly access your microphone, then start talking to your computer.
-This works on non-mobile devices only, and best in Chrome. I built this with the HTML5 Speech Recognition API, which allows JavaScript to have access to a browser’s audio stream and convert it to text.&lt;/p&gt;
-
-&lt;p&gt;When you’re testing it, say the words “Pizza”, “Ice Cream”, or “Cheeseburger” for a nice surprise.&lt;/p&gt;
-
-&lt;pre&gt;&lt;div class=&quot;words&quot; contenteditable=&quot;&quot;&gt;
-&lt;/div&gt;&lt;/pre&gt;
-
-&lt;script&gt;
-  window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-  const recognition = new SpeechRecognition();
-  recognition.interimResults = true;
-
-  let p = document.createElement(&#39;p&#39;);
-  const words = document.querySelector(&#39;.words&#39;);
-  words.appendChild(p);
-
-  recognition.addEventListener(&#39;result&#39;, e =&gt; {
-    const transcript = Array.from(e.results)
-      .map(result =&gt; result[0])
-      .map(result =&gt; result.transcript)
-      .join(&#39;&#39;);
-
-      const poopScript = transcript.replace(/poop|poo|shit|dump/gi, &#39;💩&#39;);
-      p.textContent = poopScript;
-
-      if (e.results[0].isFinal) {
-        p = document.createElement(&#39;p&#39;);
-        words.appendChild(p);
-      }
-      if(transcript.includes(&#39;pizza&#39;)) {
-        alert(&quot;Your 🍕 is on the way!&quot;);
-      }
-      if(transcript.includes(&#39;Pizza&#39;)) {
-        alert(&quot;Your 🍕 is on the way!&quot;);
-      }
-      if(transcript.includes(&#39;cheeseburger&#39;)) {
-        alert(&quot;🍔 Protip: 5 Guys has the best burger in town.&quot;);
-      }
-      if(transcript.includes(&#39;ice cream&#39;)) {
-        alert(&quot;😕 Isn&#39;t it a little cold for Ice cream? Anyway, your wish is my command: 🍦&quot;);
-      }
-      if(transcript.includes(&#39;shit&#39;)) {
-        alert(&quot;💩 💩 💩 💩 💩&quot;);
-      }
-  });
-
-  recognition.addEventListener(&#39;end&#39;, recognition.start);
-
-  recognition.start();
-
-&lt;/script&gt;
-
-</description>
-        <pubDate>Mon, 17 Oct 2016 12:20:28 -0400</pubDate>
-        <link>http://JesseWaites.com/speech-to-text-translation-in-javascript-demo/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/speech-to-text-translation-in-javascript-demo/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Javascript Drum Machine Demo</title>
-        <description>&lt;style&gt;
-.keys {
-  display:flex;
-  flex:1;
-  min-height:20vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.key {
-  border:4px solid black;
-  border-radius:5px;
-  margin:1rem;
-  font-size: 1.5rem;
-  padding:1rem .5rem;
-  transition:all .07s;
-  width:100px;
-  text-align: center;
-  color:white;
-  background:rgba(0,0,0,0.4);
-  text-shadow:0 0 5px black;
-}
-
-.playing {
-  transform:scale(1.1);
-  border-color:#ffc600;
-  box-shadow: 0 0 50px #ffc600;
-}
-
-kbd {
-  display: block;
-  font-size: 40px;
-}
-
-.sound {
-  font-size: 5.2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color:#ffc600;
-}
-&lt;/style&gt;
-
-&lt;div class=&quot;keys&quot;&gt;
-    &lt;div data-key=&quot;65&quot; class=&quot;key&quot;&gt;
-      &lt;kbd&gt;A&lt;/kbd&gt;
-      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div data-key=&quot;83&quot; class=&quot;key&quot;&gt;
-      &lt;kbd&gt;S&lt;/kbd&gt;
-      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div data-key=&quot;68&quot; class=&quot;key&quot;&gt;
-      &lt;kbd&gt;D&lt;/kbd&gt;
-      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div data-key=&quot;70&quot; class=&quot;key&quot;&gt;
-      &lt;kbd&gt;F&lt;/kbd&gt;
-      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div data-key=&quot;71&quot; class=&quot;key&quot;&gt;
-      &lt;kbd&gt;G&lt;/kbd&gt;
-      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div data-key=&quot;72&quot; class=&quot;key&quot;&gt;
-      &lt;kbd&gt;H&lt;/kbd&gt;
-      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div data-key=&quot;74&quot; class=&quot;key&quot;&gt;
-      &lt;kbd&gt;J&lt;/kbd&gt;
-      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div data-key=&quot;75&quot; class=&quot;key&quot;&gt;
-      &lt;kbd&gt;K&lt;/kbd&gt;
-      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div data-key=&quot;76&quot; class=&quot;key&quot;&gt;
-      &lt;kbd&gt;L&lt;/kbd&gt;
-      &lt;span class=&quot;sound&quot;&gt;&lt;/span&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-&lt;audio data-key=&quot;65&quot; src=&quot;/sounds/clap.wav&quot;&gt;&lt;/audio&gt;
-&lt;audio data-key=&quot;83&quot; src=&quot;/sounds/hihat.wav&quot;&gt;&lt;/audio&gt;
-&lt;audio data-key=&quot;68&quot; src=&quot;/sounds/kick.wav&quot;&gt;&lt;/audio&gt;
-&lt;audio data-key=&quot;70&quot; src=&quot;/sounds/openhat.wav&quot;&gt;&lt;/audio&gt;
-&lt;audio data-key=&quot;71&quot; src=&quot;/sounds/boom.wav&quot;&gt;&lt;/audio&gt;
-&lt;audio data-key=&quot;72&quot; src=&quot;/sounds/ride.wav&quot;&gt;&lt;/audio&gt;
-&lt;audio data-key=&quot;74&quot; src=&quot;/sounds/snare.wav&quot;&gt;&lt;/audio&gt;
-&lt;audio data-key=&quot;75&quot; src=&quot;/sounds/tom.wav&quot;&gt;&lt;/audio&gt;
-&lt;audio data-key=&quot;76&quot; src=&quot;/sounds/tink.wav&quot;&gt;&lt;/audio&gt;
-
-&lt;p&gt;If you’re on a laptop, press the letter “A” , then “F” - Cool, right? (This demo works on non-mobile devices only. Sorry, iPhone and Android users.)&lt;/p&gt;
-
-&lt;p&gt;Recently, my friend Ben shared a link to Web Bos’ free new Javascript course, Javascript30. I’ve known Wes’ name around for quite a while being that he has
-  created what is known as the de facto ReactJs course, so I was curious to what his free course would offer. I’ve recently decided to give it a spin and was happy to see that the first course is building a javascript drum machine. I’ve always wanted to build one of these.&lt;/p&gt;
-
-&lt;p&gt;Long story short, you create a directory in your project full of .wav sound files. In your HTML, you have various audio tags - each one has a custom data-key attribute assigned to a different keyboard letter. In your javascript, you have a window listener waiting and watching for keyboard presses. When a key on the keyboard is pushed that corresponds to an audio file, that file is played via the audio HTML API. Otherwise, if a key is pressed that is NOT associated with an audio file, the function is exited and begins again, waiting and listening for the next keypress. I’m happy with Wes’ course so far and am looking forward to the rest of it.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://javascript30.com/&quot;&gt;Click here to see Wes’ Javascript30 course.&lt;/a&gt;&lt;/p&gt;
-
-&lt;script&gt;
-    function removeTransition(e) {
-      if (e.propertyName !== &#39;transform&#39;) return;
-      e.target.classList.remove(&#39;playing&#39;);
-    }
-
-    function playSound(e) {
-      const audio = document.querySelector(`audio[data-key=&quot;${e.keyCode}&quot;]`);
-      const key = document.querySelector(`div[data-key=&quot;${e.keyCode}&quot;]`);
-      if (!audio) return;
-
-      key.classList.add(&#39;playing&#39;);
-      audio.currentTime = 0;
-      audio.play();
-    }
-
-    const keys = Array.from(document.querySelectorAll(&#39;.key&#39;));
-    keys.forEach(key =&gt; key.addEventListener(&#39;transitionend&#39;, removeTransition));
-    window.addEventListener(&#39;keydown&#39;, playSound);
-  &lt;/script&gt;
-
-</description>
-        <pubDate>Mon, 17 Oct 2016 12:20:28 -0400</pubDate>
-        <link>http://JesseWaites.com/Javascript-Drum-Machine-Demo/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/Javascript-Drum-Machine-Demo/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Working with React</title>
-        <description>&lt;p&gt;React, the javascript library invented by Facebook, is a very hot technology right now, and rightly so. With such a small surface area of API calls to learn and implement, it seems to do a small number of things just right, without over extending itself into other sections of web application development where it might not be completely needed. I’ve decided to jot down some ideas and concepts I’ve learned / am learning in the hopes of both teaching others and reinforcing for myself the things I pick up as I go. They say the best way to remember something is to write it down, after all. I’ve been building a Youtube clone with React and Redux using the Youtube API for fun and have been learning quite a bit about it lately. Here’s a screenshot of my progress on that so far…&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/CdY8xjj.png&quot; alt=&quot;React App from Jesse Waites&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This article will be updated with new information as I build and continue to learn more.&lt;/p&gt;
-
-&lt;p&gt;From Wikipedia, “React (sometimes styled React.js or ReactJS) is an open-source JavaScript library providing a view for data rendered as HTML. React views are typically rendered using components that contain additional components specified as custom HTML tags. React promises programmers a model in which subcomponents cannot directly affect enclosing components (“data flows down”); efficient updating of the HTML document when data changes; and a clean separation between components on a modern single-page application.&lt;/p&gt;
-
-&lt;p&gt;React is maintained by Facebook, Instagram and a community of individual developers and corporations. React is currently being used on the websites of Facebook, Instagram, Netflix, Imgur, Bleacher Report, Feedly, Airbnb, SeatGeek, HelloSign, and others.”&lt;/p&gt;
-
-&lt;p&gt;Some of the ideas and concepts I’ve learned since working with React are:&lt;/p&gt;
-
-&lt;h3 id=&quot;state&quot;&gt;State&lt;/h3&gt;
-
-&lt;p&gt;Probably the most important concept in React is the concept of “State”. State is described as how a React component’s data looks at any moment in time. This concept is better explained elsewhere by people far better at this that I so I will leave it to you to find resources about this. I may come back to this at a later moment and flesh this section out.&lt;/p&gt;
-
-&lt;h3 id=&quot;one-way-data-flow&quot;&gt;One-way data flow&lt;/h3&gt;
-
-&lt;p&gt;Properties, a set of immutable object values, are passed to a component’s renderer as properties in its HTML tag. A component cannot directly modify any properties passed to it, but can be passed callback functions that do modify values. This mechanism is expressed as “properties flow down; actions flow up”. As an example of this, in my app, I have a concept called “selected video” that flows down all the way from the “App” concept to “Video List”, to “Video List Item”.&lt;/p&gt;
-
-&lt;h3 id=&quot;virtual-dom&quot;&gt;Virtual DOM&lt;/h3&gt;
-
-&lt;p&gt;Another notable feature is the use of a “virtual DOM.” React creates an in-memory data structure cache, computes the resulting differences, and then updates the browser’s displayed DOM efficiently. This allows the programmer to write code as if the entire page is rendered on each change while the React libraries only render subcomponents that actually change. Basically, this “virtual” or “shadow” DOM pushes only the needed page changes to the “real” DOM.&lt;/p&gt;
-
-&lt;h3 id=&quot;jsx&quot;&gt;JSX&lt;/h3&gt;
-
-&lt;p&gt;React components are typically written in JSX, a JavaScript extension syntax allowing quoting of HTML and using HTML tag syntax to render subcomponents. HTML syntax is processed into JavaScript calls of the React library. Developers may also write in pure JavaScript. Interesting, I’ve found that some HTML is not supported in JSX, specifically “break” tags and horizontal rule tags.&lt;/p&gt;
-
-&lt;h3 id=&quot;npm-server-error-reporting&quot;&gt;NPM Server Error Reporting&lt;/h3&gt;
-
-&lt;p&gt;Errors such as syntax errors and whatnot are pretty easily found in the NPM server log, which is pretty amazing. I always know exactly where to look to begin debugging the issue. I am definitely a fan of that.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 17 Oct 2016 12:20:28 -0400</pubDate>
-        <link>http://JesseWaites.com/working-with-react/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/working-with-react/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>TheatreJS Demo</title>
-        <description>&lt;p&gt;Recently, I discovered a cool little library called TheatreJS, created by Gabin Aureche. This library adds an animated effect mimicking human typing behavior in real time. I love libraries like this because it is a really creative way to display otherwise boring static text. It is great to be reminded that us web developers can do very, very creative things online to get our users&#39; attention. I&#39;d love to made a demo of a rap or rock song duet if I ever have the time! I added a demo below that I lifted from Gabin&#39;s Codepen demo with his permission.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/Zhouzi/TheaterJS&quot;&gt;Here is the project on Github&lt;/a&gt;, and you can follow Gabin &lt;a href=&quot;https://twitter.com/Zh0uzi/&quot;&gt;here on Twitter.&lt;/a&gt;&lt;/p&gt;
-
-&lt;style&gt;
-.actor {
-  font-size: 2.8rem;
-  display: flex;
-  margin-bottom: $spacing;
-
-  &amp;:last-of-type {
-    margin-bottom: $spacing-large;
-  }
-}
-
-.actor__content {
-  flex-grow: 1;
-}
-
-@keyframes blink {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.actor__content--typing::after {
-  content: &#39;|&#39;;
-  animation: blink 500ms infinite;
-}
-&lt;/style&gt;
-
-&lt;p&gt;Without further ado, the demo:&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;main class=&quot;scene&quot;&gt;
-  &lt;div class=&quot;actor&quot;&gt;
-    &lt;div class=&quot;actor__prefix&quot;&gt;-&lt;/div&gt;
-    &lt;div id=&quot;vader&quot; class=&quot;actor__content&quot;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;actor&quot;&gt;
-    &lt;div class=&quot;actor__prefix&quot;&gt;-&lt;/div&gt;
-    &lt;div id=&quot;luke&quot; class=&quot;actor__content&quot;&gt;&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/main&gt;
-
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;iframe height=&quot;319&quot; scrolling=&quot;no&quot; src=&quot;//codepen.io/Zhouzi/embed/JoRazP/?height=319&amp;amp;theme-id=0&amp;amp;default-tab=html&amp;amp;embed-version=2&quot; frameborder=&quot;no&quot; allowtransparency=&quot;true&quot; allowfullscreen=&quot;true&quot; style=&quot;width: 100%;&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/Zhouzi/pen/JoRazP/&quot;&gt;TheaterJS&lt;/a&gt; by Gabin Aureche (&lt;a href=&quot;http://codepen.io/Zhouzi&quot;&gt;@Zhouzi&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.
-&lt;/iframe&gt;
-
-&lt;script src=&quot;//cdn.jsdelivr.net/theaterjs/latest/theater.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script&gt;
-var theater = theaterJS()
-
-theater
-.on(&#39;type:start, erase:start&#39;, function () {
-  theater.getCurrentActor().$element.classList.add(&#39;actor__content--typing&#39;)
-})
-.on(&#39;type:end, erase:end&#39;, function () {
-  theater.getCurrentActor().$element.classList.remove(&#39;actor__content--typing&#39;)
-})
-.on(&#39;type:start, erase:start&#39;, function () {
-  if (theater.getCurrentActor().name === &#39;vader&#39;) {
-    document.body.classList.add(&#39;dark&#39;)
-  } else {
-    document.body.classList.remove(&#39;dark&#39;)
-  }
-})
-
-theater
-.addActor(&#39;vader&#39;, { speed: 0.8, accuracy: 0.6 })
-.addActor(&#39;luke&#39;)
-.addScene(&#39;vader:Luke.&#39;, 600)
-.addScene(&#39;luke:What?&#39;, 400)
-.addScene(&#39;vader:I am your father.&#39;, 400)
-.addScene(&#39;luke:Nooo...&#39;, -3, &#39;!!! &#39;, 600, &#39;No! &#39;, 600)
-.addScene(&#39;luke:That\&#39;s not true!&#39;, 600)
-.addScene(&#39;luke:That\&#39;s impossible!&#39;, 400)
-.addScene(&#39;vader:Search your feelings.&#39;, 1600)
-.addScene(&#39;vader:You know it to be true.&#39;, 1000)
-.addScene(&#39;luke:Noooooooo! &#39;, 600, &#39;No!&#39;, 400)
-.addScene(&#39;vader:Luke.&#39;, 600)
-.addScene(&#39;vader:You can destroy the Emperor.&#39;, 1600)
-.addScene(&#39;vader:He has foreseen this. &#39;, 800)
-.addScene(&#39;vader:It is your destiny.&#39;, 1600)
-.addScene(&#39;vader:Join me.&#39;, 800)
-.addScene(&#39;vader:Together we can rule the galaxy.&#39;, 800)
-.addScene(&#39;vader:As father and son.&#39;, 1600)
-.addScene(&#39;vader:Come with me. &#39;, 800)
-.addScene(&#39;vader:It is the only way.&#39;, 2000)
-.addScene(theater.replay.bind(theater))
-&lt;/script&gt;
-
-</description>
-        <pubDate>Thu, 21 Jul 2016 05:50:28 -0400</pubDate>
-        <link>http://JesseWaites.com/theatre-js-demo/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/theatre-js-demo/</guid>
-        
-        
-        <category>coding</category>
-        
-      </item>
-    
-      <item>
-        <title>Embedding Interactive Ruby Snippets Into Web Pages</title>
-        <description>&lt;p&gt;Let&#39;s say you&#39;re a web developer and occasionally need to blog about code.
-You want to show off how to do this or that. Conventionally, there is no way
-to do this because browsers only understand HTML, CSS, and Javascript.&lt;/p&gt;
-
-&lt;p&gt;With this new javascript plugin called &lt;strong&gt;klipsify&lt;/strong&gt;, I can now
-run interactive Ruby snippets in the browser. Let&#39;s take a tour... (*Note: As of now
-this only works on non-mobile devices.*)&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-klipse-eval-ruby&quot;&gt;[9,8] * 2
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In the section above, change the “2” to a “20”, so that it says “[9,8] * 20”
-Did you see the output change? Cool, right?&lt;/p&gt;
-
-&lt;p&gt;Let’s show off something more complicated. Let’s write a custom Ruby method
-called “trumpify”.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-klipse-eval-ruby&quot;&gt;def trumpify(text)
-&quot;Wow! #{text} Sad!!&quot;
-end
-trumpify(&quot;My campaign is a garbage fire!&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Change &quot;My campaign is a garbage fire&quot; to anything else and the custom ruby
-method will trumpify it.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;In this next example, let’s explore Ruby’s Upcase method.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-klipse-eval-ruby&quot;&gt;&quot;Ban Assault Rifles&quot;.upcase
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here, we explore the Swapcase method.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-klipse-eval-ruby&quot;&gt;&quot;Trump Is A Con Artist.&quot;.swapcase
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Note that, where words were capitalized, they are now lowercase, and vice versa.&lt;/p&gt;
-
-&lt;p&gt;You can check out Klipse here: https://github.com/viebel/klipse&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Ok. Thanks for reading.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://2.bp.blogspot.com/-d94FNkb_Zxc/Tij3o8NE77I/AAAAAAAAAdw/DeZlPhbh2uM/s1600/fin.png&quot; alt=&quot;Fin&quot; /&gt;&lt;/p&gt;
-
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;http://app.klipse.tech/css/codemirror.css&quot; /&gt;
-
-&lt;script&gt;
-    window.klipse_settings = {
-        selector_eval_ruby: &#39;.language-klipse-eval-ruby&#39;, // css selector for the html elements you want to klipsify
-    };
-&lt;/script&gt;
-
-&lt;script src=&quot;http://cdn.opalrb.org/opal/current/opal.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;http://cdn.opalrb.org/opal/current/opal-parser.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;script src=&quot;http://app.klipse.tech/plugin/js/klipse_plugin.js&quot;&gt;&lt;/script&gt;
-
-</description>
-        <pubDate>Wed, 22 Jun 2016 05:50:28 -0400</pubDate>
-        <link>http://JesseWaites.com/embedding-interactive-ruby-snippets-into-web-pages/</link>
-        <guid isPermaLink="true">http://JesseWaites.com/embedding-interactive-ruby-snippets-into-web-pages/</guid>
+        <link>http://localhost:4000/ajax-typeahead-stunts/</link>
+        <guid isPermaLink="true">http://localhost:4000/ajax-typeahead-stunts/</guid>
         
         
         <category>coding</category>

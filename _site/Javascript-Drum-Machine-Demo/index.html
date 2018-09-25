@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="/css/main.css">
 
     <link rel="canonical" href="/Javascript-Drum-Machine-Demo/">
-    <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="http://JesseWaites.com/feed.xml" />
-    <link rel="apple-touch-icon" href="http://JesseWaites.com/img/apple-touch-icon.png">
+    <link rel="alternate" type="application/rss+xml" title="Jesse Waites" href="http://localhost:4000/feed.xml" />
+    <link rel="apple-touch-icon" href="http://localhost:4000/img/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -29,8 +29,33 @@
         <script>cheet('1 u p', function () {
           var audio = new Audio('/1up.mp3');
 audio.play();
-  alert('You got an extra life!');
+  alert('You got an extra life! 🍄 ');
 });</script>
+
+<!-- Start of Async Drift Code -->
+<script>
+!function() {
+var t;
+if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+t.factory = function(e) {
+return function() {
+  var n;
+  return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+};
+}, t.methods.forEach(function(e) {
+t[e] = t.factory(e);
+}), t.load = function(t) {
+var e, n, o, i;
+e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+});
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('6gyg5xtt693v');
+</script>
+<!-- End of Async Drift Code -->
 
 
     <!--[if lt IE 9]>
@@ -40,8 +65,8 @@ audio.play();
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@jessewaites">
     <meta name="twitter:creator" content="@jessewaites">
-    <!-- <meta property="og:image" content="http://JesseWaites.com/img/twitter_card2.png" />
-    <meta name="twitter:image:src" content="http://JesseWaites.com/img/twitter_card2.png"> -->
+    <!-- <meta property="og:image" content="http://localhost:4000/img/twitter_card2.png" />
+    <meta name="twitter:image:src" content="http://localhost:4000/img/twitter_card2.png"> -->
     <meta content="Jesse Waites" property="og:site_name">
 
     
@@ -51,13 +76,13 @@ audio.play();
     
 
     
-      <meta name="twitter:description" content="Jesse Waites - Boston, MA based Ruby on Rails Developer.">
-      <meta content="Jesse Waites - Boston, MA based Ruby on Rails Developer." property="og:description">
+      <meta name="twitter:description" content="Jesse Waites - Boston based Rails / React Developer.">
+      <meta content="Jesse Waites - Boston based Rails / React Developer." property="og:description">
     
 
     
-      <meta name="twitter:url" content="http://JesseWaites.com/Javascript-Drum-Machine-Demo/">
-      <meta content="http://JesseWaites.com/Javascript-Drum-Machine-Demo/" property="og:url">
+      <meta name="twitter:url" content="http://localhost:4000/Javascript-Drum-Machine-Demo/">
+      <meta content="http://localhost:4000/Javascript-Drum-Machine-Demo/" property="og:url">
     
 
     
@@ -65,8 +90,8 @@ audio.play();
     
 
     
-      <meta name="twitter:image:src" content="http://JesseWaites.com/img/drum.jpg">
-      <meta property="og:image" content="http://JesseWaites.com/img/drum.jpg">
+      <meta name="twitter:image:src" content="http://localhost:4000/img/drum.jpg">
+      <meta property="og:image" content="http://localhost:4000/img/drum.jpg">
     
 
 
@@ -337,10 +362,10 @@ kbd {
             <div class="social">
                 <p>Share this article</a>
                 <div class="social-links">
-                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://JesseWaites.com/Javascript-Drum-Machine-Demo/"><i class="fa fa-twitter"></i></a>
+                    <a class="social-icon" href="#" data-platform="twitter" data-message="" data-url="http://localhost:4000/Javascript-Drum-Machine-Demo/"><i class="fa fa-twitter"></i></a>
 
-                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://JesseWaites.com/Javascript-Drum-Machine-Demo/"><i class="fa fa-facebook-official"></i></a>
-                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://JesseWaites.com/Javascript-Drum-Machine-Demo/"><i class="fa fa-envelope"></i></a>
+                    <a class="social-icon" href="#" data-platform="facebook" data-message="" data-url="http://localhost:4000/Javascript-Drum-Machine-Demo/"><i class="fa fa-facebook-official"></i></a>
+                    <a class="social-icon" data-platform="mail"  href="mailto:jesse.waites@gmail.com?body=http://localhost:4000/Javascript-Drum-Machine-Demo/"><i class="fa fa-envelope"></i></a>
                 </div>
             </div>
         </div>
