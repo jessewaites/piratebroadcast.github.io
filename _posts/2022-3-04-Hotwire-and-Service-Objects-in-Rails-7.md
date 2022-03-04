@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hotwire and Service Objects in Rails 7"
-date: 2020-03-04 012:50:28
+date: 2020-03-03 012:50:28
 categories: coding
 author_name : Jesse
 author_url : /author/jesse
