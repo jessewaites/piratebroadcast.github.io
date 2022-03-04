@@ -1,7 +1,7 @@
 # Site settings
 title: Jesse Waites
 email: jesse.waites@gmail.com
-description: "Jesse Waites - Boston based Rails / React Developer."
+description: "Jesse Waites - Boston based Ruby on Rails Developer."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://JesseWaites.com" # the base hostname & protocol for your site
 enable_retina: false
