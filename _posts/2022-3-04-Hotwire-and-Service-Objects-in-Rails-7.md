@@ -16,7 +16,8 @@ square_related: recommend-wolf
 If you are reading this blog post, I am going to assume some level of familiarity with Ruby on Rails version 7 and some of the new tooling it provides, such as the "Hotwire" stack of Turbo, Turbo Frames, Turbo Streams, Stimulus. I've bene using it at work lately and have not felt this excited about web development technologies since I first started learning Rails oh so many years
 ago. It is an exciting time to be a Rails developer!
 
-So on to the point of this article... If Google brought you here, you are having some unexpected behavior between the service objects / service classes you are calling in your controller and the partials that are getting rendered. In fact, if you are looking at your Turbo Stream HTML response, you may be very surprised to see that attributes you expected to see updated are not updated- This issue happened to me and after chasing it down, it was discovered that we are padding an ID into the service object, not the object itself. That means that the object we are mutating in the service class is not the same object you have access to in the controller.
+So on to the point of this article... If Google brought you here, you are having some unexpected behavior between the service objects / service classes you are calling in your controller and the partials that are getting rendered. In fact, if you are looking at your Turbo Stream HTML response, you may be very surprised to see that attributes you expected to see updated are not updated- This issue happened to me and after chasing it down, realized that we are passing an the objects ID into the service object, and not the object itself. That means that the object we are mutating in the service class is ***not*** the same object you have access to in your controller.
+The solution to this issue is to either refactor your service class to accept an object rather than an ID, or to reassign the mutated widget (the payload) back to the widget instance variable.
 
 
 
@@ -29,7 +30,8 @@ So on to the point of this article... If Google brought you here, you are having
         flash.now[:notice] = t('controllers.widgets.something_went_wrong')
       end
       <!-- pay attention to the line below -->
-      @consumable = result[:payload]
+      @widget = result[:payload]
+      <!-- pay attention to the line above -->
       render turbo_stream:
       [
         turbo_stream.update('is_primary', partial: 'admin/shared/tables/widget_row', locals: { variable: @widget.is_primary? }),
@@ -37,7 +39,10 @@ So on to the point of this article... If Google brought you here, you are having
       ]
     end
 
-I hope someone finds this helpful, and I look forward to documenting more Hotwire learnings.
+
+PS If you are desperate, you can also call reload on your object in the controller after it goes through the service but the way above is a more elegant solution ti the issue.    
+
+
 
 
 
