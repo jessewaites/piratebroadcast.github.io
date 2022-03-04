@@ -19,8 +19,24 @@ ago. It is an exciting time to be a Rails developer!
 So on to the point of this article... If Google brought you here, you are having some unexpected behavior between the service objects / service classes you are calling in your controller and the partials that are getting rendered. In fact, if you are looking at your Turbo Stream HTML response, you may be very surprised to see that attributes you expected to see updated are not updated- This issue happened to me and after chasing it down, it was discovered that we are padding an ID into the service object, not the object itself. That means that the object we are mutating in the service class is not the same object you have access to in the controller.
 
 You will want to update the object, before you send it off to be rendered, with something like
+UpdaterService.
 
-    @widget = result.payload
+    def set_as_primary
+      authorize(Consumable)
+      result = AedPrimaryConsumableUpdaterService.call(consumable_id: @consumable.id)
+      if result[:success?]
+        Consumable.search_index.refresh
+        flash.now[:success] = t('controllers.consumables.set_as_primary.set_as_primary')
+      else
+        flash.now[:notice] = t('controllers.consumables.set_as_primary.something_went_wrong')
+      end
+      @consumable.reload
+      render turbo_stream:
+      [
+        turbo_stream.update('is_primary', partial: 'admin/shared/tables/consumable_row', locals: { variable: @consumable.is_primary? }),
+        turbo_stream.update('flash', partial: 'shared/flash')
+      ]
+    end
 
 I hope someone finds this helpful, and I look forward to documenting more Hotwire learnings.
 
