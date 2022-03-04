@@ -13,7 +13,10 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 
-If you are reading this blog post, I am going to assume some level of familiarity with Ruby on Rails version 7 and some of the new tooling it provides, such as the "Hotwire" stack of Turbo, Turbo Frames, Turbo Streams, Stimulus.
+If you are reading this blog post, I am going to assume some level of familiarity with Ruby on Rails version 7 and some of the new tooling it provides, such as the "Hotwire" stack of Turbo, Turbo Frames, Turbo Streams, Stimulus. I've bene using it at work lately and have not felt this excited about web development technologies since I first started learning Rails oh so many years
+ago. It is an exciting time to be a Rails developer!
+
+So on to the point of this article... If Google brought you here, you are having some unexpected behavior between
 
 
 
