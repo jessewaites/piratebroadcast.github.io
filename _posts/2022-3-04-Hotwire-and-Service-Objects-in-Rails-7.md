@@ -8,7 +8,7 @@ author_url : /author/jesse
 author_avatar: jesse
 show_avatar : true
 read_time : 4
-feature_image: debug
+feature_image: macbook
 show_related_posts: false
 square_related: recommend-wolf
 ---
