@@ -25,4 +25,4 @@ To test that this fix is working, you can add a console.log inside of the connec
 
 Hope that helps! 
 
-By the way, I absolutely love working with Rails and Hotwire - Let me know if you or your company does as well! 
+By the way, I absolutely love working with Rails and Hotwire - [Let me know if you or your company does as well!](mailto:hi@jessewaites.com)
