@@ -19,10 +19,10 @@ I recently went through the experience and there was a bit of inaccurate informa
 
 When *manually* creating a new stimulus controller, you also have to add this new file name to the system js manifest in the Index.js file. When you use the Rails Generator to create this file, this step is done for you, but if you create the file yourself (like a lot of us do) then you have to add it to the index.js file yourself.
 
-It is possible to avoid this issue by autoloading those files, but if you made it this far into this article, chances are y'all do not have that set up. 
+It is possible to avoid this issue going forward by writing a funciton in index.js to autoload those files, but if you made it this far into this article, chances are y'all do not have that set up. Add your new file to this index.js file and you should be all set.
 
-Another tip here is that you can add a console.log inside of the connect function in your new stimulus controller to confirm that the system is seeing your new controller upon page load. 
+To test that this fix is working, you can add a console.log inside of the connect function in your new stimulus controller to confirm that the system is seeing your new controller upon page load. 
 
 Hope that helps! 
 
-By the wya, I love working in Rails and Hotwire - Let me know if you or your compnay does as well! 
+By the way, I absolutely love working with Rails and Hotwire - Let me know if you or your company does as well! 
