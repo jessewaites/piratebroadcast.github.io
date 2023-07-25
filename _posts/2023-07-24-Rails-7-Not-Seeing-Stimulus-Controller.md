@@ -13,13 +13,13 @@ show_related_posts: false
 square_related: recommend-wolf
 ---
 
-If you are reading this blog post, chances are that a search engine brought you here. You probably created a new stimulus controller for your Rails 7+ app, and the system is not recognizing this new file.
+If you are reading this blog post, chances are that a search engine brought you here. You probably created a new stimulus controller for your Rails 7+ app, the system is not recognizing this new file, and you are searching the web for ideas on what might have went wrong.
 
-I recently went through the experience and there wa sa bit of inaccurate information out there, I decided to make this post.
+I recently went through the experience and there was a bit of inaccurate information out there, I decided to make this post to help those facing this issue in the future.
 
 When *manually* creating a new stimulus controller, you also have to add this new file name to the system js manifest in the Index.js file. When you use the Rails Generator to create this file, this step is done for you, but if you create the file yourself (like a lot of us do) then you have to add it to the index.js file yourself.
 
-It is possible to avoid this issue by autoloading those files, but if you made it this far into this artickoe.l chances are y'all do not have that set up. 
+It is possible to avoid this issue by autoloading those files, but if you made it this far into this article, chances are y'all do not have that set up. 
 
 Another tip here is that you can add a console.log inside of the connect function in your new stimulus controller to confirm that the system is seeing your new controller upon page load. 
 
