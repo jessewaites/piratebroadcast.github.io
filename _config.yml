@@ -16,7 +16,7 @@ nav_list:
   Author : ['About Jesse Waites', '/author/jesse', 'fa-user']
   Blank : ['', '/']
   Resume : ['My Resume', 'https://drive.google.com/file/d/0B78faj-_ufT8TEpkZ3JRSmp0WFU/view?usp=sharing', 'fa-file-text']
-  Github : ['GitHub', 'https://www.github.com/piratebroadcast', 'fa-github']
+  Github : ['GitHub', 'https://www.github.com/jessewaites', 'fa-github']
   LinkedIn : ['LinkedIn', 'https://www.linkedin.com/in/jessewaites', 'fa-linkedin']
   Twitter : ['Twitter', 'https://www.twitter.com/jessewaites', 'fa-twitter']
   Facebook : ['Facebook', 'http://www.facebook.com/railsdevelopers', 'fa-facebook']
